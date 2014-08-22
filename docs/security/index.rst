@@ -1,13 +1,17 @@
-Security
-========
+:fa:`lock` Security
+===================
 
-This section contains security-related patterns and anti-patterns.
+Python is a highly dynamic language that gives the programmer many ways to change the runtime
+behavior of his code and even dynamically execute new code. This is powerful but can be a security
+risk as well.
 
-.. include:: use_of_exec.rst
+Use the following patterns to increase the security of your code. 
 
-Indices and tables
-==================
+.. toctree::
+    :maxdepth: 1
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    Use of exec <use_of_exec>
+    Use of eval <use_of_eval>
+
+    Unsafe variables <use_of_unsafe_variable>
+

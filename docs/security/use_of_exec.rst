@@ -1,7 +1,11 @@
-Use of Exec
------------
+use of exec
+^^^^^^^^^^^
 
-Example 
+While not a security problem per se, using the `exec` statement is considered dangerous
+(and unclean) and should be avoided whenever possible.
+
+Example
+"""""""
 
 .. sourcecode:: python
 
@@ -9,3 +13,7 @@ Example
     f = open("untrusted_file.py")
     #...and execute it :/
     exec(f.read()) 
+
+Alternatives
+""""""""""""
+

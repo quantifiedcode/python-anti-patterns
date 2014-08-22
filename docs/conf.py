@@ -45,7 +45,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Python Code Patterns'
+project = u'Python Anti-Patterns'
 copyright = u'2014, Andreas Dewes'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -179,7 +179,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PythonCodePatternsdoc'
+htmlhelp_basename = 'PythonAntiPatternsDoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -199,7 +199,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'PythonCodePatterns.tex', u'Python Code Patterns Documentation',
+  ('index', 'PythonCodePatterns.tex', u'Python Anti-Patterns',
    u'Andreas Dewes', 'manual'),
 ]
 
@@ -229,7 +229,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'pythoncodepatterns', u'Python Code Patterns Documentation',
+    ('index', 'pythoncodepatterns', u'Python Anti-Patterns',
      [u'Andreas Dewes'], 1)
 ]
 
@@ -243,8 +243,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'PythonCodePatterns', u'Python Code Patterns Documentation',
-   u'Andreas Dewes', 'PythonCodePatterns', 'One line description of project.',
+  ('index', 'PythonAntiPatterns', u'Python Anti-Patterns',
+   u'Andreas Dewes', 'PythonAntiPatterns', 'A collection of Python anti-patterns.',
    'Miscellaneous'),
 ]
 
@@ -259,3 +259,23 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+from docutils.nodes import raw as raw_node
+def role_github_badge(name, rawtext, text, lineno, inliner,
+            options={}, content=[]):
+    print(rawtext,text,options)
+    html = """
+     <a class="github_ribbon" href="https://github.com/%s"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+     """ % text
+    return [raw_node(text = html,format = 'html')],[]
+
+from docutils.nodes import raw as raw_node
+def role_font_awesome(name, rawtext, text, lineno, inliner,
+            options={}, content=[]):
+    print(rawtext,text,options)
+    html = "<i class=\"fa fa-%s\"></i>" % text
+    return [raw_node(text = html,format = 'html')],[]
+
+def setup(app):
+    app.add_role("github_badge",role_github_badge)
+    app.add_role("fa",role_font_awesome)

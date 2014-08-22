@@ -1,13 +1,14 @@
+===============
 Unused argument
-^^^^^^^^^^^^^^^
+===============
 
 Description
------------
+===========
 
 An argument wich was defined in the header of a function / method is not used in its body. This error is not critical, but considered bad style.
 
-Example
--------
+Example(s)
+==========
 
 The following function header defines two arguments :code:`arg_1` and :code:`arg_2`. Even though :code:`arg_2` is defined, it is not used in the function's body.
 
@@ -18,7 +19,7 @@ The following function header defines two arguments :code:`arg_1` and :code:`arg
         return arg_1
 
 Solution(s)
------------
+===========
 
 - Remove the argument
 
@@ -61,5 +62,5 @@ Solution(s)
             func(10, arg_2=4) # executes without error
 
 References
-----------
+==========
 - `PyLint W0613 <http://pylint-messages.wikidot.com/messages:w0613>`

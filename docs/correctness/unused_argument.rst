@@ -48,7 +48,7 @@ You can remove arg_2 to avoid this error. Be aware though that this might break 
       del arg_2
       return arg_1
 
-If you are not sure whether arg_2 is passed to `func` you can add  `*args` and `**kwargs` to your function header. Like this, `func(10,3)` can still be called without causing an error.
+If you are not sure whether arg_2 is passed to :code:`func` you can add :code:`*args` and :code:`*kwargs` to your function header. Like this, :code:`func(10,3)` can still be called without causing an error.
 
 Alternatives
 ------------

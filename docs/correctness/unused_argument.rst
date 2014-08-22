@@ -5,7 +5,7 @@ Unused argument
 Description
 ===========
 
-An argument wich was defined in the header of a function / method is not used in its body. This error is not critical, but considered bad style.
+An argument of a function or method is not used in its body. This error is not critical, but considered bad style.
 
 Example(s)
 ==========

@@ -4,12 +4,12 @@ Unused argument
 Description
 -----------
 
-An argument wich was defined in the header of a function / method is not used in its body.
+An argument wich was defined in the header of a function / method is not used in its body. This error is not critical, but considered bad style.
 
 Example
 -------
 
-The following function header defines two arguments :code:`arg_1` and `arg_2`. Even though :code:`arg_2` is defined, it is not used in the function's body. This is in general not critical but considered bad style.
+The following function header defines two arguments :code:`arg_1` and :code:`arg_2`. Even though :code:`arg_2` is defined, it is not used in the function's body.
 
 .. code:: python
 

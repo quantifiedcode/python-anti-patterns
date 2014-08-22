@@ -63,4 +63,4 @@ Solution(s)
 
 References
 ==========
-- `PyLint W0613 <http://pylint-messages.wikidot.com/messages:w0613>`
+- `PyLint W0613 <http://pylint-messages.wikidot.com/messages:w0613>`_

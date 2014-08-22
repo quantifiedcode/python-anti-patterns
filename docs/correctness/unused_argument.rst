@@ -30,9 +30,8 @@ You can remove :code:`arg_2` from the header of your function / method.
         arg_1 = arg_1 / 5 
         return arg_1
 
-.. caution:: 
-
-    Be aware though that this might break your code elsewhere. If :code:`func` is called with two arguments (e.g., :code:`func(10,3)`) this will raise an error. If you remove an argument, you have to refactor your code to make sure only one argument is passed.
+.. DANGER:: 
+   Be aware though that this might break your code elsewhere. If :code:`func` is called with two arguments (e.g., :code:`func(10,3)`) this will raise an error. If you remove an argument, you have to refactor your code to make sure only one argument is passed.
 
 - Delete the argument
 

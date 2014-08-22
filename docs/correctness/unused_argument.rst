@@ -10,6 +10,7 @@ Example
 -------
 
 .. code:: python
+
     def my_function(arg_1, arg_2):
         arg_1 = arg_1 / 5 
         return arg_1
@@ -22,6 +23,7 @@ Solution(s)
 - Remove the argument
 
 .. code:: python
+
     def func(arg_1):
         arg_1 = arg_1 / 5 
         return arg_1
@@ -31,6 +33,7 @@ You can remove arg_2 to avoid this error. Be aware though that this might break 
 - Delete the argument
 
 .. code:: python
+
   def func(arg_1, arg_2):
       arg_1 = arg_1 / 5 
       del arg_2
@@ -39,6 +42,7 @@ You can remove arg_2 to avoid this error. Be aware though that this might break 
 - Use *args and **kwargs
 
 .. code:: python
+
   def func(arg_1, *args, **kwargs):
       arg_1 = arg_1 / 5 
       del arg_2

@@ -4,7 +4,7 @@ Unused argument %r
 Description
 -----------
 
-An argument is not used in the body of the respective function or method.
+An argument wich was defined in the header of a function or method is not used its body.
 
 Example
 -------
@@ -15,7 +15,7 @@ Example
         arg_1 = arg_1 / 5 
         return arg_1
 
-Even though arg_2 is defined as argument, it is not used in this function. This is problematic because ...
+Even though :code:`arg_2` is defined as argument, it is not used in this function.
 
 Solution(s)
 -----------
@@ -28,7 +28,7 @@ Solution(s)
         arg_1 = arg_1 / 5 
         return arg_1
 
-You can remove arg_2 to avoid this error. Be aware though that this might break your code. If `func` is called with two arguments (e.g., `func(10,3)`) this will raise an error. If you remove an argument, you have to refactor your code to make sure only one argument is passed.
+You can remove :code:`arg_2` to avoid this error. Be aware though that this might break your code. If :code:`func` is called with two arguments (e.g., :code:`func(10,3)`) this will raise an error. If you remove an argument, you have to refactor your code to make sure only one argument is passed.
 
 - Delete the argument
 
@@ -39,7 +39,7 @@ You can remove arg_2 to avoid this error. Be aware though that this might break 
       del arg_2
       return arg_1
     
-- Use *args and **kwargs
+- Use :code:`*args` and :code:`**kwargs`
 
 .. code:: python
 
@@ -48,15 +48,16 @@ You can remove arg_2 to avoid this error. Be aware though that this might break 
       del arg_2
       return arg_1
 
-If you are not sure whether arg_2 is passed to :code:`func` you can add :code:`*args` and :code:`*kwargs` to your function header. Like this, :code:`func(10,3)` can still be called without causing an error.
+If you are not sure whether :code:`arg_2` is passed to :code:`func` you can add :code:`*args` and :code:`*kwargs` to your function header. :code:`func(10,3)` can now be called without errors.
 
 Alternatives
 ------------
 
+- None
 
 Further reading
 ---------------
 
-PyLint reference
+References
 ---------------
-- 
+- [PyLint W0613](http://pylint-messages.wikidot.com/messages:w0613)

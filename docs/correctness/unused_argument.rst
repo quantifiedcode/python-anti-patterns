@@ -4,7 +4,7 @@ Unused argument %r
 Description
 -----------
 
-An argument wich was defined in the header of a function or method is not used its body.
+An argument wich was defined in the header of a function or method is not used in its body.
 
 Example
 -------

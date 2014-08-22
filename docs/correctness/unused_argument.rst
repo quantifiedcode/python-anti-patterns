@@ -9,18 +9,20 @@ An argument wich was defined in the header of a function or method is not used i
 Example
 -------
 
+The following function :code:`func` defines two arguments :code:`arg_1` and `arg_2`. Even though :code:`arg_2` is defined, it is not used in the function's body. This is in general not critical but considered bad style.
+
 .. code:: python
 
-    def my_function(arg_1, arg_2):
+    def func(arg_1, arg_2):
         arg_1 = arg_1 / 5 
         return arg_1
-
-Even though :code:`arg_2` is defined as argument, it is not used in this function.
 
 Solution(s)
 -----------
 
 - Remove the argument
+
+You can remove :code:`arg_2` from the header of your function / method.
 
 .. code:: python
 
@@ -28,7 +30,9 @@ Solution(s)
         arg_1 = arg_1 / 5 
         return arg_1
 
-You can remove :code:`arg_2` to avoid this error. Be aware though that this might break your code. If :code:`func` is called with two arguments (e.g., :code:`func(10,3)`) this will raise an error. If you remove an argument, you have to refactor your code to make sure only one argument is passed.
+.. caution:: 
+
+    Be aware though that this might break your code elsewhere. If :code:`func` is called with two arguments (e.g., :code:`func(10,3)`) this will raise an error. If you remove an argument, you have to refactor your code to make sure only one argument is passed.
 
 - Delete the argument
 

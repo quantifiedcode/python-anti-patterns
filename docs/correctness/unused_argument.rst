@@ -32,8 +32,10 @@ Solution(s)
             arg_1 = arg_1 / 5 
             return arg_1
         
-    def run():
-        func(10,3) # raises exception
+    .. code:: python
+
+        def run():
+            func(10,3) # raises exception
 
 - Delete the argument
 

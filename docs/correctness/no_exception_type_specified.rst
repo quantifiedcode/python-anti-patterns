@@ -57,12 +57,12 @@ Handle exceptions with Python's built in `exception types<https://docs.python.or
             
             return result
             
-    With this pattern, you are able to handle exceptions based on their by exception-type. The first exception type that matches the actual exception is handled first. Thus, it is recommended to handle specific error types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block. The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. Other than the `else`-block, the `finally`-block excecutes under all circumstances — no matter if an error occured or not. It can be used to clean up your actions in the `try-except`, or, like in this example, to set `result = 0`. Both, the `else`-clause and the `finally`-clause are optional.
+With this pattern, you are able to handle exceptions based on their by exception-type. The first exception type that matches the actual exception is handled first. Thus, it is recommended to handle specific error types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block. The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. Other than the `else`-block, the `finally`-block excecutes under all circumstances — no matter if an error occured or not. It can be used to clean up your actions in the `try-except`, or, like in this example, to set `result = 0`. Both, the `else`-clause and the `finally`-clause are optional.
 
 Implement user defined exceptions
 ---------------------------------
 
-    In addition to Python's standard exceptions, you can implement your own exception classes. 
+In addition to Python's standard exceptions, you can implement your own exception classes. 
 
     .. code:: python
     
@@ -102,7 +102,6 @@ Implement user defined exceptions
                     result = 0
             
             return result
-        
     
 References
 ==========

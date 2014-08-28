@@ -1,6 +1,6 @@
-================================
-No exception type(s) specificied
-================================
+==============================
+No exception type(s) specified
+==============================
 
 Description
 ===========
@@ -26,8 +26,9 @@ The function `divide` simply devides `a` by `b`. To avoid invalid calculations (
 Solution(s)
 ===========
 
-- Handle exceptions with Python's built in `exception types<https://docs.python.org/2/library/exceptions.html>`
-    
+Handle exceptions with Python's built in `exception types<https://docs.python.org/2/library/exceptions.html>`
+-------------------------------------------------------------------------------------------------------------
+
     .. code:: python
 
         def divide(a, b):
@@ -58,7 +59,8 @@ Solution(s)
             
     With this pattern, you are able to handle exceptions based on their by exception-type. The first exception type that matches the actual exception is handled first. Thus, it is recommended to handle specific error types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block. The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. Other than the `else`-block, the `finally`-block excecutes under all circumstances — no matter if an error occured or not. It can be used to clean up your actions in the `try-except`, or, like in this example, to set `result = 0`. Both, the `else`-clause and the `finally`-clause are optional.
 
-- Implement user defined exceptions
+Implement user defined exceptions
+---------------------------------
 
     In addition to Python's standard exceptions, you can implement your own exception classes. 
 
@@ -104,6 +106,6 @@ Solution(s)
     
 References
 ==========
-- `PyLint W0701<http://pylint-messages.wikidot.com/messages:w0701>`_
-- `Python Built-in Exceptions<https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`_
-- `Python Errors and Exceptions<https://docs.python.org/2/tutorial/errors.html>`_
+- `PyLint W0701<http://pylint-messages.wikidot.com/messages:w0701>`
+- `Python Built-in Exceptions<https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`
+- `Python Errors and Exceptions<https://docs.python.org/2/tutorial/errors.html>`

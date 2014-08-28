@@ -5,12 +5,13 @@ No exception type(s) specificied
 Description
 ===========
 
-You handled an exception, without a specific error type. This error is not critical, but considered bad coding style.
+You handled an exception without a specific error type. This error is not critical, but is not considered `pythonic`.
 
 Example(s)
 ==========
 
-The following function devides `a` by `b`. To avoid invalid calculations, such as a division by 0, a `try-except` block is added. However, there is not exception type defined. Python 
+The following function devides `a` by `b`. To avoid invalid calculations (e.g., a division by zero), a `try-except` block is added. 
+
 
 .. code:: python
 
@@ -24,48 +25,47 @@ The following function devides `a` by `b`. To avoid invalid calculations, such a
 Solution(s)
 ===========
 
-- Remove the argument
-
-    You can remove :code:`arg_2` from the header of your function / method. 
+- Handle exceptions with Python's built in `exception types<https://docs.python.org/2/library/exceptions.html>`
     
     .. code:: python
 
-        def func(arg_1):
-            arg_1 = arg_1 / 5 
-            return arg_1
-
-        def run():
-            func(10,3) # raises exception
+        def func(a, b):
             
-    .. caution:: 
-        Be aware that this might break your code elsewhere. If :code:`func` is called with two arguments (e.g., :code:`func(10,3)`) this will raise an error. If you remove an argument, you have to refactor your code to make sure only one argument is passed.
+            try:
+                result = a / b
+            
+            except ZeroDivisionError:
+                # Occurs, if b is zero
+                print "Type error: division by 0"
+            
+            except TypeError:
+                # Occurs, if b is e.g, a string
+                print "Type error: division by '{0}'".format(b)
+                
+            except Exception as e:
+                # Base Exception class to handle any other error
+                print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
 
-- Delete the argument
+            else:
+                # Executes after an exception, not matter which type
+                result = None
+            
+            finally:  
+                # Executes always, even without exception
+                print "Done!"
+            
+            return result
+            
+    With this pattern, you are able to handle errors specifically by error-type. The `else`-clause executes, not matter which error occured. If, like in this example, we want to return `None`, not matter which exception occured, we need to set `result = None` only once. Other than the `else`-block, the `finally`-block excecutes under all circumstances, not matter if an error occured or not. It can be used to clean up your actions in the `try-except`.
+
+- Create user defined exceptions
+
 
     .. code:: python
 
-        def func(arg_1, arg_2):
-            arg_1 = arg_1 / 5 
-            del arg_2 # delete arg_2
-            return arg_1
-      
-        def run():
-            func(10,3) # executes without error
+        def func()
+            return
     
-- Use :code:`*args` and :code:`**kwargs`
-
-    If you are not sure whether :code:`arg_2` is passed to :code:`func` you can add :code:`*args` and :code:`*kwargs` to your function header. :code:`func(10,3)` can now be called without errors.
-
-    .. code:: python
-
-        def func(arg_1, *args, **kwargs): #add *args and **kwargs
-            arg_1 = arg_1 / 5 
-            return arg_1
-      
-        def run():
-            func(10,3) # executes without error
-            func(10, arg_2=4) # executes without error
-
 References
 ==========
 - `PyLint W0701 <http://pylint-messages.wikidot.com/messages:w0701>`_

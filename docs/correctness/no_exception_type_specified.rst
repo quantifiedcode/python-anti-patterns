@@ -37,27 +37,22 @@ Handle exceptions with Python's built in `exception types<https://docs.python.or
     
         try:
             result = a / b
-        except ZeroDivisionError:
-            # Occurs, if b is zero
+        except ZeroDivisionError:                                                  
             print "Type error: division by 0."
-        except TypeError:
-            # Occurs, if b is e.g, a string
+        except TypeError: # e.g., if b is a string
             print "Type error: division by '{0}'.".format(b)
-        except Exception as e:
-            # Base Exception class to handle any other error
+        except Exception as e: # handle any other error
             print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
-        else:
-            # Executes only, if no exception occured
+        else: # executes if no error occured
             print "No errors"
-        finally:  
-            # Executes if an exception occured or not
+        finally: # Executes always
             if result is None:
                 print "Setting result to 0"
                 result = 0
         
         return result
             
-With this pattern, you are able to handle exceptions based on their by exception-type. Python executes the one except block first that first matches the current exception. Thus, it is recommended to handle specific error types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block. The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. Other than the `else`-block, the `finally`-block excecutes under all circumstances — no matter if an error occured or not. It can be used to clean up your actions in the `try-except`, or, like in this example, to set `result = 0`. Both, the `else`-clause and the `finally`-clause are optional.
+With this pattern, you are able to handle exceptions based on their by exception-type. The first exception type that matches the actual exception is handled first. Thus, it is recommended to handle specific error types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block. The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. Other than the `else`-block, the `finally`-block excecutes under all circumstances — no matter if an error occured or not. It can be used to clean up your actions in the `try-except`, or, like in this example, to set `result = 0`. Both, the `else`-clause and the `finally`-clause are optional.
 
 Implement user defined exceptions
 ---------------------------------

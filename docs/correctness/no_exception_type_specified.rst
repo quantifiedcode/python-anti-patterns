@@ -57,7 +57,7 @@ Handle exceptions with Python's built in `exception types<https://docs.python.or
             
 With this pattern, you are able to handle exceptions based on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is recommended to handle specific exception types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block.
 
-**Cleanup actions**: The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. Other than the `else`-block, the `finally`-block excecutes under all circumstances — no matter if an error occured or not. It can be used to clean up your actions in the `try-except`, or, like in this example, to set `result = 0`. Both, the `else`-clause and the `finally`-clause are optional.
+**Cleanup actions (optional)**: The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. The `finally`-block excecutes under all circumstances — no matter if an error occured or not. It is useful to clean up the `try-except` block.
 
 Implement user defined exceptions
 ---------------------------------

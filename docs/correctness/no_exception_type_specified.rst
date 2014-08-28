@@ -39,15 +39,18 @@ Handle exceptions with Python's built in `exception types<https://docs.python.or
             result = a / b
         except ZeroDivisionError:                                                  
             print "Type error: division by 0."
-        except TypeError: # e.g., if b is a string
+        except TypeError:
+            # E.g., if b is a string
             print "Type error: division by '{0}'.".format(b)
-        except Exception as e: # handle any other error
+        except Exception as e:
+            # handle any other exception
             print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
-        else: # executes if no error occured
+        else:
+            # Excecutes if no exception occured
             print "No errors"
-        finally: # Executes always
+        finally:
+            # Executes always
             if result is None:
-                print "Setting result to 0"
                 result = 0
         
         return result
@@ -75,25 +78,23 @@ In addition to Python's standard exceptions, you can implement your own exceptio
                 raise DivisorTooSmallError
             result = a / b    
         except ZeroDivisionError:
-            # Occurs, if b is zero
             print "Type error: division by 0."
         except TypeError:
-            # Occurs, if b is e.g, a string
+            # E.g., if b is a string
             print "Type error: division by '{0}'.".format(b)
         except DivisorToSmall:
-            # Occurs, if b is below 1
+            # b is below 1
             print "DivisorToSmall error: set result = 1"
             result = 1
         except Exception as e:
-            # Base Exception class to handle any other error
+            # handle any other exception
             print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
         else:
-            # Executes only, if no exception occured
+            # Excecutes if no exception occured
             print "No errors"
         finally:  
-            # Executes if an exception occured or not
+            # Executes always
             if result is None:
-                print "Setting result to 0"
                 result = 0
         
         return result

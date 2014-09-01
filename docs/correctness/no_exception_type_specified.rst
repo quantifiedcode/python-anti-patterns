@@ -79,28 +79,15 @@ In addition to Python's standard exceptions, you can implement your own exceptio
             if b < 1:
                 raise DivisorTooSmallError
             result = a / b    
-        except ZeroDivisionError:
-            print "Type error: division by 0."
-        except TypeError:
-            # E.g., if b is a string
-            print "Type error: division by '{0}'.".format(b)
         except DivisorToSmall:
             # b is below 1
             print "DivisorToSmall error: set result = 1"
             result = 1
-        except Exception as e:
-            # handle any other exception
-            print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
-        else:
-            # Excecutes if no exception occured
-            print "No errors"
-        finally:  
-            # Executes always
-            if result is None:
-                result = 0
+        
+        ...
         
         return result
-    
+
 References
 ==========
 - `PyLint W0701<http://pylint-messages.wikidot.com/messages:w0701>`

@@ -29,6 +29,8 @@ Class method is missing the ``cls`` keyword
 
 In the ``Refrigerator`` class below the method ``print_class_name`` prints the name of the class. We know that ``print_class_name`` is a class method because of the function `decorator <https://docs.python.org/2/glossary.html#term-decorator>`_ ``@classmethod`` preceding it. ``print_class_name`` causes the ``Method has no argument`` error because it is missing the required first argument ``cls``.
 
+.. code:: python
+
     class Refrigerator:
         @classmethod
         def print_class_name():

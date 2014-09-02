@@ -19,11 +19,11 @@ The ``__init__`` method of the ``Rectangle`` class below attempts to return the 
 .. code:: python
 
     class Rectangle:
-      def __init__(self, width, height):
-        self.width = width
-        self.height = height
-        self.area = width * height
-        return self.area
+        def __init__(self, width, height):
+            self.width = width
+            self.height = height
+            self.area = width * height
+            return self.area
 
 Solution(s)
 -----------
@@ -31,15 +31,15 @@ Solution(s)
 Remove the `return` statement from the ``__init__`` method
 ..........................................................
 
-Remove the ``return`` statement that is returning a value other than ``None``.
+Remove the ``return`` statement in the ``__init__`` method that is returning a value.
 
 .. code:: python
 
     class Rectangle:
-      def __init__(self, width, height):
-        self.width = width
-        self.height = height
-        self.area = width * height
+        def __init__(self, width, height):
+            self.width = width
+            self.height = height
+            self.area = width * height
 
 References
 ----------

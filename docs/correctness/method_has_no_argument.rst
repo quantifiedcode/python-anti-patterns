@@ -57,6 +57,8 @@ Add the ``cls`` parameter to the class method
 
 Adding the keyword ``cls`` as the first argument of ``print_class_name`` fixes the ``Method has no argument`` error.
 
+.. code:: python
+
     class Refrigerator:
         @classmethod
         def print_class_name(cls):

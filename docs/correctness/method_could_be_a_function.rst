@@ -26,15 +26,18 @@ In the ``Rectangle`` class below the ``area`` method calculates the area of any 
             self.width = width
             self.height = height
             self.area = width * height    
+        # should be preceded by @staticmethod here
         def area(width, height): # causes "Method could be a function" error
             return width * height
             
 ``area`` causes the ``Method could be a function`` error because it is ambiguous. It does not reference the instance or class using the ``self`` or ``cls`` keywords and it is not preceded by the ``@staticmethod`` decorator.
 
 Class method is not preceded by ``@classmethod`` decorator
-...............................................
+..........................................................
 
 In the ``Rectangle`` class below the ``print_class_name`` method prints the name of the class. Again, Python raises the ``Method could be a function`` error because the method does not reference any class members or methods and is not preceded by the ``@classmethod`` decorator.
+
+Furthermore, the first argument of a class method must be a reference to the class itself.
 
 .. code:: python
 
@@ -43,7 +46,8 @@ In the ``Rectangle`` class below the ``print_class_name`` method prints the name
             self.width = width
             self.height = height
             self.area = width * height     
-        def print_class_name:
+        # should be preceded by @classmethod here
+        def print_class_name: # missing required first argument "cls"
             print "class name: Rectangle"
             
 
@@ -64,22 +68,13 @@ Add the ``@staticmethod`` decorator before the static method
 Add the ``@classmethod`` decorator before the class method
 ..........................................................
 
-.. code:: python
-
-    class Rectangle:
-        @classmethod # clarifies that this is a class method and belongs here
-        def print_class_name:
-            print "Rectangle"
-
-Insert the ``cls`` keyword into the body of the static method
-.............................................................
-
-When possible, adding the keyword ``cls`` to the method is another way to remove the ambiguity that causes the ``Method could be a function`` error.
+All class methods should be preceded by ``@classmethod``. Furthermore, the first argument of any class method must be ``cls``, which is a reference to the class itself.
 
 .. code:: python
 
     class Rectangle:
-        def print_class_name:
+        @classmethod
+        def print_class_name(cls):
             print("class name: %s" % cls) # "class name: Rectangle"
 
 References

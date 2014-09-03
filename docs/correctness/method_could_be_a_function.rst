@@ -57,6 +57,8 @@ Solutions
 Add the ``@staticmethod`` decorator before the static method
 ............................................................
 
+All static methods must be preceded by the ``@staticmethod`` decorator.
+
 .. code:: python
 
     class Rectangle:
@@ -68,7 +70,7 @@ Add the ``@staticmethod`` decorator before the static method
 Add the ``@classmethod`` decorator before the class method
 ..........................................................
 
-All class methods should be preceded by ``@classmethod``. Furthermore, the first argument of any class method must be ``cls``, which is a reference to the class itself.
+All class methods must be preceded by the ``@classmethod`` decorator. Furthermore, the first argument of any class method must be ``cls``, which is a reference to the class itself.
 
 .. code:: python
 

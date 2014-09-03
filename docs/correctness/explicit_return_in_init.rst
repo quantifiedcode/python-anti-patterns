@@ -4,17 +4,17 @@ Explicit return in __init__
 Summary
 -------
 
-The ``__init__`` operation contains a ``return`` statement that returns a value other than ``None``.
+The ``__init__`` method contains a ``return`` statement that returns a value other than ``None``. The purpose of ``__init__`` is to initialize the instance members of a newly-allocated object in memory, not return any values.
 
 Description
 -----------
 
-``__init__`` is a `special Python method <https://docs.python.org/2/reference/datamodel.html#special-method-names>`_. It is automatically called when a class instance is first created. ``__init__`` should only be used to initialize the values of the new class instance. The ``Explicit return in __init__`` error is raised whenever an ``__init__`` method returns any value other than ``None``.
+``__init__`` is a `special Python method <https://docs.python.org/2/reference/datamodel.html#special-method-names>`_ that is automatically called when memory is allocated for a new object. The sole purpose of ``__init__`` is to initialize the values of instance members for the new object. Using ``__init__`` to return a value implies that a program is using ``__init__`` to do something other than initialize the object. This logic should be moved to another instance method and called by the program later, after initialization.
 
 Examples
 ----------
 
-The ``__init__`` method of the ``Rectangle`` class below attempts to return the area of the rectangle within the ``__init__`` method. This will cause the ``Explicit return in __init__`` error because Python does not allow an ``__init__`` statement to return any value other than ``None``.
+The ``__init__`` method of the ``Rectangle`` class below attempts to return the area of the rectangle within the ``__init__`` method. This violates the rule of only using ``__init__`` to initialize instance members.
 
 .. code:: python
 
@@ -23,7 +23,7 @@ The ``__init__`` method of the ``Rectangle`` class below attempts to return the 
             self.width = width
             self.height = height
             self.area = width * height
-            return self.area
+            return self.area # causes "Explicit return in __init__" error
 
 Solutions
 -----------
@@ -40,6 +40,22 @@ Remove the ``return`` statement in the ``__init__`` method that is returning a v
             self.width = width
             self.height = height
             self.area = width * height
+            # return statement removed from here
+
+Move the program logic to another instance method
+.................................................
+
+There is no reason why the ``Rectangle`` class MUST return the area immediately upon initialization. This program logic should be moved to a separate method of the ``Rectangle`` class. The program can call the method later, after the object has successfully initialized.
+
+.. code:: python
+
+    class Rectangle:
+        def __init__(self, width, height):
+            self.width = width
+            self.height = height
+            self.area = width * height
+        def area: # moved the logic for returning area to a separate method
+            return self.area
 
 References
 ----------

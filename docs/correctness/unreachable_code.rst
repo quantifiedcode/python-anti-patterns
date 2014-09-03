@@ -28,8 +28,8 @@ When a new ``Rectangle`` object is created, the instance member ``area`` is supp
             return
             self.area = width * height # never executed
             print self.area # never executed
-    def area(self):
-        return self.area # possibly undefined
+        def area(self):
+            return self.area # possibly undefined
         
     r = Rectangle(5, 12)
     r.area() # undefined
@@ -51,6 +51,11 @@ Initializing the value of ``area`` is important to the correct operation of the 
             self.area = width * height # moved in front of return
             print self.area # moved in front of return, optional
             return
+        def area(self):
+            return self.area # ok now
+        
+    r = Rectangle(5, 12)
+    r.area() # ok now            
 
 Remove unnecessary code
 ...........................

@@ -6,7 +6,7 @@ Summary
 
 The first argument in an instance method must be the keyword ``self``. The first argument in a class method must be the keyword ``cls``.
 
-Example(s)
+Examples
 ----------
 
 Instance method is missing the ``self`` keyword
@@ -36,7 +36,7 @@ In the ``Refrigerator`` class below the method ``print_class_name`` prints the n
         def print_class_name():
         print("Hello, I am %s!" % cls)
 
-Solution(s)
+Solutions
 -----------
 
 Add the ``self`` parameter to the instance method

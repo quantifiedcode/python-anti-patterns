@@ -11,7 +11,7 @@ Description
 
 When a method is not preceded by the ``@staticmethod`` or ``@classmethod`` decorators and does not contain any references to the class (via keywords like ``cls``), Python raises ``Method could be a function`` error because it cannot determine the exact nature of the code. In this scenario the could even be a global function that is not even related to the class; it only appears to be because it is indented like a member of the class.
 
-Example(s)
+Examples
 ----------
 
 Static method is not preceded by ``@staticmethod`` decorator
@@ -68,7 +68,7 @@ The code itself does not contain enough information to indicate that ``print_cla
     def print_class_name:
         print "class name: Rectangle"
 
-Solution(s)
+Solutions
 -----------
 
 Add the ``@staticmethod`` decorator before the static method

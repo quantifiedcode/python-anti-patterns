@@ -10,13 +10,13 @@ Description
 -----------
 
 
-Example(s)
+Examples
 ----------
 
 .. code:: python
 
 
-Solution(s)
+Solutions
 -----------
 
 References

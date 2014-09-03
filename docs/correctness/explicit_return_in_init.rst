@@ -11,7 +11,7 @@ Description
 
 ``__init__`` is a `special Python method <https://docs.python.org/2/reference/datamodel.html#special-method-names>`_. It is automatically called when a class instance is first created. ``__init__`` should only be used to initialize the values of the new class instance. The ``Explicit return in __init__`` error is raised whenever an ``__init__`` method returns any value other than ``None``.
 
-Example(s)
+Examples
 ----------
 
 The ``__init__`` method of the ``Rectangle`` class below attempts to return the area of the rectangle within the ``__init__`` method. This will cause the ``Explicit return in __init__`` error because Python does not allow an ``__init__`` statement to return any value other than ``None``.
@@ -25,7 +25,7 @@ The ``__init__`` method of the ``Rectangle`` class below attempts to return the 
             self.area = width * height
             return self.area
 
-Solution(s)
+Solutions
 -----------
 
 Remove the `return` statement from the ``__init__`` method

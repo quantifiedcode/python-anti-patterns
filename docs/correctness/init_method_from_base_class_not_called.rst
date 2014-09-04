@@ -35,9 +35,9 @@ Derived class does not call base class' ``__init__`` method
     print "first name: %s" % m.get_first_name() # Runtime error! See output below.
     
     # Traceback (most recent call last):
-    #  File "test.py", line 15, in <module>
+    #  File "w0231.py", line 15, in <module>
     #    print "first name: %s" % m.get_first_name()
-    #  File "test.py", line 5, in get_first_name
+    #  File "w0231.py", line 5, in get_first_name
     #    return self.first_name
     # AttributeError: Male instance has no attribute 'first_name'
 

@@ -19,6 +19,21 @@ Derived class does not call base class' ``__init__`` method
 
 .. code:: python
 
+class Person:
+    def __init__(self, first_name):
+        self.first_name = first_name
+    def get_first_name(self):
+        return self.first_name
+
+class Male(Person):
+    def __init__(self, first_name):
+        self.gender = "male"
+    def get_gender(self):
+        return self.gender
+
+m = Male("Ford")
+print "first name: %s" % m.get_first_name()
+
 Solutions
 ---------
 
@@ -26,6 +41,22 @@ Call the base class' ``__init__`` method
 ........................................
 
 .. code:: python
+
+class Person:
+    def __init__(self, first_name):
+        self.first_name = first_name
+    def get_first_name(self):
+        return self.first_name
+
+class Male(Person):
+    def __init__(self, first_name):
+        Person.__init__(self, first_name)
+        self.gender = "male"
+    def get_gender(self):
+        return self.gender
+
+m = Male("Ford")
+print "first name: %s" % m.get_first_name()
     
 References
 ----------

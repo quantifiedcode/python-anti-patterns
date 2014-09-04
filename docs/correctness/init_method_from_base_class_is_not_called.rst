@@ -62,8 +62,8 @@ Call the base class' ``__init__`` method
         def get_gender(self):
             return self.gender
 
-m = Male("Ford")
-print "first name: %s" % m.get_first_name() # "name: Ford"
+    m = Male("Ford")
+    print "first name: %s" % m.get_first_name() # "name: Ford"
     
 References
 ----------

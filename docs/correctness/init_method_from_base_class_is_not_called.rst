@@ -19,20 +19,27 @@ Derived class does not call base class' ``__init__`` method
 
 .. code:: python
 
-class Person:
-    def __init__(self, first_name):
-        self.first_name = first_name
-    def get_first_name(self):
-        return self.first_name
+    class Person:
+        def __init__(self, first_name):
+            self.first_name = first_name
+        def get_first_name(self):
+            return self.first_name
 
-class Male(Person):
-    def __init__(self, first_name):
-        self.gender = "male"
-    def get_gender(self):
-        return self.gender
+    class Male(Person):
+        def __init__(self, first_name):
+            self.gender = "male"
+        def get_gender(self):
+            return self.gender
 
-m = Male("Ford")
-print "first name: %s" % m.get_first_name()
+    m = Male("Ford")
+    print "first name: %s" % m.get_first_name() # Runtime error! See output below.
+    
+    # Traceback (most recent call last):
+    #  File "test.py", line 15, in <module>
+    #    print "first name: %s" % m.get_first_name()
+    #  File "test.py", line 5, in get_first_name
+    #    return self.first_name
+    # AttributeError: Male instance has no attribute 'first_name'
 
 Solutions
 ---------
@@ -42,21 +49,21 @@ Call the base class' ``__init__`` method
 
 .. code:: python
 
-class Person:
-    def __init__(self, first_name):
-        self.first_name = first_name
-    def get_first_name(self):
-        return self.first_name
+    class Person:
+        def __init__(self, first_name):
+            self.first_name = first_name
+        def get_first_name(self):
+            return self.first_name
 
-class Male(Person):
-    def __init__(self, first_name):
-        Person.__init__(self, first_name)
-        self.gender = "male"
-    def get_gender(self):
-        return self.gender
+    class Male(Person):
+        def __init__(self, first_name):
+            Person.__init__(self, first_name)
+            self.gender = "male"
+        def get_gender(self):
+            return self.gender
 
 m = Male("Ford")
-print "first name: %s" % m.get_first_name()
+print "first name: %s" % m.get_first_name() # "name: Ford"
     
 References
 ----------

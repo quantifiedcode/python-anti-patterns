@@ -31,6 +31,7 @@ The class ``Male`` is a descendant of the class ``Person``. Because the ``Male``
 
     class Male(Person):
         def __init__(self, first_name):
+            # ERROR: should call Person.__init__ here
             self.gender = "male"
         def get_gender(self):
             return self.gender

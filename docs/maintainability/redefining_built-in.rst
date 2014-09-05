@@ -56,4 +56,5 @@ Rename the overloaded function
     
 References
 ----------
-- `URL Description <URL>`_
+- `Stack Overflow - Module name redefines built-in <http://stackoverflow.com/questions/3639511/module-name-redefines-built-in>`_
+

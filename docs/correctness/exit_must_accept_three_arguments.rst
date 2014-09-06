@@ -59,8 +59,8 @@ The ``__exit__`` method defined in the ``Rectangle`` class below does not confor
     #     r.divide_by_zero()
     # TypeError: __exit__() takes exactly 1 argument (4 given)
     
-Examples 
---------
+Solutions
+---------
 
 Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is properly called when an exception is raised in the indented block of code following the ``with`` statement. Note that the argument names do not have to exactly match the names provided below. But they must occur in the order provided below.
 

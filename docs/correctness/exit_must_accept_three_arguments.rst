@@ -44,7 +44,8 @@ The ``__exit__`` method defined in the ``Rectangle`` class below does not confor
         def __enter__(self):
             print "in __enter__"
             return self
-        def __exit__(self): # never called because argument signature is wrong
+        def __exit__(self): # never called because 
+                            # argument signature is wrong
             print "in __exit__"
         def divide_by_zero(self): # causes ZeroDivisionError exception
             return self.width / 0
@@ -73,7 +74,7 @@ Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is pro
         def __enter__(self):
             print "in __enter__"
             return self
-        def __exit__(self, exception_type, exception_value, traceback): # never called because argument signature is wrong
+        def __exit__(self, exception_type, exception_value, traceback): 
             print "in __exit__"
         def divide_by_zero(self): # causes ZeroDivisionError exception
             return self.width / 0
@@ -83,10 +84,10 @@ Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is pro
         
     # Output:    
     # "in __enter__"
+    # "in __exit__"
     # Traceback (most recent call last):
     #   File "e0235.py", line 27, in <module>
     #     r.divide_by_zero()
-    # TypeError: __exit__() takes exactly 1 argument (4 given)    
 
 References
 ----------

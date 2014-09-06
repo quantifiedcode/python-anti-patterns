@@ -80,7 +80,7 @@ Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is pro
             return self.width / 0
 
     with Rectangle(3, 4) as r:
-        r.divide_by_zero() # __exit__ should be called but isn't
+        r.divide_by_zero() # exception successfully pass to __exit__
         
     # Output:    
     # "in __enter__"

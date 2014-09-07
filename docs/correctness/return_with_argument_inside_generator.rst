@@ -21,13 +21,13 @@ The ``tokenize`` function below is a generator because it contains the ``yield``
 
 .. code:: python
 
-def tokenize(string):
-    for token in string.split(' '):
-        yield token
-        return "I break everything."  # generator cannot return anything other than None
+    def tokenize(string):
+        for token in string.split(' '):
+            yield token
+            return "I break everything."  # generator cannot return anything other than None
 
-for t in tokenize("This sentence has five tokens."):
-    print t
+    for t in tokenize("This sentence has five tokens."):
+        print t
 
 Solutions
 -----------
@@ -39,13 +39,13 @@ Remove the ``return`` statement from the generator if it is not needed.
 
 .. code:: python
 
-def tokenize(string):
-    for token in string.split(' '):
-        yield token
-        # return statement removed
+    def tokenize(string):
+        for token in string.split(' '):
+            yield token
+            # return statement removed
 
-for t in tokenize("This sentence has five tokens."):
-    print t
+    for t in tokenize("This sentence has five tokens."):
+        print t
 
 Modify the ``return`` statement to return ``None``
 ..................................................
@@ -54,13 +54,13 @@ If the ``return`` statement is needed in the generator, modify it to return ``No
 
 .. code:: python
 
-def tokenize(string):
-    for token in string.split(' '):
-        yield token
-        return None
+    def tokenize(string):
+        for token in string.split(' '):
+            yield token
+            return None
 
-for t in tokenize("This sentence has five tokens."):
-    print t
+    for t in tokenize("This sentence has five tokens."):
+        print t
 
 References
 ----------

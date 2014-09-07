@@ -19,7 +19,7 @@ Description of error
 
 
 
-.. warning:: WARNING! The code below is an example of an error. Using this code will create bugs in your programs!
+.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

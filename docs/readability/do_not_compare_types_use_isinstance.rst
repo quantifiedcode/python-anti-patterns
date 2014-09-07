@@ -37,7 +37,7 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
         
 Note that the following situation will not raise the error.
 
-..code:: python
+.. code:: python
 
     import types
 

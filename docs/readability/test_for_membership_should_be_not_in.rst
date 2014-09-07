@@ -17,7 +17,7 @@ Examples
 Statement uses ``not VALUE in SEQUENCE`` pattern
 ................................................
 
-The ``print`` statement below uses the pattern ``not VALUE in SEQUENCE`` to test if a number is in a list. Although this is valid syntax, the statement is confusing.
+The ``print`` statement below uses the pattern ``not VALUE in SEQUENCE`` to test if a number is in a list. Although this is valid syntax, the statement is confusing. The problem with the statement is its ambiguity. The statement is executed as ``not (VALUE in SEQUENCE)``. However, without parentheses somebody may read it as ``(not VALUE) in SEQUENCE``, which makes no sense in most contexts.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
@@ -26,9 +26,10 @@ The ``print`` statement below uses the pattern ``not VALUE in SEQUENCE`` to test
     target = 3
     sequence = [1, 2, 3, 4, 5]
     
-    print not target in sequence  # confusing syntax
+    print not target in sequence  # Confusing. Does it evaluate to (not target) in sequence
+                                  # or not (target in sequence)?
     # FYI: prints "False" because the target value is indeed a 
-    # member of the sequence
+    # member of the sequence. So it evaluates to not (target in sequence).
 
 Solutions
 ---------

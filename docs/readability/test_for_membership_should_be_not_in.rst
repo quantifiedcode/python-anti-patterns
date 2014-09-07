@@ -17,6 +17,8 @@ Examples
 Statement uses ``not VALUE in SEQUENCE`` pattern
 ................................................
 
+The ``print`` statement below uses the pattern ``not VALUE in SEQUENCE`` to test if a number is in a list. Although this is valid syntax, the statement is confusing.
+
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python

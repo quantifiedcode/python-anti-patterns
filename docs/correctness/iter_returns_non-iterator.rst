@@ -74,3 +74,4 @@ References
 ----------
 - `The Python Tutorial - Iterators <https://docs.python.org/3/tutorial/classes.html#iterators>`_
 - `The Python Language Reference - Iterator Types <https://docs.python.org/2/library/stdtypes.html#iterator-types>`_
+- `Stack Overflow - Understanding Python's Iterator, Iterable, and Iteration Protocols <http://stackoverflow.com/questions/9884132/understanding-pythons-iterator-iterable-and-iteration-protocols-what-exact>`_

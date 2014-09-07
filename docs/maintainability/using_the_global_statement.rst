@@ -25,25 +25,30 @@ The module below uses global variables and a function to compute the area and pe
 
 .. code:: python
 
-    WIDTH = 0
-    HEIGHT = 0
+    WIDTH = 0 # global variable
+    HEIGHT = 0 # global variable
 
     def area(w, h):
-        global WIDTH
-        global HEIGHT
+        global WIDTH # global statement
+        global HEIGHT # global statement
         WIDTH = w
         HEIGHT = h
         return WIDTH * HEIGHT
+        
+    def perimeter(w, h):
+        global WIDTH # global statement
+        global HEIGHT # global statement
+        WIDTH = w
+        HEIGHT = h
+        return ((WIDTH * 2) + (HEIGHT * 2))        
 
-    print "Before area()"
-    print "WIDTH:" , WIDTH
-    print "HEIGHT:" , HEIGHT
+    print "WIDTH:" , WIDTH # "WIDTH: 0"
+    print "HEIGHT:" , HEIGHT # "HEIGHT: 0"
 
-    print "area():" , area(3, 4)
+    print "area():" , area(3, 4) # "area(): 12"
 
-    print "After area()"
-    print "WIDTH:" , WIDTH
-    print "HEIGHT:" , HEIGHT
+    print "WIDTH:" , WIDTH # "WIDTH: 3"
+    print "HEIGHT:" , HEIGHT # "HEIGHT: 4"
 
 
 Solutions
@@ -67,6 +72,7 @@ One common solution for avoiding global variables is to create a class and store
             return ((self.width * 2) + (self.height * 2))
             
     r = Rectangle(3, 4)        
+    print "area():" , r.area()
     
 References
 ----------

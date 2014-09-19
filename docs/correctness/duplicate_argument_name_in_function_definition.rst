@@ -4,44 +4,46 @@ Duplicate argument name in function definition
 Summary
 -------
 
-Two arguments in a function definition have the same name. Rename the arguments to unique names, or else Python will raise a syntax error and the program will not execute.
+Two or more parameters in a function definition have the exact same name. Give each parameter a unique name or else Python will raise a ``SyntaxError`` at runtime and the program will not execute.
 
 Description
 -----------
 
-Having two or more arguments with the same name creates unresolvable ambiguity for the Python interpreter. Whenever the arguments with the same name are referenced in the function definition, Python cannot resolve exactly which argument is being referenced. As a result, Python returns a syntax error and the program cannot execute.
+When two or more parameters have the same name in a function definition, Python cannot resolve which parameter is being referenced whenever that name is used. The only solution to this situation is to give each name a unique meaning. This is a good programming practice in general; names should not be overloaded with multiple meanings.
 
 Examples
 ----------
 
-Two arguments in function definition have same name
-...................................................
+Multiple parameters have same name in function definition
+.........................................................
 
-The function ``multiply`` multiplies the two numbers passed as arguments and returns the product of the multiplication. Because both arguments are named ``n`` the Python interpreter cannot determine which argument is being referenced whenever the argument ``n`` is used in the function definition.
+The ``print_string`` function below attempts to use two parameters, both of which are called ``string``. Because Python cannot figure out which parameter is being used whenever the name ``string`` is used in the function definition, it raises a ``SyntaxError`` and does not execute the function.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 
-    def multiply(n, n): # syntax error
-        return n * n # Python cannot resolve which n is being referenced (arg 1 or arg 2?)
-    
-    multiply(3, 2) # 3 * 3, or 3 * 2, or 2 * 2?
+    def print_string(string, string):
+        print string  # parameter one or two? Python cannot resolve.
+        print string
+
+    print_string("A", "B")  # print out "A" or "B"? Python cannot resolve.
 
 Solutions
 ---------
 
-Rename the arguments to unique names
-....................................
+Make each parameter name unique
+...............................
 
-The only solution for duplicate argument names is giving each argument a unique name. In the ``multiply`` function the two arguments have been given the unique names ``a`` and ``b``.
+In the modified module below, the parameters have been given unique names to fix the ``Duplicate argument name in function definition`` error.
 
 .. code:: python
 
-    def multiply(a, b): # unique names
-        return a * b # no more ambiguity
-    
-    multiply(3, 2) # returns 6
+    def print_string(string_one, string_two):
+        print string_one
+        print string_two
+
+    print_string("A", "B")
     
 References
 ----------

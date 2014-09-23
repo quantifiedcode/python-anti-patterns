@@ -39,5 +39,15 @@ Now that the format string contains the same number of replacement fields (two) 
     numbers = "{:d} {:d}".format(1, 2)  # removed the third argument
     print numbers
     
+Add more replacement fields
+...........................
+
+The modified module below adds another replacement field to the string literal to match the number of arguments passed to ``format()``.
+
+.. code:: python
+
+    numbers = "{:d} {:d} {:d}".format(1, 2, 3)  # added a third replacement field
+    print numbers
+
 References
 ----------

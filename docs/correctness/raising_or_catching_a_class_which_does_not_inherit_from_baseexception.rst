@@ -1,5 +1,5 @@
-Catching an exception which does not inherit from ``BaseException``
-===================================================================
+Raising or catching a class which does not inherit from ``BaseException``
+=========================================================================
 
 Summary
 -------

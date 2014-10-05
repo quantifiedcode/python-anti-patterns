@@ -7,10 +7,5 @@ Use the following patterns to reduce overhead and make your code more performant
 .. toctree::
     :maxdepth: 1
 
-..
-    Map, reduce and filter <map_reduce_filter>
-    List comprehensions <list_comprehensions>
-    Dictionaries for Element Lookup <dictionaries_vs_lists>
-    Numerical Libraries <numerical_libraries>
-    Using C Code <using_c_code>
+    using_key_in_list_to_check_if_key_is_contained_in_a_list
 

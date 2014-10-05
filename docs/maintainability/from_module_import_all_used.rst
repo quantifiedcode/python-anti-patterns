@@ -1,5 +1,5 @@
-``From module import *``; unable to detect undefined names
-==========================================================
+From module import *; unable to detect undefined names
+======================================================
 
 Summary
 -------
@@ -37,7 +37,7 @@ The ``import`` statement should be refactored to be more specific about what fun
 
     from math import ceil
 
-    
+
 References
 ----------
 - `Stack Overflow - Importing Modules <http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much>`_

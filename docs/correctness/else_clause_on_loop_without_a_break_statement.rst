@@ -57,4 +57,5 @@ If the ``else`` clause should not always execute at the end of a loop clause, th
     
 References
 ----------
+- PyLint - W0120
 - `Python Standard Library - else Clauses on Loops <https://docs.python.org/2/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops>`_

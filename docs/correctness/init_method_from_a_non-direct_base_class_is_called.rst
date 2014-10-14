@@ -59,3 +59,4 @@ Upon reviewing the class implementations, the author decides that ``Square`` sho
 
 References
 ----------
+- PyLint - W0233

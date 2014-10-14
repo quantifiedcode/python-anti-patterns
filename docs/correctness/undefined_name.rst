@@ -68,3 +68,4 @@ Implementing the undefined name as some type of object (variable, function, etc.
  
 References
 ----------
+- Pyflakes - F821

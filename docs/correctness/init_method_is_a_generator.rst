@@ -55,4 +55,5 @@ To suppress the ``__init__ method is a generator`` error the author modifies the
 
 References
 ----------
+- PyLint - E0100
 - `Stack Overflow - What does the yield keyword do in Python? <http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python>`_

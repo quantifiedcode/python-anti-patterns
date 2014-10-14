@@ -47,5 +47,6 @@ The ``NotImplemented raised, should raise NotImplementedError`` is suppressed on
 
 References
 ----------
+- PyLint - E0711
 - `Python Standard Library - Built-In Exceptions <https://docs.python.org/2/library/exceptions.html#exceptions.NotImplementedError>`_
 - `Python Standard Library - Built-In Constants <https://docs.python.org/2/library/constants.html#NotImplemented>`_

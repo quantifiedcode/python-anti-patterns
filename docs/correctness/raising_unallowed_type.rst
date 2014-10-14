@@ -43,3 +43,4 @@ The object type proceeding the ``raise`` keyword should be a class, instance, or
 
 References
 ----------
+- PyLint - E0702

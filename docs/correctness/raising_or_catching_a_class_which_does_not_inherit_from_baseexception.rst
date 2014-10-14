@@ -76,5 +76,7 @@ If the raised class cannot be modified, then the class should not be raised to h
 
 References
 ----------
+- PyLint - E0710
+- PyLint - E0712
 - `Python Standard Library - Exceptions <https://docs.python.org/2/library/exceptions.html>`_
 - `PEP 352 - Required Superclass for Exceptions <http://legacy.python.org/dev/peps/pep-0352/>`_

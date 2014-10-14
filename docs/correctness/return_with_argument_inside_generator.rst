@@ -64,6 +64,5 @@ If the ``return`` statement is needed in the generator, modify it to return ``No
 
 References
 ----------
-
 - `PyLint - E0106 <http://pylint-messages.wikidot.com/messages:e0106>`_
 - `Stack Overflow - Python SyntaxError: (“'return' with argument inside generator”) <http://stackoverflow.com/questions/15809296/python-syntaxerror-return-with-argument-inside-generator>`_

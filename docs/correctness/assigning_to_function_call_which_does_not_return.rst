@@ -45,3 +45,4 @@ Upon reviewing the module, the author realized that the ``hello`` function was n
 
 References
 ----------
+- Pylint - E1111

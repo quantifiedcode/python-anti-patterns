@@ -82,4 +82,5 @@ If the author of the class decides that it is accessible to directly access the 
 
 References
 ----------
+- PyLint - W0212
 - `Python Standard Library - property([fget[, fset[, fdel[, doc]]]]) <https://docs.python.org/2/library/functions.html#property>`_

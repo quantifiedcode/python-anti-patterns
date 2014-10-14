@@ -79,3 +79,4 @@ In the modified module below, the ``Dog`` class has removed the second argument 
 
 References
 ----------
+- Pylint - W0221

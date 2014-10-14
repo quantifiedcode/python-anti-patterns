@@ -47,3 +47,4 @@ In the modified module below, the parameters have been given unique names to fix
     
 References
 ----------
+- Pyflakes - F831

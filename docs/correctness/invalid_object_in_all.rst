@@ -63,3 +63,4 @@ The modified module below suppresses the ``Invalid object in __all__`` error by 
     
 References
 ----------
+- PyLint - E0604

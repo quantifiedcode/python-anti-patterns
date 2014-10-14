@@ -59,3 +59,4 @@ Specifying a default value for arguments is another way to suppress the ``No val
 
 References
 ----------
+- PyLint - E1120

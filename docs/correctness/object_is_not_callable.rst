@@ -54,4 +54,5 @@ Another way to fix the ``object is not callable`` error is to use more specific 
 
 References
 ----------
+- PyLint - E1102
 - `Stack Overflow - What is a callable? <http://stackoverflow.com/questions/111234/what-is-a-callable-in-python>`_

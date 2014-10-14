@@ -76,3 +76,4 @@ The updated module below suppresses the ``class has no member`` error by using k
 
 References
 ----------
+- Pylint - E1101

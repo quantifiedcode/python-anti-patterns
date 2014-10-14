@@ -62,3 +62,4 @@ The ``redefining name from outer scope`` error can be suppressed by renaming the
     
 References
 ----------
+- PyLint - W0621

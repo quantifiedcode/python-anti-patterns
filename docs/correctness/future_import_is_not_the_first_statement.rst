@@ -56,5 +56,6 @@ In the modified module below, the author decides that the module needs the new f
     
 References
 ----------
+- PyLint - W0410
 - `Simeon Visser - How does 'from __future__ import ...' work? <http://simeonvisser.com/posts/how-does-from-future-import-work-in-python.html>`_
 - `Python Standard Library - __future__ <https://docs.python.org/2/library/__future__.html>`_

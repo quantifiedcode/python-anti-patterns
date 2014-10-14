@@ -58,3 +58,4 @@ Fixing the function invocation of ``print_name`` to match the number of argument
     
 References
 ----------
+- PyLint - E1121

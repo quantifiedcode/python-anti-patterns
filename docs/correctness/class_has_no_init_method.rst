@@ -51,3 +51,4 @@ Upon reviewing the code, the author created an empty ``__init__`` method to expl
 
 References
 ----------
+- Pylint - W0232

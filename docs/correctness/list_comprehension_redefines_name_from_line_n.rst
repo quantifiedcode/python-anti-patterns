@@ -46,3 +46,4 @@ The potential problem of inadvertently altering variables is fixed by using uniq
 References
 ----------
 - `Python For Beginners <http://www.pythonforbeginners.com/basics/list-comprehensions-in-python>`_
+- PyFlakes - F812

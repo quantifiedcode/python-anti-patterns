@@ -90,4 +90,6 @@ The modified module below suppresses the ``yield outside function`` by replacing
 
 References
 ----------
+- PyLint - E0104
+- PyLint - E0105
 - `Stack Overflow - What does yield do? <http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python>`_

@@ -76,4 +76,5 @@ In the modified module below, the ``Square`` class has concretely implemented th
 
 References
 ----------
+- PyLint - W0223
 - `Stack Overflow - Abstract Methods in Python <http://stackoverflow.com/questions/4382945/abstract-methods-in-python>`_

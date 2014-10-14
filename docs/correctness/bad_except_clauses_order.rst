@@ -49,3 +49,4 @@ The modified module below places the ``ZeroDivisionError`` exception clause in f
 
 References
 ----------
+- Pylint - E0701

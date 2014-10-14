@@ -57,4 +57,5 @@ In the example below the modified version of the function ``print_number`` now s
 
 References
 ----------
+- PyLint - E1123
 - `Python Language Reference - Keyword Arguments <https://docs.python.org/2/tutorial/controlflow.html?highlight=keyword%20argument#keyword-arguments>`_

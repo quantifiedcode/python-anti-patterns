@@ -47,3 +47,4 @@ The modified module below resolves the problem by making the parameter names uni
     
 References
 ----------
+PyLint - E1124

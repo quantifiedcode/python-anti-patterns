@@ -45,3 +45,4 @@ To suppress the ``Local variable name referenced before assignment`` error, plac
     
 References
 ----------
+- Pyflakes - F823

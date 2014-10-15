@@ -63,7 +63,7 @@ When a calling module provides invalid data to a function, or a precondition to 
     try:
         secret_code = get_secret_code("unicycle")
         print "The secret code is {}".format(secret_code)
-    except ve as ValueError:
+    except ValueError:
         print "Wrong password."
 
 References

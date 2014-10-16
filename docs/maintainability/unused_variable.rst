@@ -60,3 +60,4 @@ After receiving the ``unused variable`` error the author reviews the section of 
     
 References
 ----------
+- PyLint - W0612

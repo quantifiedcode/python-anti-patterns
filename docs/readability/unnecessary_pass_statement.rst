@@ -42,5 +42,5 @@ Removing the ``pass`` statement suppresses the ``Unnecessary pass statement`` er
 
 References
 ----------
-- `PyLint <http://pylint-messages.wikidot.com/messages:w0107>`_
+- `PyLint - W0107 <http://pylint-messages.wikidot.com/messages:w0107>`_
 - `Python Language Reference <https://docs.python.org/3/reference/simple_stmts.html#the-pass-statement>`_

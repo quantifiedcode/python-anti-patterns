@@ -53,3 +53,4 @@ References
 ----------
 - `PEP8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 - `Stack Overflow - What is more 'pythonic' for 'not'? <http://stackoverflow.com/questions/17659303/what-is-more-pythonic-for-not>`_
+- pep8 - E713

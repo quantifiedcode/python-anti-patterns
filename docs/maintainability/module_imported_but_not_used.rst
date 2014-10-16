@@ -59,3 +59,4 @@ In the modified version of the module below, the module now uses ``math.floor`` 
     
 References
 ----------
+- Pyflakes - F401

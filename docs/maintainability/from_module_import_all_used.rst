@@ -41,3 +41,5 @@ The ``import`` statement should be refactored to be more specific about what fun
 References
 ----------
 - `Stack Overflow - Importing Modules <http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much>`_
+- PyFlakes - F403
+

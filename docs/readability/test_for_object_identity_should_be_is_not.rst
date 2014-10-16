@@ -42,3 +42,4 @@ Refactor the statement to the more readable ``OBJECT is not CLASS`` pattern.
 References
 ----------
 - `PEP8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
+- pep8 - E714

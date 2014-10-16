@@ -41,3 +41,4 @@ In the modified module below the second, duplicate entry for ``gmt`` has been de
 
 References
 ----------
+- PyLint - W0109

@@ -47,3 +47,4 @@ The modified module below indents the statement ``s.append(n)`` to clarify that 
 
 References
 ----------
+- PyLint - W0631

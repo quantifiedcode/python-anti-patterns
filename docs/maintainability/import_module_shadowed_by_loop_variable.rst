@@ -53,3 +53,4 @@ A for loop variable should never use the name of an imported module. In the modi
     
 References
 ----------
+- Pyflakes - F402

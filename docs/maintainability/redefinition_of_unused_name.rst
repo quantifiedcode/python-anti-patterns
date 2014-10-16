@@ -61,3 +61,4 @@ Another way to suppress the ``redefinition of unused name`` error is to remove t
 
 References
 ----------
+- Pyflakes - F811

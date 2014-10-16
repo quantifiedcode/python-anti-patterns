@@ -58,3 +58,4 @@ If the variable is a reminder of some part of the function that still needs to b
 
 References
 ----------
+- Pyflakes - F841

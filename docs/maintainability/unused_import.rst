@@ -56,3 +56,4 @@ Upon reviewing the module, the author realized that he forgot to implement a por
 
 References
 ----------
+- PyLint - W0611

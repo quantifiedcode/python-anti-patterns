@@ -44,3 +44,4 @@ The modified module below has replaced the wildcard import with explicit imports
 References
 ----------
 - `PEP 20 - The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_
+- PyLint - W0614

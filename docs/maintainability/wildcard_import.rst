@@ -55,3 +55,4 @@ References
 ----------
 - `Stack Overflow - Should wildcard import be avoided? <http://stackoverflow.com/questions/3615125/should-wildcard-import-be-avoided>`_
 - `PEP8 Style Guide - Imports <http://legacy.python.org/dev/peps/pep-0008/#imports>`_
+- PyLint - W0401

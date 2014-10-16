@@ -51,3 +51,4 @@ The modified module below adds another replacement field to the string literal t
 
 References
 ----------
+- PyLint - E1305

@@ -47,4 +47,5 @@ The modified module below has removed the unnecessary lambda and just calls the 
     
 References
 ----------
+- PyLint - W0108
 - `Oliver Fromme <http://www.secnetix.de/olli/Python/lambda_functions.hawk>`_

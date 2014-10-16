@@ -61,3 +61,4 @@ If the object is private (meaning it should not be listed in ``__all__`` or if t
 References
 ----------
 - `Stack Overflow - Can someone explain __all__ in Python? <http://stackoverflow.com/questions/44834/can-someone-explain-all-in-python>`_
+- Pyflakes - F822

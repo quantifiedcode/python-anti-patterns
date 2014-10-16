@@ -41,6 +41,6 @@ In most scenarios, you can easily refactor the code to avoid the use of ``exec``
 
 References
 ----------
-- `PyLint - Use of exec <http://pylint-messages.wikidot.com/messages:w0122>`_
+- `PyLint - W0122 <http://pylint-messages.wikidot.com/messages:w0122>`_
 - `Python Language Reference - The exec statement <https://docs.python.org/2/reference/simple_stmts.html#the-exec-statement>`_
 - `Stack Overflow - Why should exec() and eval() be avoided? <http://stackoverflow.com/questions/1933451/why-should-exec-and-eval-be-avoided>`_

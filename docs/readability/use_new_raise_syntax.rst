@@ -48,3 +48,4 @@ The updated module has replaced the old style ``raise`` statement ``raise Except
 References
 ----------
 - `PEP 3109 - Raising Exceptions in Python 3 <http://legacy.python.org/dev/peps/pep-3109/>`_
+- PyLint - W0121

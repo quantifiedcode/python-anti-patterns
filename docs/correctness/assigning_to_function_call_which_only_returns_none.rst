@@ -66,3 +66,4 @@ To achieve the desired result of printing "hello" to the screen, the ``hello`` f
 References
 ----------
 - `Stack Overflow - Assigning a function to a variable <http://stackoverflow.com/questions/10354163/assigning-a-function-to-a-variable>`_
+- `PyLint - W1111 <http://pylint-messages.wikidot.com/messages:w1111>`_

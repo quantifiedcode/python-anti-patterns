@@ -77,3 +77,4 @@ One common solution for avoiding global variables is to create a class and store
 References
 ----------
 - `Cunningham & Cunningham, Inc. - Global Variables Are Bad <http://c2.com/cgi/wiki?GlobalVariablesAreBad>`_
+- PyLint - W0603

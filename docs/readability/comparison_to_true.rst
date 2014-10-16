@@ -59,3 +59,4 @@ The code below refactors the comparison to ``True`` to use the PEP 8 preferred p
 References
 ----------
 - `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
+- pep8 - E712

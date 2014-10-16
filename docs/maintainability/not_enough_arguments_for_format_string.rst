@@ -51,3 +51,4 @@ The modified module below adds a second argument to ``format()``.
 
 References
 ----------
+- PyLint - E1306

@@ -4,12 +4,12 @@ Not using named tuples when returning more than one value from a function
 Summary
 -------
 
-Use named tuples when returning more than one value from a function. This makes code easier to read and makes the data easier to access, as each value can be accessed via a name in addition to an index.
+Use `named tuples <http://stackoverflow.com/questions/2970608/what-are-named-tuples-in-python>`_ when returning more than one value from a function. This makes code easier to read and makes the data easier to access, as each value can be accessed via a name in addition to an index.
 
 Description
 -----------
 
-Named tuples can be used anywhere where normal tuples are acceptable, but their values can be accessed through their name in addition to their index, which makes code more verbose and easier to read.
+Named tuples can be used anywhere where normal tuples are acceptable, but their values can be accessed through their names in addition to their indexes. This makes the code more verbose and readable.
 
 Examples
 ----------
@@ -28,7 +28,7 @@ The module below returns a first name, middle name, and last name using a normal
 
     name = get_name()
 
-    print name[0], name[1], name[2]  # ('Richard', 'Xavier', 'Jones')  # hard to read
+    print name[0], name[1], name[2]  # no idea what these indexes map to!
 
 Solutions
 ---------

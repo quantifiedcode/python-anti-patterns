@@ -9,7 +9,7 @@ This error is raised when parentheses are encountered after any of the following
 Description
 -----------
 
-Wrapping expressions in parentheses is a common style convention in C or Java, but it is not necessary in Python. Python style conventions prefer that you remove the parentheses when they are not needed. You should ignore this error if the expression performs a complicated computation and the parentheses help clarify the order of oprations.
+Wrapping expressions in parentheses is a common style convention in C or Java, but it is not necessary in Python. Python style conventions prefer that you remove the parentheses when they are not needed. You should ignore this error if the expression performs a complicated computation and the parentheses help clarify the order of operations.
 
 Examples
 ----------
@@ -17,7 +17,7 @@ Examples
 Unnecessary parentheses in ``return`` statement
 ...............................................
 
-The ``area`` function below computes the area of a rectangle. The author of the function wrapped the statement ``width * height`` after the keyword ``return`` in parentheses. Python raises the ``Unnecessary parens after keyword`` because of the parentheses after the ``return`` keyword.
+The ``area`` function below computes the area of a rectangle. The return value is wrapped in parentheses, which is unnecessary. 
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
@@ -32,7 +32,7 @@ Solutions
 Remove the parentheses
 ......................
 
-The author of the module concluded that the parentheses in the return statement of the ``area`` function were unnecessary. To improve the readability of the code the author removed the parentheses.
+The modified function below removes the unnecessary parentheses in the ``return`` statement.
 
 .. code:: python
 

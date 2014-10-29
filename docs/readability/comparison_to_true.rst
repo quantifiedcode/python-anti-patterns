@@ -15,7 +15,7 @@ Examples
 ----------
 
 Statement compares value to ``True`` using ``==``
-....................
+..................................................
 
 The statement below uses the equality operator to compare a boolean variable to ``True``. This is not the PEP 8 preferred approach to comparing values to ``True``.
 
@@ -35,7 +35,7 @@ Solutions
 Compare values to ``True`` using the pattern ``if cond is True:``
 .................................................................
 
-The code below refactors the comparison to ``True`` to use the PEP 8 preferred pattern of ``if cond is True:``.
+The code below uses the PEP 8 preferred pattern of ``if cond is True:``.
 
 .. code:: python
 
@@ -47,7 +47,7 @@ The code below refactors the comparison to ``True`` to use the PEP 8 preferred p
 Compare values to ``True`` using the pattern ``if cond is True:``
 .................................................................
 
-The code below refactors the comparison to ``True`` to use the PEP 8 preferred pattern of ``if cond:``. This only works if the object, variable, or expression evaluates to a Boolean value of ``True`` or ``False``.
+The code below uses the PEP 8 preferred pattern of ``if cond:``. This only works if the object, variable, or expression evaluates to a Boolean value of ``True`` or ``False``.
 
 .. code:: python
 
@@ -58,5 +58,5 @@ The code below refactors the comparison to ``True`` to use the PEP 8 preferred p
 
 References
 ----------
-- `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 - pep8 - E712
+- `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_

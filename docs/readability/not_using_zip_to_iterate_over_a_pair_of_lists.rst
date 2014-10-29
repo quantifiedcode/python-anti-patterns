@@ -17,7 +17,7 @@ Examples
 For loop does not use ``zip()`` to iterate through a pair of lists
 ..................................................................
 
-The module below defines a variable ``i`` which serves as an index variable for iterating through two lists. Within the for loop the module accesses the corresponding value for each list by using the index variable. This is a common way for iterating through two lists, but it is not the preferred way in python.
+The module below defines a variable ``index`` which serves as an index variable for iterating through two lists. Within the for loop the module accesses the corresponding value for each list by using the index variable. This is a common way for iterating through two lists, but it is not the preferred way in Python.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

@@ -17,7 +17,7 @@ Examples
 Using type notation in variable names
 .....................................
 
-The module below demonstrates the dangers of variables whose names include type notation. Just because a variable is called ``n_int`` does not mean that the variable actually contains an integer for its value.
+The module below demonstrates the dangers of variables whose names include type notation. Just because a variable is called ``n_int`` does not mean that the variable is actually an integer.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
@@ -40,7 +40,7 @@ Although the modifed module below does not fix the underlying problem of attempt
 
     n = "Hello, World!"
 
-    4 / n  # still a problem, but less likely to occur now
+    4 / n  # still a problem, but less misleading now
     
 References
 ----------

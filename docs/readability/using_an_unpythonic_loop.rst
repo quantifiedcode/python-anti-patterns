@@ -11,7 +11,7 @@ index and list element simultaneously.
 Description
 -----------
 
-`PEP 20 <http://legacy.python.org/dev/peps/pep-0020/>`_ states "There should be one-- and preferably only one --obvious way to do it." Creating a loop that uses an incrementing index to access each element of a list within the loop construct is not the preferred style for accessing each element in a list. The preferred style is to use ``enumerate()`` to simultaneously retrieve the index and list element simultaneously. 
+`PEP 20 <http://legacy.python.org/dev/peps/pep-0020/>`_ states "There should be one-- and preferably only one --obvious way to do it." Creating a loop that uses an incrementing index to access each element of a list within the loop construct is not the preferred style for accessing each element in a list. The preferred style is to use ``enumerate()`` to simultaneously retrieve the index and list element. 
 
 Examples
 ----------

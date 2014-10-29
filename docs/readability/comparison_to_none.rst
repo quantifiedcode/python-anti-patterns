@@ -15,7 +15,7 @@ Examples
 ----------
 
 Statement compares value to ``None`` using ``==``
-....................
+.................................................
 
 The statement below uses the equality operator to compare a variable to ``None``. This is not the PEP 8 preferred approach to comparing values to ``None``.
 
@@ -35,7 +35,7 @@ Solutions
 Compare values to ``None`` using the pattern ``if cond is None``
 .................................................................
 
-The code below refactors the comparison to ``None`` to use the PEP 8 preferred pattern of ``if cond is None``.
+The code below uses the PEP 8 preferred pattern of ``if cond is None``.
 
 .. code:: python
 
@@ -47,5 +47,5 @@ The code below refactors the comparison to ``None`` to use the PEP 8 preferred p
     
 References
 ----------
-- `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 - pep8 - E711
+- `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_

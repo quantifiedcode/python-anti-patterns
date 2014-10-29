@@ -4,7 +4,7 @@ Not using ``items()`` to iterate over a dictionary
 Summary
 -------
 
-``items()`` is the preferred way to iterate through the key-value pairs of a dictionary. Although there are other valid ways to iterate through a dictionary, this is the most concise way, and you can improve code readability by using the method which is most familiar to the most Python programmers.
+``items()`` is the preferred way to iterate through the key-value pairs of a dictionary. Although there are other valid ways to iterate through a dictionary, this is the most concise and common way.
 
 Description
 -----------
@@ -17,16 +17,16 @@ Examples
 For loop does not use ``items()`` to iterate across dictionary
 ...............................................................
 
-The module below defines a for loop that iterates over a dictionary named ``d``. For each loop iteration Python automatically assigns the value of ``k`` to the name of the next key in the dictionary. Inside of the ``for`` loop the module uses ``k`` to access the value of each key of the dictionary. This is a common way for iterating over a dictionary, but it is not the preferred way in Python.
+The module below defines a for loop that iterates over a dictionary named ``d``. For each loop iteration Python automatically assigns the value of ``key`` to the name of the next key in the dictionary. Inside of the ``for`` loop the module uses ``key`` to access the value of each key of the dictionary. This is a common way for iterating over a dictionary, but it is not the preferred way in Python.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 
-    dictionary = {"first_name": "Alfred", "last_name":"Hitchcock"}
+    d = {"first_name": "Alfred", "last_name":"Hitchcock"}
 
-    for key in dictionary:
-        print "%s = %s".format(key, dictionary[key])
+    for key in d:
+        print "%s = %s".format(key, d[key])
 
 Solutions
 ---------
@@ -38,10 +38,10 @@ The updated module below demonstrates the Pythonic style for iterating through a
 
 .. code:: python
 
-    dictionary = {"first_name": "Alfred", "last_name":"Hitchcock"}
+    d = {"first_name": "Alfred", "last_name":"Hitchcock"}
     
-    for key,value in dictionary.items():
-        print "%s = %s".format(key, value)
+    for key,val in dictionary.items():
+        print "%s = %s".format(key, val)
     
 References
 ----------

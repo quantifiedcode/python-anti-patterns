@@ -9,7 +9,7 @@ A docstring for a module, function, class, or method is either missing or empty.
 Description
 -----------
 
-Docstrings help you remember the intention of a module, function, class, or method. This is especially important as your codebase grows and it becomes harder to remember the implemenation details of each object.
+Docstrings help you remember the intention of a module, function, class, or method. This is especially important as your codebase grows and it becomes harder to remember the implementation details of each object.
 
 Examples
 ----------
@@ -17,13 +17,13 @@ Examples
 Function missing docstring
 ..........................
 
-The function below contains no docstring describing its purpose. If you had access to the implementation of the function, then you could tell that it is a function for computing the area of a rectangle. However, if you did not have access to the function implemenation and only had access to the function signature (``def area(width, height):``), you wouldn't be able to tell whether this function computes the area of a triangle or a rectangle. Without a docstring, it is more difficult to understand what this function is used for.
+The function below contains no docstring describing its purpose. If you didn't have access to the function implementation and only had access to the function signature (i.e. ``def area(width, height)``), you wouldn't be able to tell whether this function computes the area of a triangle or a rectangle.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 
-    def area(width, height):
+    def area(width, height):  # no docstring, bad
         return width * height
 
 Solutions

@@ -4,12 +4,12 @@ Not using a dict comprehension
 Summary
 -------
 
-For Python versions 2.6 and below, a common way to initialize a dict was to pass an iterable of key-value pairs in the dict's constructor (e.g. ``d = dict((key, value) for (key, value) in iterable)``). However, in Python 2.7 and beyond, a new syntax called dict comprehension (e.g. ``d = {key: value for (key, value) in iterable}``) was introduced which is generally more readable and is now the preferred style. Use the new syntax whenever possible.
+For Python versions 2.6 and below, a common way to initialize a dict is to pass an iterable of key-value pairs in the dict's constructor (e.g. ``d = dict((key, value) for (key, value) in iterable)``). However, in Python 2.7 and beyond, a new syntax called dict comprehension (e.g. ``d = {key: value for (key, value) in iterable}``) is available. Dict comprehension is generally more readable and is now the preferred style. Use dict comprehension whenever possible.
 
 Description
 -----------
 
-You may encounter the old style of initializing a dict by passing an iterable of key-value pairs in older Python code that was written before version 2.7. The new dict comprehension style is functionally equivalent and is much more readable. Consider refactoring the code to use the new style, assuming that you are now using Python 2.7 or higher.
+You may encounter the old style of initializing a dict (passing an iterable of key-value pairs) in older Python code written before version 2.7. The new dict comprehension style is functionally equivalent and is much more readable. Consider refactoring the old-style code to use the new style (but only if you are using Python 2.7 or higher).
 
 Examples
 ----------
@@ -17,7 +17,7 @@ Examples
 Not using dict comprehension
 ............................
 
-The module below demonstrates the old syntax of initializing a dict via an iterable of key-value pairs. Although there is nothing wrong with this code, it is somewhat hard to read.
+The module below demonstrates the old syntax of dict initialization. Although there is nothing syntactically wrong with this code, it is somewhat hard to read.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

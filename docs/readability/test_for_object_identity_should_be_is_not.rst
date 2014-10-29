@@ -19,7 +19,7 @@ Examples
 Statement uses ``not OBJECT is CLASS`` pattern
 ................................................
 
-The statement below compares an object with the name of ``rectangle`` to a class with the name of ``Circle``. It is evaluated as ``if not (rectangle is Circle)`` but could easily be interpreted as ``if (not rectangle) is Circle``, which probably makes no sense in the context of the program. This code is needlessly confusing.
+The statement below compares an object with the name of ``rectangle`` to a class with the name of ``Circle``. It is evaluated as ``if not (rectangle is Circle)`` but could easily be interpreted as ``if (not rectangle) is Circle``, which probably makes no sense in the context of the program. 
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
@@ -41,5 +41,5 @@ Refactor the statement to the more readable ``OBJECT is not CLASS`` pattern.
     
 References
 ----------
-- `PEP8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 - pep8 - E714
+- `PEP8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_

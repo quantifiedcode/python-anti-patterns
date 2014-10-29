@@ -14,10 +14,10 @@ The ``pass`` statement should only be used to signify that a function or control
 Examples
 ----------
 
-``pass`` statement in implemented function
-..........................................
+Unnecessary ``pass`` statement in implemented function
+.......................................................
 
-In the ``hello_world`` function below the ``pass`` statement is unnecessary because there is another statement implemented in the function (``print "Hello, World!"``). A pass statement is unnecessary whenever it is not the *only* statement in a function or control block. 
+In the ``hello_world`` function below the ``pass`` statement is unnecessary because there is another statement implemented in the function (``print "Hello, World!"``). A pass statement is unnecessary whenever a function or control block is not empty.
 
 .. warning:: WARNING! The code below is an example of an error. Using this code will create bugs in your programs!
 
@@ -39,6 +39,7 @@ Removing the ``pass`` statement suppresses the ``Unnecessary pass statement`` er
 
     def hello_world():
         print "Hello, World!"
+        # removed unnecessary pass statememt
 
 References
 ----------

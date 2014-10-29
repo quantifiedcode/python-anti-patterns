@@ -4,12 +4,12 @@ Lambda may not be necessary
 Summary
 -------
 
-The body of a lambda expression is just a function call on the same argument list as the lambda itself. The lambda is probably unnecessary. Improve code readability by removing the lambda and calling the function directly on the argument list.
+The body of a lambda expression is just a function call on the same argument list as the lambda itself. This lambda is probably unnecessary. Improve code readability by removing the lambda and calling the function directly on the argument list.
 
 Description
 -----------
 
-Lambda expressions enable you to create inline, anonymous functions. A lambda serves no purpose when it is just a call to a named function. It only makes the code harder to read. 
+Lambda expressions enable you to create inline, anonymous functions. A lambda serves no purpose when it is just a call to a named function. It only makes the code harder to read. Remove the lambda and just call the function directly.
 
 Examples
 ----------

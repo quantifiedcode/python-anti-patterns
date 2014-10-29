@@ -15,7 +15,7 @@ Examples
 ----------
 
 Types compared using ``is``
-.........................................
+............................
 
 The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to compare a ``Rectangle`` object to a built-in type (``ListType`` in this example). This is not the preferred pattern for comparing types.
 
@@ -32,10 +32,10 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
 
     r = Rectangle(3, 4)
 
-    if type(r) is not types.ListType:
+    if type(r) is not types.ListType:  # bad
         print "object r is a list"
         
-Note that the following situation will not raise the error.
+Note that the following situation will not raise the error, although it should.
 
 .. code:: python
 
@@ -53,7 +53,7 @@ Note that the following situation will not raise the error.
     c = Circle(2)
     r = Rectangle(3, 4)
 
-    if type(r) is not type(c):
+    if type(r) is not type(c):  # bad
         print "object types do not match"
 
 Solutions
@@ -75,7 +75,7 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
 
     r = Rectangle(3, 4)
 
-    if isinstance(r, types.ListType):
+    if isinstance(r, types.ListType):  # good
         print "object r is a list"
         
 References

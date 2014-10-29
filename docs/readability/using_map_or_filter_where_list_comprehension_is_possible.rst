@@ -41,5 +41,5 @@ In the modified module below, the module uses a list comprehension to generate t
     
 References
 ----------
-`Oliver Fromme - List Comprehensions <http://www.secnetix.de/olli/Python/list_comprehensions.hawk>`_
 - PyLint - W0110
+`Oliver Fromme - List Comprehensions <http://www.secnetix.de/olli/Python/list_comprehensions.hawk>`_

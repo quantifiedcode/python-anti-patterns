@@ -27,7 +27,6 @@ The module below updates the values of the two variables ``x`` and ``y`` using a
     y = 2
     z = 0
     
-    # The method below is not the preferred way to update multiple values
     x = y + 2  # 4
     y = x - 3  # 1
     z = x + y  # 5

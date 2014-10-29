@@ -35,7 +35,7 @@ Solutions
 Use the new ``raise`` syntax
 ............................
 
-The updated module has replaced the old style ``raise`` statement ``raise Exception, "1 != 0"`` with the new style ``raise Exception("1 != 0")``. The two statements are equivalent.
+The updated module has replaced the old style ``raise`` statement ``raise Exception, "1 != 0"`` with the new style ``raise Exception("1 != 0")``.
 
 .. code:: python
 

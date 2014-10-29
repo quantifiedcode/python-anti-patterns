@@ -6,6 +6,8 @@ Summary
 
 The name of an object does not match the naming convention for its type (variable, constant, etc.). This error is just a stylistic warning. The code will probably execute. But you can improve the readability of the code by renaming the object to match the naming conventions for that type of object.
 
+.. _description:
+
 Description
 -----------
 
@@ -30,7 +32,7 @@ Examples
 Function name does not follow naming convention
 ...............................................
 
-The function named ``Hello`` below does not follow the standard naming convention for functions. As indicated in the table above in the "Description" section of this article, functions are supposed to begin with a lower case letter. The problem with ``Hello`` is that it begins with an upper case letter. The program executes, but other programmers may find the code hard to read, because classes are usually the only objects that begin with upper case letters.
+The function named ``Hello`` below does not follow the standard naming convention for functions. As indicated in the table above in :ref:`description`, functions are supposed to begin with a lower case letter. The problem with ``Hello`` is that it begins with an upper case letter. The program executes, but other programmers may find the code hard to read, because classes are usually the only objects that begin with upper case letters.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
@@ -51,10 +53,10 @@ In the modified module below, the function name has been modified to follow the 
 
 .. code:: python
 
-    def hello():  # replace H with h
+    def hello():  # easier to read, looks like a function
         print "Hello, World!"
 
-    hello()  # easier to read, looks like a function
+    hello()  # remember to fix every invocation of function
 
 References
 ----------

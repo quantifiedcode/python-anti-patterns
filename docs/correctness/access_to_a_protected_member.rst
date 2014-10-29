@@ -9,7 +9,7 @@ A module has attempted to directly access a protected member (a member prefixed 
 Description
 -----------
 
-Treat this error as a warning. Although it violates the principles of object-oriented programming to directly access protected members, Python will have no problem executing the code.
+Treat this error as a warning. Although it violates the principles of object-oriented programming to directly access protected or private members, Python will have no problem executing the code.
 
 Examples
 ----------
@@ -31,11 +31,8 @@ The module below directly accesses the ``_width`` member of a Rectangle instance
     r = Rectangle(5, 6)
     print "Width: {:d}".format(r._width)  # direct access of protected member
 
-Solutions
----------
-
 Use ``property`` to access the member
-.....................................
+'''''''''''''''''''''''''''''''''''''
 
 For new-style classes (classes that derive from ``object``, e.g. ``class Rectangle(object):``) the Pythonic way to access members is to use the built-in Python function ``property()``.
 
@@ -64,7 +61,7 @@ For new-style classes (classes that derive from ``object``, e.g. ``class Rectang
     print "Width: {:d}".format(r.width)  # automatically accesses getter, behind the scenes
 
 Add protected member to ``__all__``
-...................................
+'''''''''''''''''''''''''''''''''''
 
 If the author of the class decides that it is accessible to directly access the protected member, he can add the protected member to the module's ``__all__`` class to indicate this. The code will execute either way, but this at least explicitly documents that it is acceptable to directly access the member.
 

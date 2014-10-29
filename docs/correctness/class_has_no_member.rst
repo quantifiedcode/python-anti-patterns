@@ -14,8 +14,8 @@ When a module attempts to use a member of a class which is not defined in that c
 Examples
 ----------
 
-Description of error
-....................
+Problem: Module calls unimplemented function
+............................................
 
 The module below attempts to call a function from the ``Rectangle`` class called ``area``. This raises the ``class has no member`` error because the ``area`` function in undefined in the ``Rectangle`` class. 
 
@@ -32,12 +32,8 @@ The module below attempts to call a function from the ``Rectangle`` class called
 
     print r.area()  # no such member in Rectangle class
 
-
-Solutions
----------
-
-Implement the undefined member
-..............................
+Solution: Implement the undefined member
+''''''''''''''''''''''''''''''''''''''''
 
 The updated module below implements the ``area`` member. Now that the function is defined, the ``class has no member`` error is suppressed.
 
@@ -54,8 +50,8 @@ The updated module below implements the ``area`` member. Now that the function i
 
     print r.area()  # ok now
 
-Remove the reference to the undefined member
-............................................
+Solution: Remove the reference to the undefined member
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The updated module below suppresses the ``class has no member`` error by using known defined class members to work around the problem. Rather than trying to use the undefined member ``area``, the module multiples the ``width`` and ``height`` attributes of the instance to get the desired value.
 

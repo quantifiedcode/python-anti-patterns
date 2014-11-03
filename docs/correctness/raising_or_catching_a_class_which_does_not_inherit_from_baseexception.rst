@@ -4,7 +4,7 @@ Raising or catching a class which does not inherit from ``BaseException``
 Summary
 -------
 
-The module is attempting to raise and catch a class which does not inherit from ``BaseException`` as an exception. Either do not raise the class as an exception or modify the class to inherit from ``Exception`` (user-defined classes should not inherit directly from ``BaseException``). If Python encounters this it will raise ``TypeError`` at runtime and the module will not successfully execute.
+The module is attempting to raise and catch a class which does not inherit from ``BaseException``. Either do not raise the class as an exception or modify the class to inherit from ``Exception``. If Python encounters this it will raise ``TypeError`` at runtime and the module will not successfully execute.
 
 Description
 -----------
@@ -14,8 +14,8 @@ Classes used for handling and representing exceptions must always inherit from `
 Examples
 ----------
 
-Description of error
-....................
+Raising class that does not inherit from ``BaseException``
+..........................................................
 
 The module below defines a class ``MyException`` and then attempts to raise this as an exception. Python raises a ``TypeError`` when it encounters this code because all classes raised as exceptions must inherit from ``BaseException``.
 

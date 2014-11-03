@@ -17,7 +17,7 @@ Examples
 Manually initializing the keys of a dict
 ........................................
 
-The module below defines an empty dict and then manually initializes the keys of the dict. Although there is nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea.
+The module below defines an empty dict and then manually initializes the keys of the dict. Although there is nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea, as explained in the solution below.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

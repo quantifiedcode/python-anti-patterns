@@ -69,7 +69,7 @@ To access the ``area`` member of a ``Rectangle`` instance the first argument of 
             self.width = width
             self.height = height
             self.area = width * height
-        def area(self): # instance members now accessible, thanks to "self"
+        def area(self): # instance members now accessible because of "self"
             return self.area
             
 Add the ``cls`` parameter to class methods

@@ -24,7 +24,7 @@ The ``tokenize`` function below is a generator because it contains the ``yield``
     def tokenize(string):
         for token in string.split(' '):
             yield token
-            return "I break everything."  # generator cannot return anything other than None
+            return "I break everything."  # generator can only return None
 
     for t in tokenize("This sentence has five tokens."):
         print t

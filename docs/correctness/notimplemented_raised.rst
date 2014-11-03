@@ -9,13 +9,13 @@ When a module wants to raise an exception indicating that some functionality is 
 Description
 -----------
 
-``NotImplemented`` is a built-in constant used by some Python special methods (``__eq__``, ``__lt__``, etc.) to indicate that a specific type of comparison is not implemented within that special method.
+``NotImplemented`` is a built-in constant used by some Python special methods (such as ``__eq__`` and ``__lt__``) to indicate that a specific type of comparison is not implemented within that special method. ``NotImplementedError`` is a standard exception from the Python Standard Library.
 
 Examples
 ----------
 
-Description of error
-....................
+Functions raises ``NotImplemented``
+...................................
 
 The author of the ``area`` function below has not finished implementing the function. To ensure that other programmers understand that the function is not yet available, the ``area`` function always returns ``NotImplemented`` whenever it is called. However, ``NotImplemented`` is not a valid object type for ``raise`` statements, so Python raises a ``TypeError`` whenever ``area`` is called.
 

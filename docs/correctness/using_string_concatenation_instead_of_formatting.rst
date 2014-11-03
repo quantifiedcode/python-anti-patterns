@@ -9,7 +9,7 @@ Although string concatentation is significantly faster than string formatting, t
 Description
 -----------
 
-The Python community places a high premium on readable code. PEP 20 states that "Readability counts." Although string concatenation performs better than string formatting, unless performance is an absolute top priority, use string formatting because it is generally agreed to be more readable.
+The Python community places a high premium on readable code. PEP 20 states that "Readability counts." Although string concatenation performs better than string formatting you should use string formatting because it is generally agreed to be more readable.
 
 Examples
 ----------
@@ -39,7 +39,7 @@ The modified module below prints out the same message, this time using string fo
 
     name = "Fred"
 
-    print "Hello, my name is %s.".format(name)
+    print "Hello, my name is {:s}".format(name)
     
 References
 ----------

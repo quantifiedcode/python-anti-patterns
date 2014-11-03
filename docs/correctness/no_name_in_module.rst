@@ -4,12 +4,12 @@ No name in module
 Summary
 -------
 
-The imported module has no publically available member with this name. Fix the import statement or remove any references to the non-existent name or else Python will raise an ``ImportError`` and the program will not successfully execute.
+The imported module has no publicly available member with this name. Fix the import statement or remove any references to the non-existent name or else Python will raise an ``ImportError`` and the program will not successfully execute.
 
 Description
 -----------
 
-This error is commonly encountered when somebody makes a typo in the name of the imported member module, or the module has not publicly exposed the member for use by other modules.
+This error is commonly encountered when somebody makes a typo in the name of the imported member module, or the module has not publicly exposed the member for public use.
 
 Examples
 ----------

@@ -4,7 +4,7 @@
 Summary
 -------
 
-The ``__init__`` method of a class contains the ``yield`` statement, which makes it a generator. ``__init__`` is only used for initializing the values of the class. It cannot yield values. Remove the generator functionality or else the module will cause runtime errors.
+The ``__init__`` method of a class contains a ``yield`` statement, which makes it a generator. ``__init__`` is only used for initializing the values of the class. It cannot yield values. Remove the generator functionality or else the module will cause runtime errors.
 
 Description
 -----------

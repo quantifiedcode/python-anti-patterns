@@ -9,7 +9,7 @@ A keyword argument was passed to a function which does not accept keyword argume
 Description
 -----------
 
-To be able to use keyword arguments in a function, the function definition must declar a formal argument in the form of ``**argument_name``. The double asterisk (``**``) indicates to Python that the function is going to use keyword arguments.
+To be able to use keyword arguments in a function, the function definition must declare a formal argument in the form of ``**argument_name``. The double asterisk (``**``) indicates to Python that the function is going to use keyword arguments.
 
 Examples
 ----------
@@ -26,7 +26,7 @@ The ``print_number`` function below prints out the number that has been supplied
     def print_number(n):
         print n
 
-    print_number(n = 12)
+    print_number(n=12)
 
 Solutions
 ---------

@@ -46,7 +46,7 @@ Solutions
 Use ``else`` clause with ``for`` loop
 .....................................
 
-In Python, you can declare a ``else`` loop in conjunction with a ``for`` loop. If the ``for`` loop iterates to completion without being prematurely interrupted by a ``break`` or ``return`` statement, then Python executes the ``else`` clause of the loop.
+In Python, you can declare an ``else`` loop in conjunction with a ``for`` loop. If the ``for`` loop iterates to completion without being prematurely interrupted by a ``break`` or ``return`` statement, then Python executes the ``else`` clause of the loop.
 
 In the modified module below, the ``for`` loop will iterate through all three items in the list. Because the magic number is not contained in the list, the ``if`` statement always evaluates to ``False``, and therefore the ``break`` statement is never encountered. Because Python never encounters a ``break`` statement while iterating over the loop, it executes the ``else`` clause.
 

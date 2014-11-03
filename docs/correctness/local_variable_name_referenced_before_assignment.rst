@@ -17,7 +17,7 @@ Examples
 Local variable used before it is assigned
 .........................................
 
-The ``area`` function below is supposed to return the area of a specified rectangle. The function attempts to print the value of the variable ``a`` before the variable has been assigned a value. When Python encounters this code it will raise a ``UnboundLocalError`` error and the program will not execute.
+The ``area`` function below is supposed to return the area of a specified rectangle. The function attempts to print the value of the variable ``a`` before the variable has been assigned a value. When Python encounters this code it will raise an ``UnboundLocalError`` error and the program will not execute.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

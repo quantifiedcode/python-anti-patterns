@@ -4,7 +4,7 @@ Parameter passed as both positional and keyword argument
 Summary
 -------
 
-A positional and keyword parameter have the same name. Make the names unique in the function defintion or else Python will raise a ``TypeError`` and the module will not execute.
+A positional and keyword parameter have the same name. Make the names unique in the function definition or else Python will raise a ``TypeError`` and the module will not execute.
 
 Description
 -----------
@@ -17,7 +17,7 @@ Examples
 A positional and keyword parameter have the same name
 .....................................................
 
-In the ``print_string`` function below, the first parameter is a positional parameter. The second parameter indicates that the function accepts keyword arguments (each keyword argument is accessed via ``keyword_arguments["name"]`` where name is the keyword passed when the function is called. Because this function has a positional parameter called ``string`` and it also accepts a keyword argument called ``string``, the ``Parameter passed as both positional and keyword argument`` error is raised.
+In the ``print_string`` function below, the first parameter is a positional parameter. The second parameter indicates that the function accepts keyword arguments (each keyword argument is accessed via ``keyword_arguments["name"]`` where name is the keyword passed when the function is called). Because this function has a positional parameter called ``string`` and it also accepts a keyword argument called ``string``, the ``Parameter passed as both positional and keyword argument`` error is raised.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
@@ -27,7 +27,7 @@ In the ``print_string`` function below, the first parameter is a positional para
         print string
         print keyword_arguments["string"]
 
-    print_string("positional", string="keyword")  # can't resolve which string is referenced
+    print_string("positional", string="keyword")  # can't resolve which 'string' is being referenced
 
 Solutions
 ---------

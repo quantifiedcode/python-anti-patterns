@@ -4,7 +4,7 @@ Raising unallowed type
 Summary
 -------
 
-The ``Raising %s while only classes, instances or string are allowed`` error is encountered when a ``raise`` statement contains a type other than a class, instance, or string. These three object types are the only types allowed types that can proceed ``raise``. Fix this or else Python will raise a ``TypeError`` at runtime.
+The ``Raising %s while only classes, instances or string are allowed`` error is encountered when a ``raise`` statement contains a type other than a class, instance, or string. These three object types are the only things that can be raised. Python raises a ``TypeError`` at runtime if this problem is not fixed.
 
 Description
 -----------

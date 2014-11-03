@@ -4,7 +4,7 @@ Method is abstract in class but is not overridden
 Summary
 -------
 
-A child class has not implemetend one of the abstract methods that it inherited from its parent class. Implement the method as a concrete method in the child class or else Python will raise a ``TypeError`` and the module will not be able to successfully execute.
+A child class has not implementend one of the abstract methods that it inherited from its parent class. Implement the method as a concrete method in the child class or else Python will raise a ``TypeError`` and the module will not be able to successfully execute.
 
 Description
 -----------

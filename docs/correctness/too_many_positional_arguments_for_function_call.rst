@@ -17,7 +17,7 @@ Examples
 Function called with too many arguments
 .......................................
 
-``print_name`` takes two arguments, one representing a first name and one a last name, and prints these arguments to standard output. In the module below someone attempts to pass three arguments to the function, one for a first name, one for a middle name, and one for a last name. This raises the ``Too many positional arguments for function call`` and will raise a ``TypeError`` at runtime.
+``print_name`` takes two arguments, one representing a first name and one a last name, and prints these arguments to standard output. In the module below someone attempts to pass three arguments to the function, one for a first name, one for a middle name, and one for a last name. This raises the ``Too many positional arguments for function call`` error and will raise a ``TypeError`` at runtime.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

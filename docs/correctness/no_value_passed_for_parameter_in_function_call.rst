@@ -4,14 +4,14 @@ No value passed for parameter in function call
 Summary
 -------
 
-One of the positional arguments required in a function call is empty. Provide a value for the argument or else Python will raise a ``TypeError`` at runtime and the program will not execute.
+One of the required positional arguments required in a function is empty. Provide a value for the argument or else Python will raise a ``TypeError`` at runtime and the program will not execute.
 
 Description
 -----------
 
-When a positional argument is defined in a function definition, Python assumes that that data is required in order to successfully use the function. When a module calls a function and leaves one of these arguments empty, Python assumes that the function does not have all of the required data that it needs and therefore raises a ``TypeError`` and does not execute the program.
+When a positional argument is defined in a function definition, Python assumes that that data is required in order to successfully use the function. When a module calls a function and leaves one of these arguments empty, Python assumes that the function does not have all of the required data that it needs and therefore raises a ``TypeError`` and halts program execution.
 
-One way to suppress the error is to fix each function call to match the number of required arguments. Another way to fix the error is to specify default values for arguments that may not be supplied.
+One way to suppress the error is to fix each function call to match the number of required arguments. Another way to fix the error is to specify default values for optional arguments.
 
 Examples
 ----------
@@ -28,7 +28,7 @@ The ``print_name`` function below prints the name supplied as arguments to stand
     def print_name(first_name, last_name):
         print first_name, last_name
 
-    print_name("John",)
+    print_name("John",)  # missing second arg
 
 Solutions
 ---------
@@ -43,7 +43,7 @@ Adding the missing second argument to the ``print_name`` function call suppresse
     def print_name(first_name, last_name):
         print first_name, last_name
 
-    print_name("John", "Smith")  # added value for missing parameter
+    print_name("John", "Smith")  # added value for second arg
 
 Specify default value for argument
 ..................................

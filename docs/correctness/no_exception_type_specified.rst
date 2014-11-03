@@ -5,7 +5,7 @@ No exception type(s) specified
 Description
 ===========
 
-You handled an exception without specifying and exception type in your except-clause. This error is not critical, but might hide actual programming errors. Hence, this is not considered `pythonic`.
+You handled an exception without specifying an exception type in your except-clause. This error is not critical, but might hide actual programming errors. Hence, this is not considered `pythonic`.
 
 Examples
 ==========

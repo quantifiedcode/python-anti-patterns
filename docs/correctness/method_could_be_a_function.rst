@@ -4,7 +4,7 @@ Method could be a function
 Summary
 -------
 
-Python has encountered an section of code that could either be a static method, class method, or global function. This should be treated as a warning. If the code does not need to belong to this class then it should be removed. If the code does need to belong to this class, then the method should be preceded by the ``@staticmethod`` or ``@classmethod`` decorators.
+Python has encountered a section of code that could either be a static method, class method, or global function. This should be treated as a warning. If the code does not need to belong to this class then it should be removed. If the code does need to belong to this class, then the method should be preceded by the ``@staticmethod`` or ``@classmethod`` decorators.
 
 Description
 -----------

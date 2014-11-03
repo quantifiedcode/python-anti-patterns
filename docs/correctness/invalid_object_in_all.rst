@@ -4,12 +4,12 @@ Invalid object in ``__all__``
 Summary
 -------
 
-The ``__all__`` of a module contains an invalid object. The ``__all__`` list must only contain string literals that correspond to variables, functions, classes, and methods which have been implemented in the module and which you want to publically expose to other modules. If you perform a wildcard import of a module (i.e. ``from module import *``) on a module that includes a non-literal-string in its ``__all__`` list Python raises a ``NameError`` and the module does not execute.
+The ``__all__`` list of a module contains an invalid object. The ``__all__`` list must only contain string literals that correspond to variables, functions, classes, and methods which have been implemented in the module and which you want to publically expose to other modules. If you perform a wildcard import of a module (i.e. ``from module import *``) on a module that includes a non-literal-string in its ``__all__`` list Python raises a ``NameError`` and the module does not execute.
 
 Description
 -----------
 
-``__all__`` is a special list which enables a module to choose which variables, functions, classes, and methods it wants to publically expose to other modules. ``__all__`` must only contain string literals. Each string literal must correspond to an object that has actually been implemented in the module. Note that this error is only triggered with wildcard imports (imports that follow the pattern ``from MODULE import *`` where ``MODULE`` is the name of the module containing the bad ``__all__`` list).
+``__all__`` is a special list which enables a module to choose which variables, functions, classes, and methods it wants to publicly expose to other modules. ``__all__`` must only contain string literals. Each string literal must correspond to an object that has actually been implemented in the module. Note that this error is only triggered with wildcard imports (imports that follow the pattern ``from MODULE import *`` where ``MODULE`` is the name of the module containing the bad ``__all__`` list).
 
 Examples
 ----------

@@ -4,7 +4,7 @@ Object is not callable
 Summary
 -------
 
-The specified object is not something that can be called. This typically happens when two objects, such as a module and a function, share the same name and the wrong object is called. The statement needs to be fixed or else Python will raise a ``TypeError`` and the module will not execute successfully.
+The specified object is not something that can be called. This typically happens when two objects, such as a module and a function, share the same name and the wrong object is called. The statement(s) in question needs to be fixed or else Python will raise a ``TypeError`` and the module will not execute successfully.
 
 Description
 -----------

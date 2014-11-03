@@ -4,7 +4,7 @@ Do not assign a ``lambda`` expression, use a ``def``
 Summary
 -------
 
-Assigning a name to a ``lambda`` essentially duplicates the functionality of ``def``, in which case you should just use a ``def`` in order to avoid confusion and increase clarity.
+Assigning a name to a ``lambda`` essentially duplicates the functionality of ``def`` (a function definition), in which case you should just use a ``def`` in order to avoid confusion and increase clarity.
 
 Description
 -----------

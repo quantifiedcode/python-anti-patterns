@@ -9,7 +9,7 @@ Using ``key in list`` to check if an item is contained in a list is not an error
 Description
 -----------
 
-Using ``key in list`` to iterate through a list can potentially take ``n`` iterations to complete, where ``n`` is the number of items in the list. If possible, you should change the list to a set or dictionary instead, becase Python can search for items in a set or dictionary by attempting to directly accessing them without using any iterations, which is much more efficient.
+Using ``key in list`` to iterate through a list can potentially take ``n`` iterations to complete, where ``n`` is the number of items in the list. If possible, you should change the list to a set or dictionary instead, becase Python can search for items in a set or dictionary by attempting to directly accessing them without iterations, which is much more efficient.
 
 Examples
 ----------
@@ -25,7 +25,7 @@ The module below defines a list ``l`` and then calls ``if 3 in l`` to check if t
 
     l = [1, 2, 3, 4]
     
-    if 3 in l:
+    if 3 in l:  # iterates through list three times
         print "The number 3 is in the list."
     else:
         print "The number 3 is NOT in the list."

@@ -23,7 +23,7 @@ The ``Car`` class triggers the ``class has no __init__ method`` warning because 
 
 .. code:: python
 
-    class Car:
+    class Car:  # class defines no __init__ method
         def print_class_name(self):
             print "Car"
 

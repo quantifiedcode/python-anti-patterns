@@ -17,7 +17,7 @@ Examples
 Implementing Java-style getters and setters
 ...........................................
 
-The programmer below comes to Python from a long career as a Java programmer. For every class member that he wants to expose publicly, he defines a ``get`` and ``set`` method for that member. This is common practice in Java, but is frowned upon in Python as a waste of time and unnecessary code.
+The programmer below comes to Python from a long career as a Java programmer. For every class member that he wants to expose publicly, he defines a ``get`` and ``set`` method for that member. This is common practice in Java, but is frowned upon in Python as a waste of time and a cause of unnecessary code.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

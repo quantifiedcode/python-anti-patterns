@@ -40,7 +40,7 @@ Note that the ``Assigning to function call which only returns once`` is NOT rais
 
     def hello():
         print "hello"
-        return
+        return  # although this is equivalent to Return None, error is not raised (but it should be)
 
     v = hello()
     print v # WARNING: always returns None, but error not raised!

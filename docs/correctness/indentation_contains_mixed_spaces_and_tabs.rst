@@ -4,12 +4,12 @@ Indentation contains mixed spaces and tabs
 Summary
 -------
 
-The code is being indented with both spaces and tabs. Python code should be indented with 4 spaces.
+The code is being indented with both spaces and tabs. Python code should be indented with 4 spaces, never tabs.
 
 Description
 -----------
 
-Per the PEP 8 Style Guide, all Python code should be consistently indented with 4 spaces, not tabs.
+Per the PEP 8 Style Guide, all Python code should be consistently indented with 4 spaces, never tabs.
 
 Examples
 --------

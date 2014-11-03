@@ -14,8 +14,8 @@ When a module attempts to use a member of a class which is not defined in that c
 Examples
 ----------
 
-Description of error
-....................
+Reference to unimplemented member
+.................................
 
 The module below attempts to call a function from the ``Rectangle`` class called ``area``. This raises the ``class has no member`` error because the ``area`` function in undefined in the ``Rectangle`` class. 
 

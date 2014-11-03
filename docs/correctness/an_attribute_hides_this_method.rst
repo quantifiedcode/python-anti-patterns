@@ -4,12 +4,12 @@ An attribute hides this method
 Summary
 -------
 
-An attribute and a method of a class share the same name. Give the two objects unique names or else Python will raise a ``TypeError: object is not callable`` error at runtime. Python raises the error because the name is associated to the attribute, so when you insert parentheses after the name, Python actually tries to call the attribute although you were trying to call the function.
+An attribute and a method of a class share the same name. Give unique names to the two objects or else Python will raise a ``TypeError: object is not callable`` error at runtime. Python raises the error because the name is associated to the attribute, so when you insert parentheses after the name, Python actually tries to call the attribute (although you were trying to call the function).
 
 Description
 -----------
 
-When an attribute and a method have the same name, Python gives the attribute precedence. Because two objects cannot have the same name while residing in the same namespace, the method will effectively be hidden. If you try to call the method, Python will actually attempt to call the attribute, and a ``TypeError`` runtime error will occur and the module will not successfully execute. Therefore when you encounter this error you must modify the attribute and method to have unique names.
+When an attribute and a method have the same name, Python gives the attribute precedence. Because two objects cannot have the same name while residing in the same namespace, the method will effectively be hidden. If you try to call the method, Python will actually attempt to call the attribute, a ``TypeError`` runtime error will occur, and the module will not successfully execute. Therefore when you encounter this error you must modify the attribute and method to have unique names.
 
 This error often occurs when somebody implements a getter/setter method for accessing an instance attribute. Python style conventions actually prefers that you remove the getter/setter method and just access the attribute directly.
 

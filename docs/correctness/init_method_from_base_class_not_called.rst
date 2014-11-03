@@ -19,7 +19,7 @@ Derived class does not call base class' ``__init__`` method
 
 The class ``Male`` is a descendant of the class ``Person``. Because the ``Male`` class does not call the ``__init__`` method of ``Person``, the members and methods defined in ``Person`` are not accessible to ``Male`` class instances. Attempting to use base class members and methods results in runtime errors.
 
-.. warning:: WARNING! The code below is an example of an error. Using this code will create bugs in your programs!
+.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

@@ -19,7 +19,7 @@ Code is indented with spaces and tabs
 
 The following code uses tabs for indentation. Python code should be indented with four spaces for each level of indentation.
 
-.. warning:: WARNING! The code below is an example of an error. Using this code will create bugs in your programs!
+.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

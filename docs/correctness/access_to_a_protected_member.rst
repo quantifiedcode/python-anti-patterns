@@ -37,7 +37,7 @@ Solutions
 Use ``property`` to access the member
 .....................................
 
-For new-style classes (classes that derive from ``object``, e.g. ``class Rectangle(object):``) the Pythonic way to access members is to use the built-in Python function ``property()``.
+For new-style classes (classes that derive from ``object``, e.g. ``class Rectangle(object)``) the Pythonic way to access members is to use the built-in Python function ``property()``.
 
 .. code:: python
 
@@ -66,7 +66,7 @@ For new-style classes (classes that derive from ``object``, e.g. ``class Rectang
 Add protected member to ``__all__``
 ...................................
 
-If the author of the class decides that it is accessible to directly access the protected member, he can add the protected member to the module's ``__all__`` class to indicate this. The code will execute either way, but this at least explicitly documents that it is acceptable to directly access the member.
+If the author of the class decides that it is acceptable to directly access the protected member, he can add the protected member to the module's ``__all__`` class to indicate this. The code will execute either way, but this at least explicitly documents that it is acceptable to directly access the member.
 
 .. code:: python
 

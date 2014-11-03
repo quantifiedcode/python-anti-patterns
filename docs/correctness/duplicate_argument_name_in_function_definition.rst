@@ -9,7 +9,7 @@ Two or more parameters in a function definition have the exact same name. Give e
 Description
 -----------
 
-When two or more parameters have the same name in a function definition, Python cannot resolve which parameter is being referenced whenever that name is used. The only solution to this situation is to give each name a unique meaning. This is a good programming practice in general; names should not be overloaded with multiple meanings.
+When two or more parameters have the same name in a function definition, Python cannot resolve which parameter is being referenced. The only solution to this situation is to give each parameter a unique name. This is a good programming practice in general; names should not be overloaded with multiple meanings.
 
 Examples
 ----------

@@ -4,12 +4,12 @@ Too many arguments for format string
 Summary
 -------
 
-A format string contains more arguments than replacement fields. You can improve the readability and minimize the chance of bugs in the code by updating the format string to have the same number of replacement fields and arguments.
+A format string contains more arguments than replacement fields. Fix the format string so that it has the same number of replacement fields as argument strings to minimize bugs and improve readability.
 
 Description
 -----------
 
-Although a format string that contains more arguments than replacement fields will execute just fine, the extra arguments are unused. This reduces code readability and increases the chance of future bugs. Therefore, unless the extra arguments serve a purpose they should be removed. 
+Although a format string that contains more arguments than replacement fields will execute, the extra arguments reduce code readability and increase the chance of future bugs. Therefore, unless the extra arguments serve a purpose they should be removed. 
 
 Examples
 ----------
@@ -32,17 +32,17 @@ Solutions
 Remove extra arguments 
 ......................
 
-Now that the format string contains the same number of replacement fields (two) as arguments (two), the ``too many arguments for format string`` error is suppressed.
+The modified module below suppresses the ``too many arguments for format string`` error by fixing the format string to have the same number of replacement fields as arguments.
 
 .. code:: python
 
-    numbers = "{:d} {:d}".format(1, 2)  # removed the third argument
+    numbers = "{:d} {:d}".format(1, 2)  # removed the extra, third argument
     print numbers
     
 Add more replacement fields
 ...........................
 
-The modified module below adds another replacement field to the string literal to match the number of arguments passed to ``format()``.
+The modified module below adds another replacement field to the string literal to match the number of arguments passed to ``format()``. This is another way to fix the format string to have the same number of replacement fields as arguments.
 
 .. code:: python
 

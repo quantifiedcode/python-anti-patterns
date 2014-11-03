@@ -4,7 +4,7 @@ The loop may never terminate
 Summary
 -------
 
-The given loop does not modify anything that impacts the loop condition and does not call ``break``, ``return``, or ``yield`` explicitly, which may lead to an infinite loop.
+The given loop does not modify anything that impacts the loop condition and does not call ``break``, ``return``, or ``yield`` explicitly. Therefore, this loop will probably never terminate.
 
 Description
 -----------
@@ -35,7 +35,7 @@ Solutions
 Modify the variable that impacts the loop condition
 ...................................................
 
-In the modified module below, the loop will finish executing as expected, because now the variable ``i`` is incremented by 1 in every iteration of the loop.
+In the modified module below, the loop finishes as expected, because now the variable ``i`` is incremented by 1 in every iteration of the loop.
 
 .. code:: python
 

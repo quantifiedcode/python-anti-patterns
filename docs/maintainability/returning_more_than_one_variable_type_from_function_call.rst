@@ -24,7 +24,7 @@ Examples
 Function returns ``None`` upon unsatisfied precondition
 .......................................................
 
-In the module below, the function ``get_secret_code()`` returns a secret code when the module calling the function provides the correct password. If the password is incorrect, the function returns ``None``. This leads to hard-to-maintain code, because the caller will have check the type of the return value before proceeding.
+In the module below, the function ``get_secret_code()`` returns a secret code when the module calling the function provides the correct password. If the password is incorrect, the function returns ``None``. This leads to hard-to-maintain code, because the caller will have to check the type of the return value before proceeding.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

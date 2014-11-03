@@ -9,7 +9,7 @@ Raised when the function in a user-defined module has the same name as a `Python
 Description
 -----------
 
-When a user-defined function has the same name as a function from a Python Standard Library, the ``Redefining built-in %r`` error is raised, where ``%r`` is the name of the function that is being overloaded with two or more names. Overloading functions is generally a bad programming practice and should be avoided at all costs.
+When a user-defined function has the same name as a function from a Python Standard Library, the ``Redefining built-in %r`` error is raised, where ``%r`` is the name of the function that is being overloaded with two or more names. Overloading functions is generally a bad programming practice and should be avoided as much as possible.
 
 Examples
 ----------

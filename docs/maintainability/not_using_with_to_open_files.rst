@@ -4,7 +4,7 @@ Not using ``with`` to open files
 Summary
 -------
 
-Use a ``with`` statement to open a filei (e.g. ``with open("file.txt", "r" as f``). This is the standard and safest way to open a file in Python.
+Use a ``with`` statement to open a file (e.g. ``with open("file.txt", "r" as f``). This is the standard and safest way to open a file in Python.
 
 Description
 -----------

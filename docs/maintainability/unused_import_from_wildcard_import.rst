@@ -9,7 +9,7 @@ A wildcard import statement is used in the module, but the module does not use e
 Description
 -----------
 
-`EP 20, The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_, states that "Explicit is better than implicit." Import statements of the pattern ``from MODULE import OBJECT`` are more explicit than ``from MODULE import *``. Therefore, you should not use wildcard imports but rather should explicitly list which objects you need to use when importing modules. Wildcard imports also make it more difficult for static code analyzers (like this tool) to perform their jobs.
+`PEP 20, The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_, states that "Explicit is better than implicit." Import statements of the pattern ``from MODULE import OBJECT`` are more explicit than ``from MODULE import *``. Therefore, you should not use wildcard imports but rather should explicitly list which objects you need to use when importing modules. Wildcard imports also make it more difficult for static code analyzers (like this tool) to perform their jobs.
 
 Examples
 ----------

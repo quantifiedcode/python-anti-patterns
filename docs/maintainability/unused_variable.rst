@@ -4,12 +4,12 @@ Unused variable
 Summary
 -------
 
-A variable has been defined but is not being used. Review the module in question. Check if the module is missing any implemenatation. To improve code readability and performance, delete the variable in question if it is no longer needed.
+A variable has been defined but is not being used. Review the module in question and check if the module is missing any implemenatation. To improve code readability and performance, delete the variable in question if it is no longer needed.
 
 Description
 -----------
 
-This error is often triggered when someone refactors a module but misses a reference to a variable that is no longer needed. Other times it indicates that someone has forgot to implement a section of the module's logic. Therefore, treat this error as a warning and review the code in question.
+This error is often triggered when someone refactors a module but misses a reference to a variable that is no longer needed. Other times it indicates that someone has forgotten to implement a section of the module's logic. Therefore, treat this error as a warning and review the code in question.
 
 Examples
 ----------
@@ -35,7 +35,7 @@ Solutions
 Remove the unused variable
 ..........................
 
-Upon reviewing the module, the author decides that the ``banana`` variable serves no purpose so he deletes it. The code is now easier to read and more efficient.
+Upon reviewing the module, the author decides that the ``banana`` variable serves no purpose, so he deletes it. The code is now easier to read, more efficient, and the ``unused variable`` error is suppressed.
 
 .. code:: python
 

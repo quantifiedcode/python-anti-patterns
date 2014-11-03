@@ -59,6 +59,8 @@ Encapsulate the global variables into objects
 
 One common solution for avoiding global variables is to create a class and store related global variables as members of an instantiated object of that class. This results in more compact and safer code.
 
+In the modified module below, the author eliminates the need for the global variables ``WIDTH`` and ``HEIGHT`` by encapsulating this data into a class called ``Rectangle``.
+
 .. code:: python
 
     class Rectangle:

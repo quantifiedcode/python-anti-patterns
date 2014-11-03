@@ -10,7 +10,7 @@ An imported module is not being used. The ``module imported but not used`` error
 Description
 -----------
 
-This error typically means that there is an error in the module implementation, so you should review the module under question. There are typically three ways to solve the ``module imported but not used`` error. You can remove the module if it is not needed, check that all sections of the module have been fully implemented (and implement them if not), and check for misspellings of the module name, or any of the public objects available from the module (and fix the mispellings).
+This error typically means that there is an error in the module implementation, so you should review the module under question. There are typically three ways to solve the ``module imported but not used`` error. You can remove the module if it is not needed, check that all sections of the module have been fully implemented (and implement them if not), and check for misspellings of the module name or any of the public objects available from the module (and fix the mispellings).
 
 Examples
 ----------
@@ -35,14 +35,14 @@ Solutions
 Remove the module
 .................
 
-Upon reviewing the module, the owner of the module decided that the ``math`` module was not needed, so he removed the ``import math`` statement. Because the module is no longer imported the ``module imported but not used`` error is no longer valid.
+Upon reviewing the module, the owner of the module decided that the ``math`` module was not needed, so he removed the ``import math`` statement. Because the module is no longer imported the ``module imported but not used`` error is no longer raised.
 
 .. code:: python
 
     # removed import math from here
     import time
 
-    print "Current UNIX Epoch time:", math.floor(time.time())
+    print "Current UNIX Epoch time:", time.time()
 
 Use the module
 ..............

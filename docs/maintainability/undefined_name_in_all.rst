@@ -15,7 +15,7 @@ Examples
 ----------
 
 Object not implemented
-..................................
+......................
 
 In the module ``colors`` below, the author forgot to implement the ``brown`` variable but included it in the modules ``__all__`` list. Including an entry in ``__all__`` that does not correspond to any object defined in the module raises the ``Undefined name in __all__`` error.
 
@@ -35,7 +35,7 @@ Solutions
 Implement the object
 ....................
 
-If the object should be exposed in ``__all__`` but it has not been implemented, then implementing the object will eliminate the ``Undefined name is __all__`` error.
+One way to suppress the ``undefined name in __all__`` error is to implement the missing object, like the updated module below.
 
 .. code:: python
 
@@ -48,7 +48,7 @@ If the object should be exposed in ``__all__`` but it has not been implemented, 
 Remove the object from the ``__all__`` list
 ...........................................
 
-If the object is private (meaning it should not be listed in ``__all__`` or if the object is not implemented, then removing it from the ``__all__`` list will also suppress the ``Undefined name is __all__`` error.
+If the object is private (meaning it should not be listed in ``__all__``) or if the object is not implemented, then removing it from the ``__all__`` list also suppresses the ``Undefined name in __all__`` error.
 
 .. code:: python
 

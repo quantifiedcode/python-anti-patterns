@@ -4,7 +4,7 @@ Import module from line n shadowed by loop variable
 Summary
 -------
 
-A loop has defined a variable with the same name as an imported module. This can cause bugs in a module because it overrides the meaning of the module name. Attempting to access module members after the module name has been redefined can result in runtime errors or unintended behavior. The variable name should be renamed to something other than a module name.
+A loop has defined a variable with the same name as an imported module. This can cause bugs in a module because it overrides the meaning of the module name. Attempting to access members from the overridden module can result in runtime errors or unintended behavior. The variable name should be renamed to something other than a module name.
 
 Description
 -----------
@@ -17,7 +17,7 @@ Examples
 Loop defines variable with same name as imported module
 .......................................................
 
-The module below imports the ``os`` Python Standard Library module, which is used for performing miscellaneous tasks related to the current operating system. When ``os.name`` is called, ``os`` still refers to the ``os`` module, so this works fine. But when the for loop creates a variable called ``os`` this overrides the meaning of ``os``. ``os`` now refers to a ``str`` variable. So only members from the ``str`` class are valid on ``os`` now. Any attempt to reference a member from the ``os`` module creates runtime errors. In other words, when the module attempts to reference ``os.name`` in the for loop, it is actually calling ``str.name``. Because the ``str`` data type does not have any member called ``name`` Python raises an error.
+The module below imports the ``os`` Python Standard Library module, which is used for performing miscellaneous tasks related to the current operating system. When ``os.name`` is called outside of the loop, ``os`` still refers to the ``os`` module, so this works fine. But notice that the for loop also creates a variable called ``os``. This overrides the meaning of ``os``. ``os`` now refers to a ``str`` variable. So only members from the ``str`` class are valid on ``os`` now. Any attempt to reference a member from the ``os`` *module* creates runtime errors. In other words, when the module attempts to reference ``os.name`` in the for loop, it is actually calling ``str.name``. Because the ``str`` data type does not have any member called ``name`` Python raises an error.
 
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 

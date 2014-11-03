@@ -22,17 +22,17 @@ In the module below the ``gmt`` key has been defined twice. When you print out t
 .. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
-
+    # first occurrence of 'gmt' below gets silently overridden
     time = {"gmt": -08, "hour": 16, "minute": 37, "second": 05, "gmt": -09}
     print time  # {'second': 05, 'minute': 37, 'hour': 16, 'gmt': -09}
 
 Solutions
 ---------
 
-Delete duplicate keys
-.....................
+Delete or rename duplicate keys
+...............................
 
-In the modified module below the second, duplicate entry for ``gmt`` has been deleted.
+In the modified module below the second, duplicate entry for ``gmt`` has been deleted. Where applicable, another acceptable solution is to give unique names to each of the conflicting items.
 
 .. code:: python
 

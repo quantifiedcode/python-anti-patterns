@@ -23,7 +23,7 @@ The following code imports everything from the ``math`` built-in Python module.
 
 .. code:: python
 
-    from math import *
+    from math import *  # wildcard import = bad
 
 Solutions
 ---------
@@ -31,15 +31,14 @@ Solutions
 Make the ``import`` statement more specific
 ...........................................
 
-The ``import`` statement should be refactored to be more specific about what functions or variables it is using from the ``math`` module.
+The ``import`` statement should be refactored to be more specific about what functions or variables it is using from the ``math`` module. The modified module below specifies exactly which module member it is using, which happens to be ``ceil`` in this example.
 
 .. code:: python
 
     from math import ceil
 
-
 References
 ----------
-- `Stack Overflow - Importing Modules <http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much>`_
 - PyFlakes - F403
+- `Stack Overflow - Importing Modules <http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much>`_
 

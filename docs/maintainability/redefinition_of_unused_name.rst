@@ -25,7 +25,7 @@ The module below imports the ``json`` module from the Python Standard Library an
 
     import json
 
-    json = ['{"first": "John", "last": "Smith"', '"ssn": "613230789"']  # redefinition
+    json = ['"first": "John"', '"last": "Smith"', '"ssn": "613230789"']  # redefinition
 
     for s in json:
         print s
@@ -36,13 +36,13 @@ Solutions
 Rename the variable
 ...................
 
-Often the simplest solution for suppressing the ``redefinition of unused name`` error is to give the objects different, unique names. Because the names are unique, there is no more redefinition taking place, and therefore the error is no longer valid. In the modified module below, the variable storing a list of JSON strings has been changed from ``json`` to ``json_list``.
+Often the simplest solution for suppressing the ``redefinition of unused name`` error is to give the objects different, unique names. Because the names are unique, there is no more redefinition taking place, and therefore the error is no longer raised. In the modified module below, the variable storing a list of JSON strings has been changed from ``json`` to ``json_list``.
 
 .. code:: python
 
     import json
 
-    json_list = ['{"first": "John", "last": "Smith"', '"ssn": "613230789"']  # ok now, unique name
+    json_list =  ['"first": "John"', '"last": "Smith"', '"ssn": "613230789"']  # ok now
 
     for s in json_list:
         print s
@@ -54,7 +54,9 @@ Another way to suppress the ``redefinition of unused name`` error is to remove t
 
 .. code:: python
 
-    json = ['{"first": "John", "last": "Smith"', '"ssn": "613230789"']  # ok now, no more redefinition
+    # deleted import statement, no more overriding of names
+
+    json =   ['{"first": "John", "last": "Smith"', '"ssn": "613230789"']
 
     for s in json:
         print s

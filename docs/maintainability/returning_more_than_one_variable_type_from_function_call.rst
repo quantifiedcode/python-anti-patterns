@@ -41,7 +41,7 @@ In the module below, the function ``get_secret_code()`` returns a secret code wh
     if secret_code == None:
         print "Wrong password."
     else:
-        print "The secret code is %s".format(secret_code)
+        print "The secret code is {}".format(secret_code)
         
 
 Solutions
@@ -62,8 +62,8 @@ When a calling module provides invalid data to a function, or a precondition to 
 
     try:
         secret_code = get_secret_code("unicycle")
-        print "The secret code is %s".format(secret_code)
-    except ve as ValueError:
+        print "The secret code is {}".format(secret_code)
+    except ValueError:
         print "Wrong password."
 
 References

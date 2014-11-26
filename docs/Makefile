@@ -60,6 +60,12 @@ markdown:
 	@echo
 	@echo "Build finished. The markdown files are in $(BUILDDIR)/md."
 
+barehtml:
+	test -s $(BUILDDIR)/md || mkdir -p $(BUILDDIR)/barehtml
+	find ./ -iname "*.rst" -type f -exec sh -c 'mkdir -p $$(dirname $(BUILDDIR)/barehtml/$${0%.rst}.md) && pandoc "$${0}" -o "$(BUILDDIR)/barehtml/$${0%.rst}.html"' {} \;
+	@echo
+	@echo "Build finished. The markdown files are in $(BUILDDIR)/md."
+
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo

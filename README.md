@@ -2,7 +2,7 @@
 
 #Description
 
-This is an open collection of **Python worst practices**, or anti-patterns. Many of them can be found automatically using `Pylint`, `Pyflakes` or `Pep8`, or using our online code-checking service at [www.quantifiedcode.com](http://www.quantifiedcode.com).
+This is an open collection of **Python worst practices**, or anti-patterns. Many of them can be detected automatically using [Pylint](http://www.pylint.org/), [Pyflakes](https://pypi.python.org/pypi/pyflakes) or [Pep8](https://pypi.python.org/pypi/pep8), or using our online code-checking service at [www.quantifiedcode.com](http://www.quantifiedcode.com).
 
 #Licence
 

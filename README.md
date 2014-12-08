@@ -4,9 +4,9 @@
 
 This is an open collection of **Python worst practices**, or anti-patterns. Many of them can be detected automatically using [Pylint](http://www.pylint.org/), [Pyflakes](https://pypi.python.org/pypi/pyflakes) or [Pep8](https://pypi.python.org/pypi/pep8), or using our online code-checking service at [www.quantifiedcode.com](http://www.quantifiedcode.com).
 
-#Licence
+#License
 
-These patterns are made available under a Creative Commons Non-Commercial license. This allows you to use them freely for your own personal project. 
+All articles are made available under a Creative Commons Non-Commercial license. This allows you to use them freely for your own personal project. 
 
 When using these articles on your website, please add a well-visible link to [http://docs.quantifiedcode.com/python-code-patterns](our documentation website) or this Github project, so that people can easily find the original articles and make contributions.
 

@@ -1,2 +1,0 @@
-Use of unsafe variable
-^^^^^^^^^^^^^^^^^^^^^^

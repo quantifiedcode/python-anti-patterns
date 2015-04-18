@@ -12,5 +12,4 @@ Use the following patterns to increase the security of your code.
 
     Use of exec <use_of_exec>
     Use of eval <use_of_eval>
-    Unsafe variables <use_of_unsafe_variable>
 

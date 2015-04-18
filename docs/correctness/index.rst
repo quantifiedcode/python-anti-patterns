@@ -4,7 +4,7 @@
 .. toctree::
     :maxdepth: 1
 
-    access_to_a_protected_member
+    accessing_a_protected_member_from_outside_the_class
     bad_except_clauses_order
     Bad arg for super <bad_first_argument_given_to_super>
     Dangerous default arg value <dangerous_default_value_as_argument>

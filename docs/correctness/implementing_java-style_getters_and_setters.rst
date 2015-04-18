@@ -1,14 +1,6 @@
 Implementing Java-style getters and setters
 ===========================================
 
-Summary
--------
-
-Use the built-in function decorator ``property`` to implement getters and setters on Python classes and objects, or just access the members directly. Don't use the Java style of defining ``get_x`` and ``set_x`` methods for every public member of a class.
-
-Description
------------
-
 Python is not Java. If you need to set or get the members of a class or object, just expose the member publicly and access it directly. If you need to perform some computations before getting or setting the member, then use Python's built-in ``property`` decorator.
 
 Examples
@@ -18,8 +10,6 @@ Implementing Java-style getters and setters
 ...........................................
 
 The programmer below comes to Python from a long career as a Java programmer. For every class member that he wants to expose publicly, he defines a ``get`` and ``set`` method for that member. This is common practice in Java, but is frowned upon in Python as a waste of time and a cause of unnecessary code.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

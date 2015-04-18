@@ -1,27 +1,17 @@
 Missing argument to ``super()``
 ===============================
 
-Summary
--------
-
-No arguments are provided to ``super()``. Python will raise the following error when ``super()`` is called with no arguments: ``TypeError: super() takes at least 1 argument``. The first argument to ``super()`` should be the class name of the child class that is calling the ``super()`` method of its parent. The second argument should be ``self``, which is a reference to the object calling its parent's ``super()`` method. Note that this error is only raised for Python versions 2.x which support new-style classes.
-
-Description
------------
-
 ``super()`` enables you to access the methods and members of a parent class without referring to the parent class by name. For a single inheritance situation the first argument to ``super()`` should be the name of the current child class calling ``super()``, and the second argument should be ``self``, that is, a reference to the current object calling ``super()``.
 
 .. note:: This error is only raised for Python versions 2.x which support new-style classes.
 
-Examples
-----------
+Example
+-------
 
 No arguments given to ``super()``
 .................................
 
 The author of the module below provides no arguments for the child class' call to ``super()``. Python raises a ``TypeError`` at runtime because it expects at least 1 argument for ``super()``.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

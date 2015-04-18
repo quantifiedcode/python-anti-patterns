@@ -1,25 +1,15 @@
 Not using named tuples when returning more than one value from a function
 =========================================================================
 
-Summary
--------
-
-Use `named tuples <http://stackoverflow.com/questions/2970608/what-are-named-tuples-in-python>`_ when returning more than one value from a function. This makes code easier to read and makes the data easier to access, as each value can be accessed via a name in addition to an index.
-
-Description
------------
-
 Named tuples can be used anywhere where normal tuples are acceptable, but their values can be accessed through their names in addition to their indexes. This makes the code more verbose and readable.
 
-Examples
-----------
+Example
+-------
 
 Using normal tuple to return multiple values
 ............................................
 
 The module below returns a first name, middle name, and last name using a normal, unnamed tuple. After calling the tuple, each value can only be returned via an index. This code is difficult to use: the caller of the function has to know that the first element is the first name, the second is the middle name, and the third is the last name.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

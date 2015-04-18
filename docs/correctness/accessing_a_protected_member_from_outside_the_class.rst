@@ -1,12 +1,8 @@
 Accessing a protected member from outside the class
 ===================================================
 
-Summary
--------
-
 Accessing a protected member (a member prefixed with ``_``) of a class from outside that class usually
 calls for trouble, since the creator of that class did not intend this function to be exposed.
-
 
 Example
 -------

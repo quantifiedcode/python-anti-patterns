@@ -1,5 +1,5 @@
-Very high complexity
-^^^^^^^^^^^^^^^^^^^^
+Writing highly complex functions
+================================
 
 Functions and classes with high complexity are empirically correlated with higher error
 rates and bugs. In addition, they are often hard to understand, maintain and extend.

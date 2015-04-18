@@ -1,25 +1,15 @@
 ``__future__`` import is not the first non-docstring statement
 ==============================================================
 
-Summary
--------
-
-Features from the ``__future__`` module need to be imported before all other executable statements in the module or else Python will raise a ``SyntaxError`` and the program will not execute. Raising a ``SyntaxError`` in this scenario prevents a module from being able to simultaneously use incompatible versions of a Python feature, which would be highly likely to cause nasty bugs.
-
-Description
------------
-
 The ``__future__`` module enables a module to use functionality that is mandatory in future Python versions. If it was possible to place the ``__future__`` module in the middle of a module, then that would mean that one half of the module could use the old Python functionality for a given feature, and the other half (after the ``__future__`` import) could use the new Python functionality of the feature. This could create many strange and hard-to-find bugs, so Python does not allow it.
 
-Examples
-----------
+Example
+-------
 
 Module imports from ``__future__`` after other statements
 .........................................................
 
 The module below attempts to place a ``__future__`` import statement in the middle of the module. When Python encounters the ``from __future__ import division`` statement it raises a ``SyntaxError`` and halts execution. However, if the module were to execute, the first ``print`` statement would print out ``1`` (which is how the division operator behaves in Python versions 2 and below), but the second ``print`` statement would print out a decimal value, which is how the division operator functions in Python versions 3 and later. As you can see, this could create very strange behavior, so Python does not allow ``__future__`` import statements in the middle of a module. The module can use either version of the division operator, but it can't use both.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

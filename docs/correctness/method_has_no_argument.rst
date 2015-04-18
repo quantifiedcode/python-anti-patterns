@@ -1,18 +1,10 @@
 Method has no argument
 ======================
 
-Summary
--------
-
-The first argument in an instance or class method must be a reference to the instance object (``self``) or class object (``cls``), respectively. If these arguments are missing, the method will not have access to any instance or class members.
-
-Description
------------
-
 Unlike some programming languages, Python does not pass references to instance or class objects automatically behind the scenes. So the program must explicitly pass them as arguments whenever it wants to access any members of the instance or class within a method.
 
-Examples
---------
+Example
+-------
 
 Instance method is missing the ``self`` keyword
 ...............................................

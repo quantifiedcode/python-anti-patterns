@@ -1,25 +1,15 @@
 Not using ``defaultdict()``
 ===========================
 
-Summary
--------
-
-Rather than using ``if`` statements or ``for`` loops to initialize the keys of a dict, use the Python Standard Library built-in method ``defaultdict()`` to automatically initialize the value of every key in the dict. Using ``defaultdict()`` is more concise and less error-prone, as the programmer no longer has to remember to manually initialize the value of every key.
-
-Description
------------
-
 When a dict is created using ``defaultdict()``, the value for each key in the dict will default to the value provided as the first argument of ``defaultdict()``. This is more concise and less error-prone than manually setting the value of each key.
 
-Examples
-----------
+Example
+-------
 
 Manually initializing the keys of a dict
 ........................................
 
 The module below defines an empty dict and then manually initializes the keys of the dict. Although there is nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea, as explained in the solution below.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

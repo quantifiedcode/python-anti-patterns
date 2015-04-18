@@ -1,18 +1,10 @@
 Bad first argument given to ``super()``
 =======================================
 
-Summary
--------
-
-The first argument to ``super()`` should be the class name of the child class that is calling the ``super()`` method of its parent. If a valid child class name is not provided Python will raise a ``TypeError`` and the module will not execute.
-
-Description
------------
-
 ``super()`` enables you to access the methods and members of a parent class without referring to the parent class by name. For a single inheritance situation the first argument to ``super()`` should be the name of the current child class calling ``super()``, and the second argument should be ``self`` (that is, a reference to the current object calling ``super()``).
 
-Examples
-----------
+Example
+-------
 
 First argument to ``super()`` should be name of child class
 ...........................................................

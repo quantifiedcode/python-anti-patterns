@@ -1,14 +1,6 @@
 Do not assign a ``lambda`` expression, use a ``def``
 ====================================================
 
-Summary
--------
-
-Assigning a name to a ``lambda`` essentially duplicates the functionality of ``def`` (a function definition), in which case you should just use a ``def`` in order to avoid confusion and increase clarity.
-
-Description
------------
-
 The sole advantage that a ``lambda`` expression has over a ``def`` is that the ``lambda`` can be anonymously embedded within a larger expression. If you are going to assign a name to a ``lambda``, you are better off just defining it as a ``def``.
 
 From the PEP 8 Style Guide:

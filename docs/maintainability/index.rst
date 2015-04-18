@@ -12,6 +12,5 @@ Use the following patterns to increase maintainability and avoid creating `spagh
     from_module_import_all_used
     not_using_with_to_open_files
     Multiple function return types <returning_more_than_one_variable_type_from_function_call>
-    single_responsibility_principle
     using_the_global_statement
     very_complex_function

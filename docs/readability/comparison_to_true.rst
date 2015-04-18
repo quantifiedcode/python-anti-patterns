@@ -1,14 +1,6 @@
 Comparison to ``True`` should be ``if cond is True:`` or ``if cond:``
 =====================================================================
 
-Summary
--------
-
-The preferred patterns for comparing something to ``True`` are ``if cond is True:`` or ``if cond:``. Statements that use the pattern ``if cond == True:`` should be converted to the preferred patterns.
-
-Description
------------
-
 Per the PEP 8 Style Guide, the preferred ways to compare something to ``True`` are the patterns ``if cond is True:`` or ``if cond:``. This is only a guideline. It can be ignored if needed. But the purpose of the PEP 8 Style Guide is to improve the readability of code. 
 
 Examples
@@ -18,8 +10,6 @@ Statement compares value to ``True`` using ``==``
 ..................................................
 
 The statement below uses the equality operator to compare a boolean variable to ``True``. This is not the PEP 8 preferred approach to comparing values to ``True``.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

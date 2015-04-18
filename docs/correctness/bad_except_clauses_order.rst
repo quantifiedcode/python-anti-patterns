@@ -1,18 +1,10 @@
 Bad except clauses order
 ========================
 
-Summary
--------
-
-Raised when a base class exception clause is placed before its sub class exception clauses. Whenever an exception is raised which matches the sub class, the base class exception clause will always be called. The exception clause doesn't need to be an exact match of the raised exception; so long as the raised exception is a sub class of the exception defined in the exception clause then that exception clause will execute. This defeats the purpose of catching exceptions, which is to pinpoint the exact reason why an exception occurred. Place the sub class exception clauses before the base class exception clause.
-
-Description
------------
-
 When an exception occurs, Python will search for the first exception clause which matches the exception type that occurred. It doesn't need to be an exact match. If the exception clause represents a base class of the raised exception, then Python considers that exception clause to be a match. E.g. if a ``ZeroDivisionError`` exception is raised and the first exception clause is ``Exception``, then the ``Exception`` clause will execute because ``ZeroDivisionError`` is a sub class of ``Exception``. Therefore, more specific exception clauses of sub classes should always be placed before the exception clauses of their base classes to ensure that exception handling is as specific and as helpful as possible.
 
-Examples
-----------
+Example
+-------
 
 Sub class exception clause placed after its ancestor's clause
 .............................................................

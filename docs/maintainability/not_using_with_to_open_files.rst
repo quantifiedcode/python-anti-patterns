@@ -1,25 +1,15 @@
 Not using ``with`` to open files
 ================================
 
-Summary
--------
-
-Use a ``with`` statement to open a file (e.g. ``with open("file.txt", "r" as f``). This is the standard and safest way to open a file in Python.
-
-Description
------------
-
 In Python 2.5, the ``file`` class was equipped with special methods that are automatically called whenever a file is opened via a ``with`` statement (e.g. ``with open("file.txt", "r") as file``). These special methods ensure that the file is properly and safely opened and closed.
 
-Examples
-----------
+Example
+-------
 
 Not using ``with`` to open a file
 .................................
 
 The module below does not use ``with`` to open a file. This code depends on the programmer remembering to manually close the file via ``close()`` when finished. Even if the programmer remembers to call ``close()`` the code is still dangerous, because if an exception occurs before the call to ``close()`` then ``close()`` will not be called and the memory issues can occur, or the file can be corrupted.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

@@ -2,14 +2,6 @@
 No exception type(s) specified
 ==============================
 
-Description
-===========
-
-You handled an exception without specifying an exception type in your except-clause. This error is not critical, but might hide actual programming errors. Hence, this is not considered `pythonic`.
-
-Examples
-==========
-
 The function `divide` simply devides `a` by `b`. To avoid invalid calculations (e.g., a division by zero), a `try-except` block is added. This is valid and and ensures that the function always returns a result. However, by securing your code with the try clause, you might hide acutall programming errors, e.g., that you pass a string or an object as `b`, instead of a number. By not specifiycing and exception type, you do not only hide this error but you loose also information about the error itself.
 
 .. code:: python
@@ -24,7 +16,7 @@ The function `divide` simply devides `a` by `b`. To avoid invalid calculations (
       return result
 
 Solutions
-===========
+=========
 
 Handle exceptions with Python's built in `exception types<https://docs.python.org/2/library/exceptions.html>`
 -------------------------------------------------------------------------------------------------------------

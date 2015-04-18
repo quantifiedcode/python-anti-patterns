@@ -1,25 +1,15 @@
 Using ``key in list`` to check if key is contained in list
 ==========================================================
 
-Summary
--------
-
-Using ``key in list`` to check if an item is contained in a list is not an error but it is inefficient, since the list search will take O(n). If possible, use a set or dictionary instead, which enables Python to attempt to directly access the item without iterations.
-
-Description
------------
-
 Using ``key in list`` to iterate through a list can potentially take ``n`` iterations to complete, where ``n`` is the number of items in the list. If possible, you should change the list to a set or dictionary instead, becase Python can search for items in a set or dictionary by attempting to directly accessing them without iterations, which is much more efficient.
 
-Examples
-----------
+Example
+-------
 
 Using ``key in list`` to check if a key exists
 ..............................................
 
 The module below defines a list ``l`` and then calls ``if 3 in l`` to check if the number 3 exists in the list. This is inefficient. Behind the scenes, Python iterates through the list until it finds the number or reaches the end of the list.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

@@ -31,9 +31,7 @@ The modified code below uses ``setdefault()`` to initialize the dictionary. When
 
     dictionary = {}
 
-    list = dictionary.setdefault("list", [])
-
-    list.append("list_item")
+    dictionary.setdefault("list", []).append("list_item")
     
 References
 ----------

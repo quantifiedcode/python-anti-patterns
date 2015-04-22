@@ -14,9 +14,9 @@ The code below updates the values of the two variables ``x`` and ``y`` using ass
     y = 2
     z = 0
     
-    x = y + 2  # 4
-    y = x - 3  # 1
-    z = x + y  # 5
+    a = y + 2  # 4
+    b = x - 3  # 1
+    c = x + y  # 5
 
 Solutions
 ---------
@@ -32,4 +32,4 @@ The modified code below is functionally equivalent to the original code above, b
     y = 2
     z = 0
 
-    x, y, z = y + 2, x - 3, x + y  # more concise
+    a, b, c = y + 2, x - 3, x + y  # more concise

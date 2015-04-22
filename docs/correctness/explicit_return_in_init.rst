@@ -1,18 +1,10 @@
 Explicit return in __init__
 ===========================
 
-Summary
--------
-
-The ``__init__`` method contains a ``return`` statement that returns a value other than ``None``. The purpose of ``__init__`` is to initialize the instance members of a newly-allocated object in memory, not return any values.
-
-Description
------------
-
 ``__init__`` is a `special Python method <https://docs.python.org/2/reference/datamodel.html#special-method-names>`_ that is automatically called when memory is allocated for a new object. The sole purpose of ``__init__`` is to initialize the values of instance members for the new object. Using ``__init__`` to return a value implies that a program is using ``__init__`` to do something other than initialize the object. This logic should be moved to another instance method and called by the program later, after initialization.
 
-Examples
-----------
+Example
+-------
 
 The ``__init__`` method of the ``Rectangle`` class below attempts to return the area of the rectangle within the ``__init__`` method. This violates the rule of only using ``__init__`` to initialize instance members.
 
@@ -59,5 +51,6 @@ There is no reason why the ``Rectangle`` class MUST return the area immediately 
 
 References
 ----------
+
 - `PyLint - E0101 <http://pylint-messages.wikidot.com/messages:e0101>`_
 - `Python Language Reference - object.__init__(self[, ...]) <https://docs.python.org/2/reference/datamodel.html#object.__init__>`_

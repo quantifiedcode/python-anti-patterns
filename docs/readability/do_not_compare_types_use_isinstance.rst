@@ -1,25 +1,12 @@
-Do not compare types, use ``isinstance()``
-==========================================
-
-Summary
--------
-
-Raised when types are compared using the Python keyword ``is``. The preferred method for comparing types is the built-in function ``isinstance`` because it is specifically designed to robustly handle type comparisons on objects.
-
-Description
------------
+Using `type()` to compare types
+===============================
 
 The function ``isinstance`` is the best-equipped to handle type checking because it supports inheritance (e.g. an instance of a derived class is an instance of a base class, too). Therefore ``isinstance`` should be used whenever type comparison is required.
 
-Examples
-----------
-
-Types compared using ``is``
-............................
+Example
+-------
 
 The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to compare a ``Rectangle`` object to a built-in type (``ListType`` in this example). This is not the preferred pattern for comparing types.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 
@@ -80,5 +67,6 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
         
 References
 ----------
+
 - `Stack Overflow: Differences between isinstance() and type() in Python <http://stackoverflow.com/questions/1549801/differences-between-isinstance-and-type-in-python>`_
 - pep8 - E721

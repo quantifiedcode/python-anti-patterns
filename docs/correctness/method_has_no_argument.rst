@@ -1,21 +1,10 @@
 Method has no argument
 ======================
 
-Summary
--------
-
-The first argument in an instance or class method must be a reference to the instance object (``self``) or class object (``cls``), respectively. If these arguments are missing, the method will not have access to any instance or class members.
-
-Description
------------
-
 Unlike some programming languages, Python does not pass references to instance or class objects automatically behind the scenes. So the program must explicitly pass them as arguments whenever it wants to access any members of the instance or class within a method.
 
-Examples
-----------
-
-Instance method is missing the ``self`` keyword
-...............................................
+Example
+-------
 
 In the ``Rectangle`` class below the ``area`` method attempts to return the value of the ``area`` instance variable. However, ``self.area`` is undefined because a reference to the instance object has not been explicitly passed as an argument to the method.
 
@@ -41,9 +30,6 @@ The method ``print_class_name`` attempts to print the name of the class. However
         def print_class_name(): # missing first argument "cls"
         print("Hello, I am %s!" % cls) # cls is undefined here
         
-        
-Static method is missing the ``@staticmethod`` decorator
-...........................................
 
 The method ``area`` computes the value of any rectangle. Currently this method is ambiguous. It is defined as a method of the ``Rectangle`` class, yet it does not reference any instance or class members. The method needs to explicitly state that it is a static method via the ``@staticmethod`` decorator.
 
@@ -55,7 +41,7 @@ The method ``area`` computes the value of any rectangle. Currently this method i
             return width * height
 
 Solutions
------------
+---------
 
 Add the ``self`` parameter to instance methods
 .................................................

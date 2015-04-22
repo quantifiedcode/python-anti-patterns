@@ -1,25 +1,12 @@
-Comparison to ``None`` should be ``if cond is None``
-====================================================
-
-Summary
--------
-
-The preferred way of comparing something to ``None`` is the pattern ``if cond is None``. Statements that use the pattern ``if cond == None`` should be converted to the preferred style.
-
-Description
------------
+Comparing things to `None` the wrong way
+========================================
 
 Per the PEP 8 Style Guide, the preferred way to compare something to ``None`` is the pattern ``if Cond is None``. This is only a guideline. It can be ignored if needed. But the purpose of the PEP 8 style guidelines is to improve the readability of code. 
 
-Examples
-----------
-
-Statement compares value to ``None`` using ``==``
-.................................................
+Example
+-------
 
 The statement below uses the equality operator to compare a variable to ``None``. This is not the PEP 8 preferred approach to comparing values to ``None``.
-
-.. warning:: WARNING! The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 
@@ -47,5 +34,6 @@ The code below uses the PEP 8 preferred pattern of ``if cond is None``.
     
 References
 ----------
+
 - pep8 - E711
 - `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_

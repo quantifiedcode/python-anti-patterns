@@ -1,21 +1,10 @@
 Method could be a function
 ==========================
 
-Summary
--------
-
-Python has encountered a section of code that could either be a static method, class method, or global function. This should be treated as a warning. If the code does not need to belong to this class then it should be removed. If the code does need to belong to this class, then the method should be preceded by the ``@staticmethod`` or ``@classmethod`` decorators.
-
-Description
------------
-
 When a method is not preceded by the ``@staticmethod`` or ``@classmethod`` decorators and does not contain any references to the class or instance (via keywords like ``cls`` or ``self``), Python raises the  ``Method could be a function`` error. This is not a critical error, but you should check the code in question in order to determine if this section of code really needs to be defined as a method of this class.
 
-Examples
-----------
-
-Static method is not preceded by ``@staticmethod`` decorator
-............................................................
+Example
+-------
 
 In the ``Rectangle`` class below the ``area`` method calculates the area of any rectangle given a width and a height.
 

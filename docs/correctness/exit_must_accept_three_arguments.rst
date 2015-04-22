@@ -1,14 +1,6 @@
 ``__exit__`` must accept 3 arguments: type, value, traceback
 ============================================================
 
-Summary
--------
-
-The ``__exit__`` method definition for a ``contextmanager`` class must have exactly three arguments (four, if you include ``self``). The ``__exit__`` method is called by Python automatically at the end of the code block following a ``with`` statement. Python always passes three arguments to ``__exit__``. Therefore if the user-defined ``__exit__`` method does not define four arguments (``self`` plus the three passed by Python), a runtime error occurs because the number of arguments provided by Python does not match the number of arguments listed in the method definition.
-
-Description
------------
-
 A ``contextmanager`` class is any class that implements the ``__enter__`` and ``__exit__`` methods according to the `Python Language Reference's context management protocol <https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers>`_. Implementing the context management protocol enables you to use the ``with`` statement with instances of the class. The ``with`` statement is used to ensure that setup and teardown operations are always executed before and after a given block of code. It is functionally equivalent to ``try...finally`` blocks, except that ``with`` statements are more concise.
 
 For example, the following block of code using a ``with`` statement...
@@ -91,6 +83,7 @@ Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is pro
 
 References
 ----------
+
 - `PyLint - E0235 <https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers>`_
 - `Python Language Reference - The with statement <https://docs.python.org/2/reference/compound_stmts.html#with>`_
 - `Python Language Reference - With Statement Context Managers <https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers>`_

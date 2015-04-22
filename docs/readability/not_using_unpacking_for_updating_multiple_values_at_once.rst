@@ -1,25 +1,12 @@
 Not using unpacking for updating multiple values at once
 ========================================================
 
-Summary
--------
-
-For simple updates to multiple variables, use unpacking to update the values rather than using assignments to update each value individually.
-
-Description
------------
-
 In general, the Python programming community prefers concise code over verbose code. Using unpacking to update the values of multiple variables simultaneously is more concise than using assignments to update each variable individually. 
 
-Examples
-----------
+Example
+-------
 
-Using assignments to individually update the values of variables
-................................................................
-
-The module below updates the values of the two variables ``x`` and ``y`` using assignments that are on separate lines of code.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
+The code below updates the values of the two variables ``x`` and ``y`` using assignments that are on separate lines of code.
 
 .. code:: python
 
@@ -37,7 +24,7 @@ Solutions
 Use unpacking to update multiple values simultaneously
 ......................................................
 
-The modified module below is functionally equivalent to the original module above, but this module is more concise. 
+The modified code below is functionally equivalent to the original code above, but this code is more concise. 
 
 .. code:: python
 
@@ -46,6 +33,3 @@ The modified module below is functionally equivalent to the original module abov
     z = 0
 
     x, y, z = y + 2, x - 3, x + y  # more concise
-    
-References
-----------

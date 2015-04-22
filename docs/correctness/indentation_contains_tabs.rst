@@ -1,25 +1,12 @@
 Indentation contains tabs
 =========================
 
-Summary
--------
-
-The code is being indented with tabs. Python code should be indented with 4 spaces for each level of indentation.
-
-Description
------------
-
 Per the PEP 8 Style Guide, all Python code should be consistently indented with 4 spaces for each level of indentation, not tabs.
 
-Examples
---------
-
-Code is indented with spaces and tabs
-.....................................
+Example
+-------
 
 The following code uses tabs for indentation. Python code should be indented with four spaces for each level of indentation.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

@@ -1,13 +1,5 @@
-Do not assign a ``lambda`` expression, use a ``def``
-====================================================
-
-Summary
--------
-
-Assigning a name to a ``lambda`` essentially duplicates the functionality of ``def`` (a function definition), in which case you should just use a ``def`` in order to avoid confusion and increase clarity.
-
-Description
------------
+Assigning a `lambda` expression to a variable
+=============================================
 
 The sole advantage that a ``lambda`` expression has over a ``def`` is that the ``lambda`` can be anonymously embedded within a larger expression. If you are going to assign a name to a ``lambda``, you are better off just defining it as a ``def``.
 
@@ -26,12 +18,7 @@ From the PEP 8 Style Guide:
 Examples
 ----------
 
-``lambda`` expression assigned to variable
-...........................................
-
 The following code assigns a ``lambda`` function which returns the double of its input to a variable. This is functionally identical to creating a ``def``.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 
@@ -51,6 +38,7 @@ Refactor the ``lambda`` expression into a named ``def`` expression.
     
 References
 ----------
+
 - `PEP 8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 - `Stack Overflow - Do not assign a lambda expression <http://stackoverflow.com/questions/25010167/e731-do-not-assign-a-lambda-expression-use-a-def>`_
 - pep8 - E731

@@ -44,7 +44,7 @@ The code below uses the PEP 8 preferred pattern of ``if cond is True:``.
     if flag is True:
         print "PEP 8 Style Guide prefers this pattern"
         
-Compare values to ``True`` using the pattern ``if cond is True:``
+Compare values to ``True`` using the pattern ``if cond:``
 .................................................................
 
 The code below uses the PEP 8 preferred pattern of ``if cond:``. This only works if the object, variable, or expression evaluates to a Boolean value of ``True`` or ``False``.

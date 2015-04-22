@@ -41,7 +41,7 @@ In the modified module below, the author decides that the module needs to use th
 
     # removed __future__ import statement
 
-    print 8 / 7  # 1.1428571428571428
+    print 8 / 7  # 1
 
 Place ``__future__`` import before all other statements
 .......................................................

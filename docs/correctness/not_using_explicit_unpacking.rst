@@ -9,7 +9,7 @@ Rather than creating variables and then manually assigning a list item to each v
 Description
 -----------
 
-When you see multiple variables being defined followed by an assignment to a list (e.g. ``l0, l1, l2 = l``, where ``l0``, ``l1``, and ``l2`` are variables and ``l`` is a list), Python will automatically iterate through the list and assign ``l[0]`` to ``l1``, ``l[1]`` to ``l1``, and so on.
+When you see multiple variables being defined followed by an assignment to a list (e.g. ``l0, l1, l2 = l``, where ``l0``, ``l1``, and ``l2`` are variables and ``l`` is a list), Python will automatically iterate through the list and assign ``l[0]`` to ``l0``, ``l[1]`` to ``l1``, and so on.
 
 Examples
 ----------

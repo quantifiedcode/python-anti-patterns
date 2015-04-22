@@ -32,7 +32,7 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
 
     r = Rectangle(3, 4)
 
-    if type(r) is not types.ListType:  # bad
+    if type(r) is types.ListType:  # bad
         print "object r is a list"
         
 Note that the following situation will not raise the error, although it should.

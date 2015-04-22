@@ -10,7 +10,7 @@ A programmer wrote the ``append`` function below under the assumption that the `
 
 .. code:: python
 
-    def append(number, list = []):
+    def append(number, list=[]):
         list.append(number)
         print list
         return list
@@ -30,8 +30,8 @@ If, like the programmer who implemented the ``append`` function above, you want 
 
 .. code:: python
 
-    def append(number, list = None): # the keyword None is the sentinel value representing empty list
-        if list is None
+    def append(number, list=None): # the keyword None is the sentinel value representing empty list
+        if list is None:
             list = []
         list.append(number)
         print list

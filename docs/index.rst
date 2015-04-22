@@ -97,6 +97,10 @@ So far, the following people have contributed to this open-source book:
 * `Christoph Neumann`_ - Christoph contributed material and did a large part of the editing.
 * `Florian Lehmann`_ - Florian designed the modified RTD theme used for this book.
 
+If you have contributed to this book but your name is missing from the list, 
+feel free to add it on `Github`_. We apologize for any omissions.
+
+.. _`Github`: https://github.com/quantifiedcode/python-anti-patterns
 .. _`Kayce Basques`: https://github.com/kaycebasques
 .. _`Andreas Dewes`: https://github.com/adewes
 .. _`Christoph Neumann`: https://github.com/programmdesign

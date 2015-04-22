@@ -1,14 +1,16 @@
-#Python code patterns
+#The Little Book of Python Anti-Patterns
 
 #Description
 
-This is an open collection of **Python worst practices**, or anti-patterns. Many of them can be detected automatically using [Pylint](http://www.pylint.org/), [Pyflakes](https://pypi.python.org/pypi/pyflakes) or [Pep8](https://pypi.python.org/pypi/pep8), or using our online code-checking service at [www.quantifiedcode.com](http://www.quantifiedcode.com).
+This is an open-source book of **Python anti-patterns and worst practices**. Check out `docs/index.rst` for more information.
 
-#Licence
+**Notice**: This is still (and will always be) a work-in-progress, feel free to contribute by suggesting improvements, adding new articles, improving existing ones, or translating this into other languages.
 
-These patterns are made available under a Creative Commons Non-Commercial license. This allows you to use them freely for your own personal projects. 
+#License
 
-When using these articles on your website, please add a well-visible link to [our documentation website](http://docs.quantifiedcode.com/python-code-patterns) or this Github project, so that people can easily find the original articles and make contributions.
+The book is made available under a Creative Commons Non-Commercial license. This allows you to use and distribute it freely for your own non-commercial projects (e.g. for teaching). 
+
+When using content from the book on your website or elsewhere, please add a visible link to [our website](http://docs.quantifiedcode.com/python-anti-patterns) or this Github project, so that your readers can easily find the original articles and make contributions.
 
 Enjoy :)
 

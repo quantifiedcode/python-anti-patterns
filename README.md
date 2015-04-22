@@ -1,7 +1,5 @@
 #The Little Book of Python Anti-Patterns
 
-#Description
-
 This is an open-source book of **Python anti-patterns and worst practices**. Check out `docs/index.rst` for more information.
 
 **Notice**: This is still (and will always be) a work-in-progress, feel free to contribute by suggesting improvements, adding new articles, improving existing ones, or translating this into other languages.

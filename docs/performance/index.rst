@@ -2,7 +2,7 @@
 ===========================
 
 In Python, large performance gains can be obtained by using appropriate functions and directives.
-Use the following patterns to reduce overhead and make your code more performant.
+Avoid the following anti-patterns to reduce overhead and make your code more performant.
 
 .. toctree::
     :maxdepth: 1

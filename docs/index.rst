@@ -18,7 +18,7 @@ The Little Book of Python Anti-Patterns
 |
 
 
-:github_badge:`quantifiedcode/python-code-patterns`
+:github_badge:`quantifiedcode/python-anti-patterns`
 
 Welcome, fellow Pythoneer! This is a small book of Python  **anti-patterns** and **worst practices**.
 

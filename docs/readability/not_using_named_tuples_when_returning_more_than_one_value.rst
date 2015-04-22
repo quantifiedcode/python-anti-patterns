@@ -39,4 +39,5 @@ The modified code below uses named tuples to return multiple values. This code i
 
 References
 ----------
+
 - `Python Standard Libary - collections.namedtuple <https://docs.python.org/2/library/collections.html#namedtuple-factory-function-for-tuples-with-named-fields>`_

@@ -45,5 +45,6 @@ The code below uses the PEP 8 preferred pattern of ``if cond:``. This only works
 
 References
 ----------
+
 - pep8 - E712
 - `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_

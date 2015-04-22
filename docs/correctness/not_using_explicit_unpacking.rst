@@ -29,6 +29,3 @@ The modified code below is functionally equivalent to the original code, but thi
     l = [4, 7, 18]
 
     l0, l1, l2 = l
-    
-References
-----------

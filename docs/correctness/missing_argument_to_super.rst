@@ -52,6 +52,7 @@ In the modified code below the author has fixed the call to ``super()`` so that 
 
 References
 ----------
+
 - PyLint - E1004
 - `Python Standard Library - super([type[, object-or-type]]) <https://docs.python.org/3.1/library/functions.html#super>`_
 - `Stack Overflow - What is a basic example of single inheritance using super()? <http://stackoverflow.com/questions/1173992/what-is-a-basic-example-of-single-inheritance-using-the-super-keyword-in-pytho>`_

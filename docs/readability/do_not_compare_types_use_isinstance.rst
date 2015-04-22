@@ -67,5 +67,6 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
         
 References
 ----------
+
 - `Stack Overflow: Differences between isinstance() and type() in Python <http://stackoverflow.com/questions/1549801/differences-between-isinstance-and-type-in-python>`_
 - pep8 - E721

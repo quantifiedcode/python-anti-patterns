@@ -31,4 +31,5 @@ Although the modifed code below does not fix the underlying problem of attemptin
     
 References
 ----------
+
 `Stack Overflow - Hungarian Notation <http://stackoverflow.com/questions/8791533/does-it-make-sense-to-use-hungarian-notation-prefixes-in-interpreted-languages>`_

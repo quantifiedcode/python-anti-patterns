@@ -34,4 +34,5 @@ The updated code below demonstrates the Pythonic style for iterating through a p
     
 References
 ----------
+
 - `PEP 20 - The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_

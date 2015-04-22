@@ -43,5 +43,6 @@ If, like the programmer who implemented the ``append`` function above, you want 
     
 References
 ----------
+
 - `PyLint - W0102 <http://pylint-messages.wikidot.com/messages:w0102>`_
 - `Stack Overflow - Hidden Features of Python <http://stackoverflow.com/questions/101268/hidden-features-of-python#113198>`_

@@ -2,7 +2,7 @@
 ==================================
 
 A program is **maintainable** if it is easy to understand and modify the code even for someone
-that is unfamiliar with the code base. Maintainability is intertwined, but more than readability.
+that is unfamiliar with the code base.
 
 Avoid the following anti-patterns to increase maintainability and avoid creating `spaghetti code`.
 

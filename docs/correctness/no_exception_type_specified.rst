@@ -15,10 +15,9 @@ The function `divide` simply devides `a` by `b`. To avoid invalid calculations (
       return result
 
 Solutions
-=========
+---------
 
 Handle exceptions with Python's built in `exception types<https://docs.python.org/2/library/exceptions.html>`
--------------------------------------------------------------------------------------------------------------
 
 .. code:: python
 
@@ -80,7 +79,8 @@ In addition to Python's standard exceptions, you can implement your own exceptio
         return result
 
 References
-==========
+----------
+
 - `PyLint W0701<http://pylint-messages.wikidot.com/messages:w0701>`
 - `Python Built-in Exceptions<https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`
 - `Python Errors and Exceptions<https://docs.python.org/2/tutorial/errors.html>`

@@ -34,5 +34,6 @@ The code below uses the PEP 8 preferred pattern of ``if cond is None``.
     
 References
 ----------
+
 - pep8 - E711
 - `PEP 8 Style Guide - Progrmaming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_

@@ -83,6 +83,7 @@ Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is pro
 
 References
 ----------
+
 - `PyLint - E0235 <https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers>`_
 - `Python Language Reference - The with statement <https://docs.python.org/2/reference/compound_stmts.html#with>`_
 - `Python Language Reference - With Statement Context Managers <https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers>`_

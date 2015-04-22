@@ -33,6 +33,3 @@ The modified code below is functionally equivalent to the original code above, b
     z = 0
 
     x, y, z = y + 2, x - 3, x + y  # more concise
-    
-References
-----------

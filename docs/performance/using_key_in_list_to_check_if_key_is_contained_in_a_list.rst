@@ -33,6 +33,3 @@ In the modified code below, the list has been changed to a set. This is much mor
         print "The number 3 is in the list."
     else:
         print "The number 3 is NOT in the list."
-    
-References
-----------

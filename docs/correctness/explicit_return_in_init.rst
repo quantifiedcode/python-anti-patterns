@@ -51,5 +51,6 @@ There is no reason why the ``Rectangle`` class MUST return the area immediately 
 
 References
 ----------
+
 - `PyLint - E0101 <http://pylint-messages.wikidot.com/messages:e0101>`_
 - `Python Language Reference - object.__init__(self[, ...]) <https://docs.python.org/2/reference/datamodel.html#object.__init__>`_

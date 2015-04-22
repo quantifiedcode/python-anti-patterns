@@ -37,4 +37,5 @@ The modified code below uses ``setdefault()`` to initialize the dictionary. When
     
 References
 ----------
+
 - `Stack Overflow - Use cases for the setdefault dict method <http://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method>`_

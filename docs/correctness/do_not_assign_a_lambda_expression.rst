@@ -38,6 +38,7 @@ Refactor the ``lambda`` expression into a named ``def`` expression.
     
 References
 ----------
+
 - `PEP 8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 - `Stack Overflow - Do not assign a lambda expression <http://stackoverflow.com/questions/25010167/e731-do-not-assign-a-lambda-expression-use-a-def>`_
 - pep8 - E731

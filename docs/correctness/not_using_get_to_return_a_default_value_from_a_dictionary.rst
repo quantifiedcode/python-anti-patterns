@@ -41,4 +41,5 @@ When ``get()`` is called, Python checks if the specified key exists in the dict.
     
 References
 ----------
+
 - `Python Standard Library - dict.get <https://docs.python.org/2/library/stdtypes.html#dict.get>`_

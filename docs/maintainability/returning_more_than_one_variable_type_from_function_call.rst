@@ -48,6 +48,3 @@ When a calling code provides invalid data to a function, or a precondition to th
         print "The secret code is {}".format(secret_code)
     except ValueError:
         print "Wrong password."
-
-References
-----------

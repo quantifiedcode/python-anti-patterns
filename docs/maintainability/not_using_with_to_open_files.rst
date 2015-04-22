@@ -31,4 +31,5 @@ The modified code below is the safest way to open a file. The ``file`` class has
     
 References
 ----------
+
 `effbot - Understanding Python's with statement <http://effbot.org/zone/python-with-statement.htm>`_

@@ -33,6 +33,7 @@ All Python code should be consistently indented with 4 spaces.
     
 References
 ----------
+
 - `PEP 8 Style Guide - Tabs or Spaces? <http://legacy.python.org/dev/peps/pep-0008/#tabs-or-spaces>`_
 - `PEP 8 Style Guide - Indentation <http://legacy.python.org/dev/peps/pep-0008/#indentation>`_
 - pep8 - E731

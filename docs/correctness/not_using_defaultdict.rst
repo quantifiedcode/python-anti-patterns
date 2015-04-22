@@ -38,4 +38,5 @@ The modified code below uses ``defaultdict`` to initialize the dict. Whenever a 
 
 References
 ----------
+
 - `Python Standard Library - collections.defaultdict <https://docs.python.org/2/library/collections.html#collections.defaultdict>`_

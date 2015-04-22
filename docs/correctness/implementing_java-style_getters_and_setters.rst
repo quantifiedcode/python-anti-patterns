@@ -69,6 +69,7 @@ When a member needs to be slightly protected and cannot be simply exposed as a p
 
 References
 ----------
+
 - `Python Built-in Functions - property <https://docs.python.org/2/library/functions.html#property>`_
 - `dirtSimple - Python Is Not Java <http://dirtsimple.org/2004/12/python-is-not-java.html>`_
 - `Stack Overflow - What's the Pythonic Way to use getters and setters? <http://stackoverflow.com/questions/2627002/whats-the-pythonic-way-to-use-getters-and-setters>`_

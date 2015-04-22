@@ -20,7 +20,7 @@ The Little Book of Python Anti-Patterns
 
 :github_badge:`quantifiedcode/python-code-patterns`
 
-Welcome, fellow Pythoneer! This is a small book of Python  **anti-patterns** and **bad practices**.
+Welcome, fellow Pythoneer! This is a small book of Python  **anti-patterns** and **worst practices**.
 
 Learning about these anti-patterns will help you to avoid them in your own code and make you
 a better programmer (hopefully). Each pattern comes with a small description, examples and
@@ -40,8 +40,8 @@ Who are we?
 -----------
 
 We're `QuantifiedCode`_, a Berlin-based startup. Our mission
-is to help everyone to write better code, faster! Our first product is an `online tool`_ for
-automated, data-driven code review. When building this tool, we learned a lot about code quality
+is to help programmers write better code! Our first product is an `online tool`_ for
+automated, data-driven code review. When building this tool we learned a lot about code quality
 in Python and decided to compile our knowledge into this book.
 
 .. _QuantifiedCode: https://www.quantifiedcode.com/
@@ -87,8 +87,25 @@ simply forking our Github project and sending us a pull request once you're done
 We will review and merge all pull requests as fast as possible and be happy to include your name on
 the list of authors of this document.
 
+List of Contributors
+--------------------
+
+So far, the following people have contributed to this open-source book:
+
+* `Kayce Basques`_ - Kayce wrote most of the original content for this book.
+* `Andreas Dewes`_ - Andreas compiled the list of patterns and did most of the editing.
+* `Christoph Neumann`_ - Christoph contributed material and did a large part of the editing.
+* `Florian Lehmann`_ - Florian designed the modified RTD theme used for this book.
+
+.. _`Kayce Basques`: https://github.com/kaycebasques
+.. _`Andreas Dewes`: https://github.com/adewes
+.. _`Christoph Neumann`: https://github.com/programmdesign
+.. _`Florian Lehmann`: https://github.com/cashaddy
+
 Index Of Patterns
 -----------------
+
+Here's the full index of all anti-patterns in this book.
 
 .. toctree::
     :glob:

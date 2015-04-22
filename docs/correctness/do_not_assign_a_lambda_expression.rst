@@ -18,12 +18,7 @@ From the PEP 8 Style Guide:
 Examples
 ----------
 
-``lambda`` expression assigned to variable
-...........................................
-
 The following code assigns a ``lambda`` function which returns the double of its input to a variable. This is functionally identical to creating a ``def``.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 

@@ -10,6 +10,5 @@ Use the following patterns to increase the security of your code.
 .. toctree::
     :maxdepth: 1
 
-    Use of exec <use_of_exec>
-    Use of eval <use_of_eval>
+    use_of_exec
 

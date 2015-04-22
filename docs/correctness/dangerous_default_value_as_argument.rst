@@ -6,9 +6,6 @@ Passing mutable lists or dictionaries as default arguments can have unforeseen c
 Example
 -------
 
-A mutable list or dictionary is supplied as the default argument
-................................................................
-
 A programmer wrote the ``append`` function below under the assumption that the ``append`` function would return a new list every time that the function is called without the second argument. In reality this is not what happens. The first time that the function is called, Python creates a persistent list. Every subsequent call to ``append`` appends the value to that original list.
 
 .. code:: python

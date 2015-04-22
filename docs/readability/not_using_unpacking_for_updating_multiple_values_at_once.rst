@@ -6,10 +6,7 @@ In general, the Python programming community prefers concise code over verbose c
 Example
 -------
 
-Using assignments to individually update the values of variables
-................................................................
-
-The module below updates the values of the two variables ``x`` and ``y`` using assignments that are on separate lines of code.
+The code below updates the values of the two variables ``x`` and ``y`` using assignments that are on separate lines of code.
 
 .. code:: python
 
@@ -27,7 +24,7 @@ Solutions
 Use unpacking to update multiple values simultaneously
 ......................................................
 
-The modified module below is functionally equivalent to the original module above, but this module is more concise. 
+The modified code below is functionally equivalent to the original code above, but this code is more concise. 
 
 .. code:: python
 

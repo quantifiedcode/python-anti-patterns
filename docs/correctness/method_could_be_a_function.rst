@@ -6,9 +6,6 @@ When a method is not preceded by the ``@staticmethod`` or ``@classmethod`` decor
 Example
 -------
 
-Static method is not preceded by ``@staticmethod`` decorator
-............................................................
-
 In the ``Rectangle`` class below the ``area`` method calculates the area of any rectangle given a width and a height.
 
 .. code:: python

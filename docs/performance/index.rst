@@ -7,5 +7,4 @@ Use the following patterns to reduce overhead and make your code more performant
 .. toctree::
     :maxdepth: 1
 
-    Searching lists <using_key_in_list_to_check_if_key_is_contained_in_a_list>
-
+    using_key_in_list_to_check_if_key_is_contained_in_a_list

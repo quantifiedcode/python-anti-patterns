@@ -6,12 +6,7 @@ When an exception occurs, Python will search for the first exception clause whic
 Example
 -------
 
-Sub class exception clause placed after its ancestor's clause
-.............................................................
-
-The module below performs a division operation that results in a ``ZeroDivisionError``. The module contains an except clause for this type of error, which would be really useful because it pinpoints the exact cause of the problem. However, the ``ZeroDivisionError`` exception clause is unreachable because there is a ``Exception`` exception clause placed before it. When Python experiences an exception, it will linearly test each exception clause and execute the first clause that matches the raised exception. The match does not need to be identical. So long as the raised exception is a sub class of the exception listed in the exception clause, then Python will execute that clause and will skip all other clauses. This defeats the purpose of exception clauses, which is to identify and handle exceptions with as much precision as possible.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
+The code below performs a division operation that results in a ``ZeroDivisionError``. The code contains an except clause for this type of error, which would be really useful because it pinpoints the exact cause of the problem. However, the ``ZeroDivisionError`` exception clause is unreachable because there is a ``Exception`` exception clause placed before it. When Python experiences an exception, it will linearly test each exception clause and execute the first clause that matches the raised exception. The match does not need to be identical. So long as the raised exception is a sub class of the exception listed in the exception clause, then Python will execute that clause and will skip all other clauses. This defeats the purpose of exception clauses, which is to identify and handle exceptions with as much precision as possible.
 
 .. code:: python
 
@@ -28,7 +23,7 @@ Solutions
 Move sub class exception clause before its ancestor's clause
 ............................................................
 
-The modified module below places the ``ZeroDivisionError`` exception clause in front of the ``Exception`` exception clause. Now when the exception is triggered the ``ZeroDivisionError`` exception clause will execute, which is much more optimal because it is more specific.
+The modified code below places the ``ZeroDivisionError`` exception clause in front of the ``Exception`` exception clause. Now when the exception is triggered the ``ZeroDivisionError`` exception clause will execute, which is much more optimal because it is more specific.
 
 .. code:: python
 

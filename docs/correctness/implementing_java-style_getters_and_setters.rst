@@ -6,9 +6,6 @@ Python is not Java. If you need to set or get the members of a class or object, 
 Examples
 ----------
 
-Implementing Java-style getters and setters
-...........................................
-
 The programmer below comes to Python from a long career as a Java programmer. For every class member that he wants to expose publicly, he defines a ``get`` and ``set`` method for that member. This is common practice in Java, but is frowned upon in Python as a waste of time and a cause of unnecessary code.
 
 .. code:: python
@@ -31,7 +28,7 @@ Solutions
 Access the members directly
 ...........................
 
-In Python it is acceptable to simply access class or object members directly. The modified module below exposes the ``length`` member as a public member. This is signified by the fact that there is no underscore character at the beginning of the member name. The ``get_length()`` and ``set_length()`` methods are no longer necessary so they have been deleted.
+In Python it is acceptable to simply access class or object members directly. The modified code below exposes the ``length`` member as a public member. This is signified by the fact that there is no underscore character at the beginning of the member name. The ``get_length()`` and ``set_length()`` methods are no longer necessary so they have been deleted.
 
 .. code:: python
 

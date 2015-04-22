@@ -6,10 +6,7 @@ Named tuples can be used anywhere where normal tuples are acceptable, but their 
 Example
 -------
 
-Using normal tuple to return multiple values
-............................................
-
-The module below returns a first name, middle name, and last name using a normal, unnamed tuple. After calling the tuple, each value can only be returned via an index. This code is difficult to use: the caller of the function has to know that the first element is the first name, the second is the middle name, and the third is the last name.
+The code below returns a first name, middle name, and last name using a normal, unnamed tuple. After calling the tuple, each value can only be returned via an index. This code is difficult to use: the caller of the function has to know that the first element is the first name, the second is the middle name, and the third is the last name.
 
 .. code:: python
 
@@ -26,7 +23,7 @@ Solutions
 Use named tuples to return multiple values
 ..........................................
 
-The modified module below uses named tuples to return multiple values. This code is easier to use and easier to read, as now the caller can access each piece of data via a straightforward name (like ``name.first``).
+The modified code below uses named tuples to return multiple values. This code is easier to use and easier to read, as now the caller can access each piece of data via a straightforward name (like ``name.first``).
 
 .. code:: python
 

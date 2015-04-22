@@ -6,10 +6,7 @@ The ``else`` clause of a loop is executed when the loop sequence is empty. When 
 Example
 -------
 
-Loop contains ``else`` clause yet specifies no ``break`` statements
-...................................................................
-
-The code below demonstrates some potential unintended behavior that can result when a loop contains an ``else`` statement yet never specifies a ``break`` statement. ``contains_magic_number()`` iterates through a list of numbers and compares each number to the magic number. If the magic number is found then the function prints ``The list contains the magic number."``. If it doesn't then the function prints ``This list does NOT contain the magic number.``. When the module calls the function with a list of ``range(10)`` and a magic number of ``5``, you would expect the module to only print ``The list contains the magic number.``. However, the module also prints ``This list does NOT contain the magic number.``. This is because the ``range(10)`` list eventually becomes empty, which prompts Python to execute the ``else`` clause.
+The code below demonstrates some potential unintended behavior that can result when a loop contains an ``else`` statement yet never specifies a ``break`` statement. ``contains_magic_number()`` iterates through a list of numbers and compares each number to the magic number. If the magic number is found then the function prints ``The list contains the magic number."``. If it doesn't then the function prints ``This list does NOT contain the magic number.``. When the code calls the function with a list of ``range(10)`` and a magic number of ``5``, you would expect the code to only print ``The list contains the magic number.``. However, the code also prints ``This list does NOT contain the magic number.``. This is because the ``range(10)`` list eventually becomes empty, which prompts Python to execute the ``else`` clause.
 
 .. code:: python
 
@@ -30,7 +27,7 @@ Solutions
 Insert a ``break`` statement into the loop
 ..........................................
 
-If the ``else`` clause should not always execute at the end of a loop clause, then the module should add a ``break`` statement within the loop block.
+If the ``else`` clause should not always execute at the end of a loop clause, then the code should add a ``break`` statement within the loop block.
 
 .. code:: python
 

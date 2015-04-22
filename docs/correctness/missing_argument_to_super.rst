@@ -8,10 +8,7 @@ Missing argument to ``super()``
 Example
 -------
 
-No arguments given to ``super()``
-.................................
-
-The author of the module below provides no arguments for the child class' call to ``super()``. Python raises a ``TypeError`` at runtime because it expects at least 1 argument for ``super()``.
+The author of the code below provides no arguments for the child class' call to ``super()``. Python raises a ``TypeError`` at runtime because it expects at least 1 argument for ``super()``.
 
 .. code:: python
 
@@ -35,7 +32,7 @@ Solutions
 Insert name of child class as first argument to ``super()``
 ...........................................................
 
-In the modified module below the author has fixed the call to ``super()`` so that the name of the child class which is calling ``super()`` (``Square`` in this case) is the first argument to the method, and a reference to the object calling ``super()`` is the second argument.
+In the modified code below the author has fixed the call to ``super()`` so that the name of the child class which is calling ``super()`` (``Square`` in this case) is the first argument to the method, and a reference to the object calling ``super()`` is the second argument.
 
 .. code:: python
 

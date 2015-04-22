@@ -6,9 +6,6 @@ Unlike some programming languages, Python does not pass references to instance o
 Example
 -------
 
-Instance method is missing the ``self`` keyword
-...............................................
-
 In the ``Rectangle`` class below the ``area`` method attempts to return the value of the ``area`` instance variable. However, ``self.area`` is undefined because a reference to the instance object has not been explicitly passed as an argument to the method.
 
 .. code:: python

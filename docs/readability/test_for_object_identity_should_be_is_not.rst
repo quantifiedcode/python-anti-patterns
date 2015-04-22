@@ -8,9 +8,6 @@ This is only a guideline. It can be ignored if needed. But the purpose of the PE
 Example
 -------
 
-Statement uses ``not OBJECT is CLASS`` pattern
-................................................
-
 The statement below compares an object with the name of ``rectangle`` to a class with the name of ``Circle``. It is evaluated as ``if not (rectangle is Circle)`` but could easily be interpreted as ``if (not rectangle) is Circle``, which probably makes no sense in the context of the program. 
 
 .. code:: python

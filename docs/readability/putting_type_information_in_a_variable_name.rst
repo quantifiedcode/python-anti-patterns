@@ -1,15 +1,12 @@
-Putting type notation in a variable name 
-========================================
+Putting type information in a variable name
+===========================================
 
-Python is a duck-typed language. Just because a variable is described as an integer, does not mean that it actually is an integer. This can be very dangerous for any programmer who acts on the variable assuming that it is an integer. Note that the practice of including type notation in variable names is also called Hungarian Notation.
+Python is a duck-typed language. Just because a variable is described as an integer does not mean that it actually is an integer. This can be very dangerous for any programmer who acts on the variable assuming that it is an integer. Note that the practice of including type notation in variable names is also called Hungarian Notation.
 
 Example
 -------
 
-Using type notation in variable names
-.....................................
-
-The module below demonstrates the dangers of variables whose names include type notation. Just because a variable is called ``n_int`` does not mean that the variable is actually an integer.
+The code below demonstrates the dangers of variables whose names include type notation. Just because a variable is called ``n_int`` does not mean that the variable is actually an integer.
 
 .. code:: python
 
@@ -24,7 +21,7 @@ Solutions
 Remove type notation
 ....................
 
-Although the modifed module below does not fix the underlying problem of attempting to divide a number by a string, the code is generally less misleading, because there is no misleading description in the variable name ``n`` that ``n`` is a number.
+Although the modifed code below does not fix the underlying problem of attempting to divide a number by a string, the code is generally less misleading, because there is no misleading description in the variable name ``n`` that ``n`` is a number.
 
 .. code:: python
 

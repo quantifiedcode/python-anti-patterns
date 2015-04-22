@@ -6,10 +6,7 @@ When you see multiple variables being defined followed by an assignment to a lis
 Example
 -------
 
-Not using unpacking
-...................
-
-The module below manually creates multiple variables to access the items in a list. This code is error-prone and unnecessarily verbose, as well as tedious to write.
+The code below manually creates multiple variables to access the items in a list. This code is error-prone and unnecessarily verbose, as well as tedious to write.
 
 .. code:: python
 
@@ -25,7 +22,7 @@ Solutions
 Use unpacking
 .............
 
-The modified module below is functionally equivalent to the original module, but this module is more concise and less prone to error.
+The modified code below is functionally equivalent to the original code, but this code is more concise and less prone to error.
 
 .. code:: python
 

@@ -6,9 +6,6 @@ Per the PEP 8 Style Guide, all Python code should be consistently indented with 
 Example
 -------
 
-Code is indented with spaces and tabs
-.....................................
-
 The following code mixes spaces and tabs for indentation. The ``print "Hello, World!" statement is indented with a tab. The ``print "Goodybye, World!"`` statement is indented with 4 spaces.
 
 .. code:: python

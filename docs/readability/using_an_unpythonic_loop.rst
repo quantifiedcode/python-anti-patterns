@@ -6,10 +6,7 @@ Using an unpythonic loop
 Example
 -------
 
-Loop defines index and accesses each list element with index
-............................................................
-
-The module below uses an index variable ``i`` in a ``for`` loop to iterate through the elements of a list. This is not the preferred style for iterating through a list in Python.
+The code below uses an index variable ``i`` in a ``for`` loop to iterate through the elements of a list. This is not the preferred style for iterating through a list in Python.
 
 .. code:: python
 
@@ -25,7 +22,7 @@ Solutions
 Retrieve index and element when defining loop
 .............................................
 
-The updated module below demonstrates the Pythonic style for iterating through a list. When you define two variables in a ``for`` loop in conjunction with a call to ``enumerate()`` on a list, Python automatically assigns the first variable as an index variable, and the second variable as the corresponding list element value for that index location in the list.
+The updated code below demonstrates the Pythonic style for iterating through a list. When you define two variables in a ``for`` loop in conjunction with a call to ``enumerate()`` on a list, Python automatically assigns the first variable as an index variable, and the second variable as the corresponding list element value for that index location in the list.
 
 .. code:: python
 

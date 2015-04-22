@@ -6,10 +6,7 @@ For simple transformations that can be expressed as a list comprehension, use li
 Example
 -------
 
-Using ``map()`` where list comprehension is possible
-....................................................
-
-The module below defines a list, and then uses ``map()`` to create a second list which is just the doubles of each value from the first list.
+The code below defines a list, and then uses ``map()`` to create a second list which is just the doubles of each value from the first list.
 
 .. code:: python
 
@@ -22,7 +19,7 @@ Solutions
 Use list comprehension instead of ``map()``
 ...........................................
 
-In the modified module below, the module uses a list comprehension to generate the second list containing the doubled values from the first list. Although this is functionally equivalent to the first module, the list comprehension is generally agreed to be more concise and easier to read.
+In the modified code below, the code uses a list comprehension to generate the second list containing the doubled values from the first list. Although this is functionally equivalent to the first code, the list comprehension is generally agreed to be more concise and easier to read.
 
 .. code:: python
 

@@ -22,6 +22,7 @@ Solutions
 
 If you are absolutely sure that you need to call the proteced function from the outside,
 do the following:
+
  * Make sure that calling the function from outside the class does not cause any inadverent side effects.
  * Refactor it such that it becomes part of the public interface of the class.
 

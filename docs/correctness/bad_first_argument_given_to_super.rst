@@ -6,12 +6,7 @@ Bad first argument given to ``super()``
 Example
 -------
 
-First argument to ``super()`` should be name of child class
-...........................................................
-
-Python raises a ``TypeError`` when it attempts to execute the call to ``super()`` below. The first argument should be the name of the child class that is calling ``super()``. The author of the module mistakenly provided ``self`` as the first argument.
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
+Python raises a ``TypeError`` when it attempts to execute the call to ``super()`` below. The first argument should be the name of the child class that is calling ``super()``. The author of the code mistakenly provided ``self`` as the first argument.
 
 .. code:: python
 
@@ -35,7 +30,7 @@ Solutions
 Insert name of child class as first argument to ``super()``
 ...........................................................
 
-In the modified module below the author has fixed the call to ``super()`` so that the name of the child class which is calling ``super()`` (``Square`` in this case) is the first argument to the method.
+In the modified code below the author has fixed the call to ``super()`` so that the name of the child class which is calling ``super()`` (``Square`` in this case) is the first argument to the method.
 
 .. code:: python
 

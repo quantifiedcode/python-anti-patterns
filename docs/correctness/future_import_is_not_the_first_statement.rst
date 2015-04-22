@@ -6,10 +6,7 @@ The ``__future__`` module enables a module to use functionality that is mandator
 Example
 -------
 
-Module imports from ``__future__`` after other statements
-.........................................................
-
-The module below attempts to place a ``__future__`` import statement in the middle of the module. When Python encounters the ``from __future__ import division`` statement it raises a ``SyntaxError`` and halts execution. However, if the module were to execute, the first ``print`` statement would print out ``1`` (which is how the division operator behaves in Python versions 2 and below), but the second ``print`` statement would print out a decimal value, which is how the division operator functions in Python versions 3 and later. As you can see, this could create very strange behavior, so Python does not allow ``__future__`` import statements in the middle of a module. The module can use either version of the division operator, but it can't use both.
+The code below attempts to place a ``__future__`` import statement in the middle of the module. When Python encounters the ``from __future__ import division`` statement it raises a ``SyntaxError`` and halts execution. However, if the code were to execute, the first ``print`` statement would print out ``1`` (which is how the division operator behaves in Python versions 2 and below), but the second ``print`` statement would print out a decimal value, which is how the division operator functions in Python versions 3 and later. As you can see, this could create very strange behavior, so Python does not allow ``__future__`` import statements in the middle of a module. The module can use either version of the division operator, but it can't use both.
 
 .. code:: python
 
@@ -25,7 +22,7 @@ Solutions
 Remove ``__future__`` import
 ............................
 
-In the modified module below, the author decides that the module needs to use the old functionality of the division operator. The only solution in this case is to remove the ``__future__`` import statement from the module.
+In the modified code below, the author decides that the module needs to use the old functionality of the division operator. The only solution in this case is to remove the ``__future__`` import statement from the module.
 
 .. code:: python
 
@@ -36,7 +33,7 @@ In the modified module below, the author decides that the module needs to use th
 Place ``__future__`` import before all other statements
 .......................................................
 
-In the modified module below, the author decides that the module needs the new functionality of the division operator. The only solution then is to place the ``__future__`` import statement at the beginning of the module
+In the modified code below, the author decides that the module needs the new functionality of the division operator. The only solution then is to place the ``__future__`` import statement at the beginning of the module
 
 .. code:: python
 

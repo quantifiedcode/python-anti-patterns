@@ -6,10 +6,7 @@ When a dict is created using ``defaultdict()``, the value for each key in the di
 Example
 -------
 
-Manually initializing the keys of a dict
-........................................
-
-The module below defines an empty dict and then manually initializes the keys of the dict. Although there is nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea, as explained in the solution below.
+The code below defines an empty dict and then manually initializes the keys of the dict. Although there is nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea, as explained in the solution below.
 
 .. code:: python
 
@@ -28,7 +25,7 @@ Solutions
 Use ``defaultdict()`` to initialize dict keys
 .............................................
 
-The modified module below uses ``defaultdict`` to initialize the dict. Whenever a new key is created, the default value for that key is 6. This module is functionally equivalent to the previous module, but this one is more concise and less error-prone, because every key automatically initializes to 6 with no work on the part of the programmer.
+The modified code below uses ``defaultdict`` to initialize the dict. Whenever a new key is created, the default value for that key is 6. This code is functionally equivalent to the previous code, but this one is more concise and less error-prone, because every key automatically initializes to 6 with no work on the part of the programmer.
 
 .. code:: python
 

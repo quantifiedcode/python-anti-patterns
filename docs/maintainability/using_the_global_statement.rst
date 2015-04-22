@@ -8,10 +8,7 @@ Global variables also make code difficult to read, because they force you to sea
 Examples
 ----------
 
-Module and functions use ``global`` statement
-.............................................
-
-The module below uses global variables and a function to compute the area and perimeter of a rectangle. As you can see, even with two functions it becomes difficult to keep track of how the global variables are used and modified.
+The code below uses global variables and a function to compute the area and perimeter of a rectangle. As you can see, even with two functions it becomes difficult to keep track of how the global variables are used and modified.
 
 .. code:: python
 
@@ -49,7 +46,7 @@ Encapsulate the global variables into objects
 
 One common solution for avoiding global variables is to create a class and store related global variables as members of an instantiated object of that class. This results in more compact and safer code.
 
-In the modified module below, the author eliminates the need for the global variables ``WIDTH`` and ``HEIGHT`` by encapsulating this data into a class called ``Rectangle``.
+In the modified code below, the author eliminates the need for the global variables ``WIDTH`` and ``HEIGHT`` by encapsulating this data into a class called ``Rectangle``.
 
 .. code:: python
 

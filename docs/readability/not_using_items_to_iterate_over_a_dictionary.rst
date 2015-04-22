@@ -6,10 +6,7 @@ Not using ``items()`` to iterate over a dictionary
 Example
 -------
 
-For loop does not use ``items()`` to iterate across dictionary
-...............................................................
-
-The module below defines a for loop that iterates over a dictionary named ``d``. For each loop iteration Python automatically assigns the value of ``key`` to the name of the next key in the dictionary. Inside of the ``for`` loop the module uses ``key`` to access the value of each key of the dictionary. This is a common way for iterating over a dictionary, but it is not the preferred way in Python.
+The code below defines a for loop that iterates over a dictionary named ``d``. For each loop iteration Python automatically assigns the value of ``key`` to the name of the next key in the dictionary. Inside of the ``for`` loop the code uses ``key`` to access the value of each key of the dictionary. This is a common way for iterating over a dictionary, but it is not the preferred way in Python.
 
 .. code:: python
 
@@ -24,7 +21,7 @@ Solutions
 Use ``items()`` to iterate across dictionary
 ............................................
 
-The updated module below demonstrates the Pythonic style for iterating through a dictionary. When you define two variables in a ``for`` loop in conjunction with a call to ``items()`` on a dictionary, Python automatically assigns the first variable as the name of a key in that dictionary, and the second variable as the corresponding value for that key.
+The updated code below demonstrates the Pythonic style for iterating through a dictionary. When you define two variables in a ``for`` loop in conjunction with a call to ``items()`` on a dictionary, Python automatically assigns the first variable as the name of a key in that dictionary, and the second variable as the corresponding value for that key.
 
 .. code:: python
 

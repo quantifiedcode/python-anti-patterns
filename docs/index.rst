@@ -47,6 +47,23 @@ in Python and decided to compile our knowledge into this book.
 .. _QuantifiedCode: https://www.quantifiedcode.com/
 .. _online tool: https://www.quantifiedcode.com/
 
+How is this book organized?
+---------------------------
+
+We tried to categorize each anti-patterns into one of the following categories:
+
+* **Correctness**: Anti-patterns that will literally break your code or make it do the wrong things.
+* **Maintainability**: Anti-patterns that will make your code hard to maintain or extend.
+* **Readability**: Anti-patterns that will make your code hard to read or understand.
+* **Performance**: Anti-patterns that will unnecessarily slow your code down.
+* **Security**: Anti-patterns that will pose a security risk to your program.
+
+Many of the patterns do of course belong in more than one of these categories, so please don't take
+the choice that we've made too serious. If you think a pattern is grossly misplaced in its category,
+feel free to `create an issue`_ on Github.
+
+.. _`create an issue`: https://github.com/quantifiedcode/python-anti-patterns/issues
+
 References
 ----------
 

@@ -6,10 +6,7 @@ Not using ``zip()`` to iterate over a pair of lists
 Example
 -------
 
-For loop does not use ``zip()`` to iterate through a pair of lists
-..................................................................
-
-The module below defines a variable ``index`` which serves as an index variable for iterating through two lists. Within the for loop the module accesses the corresponding value for each list by using the index variable. This is a common way for iterating through two lists, but it is not the preferred way in Python.
+The code below defines a variable ``index`` which serves as an index variable for iterating through two lists. Within the for loop the code accesses the corresponding value for each list by using the index variable. This is a common way for iterating through two lists, but it is not the preferred way in Python.
 
 .. code:: python
 
@@ -25,7 +22,7 @@ Solutions
 Use ``zip()`` to iterate through a pair of lists
 ................................................
 
-The updated module below demonstrates the Pythonic style for iterating through a pair of lists. When the module defines two variables in its ``for`` loop in conjunction with a call to ``zip(numbers, letters)`` on the pair of lists, Python automatically assigns the first variable as the next value in the first list, and the second variable as the next value in the second list.
+The updated code below demonstrates the Pythonic style for iterating through a pair of lists. When the code defines two variables in its ``for`` loop in conjunction with a call to ``zip(numbers, letters)`` on the pair of lists, Python automatically assigns the first variable as the next value in the first list, and the second variable as the next value in the second list.
 
 .. code:: python
 

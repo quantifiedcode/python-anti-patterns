@@ -1,13 +1,10 @@
-Do not compare types, use ``isinstance()``
-==========================================
+Using `type()` to compare types
+===============================
 
 The function ``isinstance`` is the best-equipped to handle type checking because it supports inheritance (e.g. an instance of a derived class is an instance of a base class, too). Therefore ``isinstance`` should be used whenever type comparison is required.
 
 Example
 -------
-
-Types compared using ``is``
-............................
 
 The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to compare a ``Rectangle`` object to a built-in type (``ListType`` in this example). This is not the preferred pattern for comparing types.
 

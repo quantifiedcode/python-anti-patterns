@@ -6,10 +6,7 @@ In Python 2.5, the ``file`` class was equipped with special methods that are aut
 Example
 -------
 
-Not using ``with`` to open a file
-.................................
-
-The module below does not use ``with`` to open a file. This code depends on the programmer remembering to manually close the file via ``close()`` when finished. Even if the programmer remembers to call ``close()`` the code is still dangerous, because if an exception occurs before the call to ``close()`` then ``close()`` will not be called and the memory issues can occur, or the file can be corrupted.
+The code below does not use ``with`` to open a file. This code depends on the programmer remembering to manually close the file via ``close()`` when finished. Even if the programmer remembers to call ``close()`` the code is still dangerous, because if an exception occurs before the call to ``close()`` then ``close()`` will not be called and the memory issues can occur, or the file can be corrupted.
 
 .. code:: python
 
@@ -24,7 +21,7 @@ Solutions
 Use ``with`` to open a file
 ...........................
 
-The modified module below is the safest way to open a file. The ``file`` class has some special built-in methods called ``__enter__()`` and ``__exit__()`` which are automatically called when the file is opened and closed, respectively. Python guarantees that these special methods are always called, even if an exception occurs.
+The modified code below is the safest way to open a file. The ``file`` class has some special built-in methods called ``__enter__()`` and ``__exit__()`` which are automatically called when the file is opened and closed, respectively. Python guarantees that these special methods are always called, even if an exception occurs.
 
 .. code:: python
 

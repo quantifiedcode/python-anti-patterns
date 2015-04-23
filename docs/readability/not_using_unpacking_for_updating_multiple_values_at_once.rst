@@ -6,17 +6,17 @@ In general, the Python programming community prefers concise code over verbose c
 Example
 -------
 
-The code below updates the values of the two variables ``x`` and ``y`` using assignments that are on separate lines of code.
+The function below implements the classical Euclid algorithm for greatest common divisor.
+The updates of the variables ``a`` and ``b`` are made using variable ``temp`` and three lines of code.
 
 .. code:: python
 
-    x = 1
-    y = 2
-    z = 0
-    
-    x = y + 2  # 4
-    y = x - 3  # 1
-    z = x + y  # 5
+    def gcd(a, b):
+        while b != 0:
+            temp = b
+            b = a % b
+            a = temp
+        return a
 
 Solutions
 ---------
@@ -28,8 +28,19 @@ The modified code below is functionally equivalent to the original code above, b
 
 .. code:: python
 
-    x = 1
-    y = 2
-    z = 0
+    def gcd(a, b):
+        while b != 0:
+            a, b = b, a % b
+        return a
 
-    x, y, z = y + 2, x - 3, x + y  # more concise
+
+Gotchas
+---------
+
+The unpacking can be sometimes quite misleading. Figure out what is the outcome of the code below.
+
+.. code:: python
+
+    b = "1984"
+    a = b, c = "AB"
+    print a, b, c

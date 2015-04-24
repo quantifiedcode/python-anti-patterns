@@ -54,7 +54,6 @@ In the modified code below, the author eliminates the need for the global variab
         def __init__(self, width, height):
             self.width = width
             self.height = height
-            return self.area
         def area(self):
             return self.width * self.height
         def circumference(self):

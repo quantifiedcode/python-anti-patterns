@@ -13,7 +13,7 @@ The code below defines a variable ``index`` which serves as an index variable fo
     numbers = [1, 2, 3]
     letters = ["A", "B", "C"]
 
-    for index in range(numbers):
+    for index in range(len(numbers)):
         print numbers[index], letters[index]
 
 Solutions

@@ -46,7 +46,9 @@ There is no reason why the ``Rectangle`` class MUST return the area immediately 
             self.width = width
             self.height = height
             self.area = width * height
-        def area: # moved the logic for returning area to a separate method
+            
+        @property
+        def area(): # moved the logic for returning area to a separate method
             return self.area
 
 References

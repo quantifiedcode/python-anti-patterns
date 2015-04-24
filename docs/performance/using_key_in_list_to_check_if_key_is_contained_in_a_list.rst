@@ -27,7 +27,7 @@ In the modified code below, the list has been changed to a set. This is much mor
 
 .. code:: python
 
-    s = set(1, 2, 3, 4)
+    s = set([1, 2, 3, 4])
     
     if 3 in s:
         print "The number 3 is in the list."

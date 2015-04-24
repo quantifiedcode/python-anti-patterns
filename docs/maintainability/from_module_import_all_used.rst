@@ -24,9 +24,32 @@ The ``import`` statement should be refactored to be more specific about what fun
 
     from math import ceil
 
+Import the whole module
+.......................
+
+There are some cases where making the ``import`` statement spesific is not a good solution:
+
+- It may be unpractical or cumbersome to create or maintain the list of objects to be imported from a module
+- A direct import would bind to the same name as that of another object (e.g. from asyncio import TimeoutError) 
+- The module that the object is imported from would provide valuable contextual information if it is right next to the object when it's used.
+
+In these cases, use one of these idioms:
+
+.. code:: python
+
+    import math
+    x = math.ceil(y)
+
+    # or
+
+    import multiprocessing as mp
+    pool = mp.pool(8)
+
+
 References
 ----------
 
 - PyFlakes - F403
 - `Stack Overflow - Importing Modules <http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much>`_
+- `Stack Overflow - 'import module' or 'from module import' <http://stackoverflow.com/questions/710551/import-module-or-from-module-import>`_
 

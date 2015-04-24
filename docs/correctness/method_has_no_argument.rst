@@ -28,7 +28,7 @@ The method ``print_class_name`` attempts to print the name of the class. However
     class Rectangle:
         @classmethod
         def print_class_name(): # missing first argument "cls"
-        print("Hello, I am %s!" % cls) # cls is undefined here
+            print("Hello, I am %s!" % cls) # cls is undefined here
         
 
 The method ``area`` computes the value of any rectangle. Currently this method is ambiguous. It is defined as a method of the ``Rectangle`` class, yet it does not reference any instance or class members. The method needs to explicitly state that it is a static method via the ``@staticmethod`` decorator.

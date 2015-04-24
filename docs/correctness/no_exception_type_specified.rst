@@ -8,11 +8,11 @@ The function `divide` simply devides `a` by `b`. To avoid invalid calculations (
     def divide(a, b):
     
         try:
-          result = a / b
+            result = a / b
         except:
-          result = None
+            result = None
           
-      return result
+        return result
 
 Solutions
 ---------

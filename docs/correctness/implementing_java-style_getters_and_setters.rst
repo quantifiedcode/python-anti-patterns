@@ -55,11 +55,11 @@ When a member needs to be slightly protected and cannot be simply exposed as a p
         def length(self):
             return self._length
 
-        @width.setter
+        @length.setter
         def length(self, value):
             self._length = value
         
-        @width.deleter
+        @length.deleter
         def length(self):
             del self._length
 

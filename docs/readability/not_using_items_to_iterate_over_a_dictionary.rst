@@ -13,7 +13,7 @@ The code below defines a for loop that iterates over a dictionary named ``d``. F
     d = {"first_name": "Alfred", "last_name":"Hitchcock"}
 
     for key in d:
-        print "%s = %s".format(key, d[key])
+        print "{} = {}".format(key, d[key])
 
 Solutions
 ---------
@@ -28,7 +28,7 @@ The updated code below demonstrates the Pythonic style for iterating through a d
     d = {"first_name": "Alfred", "last_name":"Hitchcock"}
     
     for key,val in dictionary.items():
-        print "%s = %s".format(key, val)
+        print "{} = {}".format(key, val)
     
 References
 ----------

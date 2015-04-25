@@ -13,7 +13,7 @@ Anti-pattern
 Best practice(s)
 ----------------
 
-Best practice 1 (headlines only, if two or more best practices are possible)
+Best practice 1 (use headlines only, if two or more best practices are possible)
 ...............
 
 Description

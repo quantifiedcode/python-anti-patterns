@@ -5,8 +5,8 @@ Missing argument to ``super()``
 
 .. note:: This error is only raised for Python versions 2.x which support new-style classes.
 
-Example
--------
+Anti-pattern
+------------
 
 The author of the code below provides no arguments for the child class' call to ``super()``. Python raises a ``TypeError`` at runtime because it expects at least 1 argument for ``super()``.
 
@@ -26,8 +26,8 @@ The author of the code below provides no arguments for the child class' call to 
     print s.area  # does not execute
 
 
-Solutions
----------
+Best practice
+-------------
 
 Insert name of child class as first argument to ``super()``
 ...........................................................

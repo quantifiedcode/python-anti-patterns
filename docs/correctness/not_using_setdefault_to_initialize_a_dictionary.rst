@@ -3,8 +3,8 @@ Not using ``setdefault()`` to initialize a dictionary
 
 When initializing a dictionary, it is common to see a code check for the existence of a key and then create the key if it does not exist. Although there is nothing wrong with this, the exact same idea can be accomplished more concisely by using the built-in dictionary method ``setdefault()``.
 
-Example
--------
+Anti-pattern
+------------
 
 The code below checks if a key named ``list`` exists in a dictionary called ``dictionary``. If it does not exist, then the code creates the key and then sets its value to an empty list. The code then proceeds to append a value to the list.
 
@@ -19,8 +19,8 @@ Although there is nothing wrong with this code, it is unnecessarily verbose. Lat
 
     dictionary["list"].append["list_item"]
 
-Solutions
----------
+Best practice
+-------------
 
 Use ``setdefault()`` to initialize a dictionary
 ...............................................
@@ -32,7 +32,7 @@ The modified code below uses ``setdefault()`` to initialize the dictionary. When
     dictionary = {}
 
     dictionary.setdefault("list", []).append("list_item")
-    
+
 References
 ----------
 

@@ -9,7 +9,7 @@ For example, the following block of code using a ``with`` statement...
 
     with EXPRESSION:
         BLOCK
-        
+
 ... is equivalent to the following block of code using ``try`` and ``finally`` statements.
 
 .. code:: python
@@ -22,8 +22,8 @@ For example, the following block of code using a ``with`` statement...
 
 In order for ``__exit__`` to work properly it must have exactly three arguments: ``exception_type``, ``exception_value``, and ``traceback``. The formal argument names in the method definition do not need to correspond directly to these names, but they must appear in this order. If any exceptions occur while attempting to execute the block of code nested after the ``with`` statement, Python will pass information about the exception into the ``__exit__`` method. You can then modify the definition of ``__exit__`` to gracefully handle each type of exception.
 
-Examples 
---------
+Anti-pattern
+------------
 
 The ``__exit__`` method defined in the ``Rectangle`` class below does not conform to Python's context management protocol. The method is supposed to take four arguments: ``self``, exception type, exception value, and traceback. Because the method signature does not match what Python expects, ``__exit__`` is never called even though it should have been, because the method ``divide_by_zero`` creates a ``ZeroDivisionError`` exception.
 
@@ -36,7 +36,7 @@ The ``__exit__`` method defined in the ``Rectangle`` class below does not confor
         def __enter__(self):
             print "in __enter__"
             return self
-        def __exit__(self): # never called because 
+        def __exit__(self): # never called because
                             # argument signature is wrong
             print "in __exit__"
         def divide_by_zero(self): # causes ZeroDivisionError exception
@@ -44,16 +44,16 @@ The ``__exit__`` method defined in the ``Rectangle`` class below does not confor
 
     with Rectangle(3, 4) as r:
         r.divide_by_zero() # __exit__ should be called but isn't
-        
-    # Output:    
+
+    # Output:
     # "in __enter__"
     # Traceback (most recent call last):
     #   File "e0235.py", line 27, in <module>
     #     r.divide_by_zero()
     # TypeError: __exit__() takes exactly 1 argument (4 given)
-    
-Solutions
----------
+
+Best practices
+--------------
 
 Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is properly called when an exception is raised in the indented block of code following the ``with`` statement. Note that the argument names do not have to exactly match the names provided below. But they must occur in the order provided below.
 
@@ -66,15 +66,15 @@ Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is pro
         def __enter__(self):
             print "in __enter__"
             return self
-        def __exit__(self, exception_type, exception_value, traceback): 
+        def __exit__(self, exception_type, exception_value, traceback):
             print "in __exit__"
         def divide_by_zero(self): # causes ZeroDivisionError exception
             return self.width / 0
 
     with Rectangle(3, 4) as r:
         r.divide_by_zero() # exception successfully pass to __exit__
-        
-    # Output:    
+
+    # Output:
     # "in __enter__"
     # "in __exit__"
     # Traceback (most recent call last):

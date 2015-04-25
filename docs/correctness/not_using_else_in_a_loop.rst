@@ -1,10 +1,10 @@
 Not using ``else`` where appropriate in a loop
 ==============================================
 
-The Python language provides a built-in ``else`` clause for ``for`` loops. If a ``for`` loop completes without being prematurely interrupted by a ``break`` or ``return`` statement, then the ``else`` clause of the loop is executed. 
+The Python language provides a built-in ``else`` clause for ``for`` loops. If a ``for`` loop completes without being prematurely interrupted by a ``break`` or ``return`` statement, then the ``else`` clause of the loop is executed.
 
-Example
--------
+Anti-pattern
+------------
 
 The code below searches a list for a magic number. If the magic number is found in the list, then the code prints ``Magic number found.``. If the magic number is not found, then the code prints ``Magic number not found.``.
 
@@ -27,8 +27,8 @@ The logic in this code is valid; it will accomplish its task. But the Python lan
     if not found:
         print "Magic number not found."
 
-Solutions
----------
+Best practice
+-------------
 
 Use ``else`` clause with ``for`` loop
 .....................................
@@ -50,7 +50,7 @@ The modified code below is functionally equivalent to the original code above, b
             break
     else:
         print "Magic number not found."
-    
+
 References
 ----------
 

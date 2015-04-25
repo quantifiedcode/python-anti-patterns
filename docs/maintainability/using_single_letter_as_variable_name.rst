@@ -3,8 +3,8 @@ Using single letter to name your variables
 
 Sometimes you see programmers trying to shorten the ammount of text needed to write a piece of code, but when this goes to exremes, it will result in extremely ugly and unreadable code.
 
-Example
--------
+Anti-pattern
+------------
 
 .. code:: python
 
@@ -18,8 +18,8 @@ Example
                     print k2, v2
 
 
-Solutions
----------
+Best practice
+-------------
 
 Use more verbose name for your variables for clarity
 ....................................................

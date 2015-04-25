@@ -3,8 +3,8 @@ Method has no argument
 
 Unlike some programming languages, Python does not pass references to instance or class objects automatically behind the scenes. So the program must explicitly pass them as arguments whenever it wants to access any members of the instance or class within a method.
 
-Example
--------
+Anti-pattern
+------------
 
 In the ``Rectangle`` class below the ``area`` method attempts to return the value of the ``area`` instance variable. However, ``self.area`` is undefined because a reference to the instance object has not been explicitly passed as an argument to the method.
 
@@ -17,7 +17,7 @@ In the ``Rectangle`` class below the ``area`` method attempts to return the valu
             self.area = width * height
         def area(): # missing first argument "self"
             return self.area # self is undefined here
-            
+
 Class method is missing the ``cls`` keyword
 ...........................................
 
@@ -29,7 +29,7 @@ The method ``print_class_name`` attempts to print the name of the class. However
         @classmethod
         def print_class_name(): # missing first argument "cls"
             print("Hello, I am %s!" % cls) # cls is undefined here
-        
+
 
 The method ``area`` computes the value of any rectangle. Currently this method is ambiguous. It is defined as a method of the ``Rectangle`` class, yet it does not reference any instance or class members. The method needs to explicitly state that it is a static method via the ``@staticmethod`` decorator.
 
@@ -37,11 +37,11 @@ The method ``area`` computes the value of any rectangle. Currently this method i
 
     class Rectangle:
         # "@staticmethod" should be here
-        def area(width, height): 
+        def area(width, height):
             return width * height
 
-Solutions
----------
+Best practices
+--------------
 
 Add the ``self`` parameter to instance methods
 .................................................
@@ -57,7 +57,7 @@ To access the ``area`` member of a ``Rectangle`` instance the first argument of 
             self.area = width * height
         def area(self): # instance members now accessible because of "self"
             return self.area
-            
+
 Add the ``cls`` parameter to class methods
 .............................................
 
@@ -69,7 +69,7 @@ To access the name of the class the ``print_class_name`` method needs to explici
         @classmethod
         def print_class_name(cls): # class members now accessible, thanks to "cls"
             print("Hello, I am %s!" % cls)
-            
+
 Add the ``@staticmethod`` decorator to static methods
 ........................................................
 
@@ -79,7 +79,7 @@ If the method is a static method that does not need access to any instance membe
 
     class Rectangle:
         # clarifies that the method does not need any instance members
-        @staticmethod 
+        @staticmethod
         def area(width, height):
             return width * height
 

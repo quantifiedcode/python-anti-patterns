@@ -3,8 +3,8 @@ Implementing Java-style getters and setters
 
 Python is not Java. If you need to set or get the members of a class or object, just expose the member publicly and access it directly. If you need to perform some computations before getting or setting the member, then use Python's built-in ``property`` decorator.
 
-Examples
-----------
+Anti-pattern
+------------
 
 The programmer below comes to Python from a long career as a Java programmer. For every class member that he wants to expose publicly, he defines a ``get`` and ``set`` method for that member. This is common practice in Java, but is frowned upon in Python as a waste of time and a cause of unnecessary code.
 
@@ -22,8 +22,8 @@ The programmer below comes to Python from a long career as a Java programmer. Fo
     r.get_length()
     r.set_length(6)
 
-Solutions
----------
+Best practice
+-------------
 
 Access the members directly
 ...........................
@@ -39,7 +39,7 @@ In Python it is acceptable to simply access class or object members directly. Th
     r = Square(5)
     r.length
     r.length = 6
-    
+
 Use built-in ``property`` decorator
 ...................................
 
@@ -47,7 +47,7 @@ When a member needs to be slightly protected and cannot be simply exposed as a p
 
 .. code:: python
 
-    class Square(object): 
+    class Square(object):
         def __init__(self, length):
             self._length = length
 
@@ -58,7 +58,7 @@ When a member needs to be slightly protected and cannot be simply exposed as a p
         @length.setter
         def length(self, value):
             self._length = value
-        
+
         @length.deleter
         def length(self):
             del self._length

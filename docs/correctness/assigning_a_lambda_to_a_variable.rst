@@ -4,19 +4,19 @@ Assigning a `lambda` expression to a variable
 The sole advantage that a ``lambda`` expression has over a ``def`` is that the ``lambda`` can be anonymously embedded within a larger expression. If you are going to assign a name to a ``lambda``, you are better off just defining it as a ``def``.
 
 From the PEP 8 Style Guide:
-    
+
     Yes:
-    
+
     def f(x): return 2*x
-    
-    No: 
-    
+
+    No:
+
     f = lambda x: 2*x
 
     The first form means that the name of the resulting function object is specifically 'f' instead of the generic '<lambda>'. This is more useful for tracebacks and string representations in general. The use of the assignment statement eliminates the sole benefit a lambda expression can offer over an explicit def statement (i.e. that it can be embedded inside a larger expression)
 
-Examples
-----------
+Anti-pattern
+------------
 
 The following code assigns a ``lambda`` function which returns the double of its input to a variable. This is functionally identical to creating a ``def``.
 
@@ -24,8 +24,8 @@ The following code assigns a ``lambda`` function which returns the double of its
 
     f = lambda x: 2 * x
 
-Solutions
----------
+Best practice
+-------------
 
 Use a ``def`` for named expressions
 ...................................
@@ -35,7 +35,7 @@ Refactor the ``lambda`` expression into a named ``def`` expression.
 .. code:: python
 
     def f(x): return 2 * x
-    
+
 References
 ----------
 

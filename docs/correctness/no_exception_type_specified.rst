@@ -1,7 +1,7 @@
 No exception type(s) specified
 ==============================
 
-The function `divide` simply devides `a` by `b`. To avoid invalid calculations (e.g., a division by zero), a `try-except` block is added. This is valid and and ensures that the function always returns a result. However, by securing your code with the try clause, you might hide acutall programming errors, e.g., that you pass a string or an object as `b`, instead of a number. By not specifiycing and exception type, you do not only hide this error but you loose also information about the error itself.
+The function `divide` simply divides `a` by `b`. To avoid invalid calculations (e.g., a division by zero), a `try-except` block is added. This is valid and and ensures that the function always returns a result. However, by securing your code with the try clause, you might hide actual programming errors, e.g., that you pass a string or an object as `b`, instead of a number. By not specifying and exception type, you do not only hide this error but you loose also information about the error itself.
 
 .. code:: python
 

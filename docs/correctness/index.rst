@@ -8,7 +8,6 @@
     assigning_a_lambda_to_a_variable
     bad_except_clauses_order
     bad_first_argument_given_to_super
-    dangerous_default_value_as_argument
     else_clause_on_loop_without_a_break_statement
     exit_must_accept_three_arguments
     explicit_return_in_init
@@ -19,6 +18,7 @@
     method_could_be_a_function
     method_has_no_argument
     missing_argument_to_super
+    mutable_default_value_as_argument
     no_exception_type_specified
     not_using_defaultdict
     not_using_else_in_a_loop

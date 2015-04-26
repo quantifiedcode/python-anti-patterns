@@ -14,3 +14,4 @@ Avoid the following anti-patterns to increase maintainability and avoid creating
     returning_more_than_one_variable_type_from_function_call
     using_the_global_statement
     using_single_letter_as_variable_name
+    dynamically_creating_names

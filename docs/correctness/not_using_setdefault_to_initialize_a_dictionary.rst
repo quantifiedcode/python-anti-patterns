@@ -14,7 +14,7 @@ Although there is nothing wrong with this code, it is unnecessarily verbose. Lat
 
     dictionary = {}
 
-    if not "list" in dictionary:
+    if "list" not in dictionary:
         dictionary["list"] = []
 
     dictionary["list"].append["list_item"]

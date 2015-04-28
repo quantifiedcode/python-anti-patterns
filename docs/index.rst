@@ -93,8 +93,8 @@ List of Maintainers
 For a full list of contributors, please look at `Github`_. If you have any
 questions concerning this project or contributions, please contact one of the maintainers:
 
-* `Andreas Dewes`_ - Andreas compiled the list of patterns and did most of the editing.
-* `Christoph Neumann`_ - Christoph contributed material and did a large part of the editing.
+* `Andreas Dewes`_
+* `Christoph Neumann`_
 
 .. _`Github`: https://github.com/quantifiedcode/python-anti-patterns/graphs/contributors
 .. _`Andreas Dewes`: https://github.com/adewes

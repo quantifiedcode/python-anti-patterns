@@ -26,8 +26,8 @@ The updated code below demonstrates the Pythonic style for iterating through a d
 .. code:: python
 
     d = {"first_name": "Alfred", "last_name":"Hitchcock"}
-
-    for key,val in dictionary.items():
+    
+    for key,val in d.items():
         print "{} = {}".format(key, val)
 
 References

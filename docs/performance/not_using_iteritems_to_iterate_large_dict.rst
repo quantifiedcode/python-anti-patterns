@@ -19,7 +19,7 @@ The code below defines one large dictionary (created with dictionary comprehensi
 Best-practice
 -------------
 
-Use ``iteritems()`` to iterate across large dictionary
+Use ``iteritems()`` to iterate over large dictionary
 ......................................................
 
 The updated code below uses ``iteritems()`` instead of ``items()`` method. Note how the code is exactly the same, but memory usage is 50% less (~800MB). This is the preferred way to iterate over large dictionaries.

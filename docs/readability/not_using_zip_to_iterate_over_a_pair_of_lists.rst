@@ -13,7 +13,7 @@ The code below defines a variable ``index`` which serves as an index variable fo
     numbers = [1, 2, 3]
     letters = ["A", "B", "C"]
 
-    for index in range(numbers):
+    for index in range(len(numbers)):
         print numbers[index], letters[index]
 
 Best-practice
@@ -36,3 +36,4 @@ References
 ----------
 
 - `PEP 20 - The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_
+- `Built-in Functions > zip(*iterables) <https://docs.python.org/3.4/library/functions.html#zip>`_

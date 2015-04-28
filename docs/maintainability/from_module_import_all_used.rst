@@ -27,7 +27,7 @@ The ``import`` statement should be refactored to be more specific about what fun
 Import the whole module
 .......................
 
-There are some cases where making the ``import`` statement spesific is not a good solution:
+There are some cases where making the ``import`` statement specific is not a good solution:
 
 - It may be unpractical or cumbersome to create or maintain the list of objects to be imported from a module
 - A direct import would bind to the same name as that of another object (e.g. from asyncio import TimeoutError)

@@ -87,24 +87,18 @@ simply forking our Github project and sending us a pull request once you're done
 We will review and merge all pull requests as fast as possible and be happy to include your name on
 the list of authors of this document.
 
-List of Contributors
---------------------
+List of Maintainers
+-------------------
 
-So far, the following people have contributed to this open-source book:
+For a full list of contributors, please look at `Github`_. If you have any
+questions concerning this project or contributions, please contact one of the maintainers:
 
-* `Kayce Basques`_ - Kayce wrote most of the original content for this book.
 * `Andreas Dewes`_ - Andreas compiled the list of patterns and did most of the editing.
 * `Christoph Neumann`_ - Christoph contributed material and did a large part of the editing.
-* `Florian Lehmann`_ - Florian designed the modified RTD theme used for this book.
 
-If you have contributed to this book but your name is missing from the list, 
-feel free to add it on `Github`_. We apologize for any omissions.
-
-.. _`Github`: https://github.com/quantifiedcode/python-anti-patterns
-.. _`Kayce Basques`: https://github.com/kaycebasques
+.. _`Github`: https://github.com/quantifiedcode/python-anti-patterns/graphs/contributors
 .. _`Andreas Dewes`: https://github.com/adewes
 .. _`Christoph Neumann`: https://github.com/programmdesign
-.. _`Florian Lehmann`: https://github.com/cashaddy
 
 Index Of Patterns
 -----------------

@@ -1,40 +1,34 @@
-Insert title here
-=================
+<Pattern Name>
+--------------
 
 Summary
--------
 
 
+Anti-pattern
+------------
+
+.. code:: python
+
+
+Best practice(s)
+----------------
+
+Best practice 1
+...............
 
 Description
------------
-
-
-
-Examples
-----------
-
-Description of error
-....................
-
-
-
-.. warning:: The code below is an example of an error. Using this code will create bugs in your programs!
 
 .. code:: python
 
 
-Solutions
----------
+Best practice 2
+...............
 
-Description of solution
-........................................
-
-
+Description
 
 .. code:: python
 
-    
+
 References
 ----------
 - `URL Description <URL>`_

@@ -3,8 +3,8 @@ Method could be a function
 
 When a method is not preceded by the ``@staticmethod`` or ``@classmethod`` decorators and does not contain any references to the class or instance (via keywords like ``cls`` or ``self``), Python raises the  ``Method could be a function`` error. This is not a critical error, but you should check the code in question in order to determine if this section of code really needs to be defined as a method of this class.
 
-Example
--------
+Anti-pattern
+------------
 
 In the ``Rectangle`` class below the ``area`` method calculates the area of any rectangle given a width and a height.
 
@@ -14,11 +14,11 @@ In the ``Rectangle`` class below the ``area`` method calculates the area of any 
         def __init__(self, width, height):
             self.width = width
             self.height = height
-            self.area = width * height    
+            self.area = width * height
         # should be preceded by @staticmethod here
         def area(width, height): # causes "Method could be a function" error
             return width * height
-            
+
 ``area`` causes the ``Method could be a function`` error because it is ambiguous. It does not reference the instance or class using the ``self`` or ``cls`` keywords and it is not preceded by the ``@staticmethod`` decorator.
 
 Class method is not preceded by ``@classmethod`` decorator
@@ -34,14 +34,14 @@ Furthermore, the first argument of a class method must be a reference to the cla
         def __init__(self, width, height):
             self.width = width
             self.height = height
-            self.area = width * height     
+            self.area = width * height
         # should be preceded by @classmethod here
         def print_class_name: # missing required first argument "cls"
             print "class name: Rectangle"
-            
 
-Solutions
------------
+
+Best practices
+--------------
 
 Add the ``@staticmethod`` decorator before the static method
 ............................................................

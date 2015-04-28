@@ -3,8 +3,8 @@ Using `type()` to compare types
 
 The function ``isinstance`` is the best-equipped to handle type checking because it supports inheritance (e.g. an instance of a derived class is an instance of a base class, too). Therefore ``isinstance`` should be used whenever type comparison is required.
 
-Example
--------
+Anti-pattern
+------------
 
 The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to compare a ``Rectangle`` object to a built-in type (``ListType`` in this example). This is not the preferred pattern for comparing types.
 
@@ -21,7 +21,7 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
 
     if type(r) is types.ListType:  # bad
         print "object r is a list"
-        
+
 Note that the following situation will not raise the error, although it should.
 
 .. code:: python
@@ -43,8 +43,8 @@ Note that the following situation will not raise the error, although it should.
     if type(r) is not type(c):  # bad
         print "object types do not match"
 
-Solutions
----------
+Best practice
+-------------
 
 Use ``isinstance`` to compare types
 ...................................
@@ -64,7 +64,7 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
 
     if isinstance(r, types.ListType):  # good
         print "object r is a list"
-        
+
 References
 ----------
 

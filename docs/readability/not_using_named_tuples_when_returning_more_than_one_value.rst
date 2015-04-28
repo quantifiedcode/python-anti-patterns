@@ -3,8 +3,8 @@ Not using named tuples when returning more than one value from a function
 
 Named tuples can be used anywhere where normal tuples are acceptable, but their values can be accessed through their names in addition to their indexes. This makes the code more verbose and readable.
 
-Example
--------
+Anti-pattern
+------------
 
 The code below returns a first name, middle name, and last name using a normal, unnamed tuple. After calling the tuple, each value can only be returned via an index. This code is difficult to use: the caller of the function has to know that the first element is the first name, the second is the middle name, and the third is the last name.
 
@@ -17,8 +17,8 @@ The code below returns a first name, middle name, and last name using a normal, 
 
     print name[0], name[1], name[2]  # no idea what these indexes map to!
 
-Solutions
----------
+Best practice
+-------------
 
 Use named tuples to return multiple values
 ..........................................

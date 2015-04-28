@@ -4,8 +4,8 @@ Accessing a protected member from outside the class
 Accessing a protected member (a member prefixed with ``_``) of a class from outside that class usually
 calls for trouble, since the creator of that class did not intend this function to be exposed.
 
-Example
--------
+Anti-pattern
+------------
 
 .. code:: python
 
@@ -17,8 +17,8 @@ Example
     r = Rectangle(5, 6)
     print "Width: {:d}".format(r._width)  # direct access of protected member
 
-Solutions
----------
+Best practice
+-------------
 
 If you are absolutely sure that you need to call the proteced function from the outside,
 do the following:

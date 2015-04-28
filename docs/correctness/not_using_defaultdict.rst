@@ -3,8 +3,8 @@ Not using ``defaultdict()``
 
 When a dict is created using ``defaultdict()``, the value for each key in the dict will default to the value provided as the first argument of ``defaultdict()``. This is more concise and less error-prone than manually setting the value of each key.
 
-Example
--------
+Anti-pattern
+------------
 
 The code below defines an empty dict and then manually initializes the keys of the dict. Although there is nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea, as explained in the solution below.
 
@@ -19,8 +19,8 @@ The code below defines an empty dict and then manually initializes the keys of t
 
     print d["k"]  # 7
 
-Solutions
----------
+Best practice
+-------------
 
 Use ``defaultdict()`` to initialize dict keys
 .............................................

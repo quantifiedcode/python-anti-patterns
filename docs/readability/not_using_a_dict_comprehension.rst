@@ -10,11 +10,11 @@ The code below demonstrates the old syntax of dict initialization. Although ther
 
 .. code:: python
 
-    l = [1,2,3]
+    numbers = [1,2,3]
 
-    d = dict([(n,n*2) for n in l])  # hard to read
+    my_dict = dict([(number,number*2) for number in numbers])  # hard to read
 
-    print d  # {1: 2, 2: 4, 3: 6}
+    print my_dict  # {1: 2, 2: 4, 3: 6}
 
 Best practice
 -------------
@@ -23,11 +23,11 @@ The modified code below uses the new dict comprehension syntax which was introdu
 
 .. code:: python
 
-    l = [1, 2, 3]
+    numbers = [1, 2, 3]
 
-    d = {n: n * 2 for n in l}
+    my_dict = {number: number * 2 for number in numbers}
 
-    print d  # {1: 2, 2: 4, 3: 6}
+    print my_dict # {1: 2, 2: 4, 3: 6}
 
 References
 ----------

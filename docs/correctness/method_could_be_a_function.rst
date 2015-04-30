@@ -66,7 +66,7 @@ All class methods must be preceded by the ``@classmethod`` decorator. Furthermor
     class Rectangle:
         @classmethod
         def print_class_name(cls):
-            print("class name: %s" % cls) # "class name: Rectangle"
+            print("class name: {0}".format(cls)) # "class name: Rectangle"
 
 References
 ----------

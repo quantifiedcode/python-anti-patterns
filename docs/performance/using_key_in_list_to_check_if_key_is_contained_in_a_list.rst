@@ -12,7 +12,7 @@ The code below defines a list ``l`` and then calls ``if 3 in l`` to check if the
 
     l = [1, 2, 3, 4]
 
-    if 3 in l:  # iterates through list three times
+    if 3 in l:  # iterates over three elements in the list
         print "The number 3 is in the list."
     else:
         print "The number 3 is NOT in the list."

@@ -19,9 +19,11 @@ Here is an example of formatting the string with values from the person. This is
 
     person = {'first':'Tobin', 'age':20}
     print('{0} is {1} years old'.format(person['first'], person['age']))  # bad
+    # >>> Tobin is 20 years old
 
     person = {'first':'Tobin', 'last': 'Brown', 'age':20}
     print('{0} {1} is {2} years old'.format(person['first'], person['last'], person['age']))  # bad
+    # >>> Tobin Brown is 20 years old
 
 
 Best practice
@@ -33,9 +35,11 @@ By using the dictionary keys in the string we are formatting, the code is much m
 
     person = {'first':'Tobin', 'age':20}
     print('{first} is {age} years old'.format(**person))
+    # >>> Tobin is 20 years old
 
     person = {'first':'Tobin', 'last': 'Brown', 'age':20}
     print('{first} {last} is {age} years old'.format(**person))
+    # >>> Tobin Brown is 20 years old
 
 
 Going even further, the same result can be achieved with your own objects by using ``obj.__dict__``.
@@ -55,3 +59,4 @@ Going even further, the same result can be achieved with your own objects by usi
 
     person = Person('Tobin', 'Brown', 20)
     print(person)
+    # >>> Tobin Brown is 20 years old

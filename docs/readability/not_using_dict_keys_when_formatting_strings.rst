@@ -17,11 +17,11 @@ Here is an example of formatting the string with values from the person. This is
 
 .. code:: python
 
-	person = {'first':'Tobin', 'age':20}
-	print('{0} is {1} years old'.format(person['first'], person['age']))  # bad
+    person = {'first':'Tobin', 'age':20}
+    print('{0} is {1} years old'.format(person['first'], person['age']))  # bad
 
-	person = {'first':'Tobin', 'last': 'Brown', 'age':20}
-	print('{0} {1} is {2} years old'.format(person['first'], person['last'], person['age']))  # bad
+    person = {'first':'Tobin', 'last': 'Brown', 'age':20}
+    print('{0} {1} is {2} years old'.format(person['first'], person['last'], person['age']))  # bad
 
 
 Best practice
@@ -31,7 +31,7 @@ By using the dictionary keys in the string we are formatting, the code is much m
 
 .. code:: python
 
-	person = {'first':'Tobin', 'age':20}
+    person = {'first':'Tobin', 'age':20}
     print('{first} is {age} years old'.format(**person))
 
     person = {'first':'Tobin', 'last': 'Brown', 'age':20}
@@ -42,16 +42,16 @@ Going even further, the same result can be achieved with your own objects by usi
 
 .. code:: python
 
-	class Person(object):
+    class Person(object):
 
-		def __init__(self, first, last, age):
-			self.first = first
-			self.last = last
-			self.age = age
+        def __init__(self, first, last, age):
+            self.first = first
+            self.last = last
+            self.age = age
 
-		def __str__(self):
-			return '{first} {last} is {age} years old'.format(**self.__dict__)
+        def __str__(self):
+            return '{first} {last} is {age} years old'.format(**self.__dict__)
 
 
-	person = Person('Tobin', 'Brown', 20)
-	print(person)
+    person = Person('Tobin', 'Brown', 20)
+    print(person)

@@ -186,8 +186,9 @@
     
       ga('create', 'UA-51790189-2', 'auto');
       ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
-    
+      ga('send', 'pageview', {
+       'page': location.pathname + location.search  + location.hash
+      });      
     </script>
 
   {%- block footer %} {% endblock %}

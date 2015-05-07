@@ -34,4 +34,4 @@ The updated code below uses ``iteritems()`` instead of ``items()`` method. Note 
 
 References
 ----------
-- `PEP 234 Iterators <https://www.python.org/dev/peps/pep-0234://www.python.org/dev/peps/pep-0234/>`_
+- `PEP 234 Iterators <https://www.python.org/dev/peps/pep-0234/>`_

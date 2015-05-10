@@ -6,6 +6,7 @@
 
     accessing_a_protected_member_from_outside_the_class
     assigning_a_lambda_to_a_variable
+    assigning_to_builtin
     bad_except_clauses_order
     bad_first_argument_given_to_super
     else_clause_on_loop_without_a_break_statement

@@ -1,5 +1,5 @@
-Same value for ``MEDIA_ROOT`` and `STATIC_ROOT``
-================================================
+Same value for ``MEDIA_ROOT`` and ``STATIC_ROOT``
+=================================================
 
 According to Django's documentation, ``MEDIA_ROOT`` and ``STATIC_ROOT`` must have different values. Before STATIC_ROOT was introduced, ``MEDIA_ROOT`` was also used (as fallback) to also serve static files. As this can have serious security implications, Django has validation checks to prevent it.
 

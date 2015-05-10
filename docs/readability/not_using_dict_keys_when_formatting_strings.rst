@@ -1,4 +1,3 @@
-
 Not using dict keys when formatting strings
 ===========================================
 
@@ -7,7 +6,10 @@ When formatting a string with values from a dictionary, you can use the dictiona
 
 .. code:: python
 
-    person = {'first':'Tobin', 'age':20}
+    person = {
+        'first': 'Tobin',
+        'age': 20
+    }
 
 
 Anti-pattern
@@ -17,13 +19,30 @@ Here is an example of formatting the string with values from the person. This is
 
 .. code:: python
 
-    person = {'first':'Tobin', 'age':20}
-    print('{0} is {1} years old'.format(person['first'], person['age']))  # bad
-    # >>> Tobin is 20 years old
+    person = {
+        'first': 'Tobin',
+        'age':20
+    }
 
-    person = {'first':'Tobin', 'last': 'Brown', 'age':20}
-    print('{0} {1} is {2} years old'.format(person['first'], person['last'], person['age']))  # bad
-    # >>> Tobin Brown is 20 years old
+    print('{0} is {1} years old'.format(
+        person['first'],
+        person['age'])
+    )
+    # Output: Tobin is 20 years old
+
+    person = {
+        'first': 'Tobin',
+        'last': 'Brown',
+        'age':20
+    }
+
+    # Bad: we have to change the replacement fields within our string, once we add new values
+    print('{0} {1} is {2} years old'.format(
+        person['first'],
+        person['last'],
+        person['age'])
+    )  # bad
+    # Output: Tobin Brown is 20 years old
 
 
 Best practice
@@ -33,13 +52,21 @@ By using the dictionary keys in the string we are formatting, the code is much m
 
 .. code:: python
 
-    person = {'first':'Tobin', 'age':20}
-    print('{first} is {age} years old'.format(**person))
-    # >>> Tobin is 20 years old
+    person = {
+        'first': 'Tobin',
+        'age':20
+    }
 
-    person = {'first':'Tobin', 'last': 'Brown', 'age':20}
+    print('{first} is {age} years old'.format(**person))
+    # Output: Tobin is 20 years old
+
+    person = {
+        'first':'Tobin',
+        'last': 'Brown',
+        'age':20
+    }
     print('{first} {last} is {age} years old'.format(**person))
-    # >>> Tobin Brown is 20 years old
+    # Output: Tobin Brown is 20 years old
 
 
 Going even further, the same result can be achieved with your own objects by using ``obj.__dict__``.
@@ -59,4 +86,4 @@ Going even further, the same result can be achieved with your own objects by usi
 
     person = Person('Tobin', 'Brown', 20)
     print(person)
-    # >>> Tobin Brown is 20 years old
+    # Output: Tobin Brown is 20 years old

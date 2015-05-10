@@ -5,7 +5,7 @@ This is an open-source book of **Python anti-patterns and worst practices**. Che
 **Notice**: This is still (and will always be) a work-in-progress, feel free to contribute by suggesting improvements, adding new articles, improving existing ones, or translating this into other languages.
 
 # New articles
-If you add new articles, please use the provided [template](docs/template.rst).
+If you add new articles, please use the provided templates. Depending on the pattern you are creating, use either the [anti-pattern](templates/anti_pattern.rst) or the [migration-pattern](templates/migration_pattern.rst) template.
 
 #License
 

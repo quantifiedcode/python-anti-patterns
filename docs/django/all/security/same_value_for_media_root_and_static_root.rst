@@ -29,7 +29,7 @@ Ensure, ``STATIC_ROOT`` and ``MEDIA_ROOT`` point to different folders.
 References
 ----------
 
-- [Django documentation - Settings: MEDIA_ROOT](https://docs.djangoproject.com/en/1.8/ref/settings/#media-root)
+- `Django documentation - Settings: MEDIA_ROOT <https://docs.djangoproject.com/en/1.8/ref/settings/#media-root>`_
 
 Status
 ------

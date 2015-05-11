@@ -1,7 +1,7 @@
 Using single letter to name your variables
 ==========================================
 
-Sometimes you see programmers trying to shorten the ammount of text needed to write a piece of code, but when this goes to exremes, it will result in extremely ugly and unreadable code.
+Sometimes you see programmers trying to shorten the ammount of text needed to write a piece of code, but when this goes to extremes, it will result in extremely ugly and unreadable code.
 
 Anti-pattern
 ------------

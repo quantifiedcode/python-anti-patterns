@@ -37,10 +37,10 @@ Django requires you to use forward slashes ``/``, even on Windows.
 References
 ----------
 
-- [Django documentation - Settings: TEMPLATE_DIRS](https://docs.djangoproject.com/en/1.8/ref/settings/#template-dirs)
-- [Django documentation - Settings: FIXTURE_DIRS](https://docs.djangoproject.com/en/1.8/ref/settings/#fixture-dirs)
-- [Django documentation - Settings: STATIC_FILES_DIRS](https://docs.djangoproject.com/en/1.8/ref/settings/#https://docs.djangoproject.com/en/1.8/ref/settings/#staticfiles-dirs)
-- [Django documentation - Settings: HOST](https://docs.djangoproject.com/en/1.8/ref/settings/#host)
+- `Django documentation - Settings: TEMPLATE_DIRS <https://docs.djangoproject.com/en/1.8/ref/settings/#template-dirs>`_
+- `Django documentation - Settings: FIXTURE_DIRS <https://docs.djangoproject.com/en/1.8/ref/settings/#fixture-dirs>`_
+- `Django documentation - Settings: STATIC_FILES_DIRS <https://docs.djangoproject.com/en/1.8/ref/settings/#https://docs.djangoproject.com/en/1.8/ref/settings/#staticfiles-dirs>`_
+- `Django documentation - Settings: HOST <https://docs.djangoproject.com/en/1.8/ref/settings/#host>`_
 
 Status
 ------

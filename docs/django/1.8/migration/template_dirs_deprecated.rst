@@ -37,9 +37,9 @@ As of Django 1.8 you should set ``DIRS`` option within ``TEMPLATES`` setting. It
 References
 ----------
 
-- [Django documentation - Settings: TEMPLATES](https://docs.djangoproject.com/en/1.8/ref/settings/#templates)
-- [Django documentation - Settings: TEMPLATE_DIRS](https://docs.djangoproject.com/en/1.8/ref/settings/#template-dirs)
-- [Django documentation - Templates: Built-in backends](https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django)
+- `Django documentation - Settings: TEMPLATES <https://docs.djangoproject.com/en/1.8/ref/settings/#templates>`_
+- `Django documentation - Settings: TEMPLATE_DIRS <https://docs.djangoproject.com/en/1.8/ref/settings/#template-dirs>`_
+- `Django documentation - Templates: Built-in backends <https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django>`_
 
 
 Status

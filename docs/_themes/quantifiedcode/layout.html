@@ -101,21 +101,30 @@
       &nbsp;
 
     <!-- Begin MailChimp Signup Form -->
+    <div class="nav-box">
+      <div id="mc_embed_signup">
+        <form action="http://quantifiedcode.us8.list-manage.com/subscribe/post?u=effb5c0618b377e47329ca7ba&amp;id=0eb810e227" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL" style="color:#000;">Wanna learn more about Python code quality? Sign up for our newsletter!</label>
+            <input style="width:100%" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input  type="text" name="b_effb5c0618b377e47329ca7ba_0eb810e227" tabindex="-1" value=""></div>
+            <div class="clear"><input style="width:100%" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+      </div>
 
-    <div id="mc_embed_signup" style="padding:12px">
-    <form action="http://quantifiedcode.us8.list-manage.com/subscribe/post?u=effb5c0618b377e47329ca7ba&amp;id=0eb810e227" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL" style="color:#000;">Wanna learn more about Python code quality? Sign up for our newsletter!</label>
-        <input style="width:100%" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;"><input  type="text" name="b_effb5c0618b377e47329ca7ba_0eb810e227" tabindex="-1" value=""></div>
-        <div class="clear"><input style="width:100%" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-        </div>
-    </form>
-    <p>...and follow us <a href="https://twitter.com/quantifiedcode">@quantifiedcode</a>
-    </div>
+      <div class="social">
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/quantifiedcode/python-anti-patterns" data-icon="octicon-star" data-count-href="/quantifiedcode/python-anti-patterns/stargazers" data-count-api="/repos/quantifiedcode/python-anti-patterns#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star quantifiedcode/python-anti-patterns on GitHub">Star</a>
 
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="quantifiedcode">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+        <a href="https://twitter.com/quantifiedcode" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @quantifiedcode</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+    <div>
 
     </nav>
 
@@ -134,15 +143,17 @@
           {% include "breadcrumbs.html" %}
           <div role="main">
             <div class="alert">
-            Do you care about code quality? Then check your code for known quality problems at <a href="https://www.quantifiedcode.com">QuantifiedCode</a>.
+            <i class="fa fa-check green"></i> Automatically monitor your Python code for anti-patterns: <a href="https://www.quantifiedcode.com/app/user/signup"><strong>Sign up for free!</strong></a>
             </div>
             {% block body %}{% endblock %}
           </div>
           {% include "footer.html" %}
         </div>
       </div>
+        <div style="float: right;"> Test </div>
 
     </section>
+
 
   </div>
   {% include "versions.html" %}
@@ -191,7 +202,21 @@
       });
     </script>
 
+    <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 2065671362]);
+    __insp.push(["virtualPage"]);
+    (function() {
+    function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+    if (window.attachEvent) window.attachEvent('onload', __ldinsp);
+    else window.addEventListener('load', __ldinsp, false);
+    })();
+    </script>
+
   {%- block footer %} {% endblock %}
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 
 </body>
 </html>

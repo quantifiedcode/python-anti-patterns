@@ -29,8 +29,8 @@ Ensure, `STATIC_URL` and `MEDIA_URL` point to different folders.
 References
 ----------
 
-- [Django documentation - Settings: MEDIA_URL](https://docs.djangoproject.com/en/1.8/ref/settings/#media-url)
-- [Django documentation - Settings: MEDIA_ROOT](https://docs.djangoproject.com/en/1.8/ref/settings/#media-root)
+- `Django documentation - Settings: MEDIA_URL <https://docs.djangoproject.com/en/1.8/ref/settings/#media-url>`_
+- `Django documentation - Settings: MEDIA_ROOT <https://docs.djangoproject.com/en/1.8/ref/settings/#media-root>`_
 
 
 Status

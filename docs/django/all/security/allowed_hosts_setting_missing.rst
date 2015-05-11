@@ -28,8 +28,8 @@ Make sure, an appropriate host is set in `ALLOWED_HOSTS`, whenever `DEBUG = Fals
 References
 ----------
 
-- [Django documentation - Settings: The Basics](https://docs.djangoproject.com/en/1.8/topics/settings/#the-basics)
-- [Django documentation - Settings: ALLOWED_HOSTS](https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-ALLOWED_HOSTS)
+- `Django documentation - Settings: The Basics` <https://docs.djangoproject.com/en/1.8/topics/settings/#the-basics>`_
+- `Django documentation - Settings: ALLOWED_HOSTS` <https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-ALLOWED_HOSTS>`_
 
 Status
 ------

@@ -38,9 +38,9 @@ As of Django 1.8 you should set ``debug`` option in the ``OPTIONS`` of a ``Djang
 References
 ----------
 
-- [Django documentation - Settings: TEMPLATE_DEBUG](https://docs.djangoproject.com/en/1.8/ref/settings/#template-debug)
-- [Django documentation - Settings: TEMPLATES](https://docs.djangoproject.com/en/1.8/ref/settings/#templates)
-- [Django documentation - Templates: Built-in backends](https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django)
+- `Django documentation - Settings: TEMPLATE_DEBUG <https://docs.djangoproject.com/en/1.8/ref/settings/#template-debug>`_
+- `Django documentation - Settings: TEMPLATES <https://docs.djangoproject.com/en/1.8/ref/settings/#templates>`_
+- `Django documentation - Templates: Built-in backends <https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django>`_
 
 Status
 ------

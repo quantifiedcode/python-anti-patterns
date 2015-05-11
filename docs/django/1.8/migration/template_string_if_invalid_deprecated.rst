@@ -37,10 +37,10 @@ As of Django 1.8 you should set ``string_if_invalid`` option in the ``OPTIONS`` 
 References
 ----------
 
-- [Django documentation - Settings: TEMPLATES](https://docs.djangoproject.com/en/1.8/ref/settings/#templates)
-- [Django documentation - Settings: TEMPLATE_STRING_IF_INVALID](https://docs.djangoproject.com/en/1.8/ref/settings/#template-string-if-invalid)
-- [Django documentation - Templates: Built-in backends](https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django)
-- [Django documentation - Templates: How invalid variables are handled](https://docs.djangoproject.com/en/1.8/ref/templates/api/#how-invalid-variables-are-handled)
+- `Django documentation - Settings: TEMPLATES <https://docs.djangoproject.com/en/1.8/ref/settings/#templates>`_
+- `Django documentation - Settings: TEMPLATE_STRING_IF_INVALID <https://docs.djangoproject.com/en/1.8/ref/settings/#template-string-if-invalid>`_
+- `Django documentation - Templates: Built-in backends <https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django>`_
+- `Django documentation - Templates: How invalid variables are handled <https://docs.djangoproject.com/en/1.8/ref/templates/api/#how-invalid-variables-are-handled>`_
 
 Status
 ------

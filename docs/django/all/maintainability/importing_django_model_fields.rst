@@ -30,7 +30,7 @@ Stick to standard conventions and use ``from django.db import models`` instead.
 References
 ----------
 
-- [Django documentation - Model field reference](https://docs.djangoproject.com/en/1.8/ref/models/fields/#module-django.db.models.fields)
+- `Django documentation - Model field reference <https://docs.djangoproject.com/en/1.8/ref/models/fields/#module-django.db.models.fields>`_
 
 Status
 ------

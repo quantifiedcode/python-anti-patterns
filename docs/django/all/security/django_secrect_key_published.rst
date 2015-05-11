@@ -38,7 +38,7 @@ Alternatively, you can read the secret key from a file.
 
 References
 -----------
-- [Django](https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/)
+- `Django <https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/>`_
 
 
 Status

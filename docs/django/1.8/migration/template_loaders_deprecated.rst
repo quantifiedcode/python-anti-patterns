@@ -16,7 +16,7 @@ Deprecated ``TEMPLATE_LOADERS`` setting used.
             'django.template.loaders.filesystem.Loader',
             'django.template.loaders.app_directories.Loader',
     )
-    ```
+
 
 Migration path
 --------------

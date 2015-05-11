@@ -1,5 +1,5 @@
-Python
-======
+:fa:`book` Python
+=================
 
 This chapter contains anti- and migration patterns for Python.
 

@@ -8,7 +8,7 @@ Anti-pattern
 
 In the code below, the ``list`` built-in is overwritten. This makes it impossible, to use ``list`` to define a variable as a list. As this is a very concise example, it is easy to spot what the problem is. However, if there are hundreds of lines between the assignment to ``list`` and the assignment to ``cars``, it might become difficult to identify the problem.
 
-..code:: python
+.. code:: python
 
     # Overwriting built-in 'list' by assigning values to a variable called 'list'
     list = [1, 2, 3]
@@ -21,7 +21,7 @@ Best practice
 
 Unless you have a very specific reason to use variable names that have the same name as built-in functions, it is recommended to use a variable name that does not interfere with built-in function names.
 
-..code:: python
+.. code:: python
 
     # Numbers used as variable name instead of 'list'
     numbers = [1, 2, 3]

@@ -1,5 +1,5 @@
-``TEMPLATE_DIRS`` deprecated
-============================
+TEMPLATE_DIRS deprecated
+========================
 
 This setting is deprecated since Django version 1.8. Set the ``DIRS`` option of a [`DjangoTemplates` backend](https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django) instead.
 

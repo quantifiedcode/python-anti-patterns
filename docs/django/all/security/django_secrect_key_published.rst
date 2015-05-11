@@ -1,5 +1,5 @@
-``SECRET_KEY`` published
-========================
+SECRET_KEY published
+====================
 
 A secret key has to be be kept secret. Make sure it is only used in production, but nowhere else. Especially, avoid committing it to source control. This increases security and makes it less likely that an attacker may acquire the key.
 

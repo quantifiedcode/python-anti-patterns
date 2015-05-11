@@ -8,7 +8,8 @@ Anti-Pattern
 
 Let's assume we have a an app ``vehicle`` which contains a model ``Cars`` to store plenty of information about a car:
 
-... code:: python
+.. code:: python
+
     """ models.py """
 
     class Cars(models.Model):
@@ -20,7 +21,8 @@ Let's assume we have a an app ``vehicle`` which contains a model ``Cars`` to sto
 
 We import this model into one of your views to do something will make names within our database:
 
-... code:: python
+.. code:: python
+
     """ views.py """
     from models import Cars
 
@@ -33,7 +35,8 @@ We import this model into one of your views to do something will make names with
 
 Even though this code works and looks harmless, it can kill you in production. You think, you are actually just accessing the ``make`` field, but you are actually retrieving ALL data from your database:
 
-... code:: sql
+.. code:: sql
+
     SELECT make, model, wheels, ... FROM vehicles_cars;
 
 Especially, if you have many fields on your model and/or if you got millions of records in your table, this slows down the response time of your applications significantly.
@@ -43,7 +46,8 @@ Best practice
 
 To avoid such a scenario, make sure you only query the data you really need for your program. Use ``.values()`` to restrict the underlying SQL query to required fields only.
 
-... code:: python
+.. code:: python
+
     """ views.py """
     from cars.models import Cars
 
@@ -53,7 +57,8 @@ To avoid such a scenario, make sure you only query the data you really need for 
     for car in cars:
         do_something(car['make'])
 
-... code:: sql
+.. code:: sql
+
     SELECT make from vehicles_cars;
 
 

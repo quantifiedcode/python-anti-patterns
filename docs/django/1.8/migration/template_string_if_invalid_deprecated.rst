@@ -1,5 +1,5 @@
-``TEMPLATE_STRING_IF_INVALID`` deprecated
-=========================================
+TEMPLATE_STRING_IF_INVALID deprecated
+=====================================
 
 This setting sets the output that the template system should use for invalid (e.g. misspelled) variables. The default value is an empty string ``''``. This setting is deprecated since Django version 1.8. Set the `string_if_invalid` option in the `OPTIONS` of a `DjangoTemplates` backend instead.
 

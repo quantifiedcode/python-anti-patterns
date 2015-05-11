@@ -1,12 +1,12 @@
-Importing ``django.db.models.fields``
-=====================================
+Importing django.db.models.fields
+=================================
 
 In Django, models are defined in ``django.db.models.fields``. However, for convenience they are imported into ``django.db.models``. Django's standard convention is to use ``from django.db import models`` and refer to fields as ``models<some>Field``. To improve readability and maintainability of your code, change your import statement and model definition.
 
 Anti-pattern
 ------------
 
-... code:: python
+.. code:: python
 
     from django.db.models import fields
 
@@ -19,7 +19,7 @@ Best practice
 
 Stick to standard conventions and use ``from django.db import models`` instead.
 
-... code:: python
+.. code:: python
 
     from django.db import models
 

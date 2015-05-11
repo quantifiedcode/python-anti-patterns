@@ -1,5 +1,5 @@
-Not using ``NullBooleanField``
-==============================
+Not using NullBooleanField
+==========================
 
 A ``BooleanField`` in Django accepts only the two values: ``true`` and ``false``. If you need to accept ``NULL`` values, you have to use a ``NullBooleanField``.
 

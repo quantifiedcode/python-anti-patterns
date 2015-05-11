@@ -37,9 +37,8 @@ Why did we write this?
 Who are we?
 -----------
 
-We're `QuantifiedCode`_, a Berlin-based startup. Our mission is to help programmers write better code! Our first product is an `online tool`_ for automated, data-driven code review. When building this tool we learned a lot about code quality in Python and decided to compile our knowledge into this book.
+We're `QuantifiedCode <https://www.quantifiedcode.com/>`_, a Berlin-based startup. Our mission is to help programmers write better code! Our first product is an `online tool`_ for automated, data-driven code review. When building this tool we learned a lot about code quality in Python and decided to compile our knowledge into this book.
 
-.. _QuantifiedCode: https://www.quantifiedcode.com/
 .. _Online tool: https://www.quantifiedcode.com/
 
 How is this book organized?
@@ -103,5 +102,9 @@ Here's the full index of all anti-patterns in this book.
     :maxdepth: 4
     :titlesonly:
 
-    python/index
+    correctness/index
+    maintainability/index
+    readability/index
+    security/index
+    performance/index
     django/index

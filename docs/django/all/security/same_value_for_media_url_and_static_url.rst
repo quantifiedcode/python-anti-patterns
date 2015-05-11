@@ -1,5 +1,5 @@
-Same value for ``MEDIA_URL`` and ``STATIC_URL``
-===============================================
+Same value for MEDIA_URL and STATIC_URL
+=======================================
 
 According to Django's documentation, ``MEDIA_URL`` and ``STATIC_URL`` must have different values.
 
@@ -8,7 +8,8 @@ Anti-pattern
 
 ``MEDIA_URL`` and ``STATIC_URL`` point to the same folder.
 
-... code:: python
+.. code:: python
+
     """ settings.py """
 
     # Media and static root are identical
@@ -20,7 +21,8 @@ Best practice
 
 Ensure, `STATIC_URL` and `MEDIA_URL` point to different folders.
 
-... code:: python
+.. code:: python
+
     """ settings.py """
 
     STATIC_ROOT = '/path/to/my/static/files'

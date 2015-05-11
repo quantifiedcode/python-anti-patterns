@@ -1,5 +1,5 @@
-Same value for ``MEDIA_ROOT`` and ``STATIC_ROOT``
-=================================================
+Same value for MEDIA_ROOT and STATIC_ROOT
+=========================================
 
 According to Django's documentation, ``MEDIA_ROOT`` and ``STATIC_ROOT`` must have different values. Before STATIC_ROOT was introduced, ``MEDIA_ROOT`` was also used (as fallback) to also serve static files. As this can have serious security implications, Django has validation checks to prevent it.
 
@@ -8,7 +8,8 @@ Anti-pattern
 
 ``MEDIA_ROOT`` and ``STATIC_ROOT`` point to the same folder.
 
-..code:: python
+.. code:: python
+
     """ settings.py """
 
     # Media and static root are identical
@@ -20,7 +21,8 @@ Best practice
 
 Ensure, ``STATIC_ROOT`` and ``MEDIA_ROOT`` point to different folders.
 
-... code:: python
+.. code:: python
+    
     """ settings.py """
 
     STATIC_ROOT = '/path/to/my/static/files'

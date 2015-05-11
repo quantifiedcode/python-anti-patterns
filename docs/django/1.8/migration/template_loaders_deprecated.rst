@@ -1,5 +1,5 @@
-``TEMPLATE_LOADERS`` deprecated
-===============================
+TEMPLATE_LOADERS deprecated
+===========================
 
 This setting is deprecated since Django version 1.8. Set the `LOADERS` option of a [`DjangoTemplates` backend](https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django) instead.
 

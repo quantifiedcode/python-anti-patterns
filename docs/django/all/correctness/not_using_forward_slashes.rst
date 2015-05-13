@@ -18,7 +18,7 @@ This pattern is exemplary for any of the above mentioned settings. It uses backs
     """ settings.py """
 
     STATICFILES_DIRS = [
-        "\path\to\my\static\files",
+        "\\path\\to\\my\\static\\files",
     ]
 
 Best practice
@@ -31,7 +31,7 @@ Django requires you to use forward slashes ``/``, even on Windows.
     """ settings.py """
 
     STATICFILES_DIRS = [
-        "\path\to\my\static\files",
+        "/path/to/my/static/files",
     ]
 
 References

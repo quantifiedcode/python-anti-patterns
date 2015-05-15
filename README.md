@@ -9,7 +9,7 @@ If you add new articles, please use the provided templates. Depending on the pat
 
 #License
 
-The book is made available under a Creative Commons Non-Commercial license. This allows you to use and distribute it freely for your own non-commercial projects (e.g. for teaching).
+The book is made available under a Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 license. This allows you to use and distribute it freely for your own non-commercial projects (e.g. for teaching) if you make your contributions available under the same license.
 
 When using content from the book on your website or elsewhere, please add a visible link to [our website](http://docs.quantifiedcode.com/python-anti-patterns) or this Github project, so that your readers can easily find the original articles and make contributions.
 

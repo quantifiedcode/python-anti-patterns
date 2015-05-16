@@ -72,7 +72,7 @@ while i < 10:
     #we forget to increment i
 
 """
-Not using .items() to iterate over a list of key/value pairs of a dictionary.
+Not using .iteritems() to iterate over a list of key/value pairs of a dictionary.
 """
 
 #Bad
@@ -85,7 +85,7 @@ for key in d:
 
 #Good
 
-for key,value in d.items():
+for key,value in d.iteritems():
     print "%s = %d" % (key,value)
 
 """

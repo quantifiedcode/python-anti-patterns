@@ -33,17 +33,18 @@ We import this model into one of your views to do something will make names with
         do_something(car.make)
 
 
-Even though this code works and looks harmless, it can kill you in production. You think, you are actually just accessing the ``make`` field, but you are actually retrieving ALL data from your database:
+Even though this code works and looks harmless, it can kill you in production. You think, you are actually just accessing the ``make`` field, but you are actually retrieving ALL data from your database, once you start iterating over the retrieved QuerySet:
 
 .. code:: sql
 
     SELECT make, model, wheels, ... FROM vehicles_cars;
 
-Especially, if you have many fields on your model and/or if you got millions of records in your table, this slows down the response time of your applications significantly.
+Especially, if you have many fields on your model and/or if you got millions of records in your table, this slows down the response time of your applications significantly. As QuerySets are cached upon evaluation, it will hit your database only once, but you'd better be carful.
 
 Best practice
 -------------
 
+## Use ``.values()``
 To avoid such a scenario, make sure you only query the data you really need for your program. Use ``.values()`` to restrict the underlying SQL query to required fields only.
 
 .. code:: python
@@ -60,6 +61,21 @@ To avoid such a scenario, make sure you only query the data you really need for 
 .. code:: sql
 
     SELECT make from vehicles_cars;
+
+## Use ``.values_list()``
+
+Alternatively, you can use ``.value_list()``. It is similar to ``values()`` except that instead of returning dictionaries, it returns tuples when you iterate over it.
+
+.. code:: python
+
+    """ views.py """
+    from cars.models import Cars
+
+    cars = Cars.objects.all().values_list('make', flat=True)
+
+    # Print all makes
+    for make in cars:
+        do_something(make)
 
 
 References

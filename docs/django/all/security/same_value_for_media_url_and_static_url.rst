@@ -6,7 +6,7 @@ According to Django's documentation, ``MEDIA_URL`` and ``STATIC_URL`` must have 
 Anti-pattern
 ------------
 
-``MEDIA_URL`` and ``STATIC_URL`` point to the same folder.
+``MEDIA_URL`` and ``STATIC_URL`` point to the same URL.
 
 .. code:: python
 
@@ -14,19 +14,19 @@ Anti-pattern
 
     # Media and static root are identical
     STATIC_URL = 'http://www.mysite.com/static'
-    MEDIA_URL = 'http://www.mysite.com/media'
+    MEDIA_URL = 'http://www.mysite.com/static'
 
 Best practice
 -------------
 
-Ensure, `STATIC_URL` and `MEDIA_URL` point to different folders.
+Ensure, `STATIC_URL` and `MEDIA_URL` point to different URL's.
 
 .. code:: python
 
     """ settings.py """
 
-    STATIC_ROOT = '/path/to/my/static/files'
-    MEDIA_ROOT = '/path/to/my/media/files'
+    STATIC_URL = 'http://www.mysite.com/static'
+    MEDIA_URL = 'http://www.mysite.com/media'
 
 References
 ----------

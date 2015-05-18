@@ -13,8 +13,8 @@ This settings.py contains a SECRET_KEY. You should not do this!
     """ settings.py """
     SECRET_KEY = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
-Best Practices
---------------
+Better Practices
+----------------
 Load key from environment variable
 ..................................
 

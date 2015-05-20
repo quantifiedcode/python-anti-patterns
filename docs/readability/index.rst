@@ -18,3 +18,4 @@
     test_for_object_identity_should_be_is_not
     using_an_unpythonic_loop
     using_map_or_filter_where_list_comprehension_is_possible
+    using_camelcase_in_function_names

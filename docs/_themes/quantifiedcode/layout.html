@@ -13,6 +13,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
+  <script src="//cdn.optimizely.com/js/2899720567.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% block htmltitle %}
@@ -200,6 +201,7 @@
       ga('send', 'pageview', {
        'page': location.pathname + location.search  + location.hash
       });
+      
     </script>
 
   {%- block footer %} {% endblock %}

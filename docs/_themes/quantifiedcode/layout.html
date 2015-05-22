@@ -139,19 +139,18 @@
 
 
       {# PAGE CONTENT #}
-      <div class="wy-nav-content">
+      <div class="wy-nav-content" id="signup-box" >
         <div class="rst-content">
           {% include "breadcrumbs.html" %}
           <div role="main">
             <div class="alert">
-            <i class="fa fa-check green"></i> Automatically monitor your Python code for anti-patterns with QuantifiedCode: <a href="https://www.quantifiedcode.com"><strong>Sign up for free!</strong></a>
+            <i class="fa fa-check green"></i> Automatically monitor your Python code for anti-patterns with QuantifiedCode: <a id="signup-link" href="https://www.quantifiedcode.com"><strong>Sign up for free!</strong></a>
             </div>
             {% block body %}{% endblock %}
           </div>
           {% include "footer.html" %}
         </div>
       </div>
-        <div style="float: right;"> Test </div>
 
     </section>
 

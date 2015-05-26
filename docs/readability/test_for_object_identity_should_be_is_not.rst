@@ -35,4 +35,4 @@ References
 Status
 ------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.
+- `Automated code check available: Check your code against this pattern  <https://www.quantifiedcode.com/app/pattern/98e5c20c84d946159158c58e4768f005?tab=meta>`_

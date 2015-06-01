@@ -28,7 +28,7 @@ The updated code below uses ``iteritems()`` instead of ``items()`` method. Note 
 
     d = {i: i * 2 for i in xrange(10000000)}
 
-    # Slow and memory hungry.
+    # Memory efficient.
     for key, value in d.iteritems():
         print "{0} = {1}".format(key, value)
 

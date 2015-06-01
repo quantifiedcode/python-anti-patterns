@@ -44,7 +44,7 @@ We're `QuantifiedCode <https://www.quantifiedcode.com/>`_, a Berlin-based startu
 How is this book organized?
 ---------------------------
 
-This book contains anti- and migrations pattern for Python and for popular Python frameworks, such as Python. We categorized the patterns as follows:
+This book contains anti- and migrations pattern for Python and for popular Python frameworks, such as Django. We categorized the patterns as follows:
 
 * **Correctness**: Anti-patterns that will literally break your code or make it do the wrong things.
 * **Maintainability**: Anti-patterns that will make your code hard to maintain or extend.

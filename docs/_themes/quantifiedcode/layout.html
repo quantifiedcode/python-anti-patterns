@@ -143,11 +143,14 @@
         <div class="rst-content">
           {% include "breadcrumbs.html" %}
           <div role="main">
-            <div class="alert">
-            <i class="fa fa-check green"></i> Automatically monitor your Python code for anti-patterns with QuantifiedCode: <a id="signup-link" href="https://www.quantifiedcode.com"><strong>Sign up for free!</strong></a>
+            <div class="alert" style="text-align: center; background-color: rgb(255, 248, 189);">
+             <i class="fa fa-exclamation-circle"></i> Check now, if your code contains this pattern. <a id="signup-link" href="https://www.quantifiedcode.com/">Learn more ...</a>
             </div>
             {% block body %}{% endblock %}
           </div>
+          <div class="alert" style="text-align: center; background-color: rgb(255, 248, 189);">
+            <i class="fa fa-exclamation-circle"></i> Check now, if your code contains this pattern. <a id="signup-link" href="https://www.quantifiedcode.com/">Learn more ...</a>
+            </div>
           {% include "footer.html" %}
         </div>
       </div>
@@ -200,7 +203,7 @@
       ga('send', 'pageview', {
        'page': location.pathname + location.search  + location.hash
       });
-      
+
     </script>
 
   {%- block footer %} {% endblock %}

@@ -84,7 +84,7 @@ In addition to Python's standard exceptions, you can implement your own exceptio
 References
 ----------
 
-- `PyLint W0701<http://pylint-messages.wikidot.com/messages:w0701>`
+- `PyLint W0702<http://pylint-messages.wikidot.com/messages:w0702>`
 - `Python Built-in Exceptions<https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`
 - `Python Errors and Exceptions<https://docs.python.org/2/tutorial/errors.html>`
 

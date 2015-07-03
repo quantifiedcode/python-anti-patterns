@@ -37,9 +37,9 @@ If, like the programmer who implemented the ``append`` function above, you want 
         print number_list
         return number_list
 
-    append(5, None) # expecting: [5], actual: [5]
-    append(7, None) # expecting: [7], actual: [7]
-    append(2, None) # expecting: [2], actual: [2]
+    append(5) # expecting: [5], actual: [5]
+    append(7) # expecting: [7], actual: [7]
+    append(2) # expecting: [2], actual: [2]
 
 References
 ----------

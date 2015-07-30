@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Python Anti-Patterns'
-copyright = u'2014, Andreas Dewes'
+copyright = u'2014-2015, QuantifiedCode'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

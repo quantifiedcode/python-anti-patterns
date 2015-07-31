@@ -41,15 +41,17 @@ There is no reason why the ``Rectangle`` class MUST return the area immediately 
 
 .. code:: python
 
-    class Rectangle:
+    class Rectangle(object):
         def __init__(self, width, height):
             self.width = width
             self.height = height
-            self.area = width * height
+            self._area = width * height
 
         @property
         def area(self): # moved the logic for returning area to a separate method
-            return self.area
+            return self._area
+
+Note that the class must inherit from ``object`` now, since the ``property`` decorator only works for new style classes.
 
 References
 ----------

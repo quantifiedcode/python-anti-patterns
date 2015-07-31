@@ -25,7 +25,7 @@ an exception.
 
 Why this is bad:
 
-If a function that is supposed to return a given type (e.g. list, tuple, dict) suddenly returns 
+If a function that is supposed to return a given type (e.g. list, tuple, dict) suddenly returns
 something else (e.g. None) the caller of that function will always need to check the type of the
 return value before proceeding. This makes for confusing and complex code. If the function is unable
 to produce the supposed return value it is better to raise an exception that can be caught by the caller instead.
@@ -227,7 +227,7 @@ doubled_values = [x*2 for x in values]
 
 filtered_values = filter(lambda x:True if x < 2 else False,values)
 
-#Good 
+#Good
 
 filtered_values = [x for x in values if x < 2]
 
@@ -436,3 +436,51 @@ class Foo(object):
     def a(self,value):
         self._a = value
 
+#Bad
+
+def calculate_with_operator(operator, a, b):
+
+    if operator == '+':
+        return a+b
+    elif operator == '-':
+        return a-b
+    elif operator == '/':
+        return a/b
+    elif operator == '*':
+        return a*b
+
+#Good
+
+def calculate_with_operator(operator, a, b):
+
+    possible_operators = {
+        '+': a+b,
+        '-': a-b,
+        '*': a*b,
+        '/': a/b
+    }
+
+    return possible_operators[operator]
+
+#Bad
+
+
+class DateUtil:
+    @staticmethod
+    def from_weekday_to_string(weekday):
+        nameds_weekdays = {
+            0: 'Monday',
+            5: 'Friday'
+        }
+
+        return nameds_weekdays[weekday]
+
+#Good
+
+def from_weekday_to_string(weekday):
+    nameds_weekdays = {
+        0: 'Monday',
+        5: 'Friday'
+    }
+
+    return nameds_weekdays[weekday]

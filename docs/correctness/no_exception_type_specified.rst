@@ -63,23 +63,17 @@ In addition to Python's standard exceptions, you can implement your own exceptio
         def __init__(self, arg):
             self.args = arg
 
+
     def divide(a, b):
+        if b < 1:
+            raise DivisorTooSmallError
+        return a / b
 
-        result = None
 
-        try:
-            # Raise an error if b is < 1
-            if b < 1:
-                raise DivisorTooSmallError
-            result = a / b
-        except DivisorToSmall:
-            # b is below 1
-            print "DivisorToSmall error: set result = 1"
-            result = 1
-
-        ...
-
-        return result
+    try:
+        divide(10, 0)
+    except DivisorTooSmallError:
+        print("Unable to divide these numbers!)
 
 References
 ----------

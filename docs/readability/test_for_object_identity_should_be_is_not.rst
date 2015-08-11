@@ -17,13 +17,13 @@ Anti-pattern
     print (a is b)
 
 This code snippet will print ``False`` even though ``a`` and ``b`` have equal values.
-This can occurs because ``a`` and ``b`` are references that point to different objects which happen to have the same value.
+This can occur because ``a`` and ``b`` are references that point to different objects which happen to have the same value.
 To verify the equality of two variables the ``==`` operator should be used.
 
 Best practice
 -------------
 
-Only use the ``is`` operator if you want to check the exat identity of two references.
+Only use the ``is`` operator if you want to check the exact identity of two references.
 
 .. code:: python
 

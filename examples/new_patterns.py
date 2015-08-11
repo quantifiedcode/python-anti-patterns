@@ -454,13 +454,13 @@ def calculate_with_operator(operator, a, b):
 def calculate_with_operator(operator, a, b):
 
     possible_operators = {
-        '+': a+b,
-        '-': a-b,
-        '*': a*b,
-        '/': a/b
+        '+': lambda a,b: a+b,
+        '-': lambda a,b: a-b,
+        '*': lambda a,b: a*b,
+        '/': lambda a,b: a/b
     }
 
-    return possible_operators[operator]
+    return possible_operators[operator](a,b)
 
 #Bad
 

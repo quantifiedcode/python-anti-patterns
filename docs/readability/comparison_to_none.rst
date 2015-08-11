@@ -31,12 +31,15 @@ The code below uses the PEP 8 preferred pattern of ``if cond is None``.
     if number is None:
         print "PEP 8 Style Guide prefers this pattern"
 
+Here the identity operator ``is`` is used. It will check whether ``number`` is identical to ``None``.
+``is`` will return to ``True`` only if the two variables point to the same object.
+
 
 References
 ----------
 
-- pep8 - E711
 - `PEP 8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
+- `stackoverflow <http://stackoverflow.com/questions/1504717/why-does-comparing-strings-in-python-using-either-or-is-sometimes-produce>`_
 
 Status
 ------

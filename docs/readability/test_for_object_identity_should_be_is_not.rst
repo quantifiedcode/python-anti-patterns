@@ -1,38 +1,43 @@
-Test for object identity should be ``is not``
-=============================================
+Test for object identity should be ``is``
+========================================
 
-Per the PEP 8 Style Guide, the preferred way to check the identity of an object is ``OBJECT is not CLASS``. Statements that follow the functionally identical but less readable pattern of ``not OBJECT is CLASS`` should be refactored to ``OBJECT is not CLASS``. The problem with ``not OBJECT is CLASS`` is its ambiguity. The statement is executed as ``not (OBJECT is CLASS)``. However, without parentheses it is easy to read it as ``(not OBJECT) is CLASS``, which makes no sense in most contexts.
-
-This is only a guideline. It can be ignored if needed. But the purpose of the PEP 8 style guidelines is to improve the readability of code.
+Testing the identity of two object can be archived in python with a special operator called ``in``.
+Most prominently it is used to check whether an variable points to ``None``.
+But the operator can examine any kind of identity.
+This often leads to confusion because equality of two different objects will return ``False``.
 
 Anti-pattern
 ------------
 
-The statement below compares an object with the name of ``rectangle`` to a class with the name of ``Circle``. It is evaluated as ``if not (rectangle is Circle)`` but could easily be interpreted as ``if (not rectangle) is Circle``, which probably makes no sense in the context of the program.
-
 .. code:: python
 
-    if not rectangle is Circle
+    a = range(10)
+    b = range(10)
+
+    print (a is b)
+
+This code snippet will print ``False`` even though ``a`` and ``b`` have equal values.
+This can occurs because ``a`` and ``b`` are references that point to different objects which happen to have the same value.
+To verify the equality of two variables the ``==`` operator should be used.
 
 Best practice
 -------------
 
-Refactor statement to use ``OBJECT is not CLASS`` pattern
-.........................................................
-
-Refactor the statement to the more readable ``OBJECT is not CLASS`` pattern.
+Only use the ``is`` operator if you want to check the exat identity of two references.
 
 .. code:: python
 
-    if rectangle is not Circle
+    some_list = None
+
+    if some_list is None:
+        do_somthing_with_the_list()
 
 References
 ----------
 
-- pep8 - E714
 - `PEP8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 
 Status
 ------
 
-- `Automated code check available: Check your code against this pattern  <https://www.quantifiedcode.com/app/pattern/98e5c20c84d946159158c58e4768f005?tab=meta>`_
+- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

@@ -17,7 +17,6 @@ The ``DateUtil`` class below has the ``convert`` method that transforms a weekda
                 0: 'Monday',
                 5: 'Friday'
             }
-
             return nameds_weekdays[weekday]
 
 It's not necessary create a class to do this. You could just create a new file to put it, or put it in an existing one.
@@ -27,15 +26,14 @@ Best Practice
 Puting the method outside of the class
 ......................................
 
+It is usually easier to write just one simple method. This makes the overhead of w whole class unnecessary.
 
-.. code:: pyton
-# file date_utils.py
+.. code:: python
 
-def from_weekday_to_string(weekday):
-    nameds_weekdays = {
-        0: 'Monday',
-        5: 'Friday'
-    }
-
-    return nameds_weekdays[weekday]
+    def from_weekday_to_string(weekday):
+        nameds_weekdays = {
+            0: 'Monday',
+            5: 'Friday'
+        }
+        return nameds_weekdays[weekday]
 

@@ -29,7 +29,7 @@ do the following:
 References
 ----------
 
-- PyLint - W0212
+- PyLint - W0212, protected-access
 
 Status
 ------

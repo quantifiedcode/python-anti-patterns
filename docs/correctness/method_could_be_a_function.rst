@@ -70,7 +70,8 @@ All class methods must be preceded by the ``@classmethod`` decorator. Furthermor
 
 References
 ----------
-- `PyLint - R0201 <http://pylint-messages.wikidot.com/messages:r0201>`_
+
+- PyLint - R0201, no-self-use
 
 
 Status

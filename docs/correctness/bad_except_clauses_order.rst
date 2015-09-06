@@ -37,7 +37,7 @@ The modified code below places the ``ZeroDivisionError`` exception clause in fro
 References
 ----------
 
-- Pylint - E0701
+- Pylint - E0701, bad-except-order
 
 Status
 ------

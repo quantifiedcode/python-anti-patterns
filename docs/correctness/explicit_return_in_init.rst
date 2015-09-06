@@ -56,7 +56,7 @@ Note that the class must inherit from ``object`` now, since the ``property`` dec
 References
 ----------
 
-- `PyLint - E0101 <http://pylint-messages.wikidot.com/messages:e0101>`_
+- PyLint - E0101, return-in-init
 - `Python Language Reference - object.__init__(self[, ...]) <https://docs.python.org/2/reference/datamodel.html#object.__init__>`_
 
 

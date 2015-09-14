@@ -224,6 +224,11 @@ latex_documents = [
 #latex_domain_indices = True
 
 
+# -- Options for epub output ---------------------------------------
+
+# can be "inline" (default), "footnote" or "no"
+epub_show_urls = "no"
+
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples

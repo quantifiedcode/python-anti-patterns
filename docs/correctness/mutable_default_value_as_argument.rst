@@ -12,7 +12,7 @@ A programmer wrote the ``append`` function below under the assumption that the `
 
     def append(number, list=[]):
         list.append(number)
-        print list
+        print(list)
         return list
 
     append(5) # expecting: [5], actual: [5]
@@ -34,7 +34,7 @@ If, like the programmer who implemented the ``append`` function above, you want 
         if list is None:
             list = []
         list.append(number)
-        print list
+        print(list)
         return list
 
     append(5, None) # expecting: [5], actual: [5]

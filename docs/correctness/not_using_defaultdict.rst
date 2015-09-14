@@ -17,7 +17,7 @@ The code below defines an empty dict and then manually initializes the keys of t
 
     d["k"] += 1
 
-    print d["k"]  # 7
+    print(d["k"])  # 7
 
 Best practice
 -------------
@@ -34,7 +34,7 @@ The modified code below uses ``defaultdict`` to initialize the dict. Whenever a 
     d = defaultdict(lambda : 6)
     d["k"] += 1
 
-    print d["k"]  # 7
+    print(d["k"])  # 7
 
 References
 ----------

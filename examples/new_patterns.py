@@ -10,11 +10,11 @@ l = [1,2,3]
 #Bad
 for i in range(0,len(list)):
     le = l[i]
-    print i,le
+    print(i,le)
 
 #Good
 for i,le in enumerate(l):
-    print i,le
+    print(i,le)
 
 """
 Returning more than one variable type from function call
@@ -81,12 +81,12 @@ d = {'foo' : 1,'bar' : 2}
 
 for key in d:
     value = d[key]
-    print "%s = %d" % (key,value)
+    print("%s = %d" % (key,value))
 
 #Good
 
 for key,value in d.iteritems():
-    print "%s = %d" % (key,value)
+    print("%s = %d" % (key,value))
 
 """
 Not using zip() to iterate over a pair of lists
@@ -100,12 +100,12 @@ l2 = [4,5,6]
 for i in range(l1):
     l1v = l1[i]
     l2v = l2[i]
-    print l1v,l2v
+    print(l1v,l2v)
 
 #Good
 
 for l1v,l2v in zip(l1,l2):
-    print l1v,l2v
+    print(l1v,l2v)
 
 """
 Using "key in list" to check if a key is contained in a list.
@@ -271,7 +271,7 @@ def foo():
 
 status_code,message = foo()
 
-print status_code,message
+print(status_code,message)
 
 #Good
 
@@ -284,7 +284,7 @@ def foo():
 
 ra = foo()
 
-print ra.status_code,ra.message
+print(ra.status_code,ra.message)
 
 """
 Not using explicit unpacking of sequencing

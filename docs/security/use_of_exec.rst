@@ -13,7 +13,7 @@ The sample code below composes a literal string containing Python code and then 
 
 .. code:: python
 
-    s = "print \"Hello, World!\""
+    s = "print(\"Hello, World!\"")
     exec s
 
 
@@ -28,7 +28,7 @@ In most scenarios, you can easily refactor the code to avoid the use of ``exec``
 .. code:: python
 
     def print_hello_world():
-        print "Hello, World!"
+        print("Hello, World!")
 
     print_hello_world()
 

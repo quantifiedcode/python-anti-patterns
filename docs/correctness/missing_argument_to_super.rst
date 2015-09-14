@@ -23,7 +23,7 @@ The author of the code below provides no arguments for the child class' call to 
             super().__init__(length, length)  # no arguments provided to super()
 
     s = Square(5)
-    print s.area  # does not execute
+    print(s.area)  # does not execute
 
 
 Best practice
@@ -47,7 +47,7 @@ In the modified code below the author has fixed the call to ``super()`` so that 
             super(Square, self).__init__(length, length)  # super() executes fine now
 
     s = Square(5)
-    print s.area  # 25
+    print(s.area)  # 25
 
 
 References

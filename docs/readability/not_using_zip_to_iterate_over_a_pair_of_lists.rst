@@ -14,7 +14,7 @@ The code below defines a variable ``index`` which serves as an index variable fo
     letters = ["A", "B", "C"]
 
     for index in range(len(numbers)):
-        print numbers[index], letters[index]
+        print(numbers[index], letters[index])
 
 Best-practice
 -------------
@@ -30,7 +30,7 @@ The updated code below demonstrates the Pythonic style for iterating through a p
     letters = ["A", "B", "C"]
 
     for numbers_value, letters_value in zip(numbers, letters):
-        print numbers_value, letters_value
+        print(numbers_value, letters_value)
 
 References
 ----------

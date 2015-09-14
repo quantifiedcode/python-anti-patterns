@@ -11,9 +11,9 @@ The following code uses tabs for indentation. Python code should be indented wit
 .. code:: python
 
     def print_hello_world():
-          print "Hello, World!"  # indented with tab
+          print("Hello, World!")  # indented with tab
     def print_goodbye_world():
-        print "Goodbye, World!"  # indented with tab
+        print("Goodbye, World!")  # indented with tab
 
 Best practice
 -------------
@@ -26,9 +26,9 @@ All Python code should be consistently indented with 4 spaces.
 .. code:: python
 
     def print_hello_world():
-        print "Hello, World!"  # indented with 4 spaces
+        print("Hello, World!")  # indented with 4 spaces
     def print_goodbye_world():
-        print "Goodbye, World!"  # indented with 4 spaces
+        print("Goodbye, World!")  # indented with 4 spaces
 
 
 References

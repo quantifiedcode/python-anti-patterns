@@ -37,7 +37,7 @@ Furthermore, the first argument of a class method must be a reference to the cla
             self.area = width * height
         # should be preceded by @classmethod here
         def print_class_name(): # missing required first argument "cls"
-            print "class name: Rectangle"
+            print("class name: Rectangle")
 
 
 Best practices

@@ -14,7 +14,7 @@ Anti-pattern
     a = range(10)
     b = range(10)
 
-    print (a is b)
+    print((a is b))
 
 This code snippet will print ``False`` even though ``a`` and ``b`` have equal values.
 This can occur because ``a`` and ``b`` are references that point to different objects which happen to have the same value.

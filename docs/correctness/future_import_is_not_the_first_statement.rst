@@ -10,11 +10,11 @@ The code below attempts to place a ``__future__`` import statement in the middle
 
 .. code:: python
 
-    print 8 / 7  # 1
+    print(8 / 7)  # 1
 
     from __future__ import division  # SyntaxError
 
-    print 8 / 7  # 1.1428571428571428
+    print(8 / 7) # 1.1428571428571428
 
 Best practice
 -------------
@@ -28,7 +28,7 @@ In the modified code below, the author decides that the module needs to use the 
 
     # removed __future__ import statement
 
-    print 8 / 7  # 1
+    print(8 / 7)  # 1
 
 Place ``__future__`` import before all other statements
 .......................................................
@@ -39,7 +39,7 @@ In the modified code below, the author decides that the module needs the new fun
 
     from __future__ import division
 
-    print 8 / 7  # 1.1428571428571428
+    print(8 / 7)  # 1.1428571428571428
 
 References
 ----------

@@ -18,7 +18,7 @@ For sure, it is an anti-pattern not only in Python but in almost every programmi
     flag = True
 
     if flag == True:  # Not PEP 8's preferred pattern
-        print "This works, but is not the preferred PEP 8 pattern for comparing values to True"
+        print("This works, but is not the preferred PEP 8 pattern for comparing values to True")
 
 
 Best practices
@@ -46,7 +46,7 @@ see `Python documentation`_:
     flag = True
 
     if flag:
-        print "PEP 8 Style Guide prefers this pattern"
+        print("PEP 8 Style Guide prefers this pattern")
 
 Compare values to ``True`` using the pattern ``if cond is True:``
 .................................................................
@@ -58,7 +58,7 @@ The code below uses the pattern described in PEP 8 as *worse*:
     flag = True
 
     if flag is True:
-        print "PEP 8 Style Guide prefers this pattern"
+        print("PEP 8 Style Guide prefers this pattern")
 
 This pattern is useful, when you make actual distinction between ``True`` value and
 every other that could be treated as true.

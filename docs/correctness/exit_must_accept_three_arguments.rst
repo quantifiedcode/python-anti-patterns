@@ -34,11 +34,11 @@ The ``__exit__`` method defined in the ``Rectangle`` class below does not confor
             self.width = width
             self.height = height
         def __enter__(self):
-            print "in __enter__"
+            print("in __enter__")
             return self
         def __exit__(self): # never called because
                             # argument signature is wrong
-            print "in __exit__"
+            print("in __exit__")
         def divide_by_zero(self): # causes ZeroDivisionError exception
             return self.width / 0
 
@@ -64,10 +64,10 @@ Modifying ``__exit__`` to accept four arguments ensures that ``__exit__`` is pro
             self.width = width
             self.height = height
         def __enter__(self):
-            print "in __enter__"
+            print("in __enter__")
             return self
         def __exit__(self, exception_type, exception_value, traceback):
-            print "in __exit__"
+            print("in __exit__")
         def divide_by_zero(self): # causes ZeroDivisionError exception
             return self.width / 0
 

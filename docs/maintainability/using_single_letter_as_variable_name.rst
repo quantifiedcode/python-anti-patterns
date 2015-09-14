@@ -15,7 +15,7 @@ Anti-pattern
             for i in v:
                 # Do you know what are you iterating now?
                 for k2, v2 in i.iteritems():
-                    print k2, v2
+                    print(k2, v2)
 
 
 Best practice
@@ -38,7 +38,7 @@ It is much better to write more text, but be much more precise what each variabl
             for data_item in value:
                 # Do you know what are you iterating now?
                 for data_key, data_value in data_item.iteritems():
-                    print data_key, data_value
+                    print(data_key, data_value)
 
 Status
 ------

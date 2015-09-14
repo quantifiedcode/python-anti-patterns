@@ -19,7 +19,7 @@ Although there is nothing wrong with this code, it is verbose. The solution belo
     if "message" in dictionary:
         data = dictionary["message"]
 
-    print data  # Hello, World!
+    print(data)  # Hello, World!
 
 Best practice
 -------------
@@ -37,7 +37,7 @@ When ``get()`` is called, Python checks if the specified key exists in the dict.
 
     data = dictionary.get("message", "")
 
-    print data  # Hello, World!
+    print(data)  # Hello, World!
 
 References
 ----------

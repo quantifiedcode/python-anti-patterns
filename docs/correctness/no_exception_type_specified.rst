@@ -31,16 +31,16 @@ Handle exceptions with Python's built in `exception types<https://docs.python.or
         try:
             result = a / b
         except ZeroDivisionError:
-            print "Type error: division by 0."
+            print("Type error: division by 0.")
         except TypeError:
             # E.g., if b is a string
-            print "Type error: division by '{0}'.".format(b)
+            print("Type error: division by '{0}'.".format(b))
         except Exception as e:
             # handle any other exception
-            print "Error '{0}' occured. Arguments {1}.".format(e.message, e.args)
+            print("Error '{0}' occured. Arguments {1}.".format(e.message, e.args))
         else:
             # Excecutes if no exception occured
-            print "No errors"
+            print("No errors")
         finally:
             # Executes always
             if result is None:

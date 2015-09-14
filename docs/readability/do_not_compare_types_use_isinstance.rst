@@ -20,7 +20,7 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
     r = Rectangle(3, 4)
 
     if type(r) is types.ListType:  # bad
-        print "object r is a list"
+        print("object r is a list")
 
 Note that the following situation will not raise the error, although it should.
 
@@ -41,7 +41,7 @@ Note that the following situation will not raise the error, although it should.
     r = Rectangle(3, 4)
 
     if type(r) is not type(c):  # bad
-        print "object types do not match"
+        print("object types do not match")
 
 Best practice
 -------------
@@ -63,7 +63,7 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
     r = Rectangle(3, 4)
 
     if isinstance(r, types.ListType):  # good
-        print "object r is a list"
+        print("object r is a list")
 
 References
 ----------

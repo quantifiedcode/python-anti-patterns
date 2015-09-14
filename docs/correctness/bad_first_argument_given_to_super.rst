@@ -21,7 +21,7 @@ Python raises a ``TypeError`` when it attempts to execute the call to ``super()`
             super(self, Square).__init__(length, length)  # bad first argument to super()
 
     s = Square(5)
-    print s.area  # does not execute
+    print(s.area)  # does not execute
 
 
 Best practice
@@ -45,7 +45,7 @@ In the modified code below the author has fixed the call to ``super()`` so that 
             super(Square, self).__init__(length, length)  # super() executes fine now
 
     s = Square(5)
-    print s.area  # 25
+    print(s.area)  # 25
 
 
 References

@@ -29,13 +29,13 @@ The code below uses global variables and a function to compute the area and peri
         HEIGHT = h
         return ((WIDTH * 2) + (HEIGHT * 2))
 
-    print "WIDTH:" , WIDTH # "WIDTH: 0"
-    print "HEIGHT:" , HEIGHT # "HEIGHT: 0"
+    print("WIDTH:" , WIDTH) # "WIDTH: 0"
+    print("HEIGHT:" , HEIGHT) # "HEIGHT: 0"
 
-    print "area():" , area(3, 4) # "area(): 12"
+    print("area():" , area(3, 4)) # "area(): 12"
 
-    print "WIDTH:" , WIDTH # "WIDTH: 3"
-    print "HEIGHT:" , HEIGHT # "HEIGHT: 4"
+    print("WIDTH:" , WIDTH) # "WIDTH: 3"
+    print("HEIGHT:" , HEIGHT) # "HEIGHT: 4"
 
 
 Solutions
@@ -60,7 +60,7 @@ In the modified code below, the author eliminates the need for the global variab
             return ((self.width * 2) + (self.height * 2))
 
     r = Rectangle(3, 4)
-    print "area():" , r.area()
+    print("area():" , r.area())
 
 References
 ----------

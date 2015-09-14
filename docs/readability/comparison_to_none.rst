@@ -13,7 +13,7 @@ The statement below uses the equality operator to compare a variable to ``None``
     number = None
 
     if number == None:
-        print "This works, but is not the preferred PEP 8 pattern for comparing values to None"
+        print("This works, but is not the preferred PEP 8 pattern for comparing values to None")
 
 
 Best practice
@@ -29,7 +29,7 @@ The code below uses the PEP 8 preferred pattern of ``if cond is None``.
     number = None
 
     if number is None:
-        print "PEP 8 Style Guide prefers this pattern"
+        print("PEP 8 Style Guide prefers this pattern")
 
 Here the identity operator ``is`` is used. It will check whether ``number`` is identical to ``None``.
 ``is`` will return to ``True`` only if the two variables point to the same object.

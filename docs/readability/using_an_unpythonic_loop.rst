@@ -14,7 +14,7 @@ The code below uses an index variable ``i`` in a ``for`` loop to iterate through
 
     for i in range(0,len(list)):  # creating index variable
         le = l[i]  # using index to access list
-        print i,le
+        print(i,le)
 
 Best practice
 -------------
@@ -27,7 +27,7 @@ The updated code below demonstrates the Pythonic style for iterating through a l
 .. code:: python
 
     for i, le in enumerate(l):
-        print i, le
+        print(i, le)
 
 References
 ----------

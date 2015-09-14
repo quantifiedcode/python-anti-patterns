@@ -13,9 +13,9 @@ The code below performs a division operation that results in a ``ZeroDivisionErr
     try:
         5 / 0
     except Exception as e:
-        print "Exception"
+        print("Exception")
     except ZeroDivisionError as e:  # unreachable code!
-        print "ZeroDivisionError"
+        print("ZeroDivisionError")
 
 Best practice
 -------------
@@ -30,9 +30,9 @@ The modified code below places the ``ZeroDivisionError`` exception clause in fro
     try:
         5 / 0
     except ZeroDivisionError as e:
-        print "ZeroDivisionError"
+        print("ZeroDivisionError")
     except Exception as e:
-        print "Exception"
+        print("Exception")
 
 References
 ----------

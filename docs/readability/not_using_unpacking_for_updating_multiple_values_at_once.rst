@@ -43,7 +43,7 @@ The unpacking can be sometimes quite misleading. Figure out what is the outcome 
 
     b = "1984"
     a = b, c = "AB"
-    print a, b, c
+    print(a, b, c)
 
 
 Status

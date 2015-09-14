@@ -8,9 +8,9 @@ Anti-pattern
 ------------
 
 .. code:: python
-
+)
     def someFunction():
-        print "Is not the preferred PEP 8 pattern for function names"
+        print("Is not the preferred PEP 8 pattern for function names")
 
 Best practice
 -------------
@@ -23,7 +23,7 @@ The code below uses the PEP 8 preferred pattern of function names.
 .. code:: python
 
     def some_function():
-        print "PEP 8 Style Guide prefers this pattern"
+        print("PEP 8 Style Guide prefers this pattern")
 
 References
 ----------

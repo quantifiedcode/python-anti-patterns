@@ -14,7 +14,7 @@ The code below demonstrates the old syntax of dict initialization. Although ther
 
     my_dict = dict([(number,number*2) for number in numbers])  # hard to read
 
-    print my_dict  # {1: 2, 2: 4, 3: 6}
+    print(my_dict)  # {1: 2, 2: 4, 3: 6}
 
 Best practice
 -------------
@@ -27,7 +27,7 @@ The modified code below uses the new dict comprehension syntax which was introdu
 
     my_dict = {number: number * 2 for number in numbers}
 
-    print my_dict # {1: 2, 2: 4, 3: 6}
+    print(my_dict) # {1: 2, 2: 4, 3: 6}
 
 References
 ----------

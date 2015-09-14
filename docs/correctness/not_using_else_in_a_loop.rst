@@ -21,11 +21,11 @@ The logic in this code is valid; it will accomplish its task. But the Python lan
     for n in l:
         if n == magic_number:
             found = True
-            print "Magic number found."
+            print("Magic number found.")
             break
 
     if not found:
-        print "Magic number not found."
+        print("Magic number not found.")
 
 Best practice
 -------------
@@ -46,10 +46,10 @@ The modified code below is functionally equivalent to the original code above, b
 
     for n in l:
         if n == magic_number:
-            print "Magic number found."
+            print("Magic number found.")
             break
     else:
-        print "Magic number not found."
+        print("Magic number not found.")
 
 References
 ----------

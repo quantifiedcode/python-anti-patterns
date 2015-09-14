@@ -15,7 +15,7 @@ The code below returns a first name, middle name, and last name using a normal, 
 
     name = get_name()
 
-    print name[0], name[1], name[2]  # no idea what these indexes map to!
+    print(name[0], name[1], name[2])  # no idea what these indexes map to!
 
 Best practice
 -------------
@@ -35,7 +35,7 @@ The modified code below uses named tuples to return multiple values. This code i
 
     name = get_name()
 
-    print name.first, name.middle, name.last  # much easier to read
+    print(name.first, name.middle, name.last)  # much easier to read
 
 References
 ----------

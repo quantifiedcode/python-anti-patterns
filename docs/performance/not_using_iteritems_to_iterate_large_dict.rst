@@ -14,7 +14,7 @@ The code below defines one large dictionary (created with dictionary comprehensi
 
     # Slow and memory hungry.
     for key, value in d.items():
-        print "{0} = {1}".format(key, value)
+        print("{0} = {1}".format(key, value))
 
 Best-practice
 -------------
@@ -30,7 +30,7 @@ The updated code below uses ``iteritems()`` instead of ``items()`` method. Note 
 
     # Memory efficient.
     for key, value in d.iteritems():
-        print "{0} = {1}".format(key, value)
+        print("{0} = {1}".format(key, value))
 
 References
 ----------

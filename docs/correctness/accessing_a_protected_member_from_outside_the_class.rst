@@ -15,7 +15,7 @@ Anti-pattern
             self._height = height
 
     r = Rectangle(5, 6)
-    print "Width: {:d}".format(r._width)  # direct access of protected member
+    print("Width: {:d}".format(r._width))  # direct access of protected member
 
 Best practice
 -------------

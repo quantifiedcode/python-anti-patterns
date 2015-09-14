@@ -5,19 +5,21 @@ The sole advantage that a ``lambda`` expression has over a ``def`` is that the `
 
 From the PEP 8 Style Guide:
 
-    Yes:
+Yes:
 
 .. code:: python
 
     def f(x): return 2*x
 
-    No:
+No:
 
 .. code:: python
 
     f = lambda x: 2*x
 
-    The first form means that the name of the resulting function object is specifically 'f' instead of the generic '<lambda>'. This is more useful for tracebacks and string representations in general. The use of the assignment statement eliminates the sole benefit a lambda expression can offer over an explicit def statement (i.e. that it can be embedded inside a larger expression)
+The first form means that the name of the resulting function object is specifically 'f' instead of the generic '<lambda>'.
+This is more useful for tracebacks and string representations in general.
+The use of the assignment statement eliminates the sole benefit a lambda expression can offer over an explicit def statement (i.e. that it can be embedded inside a larger expression)
 
 Anti-pattern
 ------------

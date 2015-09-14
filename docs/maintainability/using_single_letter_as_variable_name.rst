@@ -1,7 +1,7 @@
 Using single letter to name your variables
 ==========================================
 
-Sometimes you see programmers trying to shorten the ammount of text needed to write a piece of code, but when this goes to extremes, it will result in extremely ugly and unreadable code.
+Sometimes you see programmers trying to shorten the amount of text needed to write a piece of code, but when this goes to extremes, it will result in extremely ugly and unreadable code.
 
 Anti-pattern
 ------------
@@ -21,10 +21,10 @@ Anti-pattern
 Best practice
 -------------
 
-Use more verbose name for your variables for clarity
+Use more verbose names for your variables for clarity
 ....................................................
 
-It is much better to write more text, but be much more precise what each variable means.
+It is much better to write more text and to be much more precise about what each variable means.
 
 .. code:: python
 

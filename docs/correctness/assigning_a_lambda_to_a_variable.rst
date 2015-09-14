@@ -7,9 +7,13 @@ From the PEP 8 Style Guide:
 
     Yes:
 
+.. code:: python
+
     def f(x): return 2*x
 
     No:
+
+.. code:: python
 
     f = lambda x: 2*x
 

@@ -1,13 +1,13 @@
 Dynamically creating variable/method/function names
 ===================================================
 
-Sometimes programmer gets and idea to make his/hers work easier by creating magically working code that uses ``setattr()`` and ``getattr()`` functions to set some variable. This may look like a good idea, because there is no need to write all the methods by hand. However you're asking for trouble down the road.
+Sometimes a programmer gets an idea to make his/her work easier by creating magically working code that uses ``setattr()`` and ``getattr()`` functions to set some variable. While this may look like a good idea, because there is no need to write all the methods by hand, you are asking for trouble down the road.
 
 
 Example
 -------
 
-Consider following code. You have some data and want to update the *class* with all of the data. Of course you don't want to do this by hand, especially if there is tons of items in ``data_dict``. However when refactoring this kind of code after several years, and you'd like to know where is some variable added to this class, you'd usually use ``grep`` or ``ack_grep`` to find it. But when setting variables/methods/functions like this, you're screwed.
+Consider following code. You have some data and want to update the *class* with all of the data. Of course you don't want to do this by hand, especially if there is tons of items in ``data_dict``. However, when refactoring this kind of code after several years, and you'd like to know where some variable is added to this class, you'd usually use ``grep`` or ``ack_grep`` to find it. But when setting variables/methods/functions like this, you're screwed.
 
 .. code:: python
 
@@ -50,11 +50,11 @@ Solutions
 Find another way
 ................
 
-While the approach in examples abowe may be easiest to write, it is the worst to maintain later. You should always try to find another way to solve your problem.
+While the approach in the examples above may be the easiest to write, it is the worst to maintain later. You should always try to find another way to solve your problem.
 
 Typical examples:
 
-* Use function to parse incomming data
+* Use function to parse incoming data
 * Use the data dict/list itself without class
 
 This however depends on the task at hand.

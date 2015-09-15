@@ -193,10 +193,12 @@ latex_elements = {
 # https://www.ctan.org/tex-archive/fonts/libertine/?lang=de
 # but should also be in the full installation of tex-live
 "fontpkg" : """
+% pretty font
 \\usepackage{libertine}
+% formating of chapters (maybe could be solved differently)
 \\usepackage{titlesec}
-\\usepackage{listings}
-\\usepackage{lstlinebgrd}
+%\\usepackage{listings}
+%\\usepackage{lstlinebgrd}
 
 """,
 
@@ -212,17 +214,20 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 "preamble": """
-% remove empty page between doubles
+% remove empty page between chapters (maybe unneccesary)
 \\renewcommand{\\cleardoublepage}{\\clearpage}
 
 % disable numbering for chapters
 \\renewcommand\\thechapter{}
 \\renewcommand\\thesection{\\arabic{section}}
 
+% format chapter headline style
 \\titleformat{\\chapter}[hang] 
 {\\normalfont\\LARGE\\bfseries}{}{1em}{}
+% remove new page before chapter
 \\titleclass{\\chapter}{straight}
 
+% new page before every section
 \\newcommand{\\sectionbreak}{\\clearpage}
 
 % set correct header and footers
@@ -238,7 +243,7 @@ latex_elements = {
 }
 \\makeatother
 
-% make shading of code blocks work
+% make shading of code blocks work and remove border
 \\definecolor{VerbatimColor}{rgb}{0.95,0.95,0.95}
 \\definecolor{VerbatimBorderColor}{rgb}{0.95,0.95,0.95}
 
@@ -264,10 +269,11 @@ latex_elements = {
     \\rule{1pt}{\\textheight} % Vertical line
     \\hspace*{0.05\\textwidth} % Whitespace between the vertical line and title page text
     \\parbox[b]{0.75\\textwidth}{ % Paragraph box which restricts text to less than the width of the page
-    {\\noindent\\Huge\\bfseries Python Anti-Patterns}\\\\[2\\baselineskip] % Title
-    {\\large \\textit{The Little Book of Python Anti-Patterns and Worst Practice}}\\\\[4\\baselineskip] % Tagline or further description
-    \\vspace*{\\fill}
-    {\\Large \\textit{\\@author}} % Author name
+    {\\noindent\\Huge\\bfseries Python Anti-Patterns}\\\\[4\\baselineskip] % Title
+    {\\large \\textbf{\\textsl{The Little Book of Python Anti-Patterns and Worst Practice}}}\\\\[2\\baselineskip] % Tagline or further description
+    %\\vspace*{\\fill}
+    {\\large \\textbf{\\textsl{\\@author}}} % Author name
+    \\vspace{.6\\textheight}
     }}
   \\endgroup
 \\makeatother
@@ -285,8 +291,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = "snake_warning.png"
-
+#latex_logo = "snake_warning.png"
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
 #latex_use_parts = False

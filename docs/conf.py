@@ -247,14 +247,33 @@ latex_elements = {
 % set table of content depth
 \\setcounter{tocdepth}{2}
 
+
+% add line break after paragraph
+\\makeatletter
+\\renewcommand\\paragraph{%
+  \\@startsection{paragraph}{4}{0mm}%
+    {-\\baselineskip}%
+    {.5\\baselineskip}%
+    {\\normalfont\\normalsize\\bfseries}}
+\\makeatother
+
+% add linebreak after subparagraph (this is stupid. the structure should be
+% changed for the latex output but that doesnt work as expected)
+\\makeatletter
+\\renewcommand\\subparagraph{%
+  \\@startsection{paragraph}{4}{0mm}%
+    {-\\baselineskip}%
+    {.3\\baselineskip}%
+    {\\normalfont\\normalsize\\bfseries}}
+\\makeatother
 """,
 
 # remove "release" subtitle from title page
 "releasename": "",
+
 # define some pretty title page
 "maketitle" : """
 {
-
 \\makeatletter
   \\begingroup % Create the command for including the title page in the document
     \\hbox{ % Horizontal box
@@ -264,22 +283,22 @@ latex_elements = {
     \\parbox[b]{0.75\\textwidth}{ % Paragraph box which restricts text to less than the width of the page
     {\\noindent\\Huge\\bfseries Python Anti-Patterns}\\\\[4\\baselineskip] % Title
     {\\large \\textbf{\\textsl{The Little Book of Python Anti-Patterns and Worst Practice}}}\\\\[2\\baselineskip] % Tagline or further description
-    %\\vspace*{\\fill}
-    {\\large \\textbf{\\textsl{\\@author}}} % Author name
     \\vspace{.6\\textheight}
+    {\\large \\textbf{\\textsl{\\@author}}}
+    % this doesnt work but why
+    %\\includegraphics[width=.1\\textwidth]{logo_qc.png} % Author name
     }}
   \\endgroup
 \\makeatother
 """
 }
-#\vspace{0.5\\textheight} % Whitespace between the title block and the publisher
-#{\noindent The Publisher \\plogo}\\[\baselineskip] % Publisher and logo
+
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'PythonCodePatterns.tex', u'The Little Book of Python Anti-Patterns',
-   u'Andreas Dewes', 'manual'),
+  ('index', 'PythonCodePatterns.tex', u'Python Anti-Patterns',
+   u'Quantified Code', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

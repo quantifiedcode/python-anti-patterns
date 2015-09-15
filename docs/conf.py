@@ -195,11 +195,6 @@ latex_elements = {
 "fontpkg" : """
 % pretty font
 \\usepackage{libertine}
-% formating of chapters (maybe could be solved differently)
-\\usepackage{titlesec}
-%\\usepackage{listings}
-%\\usepackage{lstlinebgrd}
-
 """,
 
 # The font size ('10pt', '11pt' or '12pt').
@@ -221,11 +216,13 @@ latex_elements = {
 \\renewcommand\\thechapter{}
 \\renewcommand\\thesection{\\arabic{section}}
 
-% format chapter headline style
-\\titleformat{\\chapter}[hang] 
-{\\normalfont\\LARGE\\bfseries}{}{1em}{}
+% format chapter headline style and indentation
+\\titleformat{\\chapter}[hang]{\\normalfont\\LARGE\\bfseries}{}{0pt}{}
 % remove new page before chapter
 \\titleclass{\\chapter}{straight}
+
+% set chapter spacing
+\\titlespacing*{\\chapter}{0pt}{15pt}{5pt}
 
 % new page before every section
 \\newcommand{\\sectionbreak}{\\clearpage}
@@ -247,18 +244,14 @@ latex_elements = {
 \\definecolor{VerbatimColor}{rgb}{0.95,0.95,0.95}
 \\definecolor{VerbatimBorderColor}{rgb}{0.95,0.95,0.95}
 
+% set table of content depth
+\\setcounter{tocdepth}{2}
+
 """,
 
-#\\lstset{ language=C++,
-#  basicstyle=\\ttfamily\\scriptsize,
-#  keywordstyle=\\color{blue}\\ttfamily,
-#  stringstyle=\\color{red}\\ttfamily,
-#  commentstyle=\\color{green!60!black}\\ttfamily,
-#  escapeinside=||,
-#  linebackgroundcolor={\\ifnum\\value{lstnumber}>3 \\ifnum\\value{lstnumber}<9\color{gray!30}\\fi\\fi}  }
 # remove "release" subtitle from title page
 "releasename": "",
-# get some nice title template
+# define some pretty title page
 "maketitle" : """
 {
 

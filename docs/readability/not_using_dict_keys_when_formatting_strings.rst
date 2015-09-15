@@ -36,7 +36,8 @@ Here is an example of formatting the string with values from the person. This is
         'age':20
     }
 
-    # Bad: we have to change the replacement fields within our string, once we add new values
+    # Bad: we have to change the replacement fields within
+    # our string, once we add new values
     print('{0} {1} is {2} years old'.format(
         person['first'],
         person['last'],

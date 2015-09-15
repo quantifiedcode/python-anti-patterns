@@ -12,8 +12,10 @@ The code below uses an index variable ``i`` in a ``for`` loop to iterate through
 
     l = [1,2,3]
 
-    for i in range(0,len(list)):  # creating index variable
-        le = l[i]  # using index to access list
+    # creating index variable
+    for i in range(0,len(list)):
+        # using index to access list
+        le = l[i]
         print(i,le)
 
 Best practice

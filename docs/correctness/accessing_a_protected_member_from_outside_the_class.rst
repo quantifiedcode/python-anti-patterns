@@ -15,21 +15,22 @@ Anti-pattern
             self._height = height
 
     r = Rectangle(5, 6)
-    print("Width: {:d}".format(r._width))  # direct access of protected member
+    # direct access of protected member
+    print("Width: {:d}".format(r._width))
 
 Best practice
 -------------
 
-If you are absolutely sure that you need to call the proteced function from the outside,
+If you are absolutely sure that you need to call the protected function from the outside,
 do the following:
 
- * Make sure that calling the function from outside the class does not cause any inadverent side effects.
+ * Make sure that calling the function from outside the class does not cause any inadvertent side effects.
  * Refactor it such that it becomes part of the public interface of the class.
 
 References
 ----------
 
-- PyLint - W0212
+- `PyLint - W0212 <http://pylint-messages.wikidot.com/messages:w0212>`_
 
 Status
 ------

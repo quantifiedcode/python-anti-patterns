@@ -20,7 +20,7 @@ Anti-pattern
 Best practice
 -------------
 
-Handle exceptions with Python's built in `exception types<https://docs.python.org/2/library/exceptions.html>`
+Handle exceptions with Python's built in `exception types <https://docs.python.org/2/library/exceptions.html>`_.
 
 .. code:: python
 
@@ -50,7 +50,7 @@ Handle exceptions with Python's built in `exception types<https://docs.python.or
 
 With this pattern, you are able to handle exceptions based on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is recommended to handle specific exception types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block.
 
-**Cleanup actions (optional)**: The `else`-clause executes only, if no exception occured. It is useful to log the success of your code. The `finally`-block excecutes under all circumstances — no matter if an error occured or not. It is useful to clean up the `try-except` block.
+**Cleanup actions (optional)**: The `else`-clause executes only, if no exception occurred. It is useful to log the success of your code. The `finally`-block executes under all circumstances — no matter if an error occured or not. It is useful to clean up the `try-except` block.
 
 Implement user defined exceptions
 ---------------------------------
@@ -73,14 +73,14 @@ In addition to Python's standard exceptions, you can implement your own exceptio
     try:
         divide(10, 0)
     except DivisorTooSmallError:
-        print("Unable to divide these numbers!)
+        print("Unable to divide these numbers!")
 
 References
 ----------
 
-- `PyLint W0702<http://pylint-messages.wikidot.com/messages:w0702>`
-- `Python Built-in Exceptions<https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`
-- `Python Errors and Exceptions<https://docs.python.org/2/tutorial/errors.html>`
+- `PyLint W0702 <http://pylint-messages.wikidot.com/messages:w0702>`_
+- `Python Built-in Exceptions <https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`_
+- `Python Errors and Exceptions <https://docs.python.org/2/tutorial/errors.html>`_
 
 Status
 ------

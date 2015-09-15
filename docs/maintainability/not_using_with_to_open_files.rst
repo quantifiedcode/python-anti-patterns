@@ -13,7 +13,8 @@ The code below does not use ``with`` to open a file. This code depends on the pr
     f = open("file.txt", "r")
     content = f.read()
     1 / 0  # ZeroDivisionError
-    f.close()  # never executes, possible memory issues or file corruption
+    # never executes, possible memory issues or file corruption
+    f.close()
 
 Best practice
 -------------
@@ -27,7 +28,8 @@ The modified code below is the safest way to open a file. The ``file`` class has
 
     with open("file.txt", "r") as f:
         content = f.read()
-        1 / 0  # Python still executes f.close() even though an exception occurs
+        # Python still executes f.close() even though an exception occurs
+        1 / 0 
 
 References
 ----------

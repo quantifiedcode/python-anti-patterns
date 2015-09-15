@@ -12,7 +12,8 @@ The code below demonstrates the dangers of variables whose names include type no
 
     n_int = "Hello, World!"
 
-    4 / n_int  # mistakenly assuming that n_int is a number
+    # mistakenly assuming that n_int is a number
+    4 / n_int
 
 
 Best practice
@@ -27,7 +28,8 @@ Although the modifed code below does not fix the underlying problem of attemptin
 
     n = "Hello, World!"
 
-    4 / n  # still a problem, but less misleading now
+    # still a problem, but less misleading now
+    4 / n
 
 References
 ----------

@@ -44,7 +44,9 @@ Especially, if you have many fields on your model and/or if you got millions of 
 Best practice
 -------------
 
-## Use ``.values()``
+Use ``.values()``
+.................
+
 To avoid such a scenario, make sure you only query the data you really need for your program. Use ``.values()`` to restrict the underlying SQL query to required fields only.
 
 .. code:: python
@@ -62,7 +64,8 @@ To avoid such a scenario, make sure you only query the data you really need for 
 
     SELECT make from vehicles_cars;
 
-## Use ``.values_list()``
+Use ``.values_list()``
+......................
 
 Alternatively, you can use ``.value_list()``. It is similar to ``values()`` except that instead of returning dictionaries, it returns tuples when you iterate over it.
 
@@ -81,8 +84,8 @@ Alternatively, you can use ``.value_list()``. It is similar to ``values()`` exce
 References
 ----------
 
-- `Django documentation - Models: Querysets (values)` <https://docs.djangoproject.com/en/1.8/ref/models/querysets/#values>`_
-- `Django documentation - Models: Querysets (values_list)` <https://docs.djangoproject.com/en/1.8/ref/models/querysets/#values_list>`_
+- `Django documentation - Models: Querysets (values) <https://docs.djangoproject.com/en/1.8/ref/models/querysets/#values>`_
+- `Django documentation - Models: Querysets (values_list) <https://docs.djangoproject.com/en/1.8/ref/models/querysets/#values_list>`_
 
 Status
 ------

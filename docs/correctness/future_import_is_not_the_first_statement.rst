@@ -12,9 +12,11 @@ The code below attempts to place a ``__future__`` import statement in the middle
 
     print(8 / 7)  # 1
 
-    from __future__ import division  # SyntaxError
+    # SyntaxError
+    from __future__ import division
 
-    print(8 / 7) # 1.1428571428571428
+    # 1.1428571428571428
+    print(8 / 7)
 
 Best practice
 -------------
@@ -27,7 +29,6 @@ In the modified code below, the author decides that the module needs to use the 
 .. code:: python
 
     # removed __future__ import statement
-
     print(8 / 7)  # 1
 
 Place ``__future__`` import before all other statements
@@ -39,12 +40,12 @@ In the modified code below, the author decides that the module needs the new fun
 
     from __future__ import division
 
-    print(8 / 7)  # 1.1428571428571428
+    # 1.1428571428571428
+    print(8 / 7)
 
 References
 ----------
 
-- PyLint - W0410
 - `Simeon Visser - How does 'from __future__ import ...' work? <http://simeonvisser.com/posts/how-does-from-future-import-work-in-python.html>`_
 - `Python Standard Library - __future__ <https://docs.python.org/2/library/__future__.html>`_
 

@@ -12,14 +12,15 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
 
     import types
 
-    class Rectangle:
+    class Rectangle(object):
         def __init__(self, width, height):
             self.width = width
             self.height = height
 
     r = Rectangle(3, 4)
 
-    if type(r) is types.ListType:  # bad
+    # bad
+    if type(r) is types.ListType:
         print("object r is a list")
 
 Note that the following situation will not raise the error, although it should.
@@ -28,19 +29,20 @@ Note that the following situation will not raise the error, although it should.
 
     import types
 
-    class Rectangle:
+    class Rectangle(object):
         def __init__(self, width, height):
             self.width = width
             self.height = height
 
-    class Circle:
+    class Circle(object):
         def __init__(self, radius):
             self.radius = radius
 
     c = Circle(2)
     r = Rectangle(3, 4)
 
-    if type(r) is not type(c):  # bad
+    # bad
+    if type(r) is not type(c):
         print("object types do not match")
 
 Best practice
@@ -55,21 +57,21 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
 
     import types
 
-    class Rectangle:
+    class Rectangle(object):
         def __init__(self, width, height):
             self.width = width
             self.height = height
 
     r = Rectangle(3, 4)
 
-    if isinstance(r, types.ListType):  # good
+    # good
+    if isinstance(r, types.ListType):
         print("object r is a list")
 
 References
 ----------
 
 - `Stack Overflow: Differences between isinstance() and type() in Python <http://stackoverflow.com/questions/1549801/differences-between-isinstance-and-type-in-python>`_
-- pep8 - E721
 
 Status
 ------

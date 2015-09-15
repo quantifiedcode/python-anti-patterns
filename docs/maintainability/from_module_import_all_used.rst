@@ -10,7 +10,8 @@ The following code imports everything from the ``math`` built-in Python module.
 
 .. code:: python
 
-    from math import *  # wildcard import = bad
+    # wildcard import = bad
+    from math import *
 
 Best practices
 --------------
@@ -49,7 +50,6 @@ In these cases, use one of these idioms:
 References
 ----------
 
-- PyFlakes - F403
 - `Stack Overflow - Importing Modules <http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much>`_
 - `Stack Overflow - 'import module' or 'from module import' <http://stackoverflow.com/questions/710551/import-module-or-from-module-import>`_
 

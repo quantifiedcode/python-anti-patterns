@@ -16,7 +16,7 @@ In the ``Rectangle`` class below the ``area`` method calculates the area of any 
             self.height = height
             self.area = width * height
         # should be preceded by @staticmethod here
-        def area(width, height): # causes "Method could be a function" error
+        def area(width, height):
             return width * height
 
 ``area`` causes the ``Method could be a function`` error because it is ambiguous. It does not reference the instance or class using the ``self`` or ``cls`` keywords and it is not preceded by the ``@staticmethod`` decorator.
@@ -36,7 +36,8 @@ Furthermore, the first argument of a class method must be a reference to the cla
             self.height = height
             self.area = width * height
         # should be preceded by @classmethod here
-        def print_class_name(): # missing required first argument "cls"
+        # missing required first argument "cls"
+        def print_class_name():
             print("class name: Rectangle")
 
 
@@ -51,7 +52,8 @@ All static methods must be preceded by the ``@staticmethod`` decorator.
 .. code:: python
 
     class Rectangle:
-        @staticmethod # clarifies that this is a static method and belongs here
+        # clarifies that this is a static method and belongs here
+        @staticmethod
         def area(width, height):
             return width * height
 
@@ -66,7 +68,8 @@ All class methods must be preceded by the ``@classmethod`` decorator. Furthermor
     class Rectangle:
         @classmethod
         def print_class_name(cls):
-            print("class name: {0}".format(cls)) # "class name: Rectangle"
+            # "class name: Rectangle"
+            print("class name: {0}".format(cls))
 
 References
 ----------

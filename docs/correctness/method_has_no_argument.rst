@@ -15,8 +15,10 @@ In the ``Rectangle`` class below the ``area`` method attempts to return the valu
             self.width = width
             self.height = height
             self.area = width * height
-        def area(): # missing first argument "self"
-            return self.area # self is undefined here
+        # missing first argument "self"
+        def area():
+            # self is undefined here
+            return self.area
 
 Class method is missing the ``cls`` keyword
 ...........................................
@@ -27,8 +29,10 @@ The method ``print_class_name`` attempts to print the name of the class. However
 
     class Rectangle:
         @classmethod
-        def print_class_name(): # missing first argument "cls"
-            print("Hello, I am {0}!".format(cls)) # cls is undefined here
+        # missing first argument "cls"
+        def print_class_name():
+            # cls is undefined here
+            print("Hello, I am {0}!".format(cls))
 
 
 The method ``area`` computes the value of any rectangle. Currently this method is ambiguous. It is defined as a method of the ``Rectangle`` class, yet it does not reference any instance or class members. The method needs to explicitly state that it is a static method via the ``@staticmethod`` decorator.
@@ -55,7 +59,8 @@ To access the ``area`` member of a ``Rectangle`` instance the first argument of 
             self.width = width
             self.height = height
             self.area = width * height
-        def area(self): # instance members now accessible because of "self"
+        # instance members now accessible because of "self"
+        def area(self):
             return self.area
 
 Add the ``cls`` parameter to class methods
@@ -67,7 +72,8 @@ To access the name of the class the ``print_class_name`` method needs to explici
 
     class Rectangle:
         @classmethod
-        def print_class_name(cls): # class members now accessible, thanks to "cls"
+        # class members now accessible, thanks to "cls"
+        def print_class_name(cls):
             print("Hello, I am {0}!".format(cls))
 
 Add the ``@staticmethod`` decorator to static methods

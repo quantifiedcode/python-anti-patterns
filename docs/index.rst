@@ -93,7 +93,7 @@ questions concerning this project or contributions, please contact one of the ma
 .. _`Christoph Neumann`: https://github.com/programmdesign
 
 Index Of Patterns
------------------
+--------------------
 
 Here's the full index of all anti-patterns in this book.
 

@@ -6,7 +6,7 @@ The Python language provides a built-in ``else`` clause for ``for`` loops. If a 
 Anti-pattern
 ------------
 
-The code below searches a list for a magic number. If the magic number is found in the list, then the code prints ``Magic number found.``. If the magic number is not found, then the code prints ``Magic number not found.``.
+The code below searches a list for a magic number. If the magic number is found in the list, then the code prints ``Magic number found``. If the magic number is not found, then the code prints ``Magic number not found``.
 
 The code uses a flag variable called ``found`` to keep track of whether or not the magic number was found in the list.
 
@@ -21,11 +21,11 @@ The logic in this code is valid; it will accomplish its task. But the Python lan
     for n in l:
         if n == magic_number:
             found = True
-            print("Magic number found.")
+            print("Magic number found")
             break
 
     if not found:
-        print("Magic number not found.")
+        print("Magic number not found")
 
 Best practice
 -------------
@@ -46,10 +46,10 @@ The modified code below is functionally equivalent to the original code above, b
 
     for n in l:
         if n == magic_number:
-            print("Magic number found.")
+            print("Magic number found")
             break
     else:
-        print("Magic number not found.")
+        print("Magic number not found")
 
 References
 ----------

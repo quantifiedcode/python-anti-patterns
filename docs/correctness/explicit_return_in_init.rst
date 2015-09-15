@@ -15,7 +15,8 @@ The ``__init__`` method of the ``Rectangle`` class below attempts to return the 
             self.width = width
             self.height = height
             self.area = width * height
-            return self.area # causes "Explicit return in __init__" error
+            # causes "Explicit return in __init__" error
+            return self.area
 
 Best practices
 --------------
@@ -48,7 +49,8 @@ There is no reason why the ``Rectangle`` class MUST return the area immediately 
             self._area = width * height
 
         @property
-        def area(self): # moved the logic for returning area to a separate method
+        # moved the logic for returning area to a separate method
+        def area(self):
             return self._area
 
 Note that the class must inherit from ``object`` now, since the ``property`` decorator only works for new style classes.

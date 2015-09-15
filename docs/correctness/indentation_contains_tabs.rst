@@ -11,9 +11,11 @@ The following code uses tabs for indentation. Python code should be indented wit
 .. code:: python
 
     def print_hello_world():
-          print("Hello, World!")  # indented with tab
+        # indented with tab
+        print("Hello, World!")
     def print_goodbye_world():
-        print("Goodbye, World!")  # indented with tab
+        # indented with tab
+        print("Goodbye, World!")
 
 Best practice
 -------------
@@ -26,16 +28,17 @@ All Python code should be consistently indented with 4 spaces.
 .. code:: python
 
     def print_hello_world():
-        print("Hello, World!")  # indented with 4 spaces
+        # indented with 4 spaces
+        print("Hello, World!")
     def print_goodbye_world():
-        print("Goodbye, World!")  # indented with 4 spaces
+        # indented with 4 spaces
+        print("Goodbye, World!")
 
 
 References
 ----------
 - `PEP 8 Style Guide - Tabs or Spaces? <http://legacy.python.org/dev/peps/pep-0008/#tabs-or-spaces>`_
 - `PEP 8 Style Guide - Indentation <http://legacy.python.org/dev/peps/pep-0008/#indentation>`_
-- pep8 - W191
 
 Status
 ------

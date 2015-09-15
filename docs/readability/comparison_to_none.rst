@@ -13,7 +13,7 @@ The statement below uses the equality operator to compare a variable to ``None``
     number = None
 
     if number == None:
-        print("This works, but is not the preferred PEP 8 pattern for comparing values to None")
+        print("This works, but is not the preferred PEP 8 pattern")
 
 
 Best practice

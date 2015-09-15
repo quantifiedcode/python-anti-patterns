@@ -8,7 +8,7 @@ Anti-pattern
 ------------
 
 .. code:: python
-)
+
     def someFunction():
         print("Is not the preferred PEP 8 pattern for function names")
 

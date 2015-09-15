@@ -13,7 +13,7 @@ The sample code below composes a literal string containing Python code and then 
 
 .. code:: python
 
-    s = "print(\"Hello, World!\"")
+    s = "print(\"Hello, World!\")"
     exec s
 
 

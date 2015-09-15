@@ -1,5 +1,5 @@
-:fa:`magic` Migration
-======================
+:fa:`magic` Migration to 1.8
+===========================
 
 Migrating to a new Django version can be time consuming. To make this process easier, this chapter lists deprecated features and shows potential migration patterns/pathes.
 

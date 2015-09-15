@@ -20,7 +20,8 @@ The author of the code below provides no arguments for the child class' call to 
 
     class Square(Rectangle):
         def __init__(self, length):
-            super().__init__(length, length)  # no arguments provided to super()
+            # no arguments provided to super()
+            super().__init__(length, length)
 
     s = Square(5)
     print(s.area)  # does not execute
@@ -44,7 +45,8 @@ In the modified code below the author has fixed the call to ``super()`` so that 
 
     class Square(Rectangle):
         def __init__(self, length):
-            super(Square, self).__init__(length, length)  # super() executes fine now
+            # super() executes fine now
+            super(Square, self).__init__(length, length)
 
     s = Square(5)
     print(s.area)  # 25
@@ -53,7 +55,6 @@ In the modified code below the author has fixed the call to ``super()`` so that 
 References
 ----------
 
-- PyLint - E1004
 - `Python Standard Library - super([type[, object-or-type]]) <https://docs.python.org/3.1/library/functions.html#super>`_
 - `Stack Overflow - What is a basic example of single inheritance using super()? <http://stackoverflow.com/questions/1173992/what-is-a-basic-example-of-single-inheritance-using-the-super-keyword-in-pytho>`_
 - `Stack Overflow - Python super() inheritance and arguments needed <http://stackoverflow.com/questions/15896265/python-super-inheritance-and-arguments-needed>`_

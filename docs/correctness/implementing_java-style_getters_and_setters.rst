@@ -13,9 +13,11 @@ The programmer below comes to Python from a long career as a Java programmer. Fo
     class Square(object):
         def __init__(length):
             self._length = length
-        def get_length(self):  # Java-style
+        # Java-style
+        def get_length(self):
             return self._length
-        def set_length(self, length):  # Java-style
+        # Java-style
+        def set_length(self, length):
             self._length = length
 
     r = Square(5)

@@ -11,9 +11,11 @@ The following code mixes spaces and tabs for indentation. The ``print("Hello, Wo
 .. code:: python
 
     def print_hello_world():
-	print("Hello, World!")  # indented with tab
+    # indented with tab
+	print("Hello, World!")
     def print_goodbye_world():
-        print("Goodbye, World!")  # indented with 4 spaces
+        # indented with 4 spaces
+        print("Goodbye, World!")
 
 Solutions
 ---------
@@ -36,7 +38,6 @@ References
 
 - `PEP 8 Style Guide - Tabs or Spaces? <http://legacy.python.org/dev/peps/pep-0008/#tabs-or-spaces>`_
 - `PEP 8 Style Guide - Indentation <http://legacy.python.org/dev/peps/pep-0008/#indentation>`_
-- pep8 - E731
 
 Status
 ------

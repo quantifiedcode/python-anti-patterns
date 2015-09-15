@@ -30,7 +30,8 @@ If, like the programmer who implemented the ``append`` function above, you want 
 
 .. code:: python
 
-    def append(number, number_list=None): # the keyword None is the sentinel value representing empty list
+    # the keyword None is the sentinel value representing empty list
+    def append(number, number_list=None):
         if number_list is None:
             number_list = []
         number_list.append(number)

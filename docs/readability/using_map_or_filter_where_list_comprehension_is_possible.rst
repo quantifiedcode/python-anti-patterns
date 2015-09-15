@@ -29,7 +29,6 @@ In the modified code below, the code uses a list comprehension to generate the s
 References
 ----------
 
-- PyLint - W0110
 - `Oliver Fromme - List Comprehensions <http://www.secnetix.de/olli/Python/list_comprehensions.hawk>`_
 
 Status

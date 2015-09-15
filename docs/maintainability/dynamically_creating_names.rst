@@ -26,7 +26,10 @@ While previous example may look easy to find and debug, consider this:
 .. code:: python
 
     data_list = ['dat1', 'dat2', 'dat3']
-    data_dict = {'dat1': [1, 2, 3], 'dat2': [4, 5, 6], 'dat3': [7, 8, 9], 'dat4': [0, 4, 6]}
+    data_dict = {'dat1': [1, 2, 3],
+                 'dat2': [4, 5, 6],
+                 'dat3': [7, 8, 9],
+                 'dat4': [0, 4, 6]}
 
     class MyAwesomeClass:
 

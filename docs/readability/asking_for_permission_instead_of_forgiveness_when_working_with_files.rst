@@ -12,7 +12,8 @@ The code below uses an ``if`` statement to check if a file exists before attempt
 
     import os
 
-    if os.path.exists("file.txt"):  # violates EAFP coding style
+    # violates EAFP coding style
+    if os.path.exists("file.txt"):
         os.unlink("file.txt")
 
 Best practice
@@ -29,7 +30,8 @@ The updated code below is a demonstration of the EAFP coding style, which is the
 
     try:
         os.unlink("file.txt")
-    except OSError:  # raised when file does not exist
+    # raised when file does not exist
+    except OSError:
         pass
 
 References

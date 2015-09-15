@@ -36,8 +36,8 @@ Use a ``NullBooleanField`` instead:
 Reference
 ---------
 
-- [Django documentation - Model field reference: BooleanField (https://docs.djangoproject.com/en/1.8/ref/models/fields/#booleanfield)
-- [Django documentation - Model field reference: NullBooleanField (https://docs.djangoproject.com/en/1.8/ref/models/fields/#nullbooleanfield)
+- `Django documentation - Model field reference: BooleanField <https://docs.djangoproject.com/en/1.8/ref/models/fields/#booleanfield>`_
+- `Django documentation - Model field reference: NullBooleanField <https://docs.djangoproject.com/en/1.8/ref/models/fields/#nullbooleanfield>`_
 
 Status
 ------

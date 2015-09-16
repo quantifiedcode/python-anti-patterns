@@ -194,7 +194,7 @@ latex_elements = {
 # but should also be in the full installation of tex-live
 "fontpkg" : """
 % pretty font
-\\usepackage{libertine}
+\\usepackage{palatino}
 """,
 
 # The font size ('10pt', '11pt' or '12pt').
@@ -205,7 +205,7 @@ latex_elements = {
 # remove numbering from chapter and set it corrextly for sections
 # style chapter headlines correctly and do not clear page before every chapter
 # clear page after section
-# make nice footer and header, i.e. style text correctly and thin out lines
+# make nice footer and header, i.e. style text correctly and thin out lineslibertine
 
 # Additional stuff for the LaTeX preamble.
 "preamble": """

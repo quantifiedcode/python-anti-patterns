@@ -266,6 +266,10 @@ latex_elements = {
     {.3\\baselineskip}%
     {\\normalfont\\normalsize\\bfseries}}
 \\makeatother
+
+% make sure to copy the logo into the latex built directory in the Makefile.
+% Otherwise it wont be found.
+\\newcommand*{\\plogo}{\\includegraphics[width=.04\\textwidth]{./logo_qc.png}} % Generic publisher logo
 """,
 
 # remove "release" subtitle from title page
@@ -273,24 +277,24 @@ latex_elements = {
 
 # define some pretty title page
 "maketitle" : """
-{
 \\makeatletter
   \\begingroup % Create the command for including the title page in the document
-    \\hbox{ % Horizontal box
-    \\hspace*{0.2\\textwidth} % Whitespace to the left of the title page
-    \\rule{1pt}{\\textheight} % Vertical line
-    \\hspace*{0.05\\textwidth} % Whitespace between the vertical line and title page text
-    \\parbox[b]{0.75\\textwidth}{ % Paragraph box which restricts text to less than the width of the page
-    {\\noindent\\Huge\\bfseries Python Anti-Patterns}\\\\[4\\baselineskip] % Title
-    {\\large \\textbf{\\textsl{The Little Book of Python Anti-Patterns and Worst Practice}}}\\\\[2\\baselineskip] % Tagline or further description
-    \\vspace{.6\\textheight}
-    {\\large \\textbf{\\textsl{\\@author}}}
-    % this doesnt work but why
-    %\\includegraphics[width=.1\\textwidth]{logo_qc.png} % Author name
-    }}
+  \\hbox{ % Horizontal box
+  \\hspace*{0.2\\textwidth} % Whitespace to the left of the title page
+  \\rule{1pt}{\\textheight} % Vertical line
+  \\hspace*{0.05\\textwidth} % Whitespace between the vertical line and title page text
+  \\parbox[b]{0.75\\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+  
+  {\\noindent\\Huge\\bfseries Python Anti-Patterns}\\\\[4\\baselineskip] % Title
+  {\\large \\textbf{\\textsl{The Little Book of Python Anti-Patterns and Worst Practice}}}\\\\[2\\baselineskip] % Tagline or further description
+  
+  \\vspace{0.5\\textheight} % Whitespace between the title block and the publisher
+  {\\noindent \\plogo \\ \\ \\Large\\bfseries{Quantified Code}}\\\\[\\baselineskip] % Publisher and logo
+  }}
   \\endgroup
 \\makeatother
 """
+
 }
 
 # Grouping the document tree into LaTeX files. List of tuples

@@ -79,16 +79,18 @@ Contributing
 If you think this collection can be improved or extended, please contribute! You can do this by
 simply forking our Github project and sending us a pull request once you're done adding your changes. We will review and merge all pull requests as fast as possible and be happy to include your name on the list of authors of this document.
 
+We would also like to thank all contributors to this book for their effort. A full list of contributors can be found at `Github`_. 
+
+.. _`Github`: https://github.com/quantifiedcode/python-anti-patterns/graphs/contributors
+
 List of Maintainers
 -------------------
 
-For a full list of contributors, please look at `Github`_. If you have any
-questions concerning this project or contributions, please contact one of the maintainers:
+If you have any questions concerning this project, please contact one of the maintainers:
 
 * `Andreas Dewes`_
 * `Christoph Neumann`_
 
-.. _`Github`: https://github.com/quantifiedcode/python-anti-patterns/graphs/contributors
 .. _`Andreas Dewes`: https://github.com/adewes
 .. _`Christoph Neumann`: https://github.com/programmdesign
 

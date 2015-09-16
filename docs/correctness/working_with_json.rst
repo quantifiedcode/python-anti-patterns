@@ -7,28 +7,32 @@ Anti-pattern
 ------------
 
 .. code:: python
-    # read from file-like
-    with open("json_file.json") as json_file:
-    	json_string = json_file.read()
-    	dictionary = json.loads(json_string)
+
+	# read from file-like
+	with open("json_file.json") as json_file:
+	  json_string = json_file.read()
+	  dictionary = json.loads(json_string)
 
 	# write to file-like
 	dictionary = {"key": "value"}
 	with open("json_file.json", "w") as json_file:
-		json_string = json.dumps(dictionary)
-		json.file.write(json_string)
+	  json_string = json.dumps(dictionary)
+	  json.file.write(json_string)
 
 Best practice
 -------------
-    When read/write to file-like objects use the json respective method load/dump instead of using loads/dumps.
-    # read from file-like
-    with open("json_file") as json_file:
-		dictionary = json.load(json_file)
+  When read/write to file-like objects use the json respective method load/dump instead of using loads/dumps.
 
-	# write to file-like
-	dictionary = {"key": "value"}
-	with open("json_file.json", "w") as json_file:
-		json.dump(dictionary = {"key": "value"}, json_file)
+  .. code:: python
+
+  	# read from file-like
+  	with open("json_file") as json_file:
+  	  dictionary = json.load(json_file)
+
+  	# write to file-like
+  	dictionary = {"key": "value"}
+  	with open("json_file.json", "w") as json_file:
+  	  json.dump(dictionary = {"key": "value"}, json_file)
 
 References
 ----------

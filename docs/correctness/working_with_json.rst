@@ -32,7 +32,7 @@ Best practice
   	# write to file-like
   	dictionary = {"key": "value"}
   	with open("json_file.json", "w") as json_file:
-  	  json.dump(dictionary = {"key": "value"}, json_file)
+  	  json.dump(dictionary, json_file)
 
 References
 ----------

@@ -200,13 +200,6 @@ latex_elements = {
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
 
-# comments for the preamble:
-# remove doubepages
-# remove numbering from chapter and set it corrextly for sections
-# style chapter headlines correctly and do not clear page before every chapter
-# clear page after section
-# make nice footer and header, i.e. style text correctly and thin out lineslibertine
-
 # Additional stuff for the LaTeX preamble.
 "preamble": """
 % remove empty page between chapters (maybe unneccesary)
@@ -269,7 +262,7 @@ latex_elements = {
 
 % make sure to copy the logo into the latex built directory in the Makefile.
 % Otherwise it wont be found.
-\\newcommand*{\\plogo}{\\includegraphics[width=.04\\textwidth]{./logo_qc.png}} % Generic publisher logo
+\\newcommand*{\\plogo}{\\includegraphics[width=.04\\textwidth]{./logo_qc.png}}
 """,
 
 # remove "release" subtitle from title page
@@ -301,7 +294,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'PythonCodePatterns.tex', u'Python Anti-Patterns',
+  ('index', 'The-little-book-of-Python-Anti-Patterns-1.0.tex', u'Python Anti-Patterns',
    u'Quantified Code', 'manual'),
 ]
 

@@ -30,7 +30,7 @@ do the following:
 References
 ----------
 
-- `PyLint - W0212 <http://pylint-messages.wikidot.com/messages:w0212>`_
+- PyLint - W0212, protected-access
 
 Status
 ------

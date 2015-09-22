@@ -66,6 +66,7 @@ References
 ----------
 
 - `Cunningham & Cunningham, Inc. - Global Variables Are Bad <http://c2.com/cgi/wiki?GlobalVariablesAreBad>`_
+- PyLint - W0603, global-statement
 
 Status
 ------

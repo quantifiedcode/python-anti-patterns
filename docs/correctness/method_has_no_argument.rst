@@ -91,7 +91,7 @@ If the method is a static method that does not need access to any instance membe
 
 References
 ----------
-- `PyLint - E0211 <http://pylint-messages.wikidot.com/messages:e0211>`_
+- PyLint - E0211, no-method-argument
 
 
 Status

@@ -31,10 +31,10 @@ In the code below, the function ``get_secret_code()`` returns a secret code when
 Best practice
 -------------
 
-Raise exception when error is encountered or precondition is unsatisfied
+Raise an exception when an error is encountered or a precondition is unsatisfied
 ........................................................................
 
-When a calling code provides invalid data to a function, or a precondition to the function is not satisfied, or an error occurs during the execution of the function, the function should not return any data. The function should raise an exception. In the modified version of the ``get_secret_code()`` function below, the function raises a ``ValueError`` when a calling code does not provide the correct value for the ``password`` argument.
+When invalid data is provided to a function, a precondition to a function is not satisfied, or an error occurs during the execution of a function, the function should not return any data. Instead, the function should raise an exception. In the modified version of ``get_secret_code()`` shown below, ``ValueError`` is raised when an incorrect value is given for the ``password`` argument.
 
 .. code:: python
 

@@ -28,7 +28,7 @@ The modified code below uses the new dict comprehension syntax which was introdu
 
     my_dict = {number: number * 2 for number in numbers}
 
-    print(my_dict) # {1: 2, 2: 4, 3: 6}
+    print(my_dict)  # {1: 2, 2: 4, 3: 6}
 
 References
 ----------

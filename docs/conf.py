@@ -53,7 +53,7 @@ copyright = u'2014-2015, QuantifiedCode'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1'
+version = '1.0'
 # The full version, including alpha/beta/rc tags.
 #release = '0.1'
 
@@ -294,7 +294,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'The-little-book-of-Python-Anti-Patterns-1.0.tex', u'Python Anti-Patterns',
+  ('index', 'The-Little-Book-of-Python-Anti-Patterns-1.0.tex', u'Python Anti-Patterns',
    u'Quantified Code', 'manual'),
 ]
 

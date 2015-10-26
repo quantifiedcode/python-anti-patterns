@@ -28,7 +28,7 @@ possible solutions. You can check many of them for free against your project at 
 
 .. only:: html
 
-    With this `link <./latex/PythonCodePatterns.pdf>`_ you can also download the pdf version.
+    With this `link <./latex/The-Little-Book-of-Python-Anti-Patterns-1.0.pdf>`_ you can also download the pdf version.
 
 Why did we write this?
 ----------------------

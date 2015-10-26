@@ -282,7 +282,7 @@ latex_elements = {
   {\\large \\textbf{\\textsl{The Little Book of Python Anti-Patterns and Worst Practice}}}\\\\[2\\baselineskip] % Tagline or further description
   
   \\vspace{0.5\\textheight} % Whitespace between the title block and the publisher
-  {\\noindent \\plogo \\ \\ \\Large\\bfseries{Quantified Code}}\\\\[\\baselineskip] % Publisher and logo
+  {\\noindent \\plogo \\ \\ \\Large\\bfseries{QuantifiedCode}}\\\\[\\baselineskip] % Publisher and logo
   }}
   \\endgroup
 \\makeatother

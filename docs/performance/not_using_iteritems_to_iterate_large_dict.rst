@@ -3,6 +3,10 @@ Not using ``iteritems()`` to iterate over a large dictionary
 
 `PEP 234 <https://www.python.org/dev/peps/pep-0234://www.python.org/dev/peps/pep-0234/>`_ defines iteration interface for objects. It also states it has significant impact on performance of dict iteration.
 
+.. note::
+
+    This is no longer applies in Python3, where ``items()`` uses an iterator.
+
 Anti-pattern
 ------------
 

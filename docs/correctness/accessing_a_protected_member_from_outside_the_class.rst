@@ -2,7 +2,7 @@ Accessing a protected member from outside the class
 ===================================================
 
 Accessing a protected member (a member prefixed with ``_``) of a class from outside that class usually
-calls for trouble, since the creator of that class did not intend this function to be exposed.
+calls for trouble, since the creator of that class did not intend this member to be exposed.
 
 Anti-pattern
 ------------
@@ -21,10 +21,10 @@ Anti-pattern
 Best practice
 -------------
 
-If you are absolutely sure that you need to call the protected function from the outside,
+If you are absolutely sure that you need to access the protected member from the outside,
 do the following:
 
- * Make sure that calling the function from outside the class does not cause any inadvertent side effects.
+ * Make sure that accessing the member from outside the class does not cause any inadvertent side effects.
  * Refactor it such that it becomes part of the public interface of the class.
 
 References

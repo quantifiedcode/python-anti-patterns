@@ -30,10 +30,18 @@ The updated code below demonstrates the Pythonic style for iterating through a d
     for key,val in d.items():
         print("{} = {}".format(key, val))
 
+Difference Python 2 and Python 3
+--------------------------------
+
+In python 2.x the above examples using ``items`` would return a list with tuples containing the copied key-value pairs of the dictionary. In order to not copy and with that load the whole dictionary's keys and values inside a list to the memory you should prefer the ``iteritems`` method which simply returns an iterator instead of a list.
+In Python 3.x the ``iteritems`` is removed and the ``items`` method returns view objects. The benefit of these view objects compared to the tuples containing copies is that every change made to the dictionary is reflected in the view objects.
+
 References
 ----------
 
 - `PEP 20 - The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_
+- `Python 2 dict.iteritems <https://docs.python.org/2/library/stdtypes.html#dict.iteritems>`_
+- `Python 3 dict.items <https://docs.python.org/3.3/library/stdtypes.html#dict-views>`_
 
 
 Status

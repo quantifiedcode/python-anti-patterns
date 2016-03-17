@@ -59,7 +59,7 @@ The code below uses the pattern described in PEP 8 as *worse*:
     flag = True
 
     if flag is True:
-        print("PEP 8 Style Guide prefers this pattern")
+        print("PEP 8 Style Guide abhors this pattern")
 
 This pattern is useful, when you make actual distinction between ``True`` value and
 every other that could be treated as true.

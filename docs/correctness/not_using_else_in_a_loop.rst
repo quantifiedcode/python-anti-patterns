@@ -51,6 +51,9 @@ The modified code below is functionally equivalent to the original code above, b
     else:
         print("Magic number not found")
 
+
+.. note:: Since ``else`` on a ``for`` loop is so unintuitive and error-prone, even some experienced Python developers suggest not using this feature at all.
+
 References
 ----------
 

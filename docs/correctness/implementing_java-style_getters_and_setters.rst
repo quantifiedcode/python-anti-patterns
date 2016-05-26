@@ -11,7 +11,7 @@ The programmer below comes to Python from a long career as a Java programmer. Fo
 .. code:: python
 
     class Square(object):
-        def __init__(length):
+        def __init__(self, length):
             self._length = length
         # Java-style
         def get_length(self):
@@ -35,7 +35,7 @@ In Python it is acceptable to simply access class or object members directly. Th
 .. code:: python
 
     class Square(object):
-        def __init__(length):
+        def __init__(self, length):
             self.length = length
 
     r = Square(5)
@@ -81,4 +81,3 @@ Status
 ------
 
 - `Automated code check available <https://www.quantifiedcode.com/app/pattern/c98ab6808f7f4e8bb70290a2590a9f72>`_
-

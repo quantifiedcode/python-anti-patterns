@@ -7,7 +7,7 @@ Sometimes a programmer gets an idea to make his/her work easier by creating magi
 Example
 -------
 
-Consider following code. You have some data and want to update the *class* with all of the data. Of course you don't want to do this by hand, especially if there is tons of items in ``data_dict``. However, when refactoring this kind of code after several years, and you'd like to know where some variable is added to this class, you'd usually use ``grep`` or ``ack_grep`` to find it. But when setting variables/methods/functions like this, you're screwed.
+Consider the following code. You have some data and want to update the *class* with all of the data. Of course you don't want to do this by hand, especially if there are tons of items in ``data_dict``. However, when refactoring this kind of code after several years, and you'd like to know where some variable is added to this class, you'd usually use ``grep`` or ``ack_grep`` to find it. But when setting variables/methods/functions like this, you're screwed.
 
 .. code:: python
 

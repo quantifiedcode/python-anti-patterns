@@ -1,7 +1,7 @@
 Not using explicit unpacking
 ============================
 
-When you see multiple variables being defined followed by an assignment to a list (e.g. ``elem0, elem1, elem2 = elems``, where ``elem0``, ``elem1``, and ``elem2`` are variables and ``elems`` is a list), Python will automatically iterate through the list and assign ``elems[0]`` to ``elem0``, ``elems[1]`` to ``elem11``, and so on.
+When you see multiple variables being defined followed by an assignment to a list (e.g. ``elem0, elem1, elem2 = elems``, where ``elem0``, ``elem1``, and ``elem2`` are variables and ``elems`` is a list), Python will automatically iterate through the list and assign ``elems[0]`` to ``elem0``, ``elems[1]`` to ``elem1``, and so on.
 
 Anti-pattern
 ------------

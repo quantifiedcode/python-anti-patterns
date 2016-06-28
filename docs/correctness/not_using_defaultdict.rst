@@ -12,7 +12,7 @@ The code below defines an empty dict and then manually initializes the keys of t
 
     d = {}
 
-    if not "k" in d:
+    if "k" not in d:
         d["k"] = 6
 
     d["k"] += 1

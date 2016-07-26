@@ -51,7 +51,7 @@ When a member needs to be slightly protected and cannot be simply exposed as a p
 
     class Square(object):
         def __init__(self, length):
-            self._length = length
+            self.length = length
 
         @property
         def length(self):

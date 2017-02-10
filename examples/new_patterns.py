@@ -8,7 +8,7 @@ loop, you should use enumerate to retrieve the index and list element simultaneo
 l = [1,2,3]
 
 #Bad
-for i in range(0,len(list)):
+for i in range(len(l)):
     le = l[i]
     print(i,le)
 

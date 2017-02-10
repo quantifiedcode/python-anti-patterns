@@ -8,7 +8,7 @@ loop, you should use enumerate to retrieve the index and list element simultaneo
 l = [1,2,3]
 
 #Bad
-for i in range(0,len(list)):
+for i in range(len(l)):
     le = l[i]
     print(i,le)
 
@@ -412,13 +412,13 @@ http://stackoverflow.com/questions/6618002/python-property-versus-getters-and-se
 
 class Foo(object):
 
-    def __init__(a):
+    def __init__(self, a):
         self._a = a
 
     def get_a(self):
-        return a
+        return self._a
 
-    def set_a(self,value):
+    def set_a(self, value):
         self._a = value
 
 #Good

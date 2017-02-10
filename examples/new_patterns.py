@@ -412,13 +412,13 @@ http://stackoverflow.com/questions/6618002/python-property-versus-getters-and-se
 
 class Foo(object):
 
-    def __init__(a):
+    def __init__(self, a):
         self._a = a
 
     def get_a(self):
-        return a
+        return self._a
 
-    def set_a(self,value):
+    def set_a(self, value):
         self._a = value
 
 #Good

@@ -1,13 +1,13 @@
-#The Little Book of Python Anti-Patterns
+# The Little Book of Python Anti-Patterns
 
 This is an open-source book of **Python anti-patterns and worst practices**. Check out `docs/index.rst` for more information.
 
 **Notice**: This is still (and will always be) a work-in-progress, feel free to contribute by suggesting improvements, adding new articles, improving existing ones, or translating this into other languages.
 
-# New articles
+## New articles
 If you add new articles, please use the provided templates. Depending on the pattern you are creating, use either the [anti-pattern](templates/anti_pattern.rst) or the [migration-pattern](templates/migration_pattern.rst) template.
 
-#License
+## License
 
 The book is made available under a Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 license. This allows you to use and distribute it freely for your own non-commercial projects (e.g. for teaching) if you make your contributions available under the same license.
 

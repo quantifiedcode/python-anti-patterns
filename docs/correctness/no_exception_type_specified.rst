@@ -1,7 +1,7 @@
 No exception type(s) specified
 ==============================
 
-The function `divide` simply divides `a` by `b`. To avoid invalid calculations (e.g., a division by zero), a `try-except` block is added. This is valid and ensures that the function always returns a result. However, by securing your code with the try clause, you might hide actual programming errors, e.g., that you pass a string or an object as `b`, instead of a number. By not specifying an exception type, you do not only hide this error but you loose also information about the error itself.
+The function `divide` simply divides `a` by `b`. To avoid invalid calculations (e.g., a division by zero), a `try-except` block is added. This is valid and ensures that the function always returns a result. However, by securing your code with the try clause, you might hide actual programming errors, e.g., that you pass a string or an object as `b`, instead of a number. By not specifying an exception type, you do not only hide this error but you also lose information about the error itself.
 
 Anti-pattern
 ------------
@@ -48,7 +48,7 @@ Handle exceptions with Python's built in `exception types <https://docs.python.o
 
         return result
 
-With this pattern, you are able to handle exceptions based on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is recommended to handle specific exception types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block.
+With this pattern, you are able to handle exceptions based on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is recommended to handle specific exception types first (e.g., ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block.
 
 **Cleanup actions (optional)**: The `else`-clause executes only, if no exception occurred. It is useful to log the success of your code. The `finally`-block executes under all circumstances — no matter if an error occured or not. It is useful to clean up the `try-except` block.
 

@@ -24,7 +24,7 @@ Welcome, fellow Pythoneer! This is a small book of Python  **anti-patterns** and
 
 Learning about these anti-patterns will help you to avoid them in your own code and make you
 a better programmer (hopefully). Each pattern comes with a small description, examples and
-possible solutions. You can check many of them for free against your project at `QuantifiedCode <https://www.quantifiedcode.com/app/patterns>`_.
+possible solutions. You can check many of them for free against your project at `QuantifiedCode <https://www.quantifiedcode.com/>`_.
 
 
 Why did we write this?

@@ -82,7 +82,4 @@ References
 - PyLint - E1003, bad-super-call
 - `PEP 3135 - New Super <https://www.python.org/dev/peps/pep-3135/>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

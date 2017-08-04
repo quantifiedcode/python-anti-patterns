@@ -38,7 +38,4 @@ References
 
 - `Stack Overflow - Use cases for the setdefault dict method <http://stackoverflow.com/questions/3483520/use-cases-for-the-setdefault-dict-method>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

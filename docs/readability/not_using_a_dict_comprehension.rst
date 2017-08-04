@@ -35,7 +35,4 @@ References
 
 - `Stack Overflow - Create a dictionary with list comprehesion <http://stackoverflow.com/questions/1747817/python-create-a-dictionary-with-list-comprehension>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

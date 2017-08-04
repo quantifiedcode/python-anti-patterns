@@ -39,7 +39,4 @@ References
 
 - `Python 2.7.8 - Glossary <https://docs.python.org/2/glossary.html>`_
 
-Status
-------
 
-- No automated code check available. Create one with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_

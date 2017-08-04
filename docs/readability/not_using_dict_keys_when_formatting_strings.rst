@@ -90,7 +90,4 @@ Going even further, the same result can be achieved with your own objects by usi
     # Output: Tobin Brown is 20 years old
 
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

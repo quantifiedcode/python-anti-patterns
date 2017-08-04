@@ -32,7 +32,4 @@ References
 - PyLint - W0110, deprecated-lambda
 - `Oliver Fromme - List Comprehensions <http://www.secnetix.de/olli/Python/list_comprehensions.hawk>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

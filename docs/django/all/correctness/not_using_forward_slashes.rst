@@ -42,7 +42,4 @@ References
 - `Django documentation - Settings: STATIC_FILES_DIRS <https://docs.djangoproject.com/en/1.8/ref/settings/#https://docs.djangoproject.com/en/1.8/ref/settings/#staticfiles-dirs>`_
 - `Django documentation - Settings: HOST <https://docs.djangoproject.com/en/1.8/ref/settings/#host>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/ff48f625efa5424088acfc1ea788db3e>`_

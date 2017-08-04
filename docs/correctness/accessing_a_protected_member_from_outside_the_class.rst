@@ -32,7 +32,4 @@ References
 
 - PyLint - W0212, protected-access
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/0e923436d72741dfa704c77aeb62d8a0>`_

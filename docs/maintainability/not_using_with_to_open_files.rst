@@ -36,7 +36,4 @@ References
 
 `effbot - Understanding Python's with statement <http://effbot.org/zone/python-with-statement.htm>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/7a20886d210e4cdaa38a7e3e9fe9b9a3>`_

@@ -30,7 +30,4 @@ The modified code below is functionally equivalent to the original code, but thi
 
     elem0, elem1, elem2 = elems
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

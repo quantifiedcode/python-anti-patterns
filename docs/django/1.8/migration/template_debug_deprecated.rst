@@ -42,7 +42,4 @@ References
 - `Django documentation - Settings: TEMPLATES <https://docs.djangoproject.com/en/1.8/ref/settings/#templates>`_
 - `Django documentation - Templates: Built-in backends <https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/705f569e1a174f39946454933994e4b3>`_

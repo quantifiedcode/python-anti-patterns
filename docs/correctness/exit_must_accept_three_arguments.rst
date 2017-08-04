@@ -94,7 +94,4 @@ References
 - `Python Language Reference - With Statement Context Managers <https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers>`_
 - `Stack Overflow - Python with...as <http://stackoverflow.com/a/14776885/1669860>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/2c6ddfdb708740e8a33d2ca6d0f37860>`_

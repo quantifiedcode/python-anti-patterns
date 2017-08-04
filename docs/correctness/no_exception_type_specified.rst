@@ -82,7 +82,4 @@ References
 - `Python Built-in Exceptions<https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`
 - `Python Errors and Exceptions<https://docs.python.org/2/tutorial/errors.html>`
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/2df59ef0b6334507bc3160318857dae7>`_

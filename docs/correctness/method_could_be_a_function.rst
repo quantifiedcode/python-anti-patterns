@@ -77,7 +77,4 @@ References
 - PyLint - R0201, no-self-use
 
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/fd60ea9fe45d43fca995a8b9d4824306>`_

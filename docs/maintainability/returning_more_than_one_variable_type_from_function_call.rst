@@ -50,7 +50,4 @@ When invalid data is provided to a function, a precondition to a function is not
     except ValueError:
         print("Wrong password.")
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

@@ -33,7 +33,4 @@ References
 
 - `Django documentation - Settings: MEDIA_ROOT <https://docs.djangoproject.com/en/1.8/ref/settings/#media-root>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/617b8feb087f4a5fafa2934d78ace2a8>`_

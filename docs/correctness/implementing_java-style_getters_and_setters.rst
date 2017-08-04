@@ -77,7 +77,4 @@ References
 - `Stack Overflow - What's the Pythonic Way to use getters and setters? <http://stackoverflow.com/questions/2627002/whats-the-pythonic-way-to-use-getters-and-setters>`_
 
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/c98ab6808f7f4e8bb70290a2590a9f72>`_

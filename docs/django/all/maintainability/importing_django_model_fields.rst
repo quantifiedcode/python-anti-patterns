@@ -32,7 +32,4 @@ References
 
 - `Django documentation - Model field reference <https://docs.djangoproject.com/en/1.8/ref/models/fields/#module-django.db.models.fields>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/cde20ce818b44fbf9d17176f03922be3>`_

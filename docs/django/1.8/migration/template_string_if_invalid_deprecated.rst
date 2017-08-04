@@ -42,7 +42,4 @@ References
 - `Django documentation - Templates: Built-in backends <https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django>`_
 - `Django documentation - Templates: How invalid variables are handled <https://docs.djangoproject.com/en/1.8/ref/templates/api/#how-invalid-variables-are-handled>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/6f1b0d6580e04149983617cefa39d08c>`_

@@ -13,7 +13,7 @@ The code below uses an index variable ``i`` in a ``for`` loop to iterate through
     l = [1,2,3]
 
     # creating index variable
-    for i in range(0,len(list)):
+    for i in range(0,len(l)):
         # using index to access list
         le = l[i]
         print(i,le)

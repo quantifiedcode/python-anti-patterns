@@ -13,7 +13,6 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <script src="//cdn.optimizely.com/js/2899720567.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% block htmltitle %}
@@ -26,7 +25,6 @@
   {% endif %}
 
   {# CSS #}
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   {# OPENSEARCH #}
   {% if not embedded %}
@@ -73,9 +71,6 @@
   {%- endblock %}
   {%- block extrahead %} {% endblock %}
 
-  {# Keep modernizr in head - http://modernizr.com/docs/#installing #}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -101,32 +96,6 @@
       </div>
       &nbsp;
 
-    <!-- Begin MailChimp Signup Form -->
-    <div class="nav-box">
-      <div id="mc_embed_signup">
-        <form action="http://quantifiedcode.us8.list-manage.com/subscribe/post?u=effb5c0618b377e47329ca7ba&amp;id=0eb810e227" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-            <label for="mce-EMAIL" style="color:#000;">Wanna learn more about Python code quality? Sign up for our newsletter!</label>
-            <input style="width:100%" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;"><input  type="text" name="b_effb5c0618b377e47329ca7ba_0eb810e227" tabindex="-1" value=""></div>
-            <div class="clear"><input style="width:100%" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-            </div>
-        </form>
-      </div>
-
-      <div class="social">
-        <!-- Place this tag where you want the button to render. -->
-        <a class="github-button" href="https://github.com/quantifiedcode/python-anti-patterns" data-icon="octicon-star" data-count-href="/quantifiedcode/python-anti-patterns/stargazers" data-count-api="/repos/quantifiedcode/python-anti-patterns#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star quantifiedcode/python-anti-patterns on GitHub">Star</a>
-
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="quantifiedcode">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-        <a href="https://twitter.com/quantifiedcode" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @quantifiedcode</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      </div>
-    <div>
-
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -143,14 +112,8 @@
         <div class="rst-content">
           {% include "breadcrumbs.html" %}
           <div role="main">
-            <div class="alert" style="text-align: center; background-color: rgb(255, 248, 189);">
-             <i class="fa fa-exclamation-circle"></i> Find more articles in our new <a id="signup-link" href="https://www.quantifiedcode.com/knowledge-base">Python Knowledge Base</a>
-            </div>
             {% block body %}{% endblock %}
           </div>
-          <div class="alert" style="text-align: center; background-color: rgb(255, 248, 189);">
-             <i class="fa fa-exclamation-circle"></i> Find more articles in our new <a id="signup-link" href="https://www.quantifiedcode.com/knowledge-base">Python Knowledge Base</a>
-            </div>
           {% include "footer.html" %}
         </div>
       </div>
@@ -191,20 +154,6 @@
       });
   </script>
   {% endif %}
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-51790189-2', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview', {
-       'page': location.pathname + location.search  + location.hash
-      });
-
-    </script>
 
   {%- block footer %} {% endblock %}
 

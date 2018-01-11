@@ -33,7 +33,4 @@ References
 - `Python Documentation: Built-in functions <https://docs.python.org/2/library/functions.html>`_
 
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/8ae91093b4f2420f8eac5cc826470aec>`_

@@ -44,8 +44,5 @@ References
 - `Python 3 dict.items <https://docs.python.org/3.3/library/stdtypes.html#dict-views>`_
 
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.
 

@@ -48,7 +48,7 @@ Handle exceptions with Python's built in `exception types <https://docs.python.o
 
         return result
 
-With this pattern, you are able to handle exceptions based on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is recommended to handle specific exception types first (e.g,. ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block.
+With this pattern, you are able to handle exceptions based on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is recommended to handle specific exception types first (e.g., ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block.
 
 **Cleanup actions (optional)**: The `else`-clause executes only, if no exception occurred. It is useful to log the success of your code. The `finally`-block executes under all circumstances — no matter if an error occured or not. It is useful to clean up the `try-except` block.
 
@@ -82,7 +82,4 @@ References
 - `Python Built-in Exceptions<https://docs.python.org/2/library/exceptions.html#exceptions.BaseException>`
 - `Python Errors and Exceptions<https://docs.python.org/2/tutorial/errors.html>`
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/2df59ef0b6334507bc3160318857dae7>`_

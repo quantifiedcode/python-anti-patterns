@@ -51,7 +51,4 @@ References
 - `Python Standard Library - __future__ <https://docs.python.org/2/library/__future__.html>`_
 
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/17ee755b2d2b4532a500d41d619bd719>`_

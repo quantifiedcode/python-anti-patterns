@@ -48,7 +48,4 @@ References
 - PyLint - W0102, dangerous-default-value
 - `Stack Overflow - Hidden Features of Python <http://stackoverflow.com/questions/101268/hidden-features-of-python#113198>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/f8cb83dc03fc47fdafba95f29f68c95e>`_

@@ -38,7 +38,4 @@ References
 - `PEP 20 - The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_
 - `Built-in Functions > zip(*iterables) <https://docs.python.org/3.4/library/functions.html#zip>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

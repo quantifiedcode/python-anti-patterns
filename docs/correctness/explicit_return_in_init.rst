@@ -62,7 +62,4 @@ References
 - `Python Language Reference - object.__init__(self[, ...]) <https://docs.python.org/2/reference/datamodel.html#object.__init__>`_
 
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/3ebb7e78099d4b189848e357c997c4fe>`_

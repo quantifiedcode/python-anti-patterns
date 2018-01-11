@@ -40,7 +40,4 @@ It is much better to write more text and to be much more precise about what each
                 for data_key, data_value in data_item.iteritems():
                     print(data_key, data_value)
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/3156948ad38447bd810ba158fa4f5f0e>`_

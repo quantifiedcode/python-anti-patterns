@@ -42,8 +42,5 @@ References
 - `Django documentation - Templates: Built-in backends <https://docs.djangoproject.com/en/1.8/topics/templates/#module-django.template.backends.django>`_
 
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/4af01dfd013241f58d0469e014209e3a>`_
 

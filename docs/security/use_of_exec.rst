@@ -38,8 +38,3 @@ References
 - PyLint - W0122, exec-used
 - `Python Language Reference - The exec statement <https://docs.python.org/2/reference/simple_stmts.html#the-exec-statement>`_
 - `Stack Overflow - Why should exec() and eval() be avoided? <http://stackoverflow.com/questions/1933451/why-should-exec-and-eval-be-avoided>`_
-
-Status
-------
-
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/14c05f5246af43b1aa3d6bb69f3b84f3>`_

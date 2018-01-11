@@ -53,8 +53,5 @@ References
 - `Stack Overflow - Importing Modules <http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much>`_
 - `Stack Overflow - 'import module' or 'from module import' <http://stackoverflow.com/questions/710551/import-module-or-from-module-import>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.
 

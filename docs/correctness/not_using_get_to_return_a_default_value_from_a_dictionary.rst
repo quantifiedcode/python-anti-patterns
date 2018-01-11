@@ -44,7 +44,4 @@ References
 
 - `Python Standard Library - dict.get <https://docs.python.org/2/library/stdtypes.html#dict.get>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

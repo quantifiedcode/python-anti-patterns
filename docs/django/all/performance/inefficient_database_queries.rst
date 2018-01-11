@@ -87,8 +87,5 @@ References
 - `Django documentation - Models: Querysets (values) <https://docs.djangoproject.com/en/1.8/ref/models/querysets/#values>`_
 - `Django documentation - Models: Querysets (values_list) <https://docs.djangoproject.com/en/1.8/ref/models/querysets/#values_list>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.
 

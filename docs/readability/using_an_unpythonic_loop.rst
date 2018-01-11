@@ -13,7 +13,7 @@ The code below uses an index variable ``i`` in a ``for`` loop to iterate through
     l = [1,2,3]
 
     # creating index variable
-    for i in range(0,len(list)):
+    for i in range(0,len(l)):
         # using index to access list
         le = l[i]
         print(i,le)
@@ -36,7 +36,4 @@ References
 
 - `PEP 20 - The Zen of Python <http://legacy.python.org/dev/peps/pep-0020/>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

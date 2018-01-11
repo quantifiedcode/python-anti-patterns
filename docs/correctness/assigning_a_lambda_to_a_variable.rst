@@ -48,7 +48,4 @@ References
 - `PEP 8 Style Guide - Programming Recommendations <http://legacy.python.org/dev/peps/pep-0008/#programming-recommendations>`_
 - `Stack Overflow - Do not assign a lambda expression <http://stackoverflow.com/questions/25010167/e731-do-not-assign-a-lambda-expression-use-a-def>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/4b4068f0aae4445782da690b1da18b34>`_

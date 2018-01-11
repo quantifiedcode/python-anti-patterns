@@ -39,7 +39,4 @@ Reference
 - `Django documentation - Model field reference: BooleanField <https://docs.djangoproject.com/en/1.8/ref/models/fields/#booleanfield>`_
 - `Django documentation - Model field reference: NullBooleanField <https://docs.djangoproject.com/en/1.8/ref/models/fields/#nullbooleanfield>`_
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/f9a71a2aeef846ceafce68f5652b9dad>`_

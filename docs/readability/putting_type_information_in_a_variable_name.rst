@@ -36,7 +36,4 @@ References
 
 - `Stack Overflow - Hungarian Notation <http://stackoverflow.com/questions/8791533/does-it-make-sense-to-use-hungarian-notation-prefixes-in-interpreted-languages>`_
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

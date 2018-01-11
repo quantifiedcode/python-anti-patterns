@@ -41,7 +41,4 @@ References
 - `Django <https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/>`_
 
 
-Status
-------
 
-- `Automated code check available <https://www.quantifiedcode.com/app/pattern/3fc074e3040b459fb393d170adf47d33>`_

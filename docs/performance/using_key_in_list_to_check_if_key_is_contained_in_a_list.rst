@@ -35,7 +35,4 @@ In the modified code below, the list has been changed to a set. This is much mor
     else:
         print("The number 3 is NOT in the list.")
 
-Status
-------
 
-- No automated check available. `Create it <https://www.quantifiedcode.com/app/patterns>`_ with `Cody <http://docs.quantifiedcode.com/patterns/language/index.html>`_.

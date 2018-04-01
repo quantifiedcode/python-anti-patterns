@@ -2,7 +2,7 @@ Test for object identity should be ``is``
 ========================================
 
 Testing the identity of two objects can be achieved in python with a special operator called ``is``.
-Most prominently it is used to check whether an variable points to ``None``.
+Most prominently it is used to check whether a variable points to ``None``.
 But the operator can examine any kind of identity.
 This often leads to confusion because equality of two different objects will return ``False``.
 

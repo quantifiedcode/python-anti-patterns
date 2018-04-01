@@ -44,7 +44,7 @@ In these cases, use one of these idioms:
     # or
 
     import multiprocessing as mp
-    pool = mp.pool(8)
+    pool = mp.Pool(8)
 
 
 References

@@ -10,8 +10,8 @@ The code below demonstrates some potential unintended behavior that can result w
 
 .. code:: python
 
-    def contains_magic_number(list, magic_number):
-        for i in list:
+    def contains_magic_number(numbers, magic_number):
+        for i in numbers:
             if i == magic_number:
                 print("This list contains the magic number")
         else:
@@ -31,8 +31,8 @@ If the ``else`` clause should not always execute at the end of a loop clause, th
 
 .. code:: python
 
-    def contains_magic_number(list, magic_number):
-        for i in list:
+    def contains_magic_number(numbers, magic_number):
+        for i in numbers:
             if i == magic_number:
                 print("This list contains the magic number.")
                 # added break statement here

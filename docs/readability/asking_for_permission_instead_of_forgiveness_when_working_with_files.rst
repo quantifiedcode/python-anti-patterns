@@ -37,6 +37,6 @@ The updated code below is a demonstration of the EAFP coding style, which is the
 References
 ----------
 
-- `Python 2.7.8 - Glossary <https://docs.python.org/2/glossary.html>`_
+- `Glossary <https://docs.python.org/3/glossary.html>`_
 
 

@@ -32,7 +32,7 @@ The code below uses the PEP 8 preferred pattern of ``if cond is None``.
         print("PEP 8 Style Guide prefers this pattern")
 
 Here the identity operator ``is`` is used. It will check whether ``number`` is identical to ``None``.
-``is`` will return to ``True`` only if the two variables point to the same object.
+``is`` will return ``True`` only if the two variables point to the same object.
 
 
 References

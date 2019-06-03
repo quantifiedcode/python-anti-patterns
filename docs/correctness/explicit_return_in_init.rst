@@ -40,6 +40,8 @@ Move the program logic to another instance method
 
 There is no reason why the ``Rectangle`` class MUST return the area immediately upon initialization. This program logic should be moved to a separate method of the ``Rectangle`` class. The program can call the method later, after the object has successfully initialized.
 
+Note that even if you set the return value, but Python will just ignore the returned value.
+
 .. code:: python
 
     class Rectangle(object):

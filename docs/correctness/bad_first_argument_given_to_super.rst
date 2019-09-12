@@ -73,6 +73,14 @@ Python 3 adds a new simpler ``super()``, which requires no arguments.  The corre
     s = Square(5)
     print(s.area)  # 25 
 
+There are use cases where it is desirable to explicitly pass the subclass argument to ``super()`` e.g. a different class implements the function that is needed. However in most cases the parameterless call to ``super()`` is recommended, and needing to make frequent changes to the instance hierarchy may indicate a wider design issue.
+
+Best practice
+-------------
+
+ * Use the parameterless call to ``super()`` as far as possible.
+ * Refactor classes if it is becoming necessary to specify the sublass argument regularly.
+  
 References
 ----------
 
@@ -81,5 +89,5 @@ References
 - `Stack Overflow - Python super() inheritance and arguments needed <http://stackoverflow.com/questions/15896265/python-super-inheritance-and-arguments-needed>`_
 - PyLint - E1003, bad-super-call
 - `PEP 3135 - New Super <https://www.python.org/dev/peps/pep-3135/>`_
-
+- `Real Python - A super() Deep Dive <https://realpython.com/python-super/#a-super-deep-dive>`_
 

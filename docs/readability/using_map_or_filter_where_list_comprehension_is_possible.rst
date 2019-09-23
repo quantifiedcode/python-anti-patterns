@@ -1,7 +1,7 @@
 Using ``map()`` or ``filter()`` where list comprehension is possible
 ====================================================================
 
-For simple transformations that can be expressed as a list comprehension, use list comprehensions over ``map()`` or ``filter()``. Use ``map()`` or ``filter()`` for expressions that are too long or complicated to express with a list comprehension. Although a ``map()`` or ``filter()`` expression may be functionally equivalent to a list comprehension, the list comprehension is generally more concise and easier to read.
+For simple transformations that can be expressed as a list comprehension, use list comprehensions over ``map()`` or ``filter()``. Although a ``map()`` or ``filter()`` expression may be functionally equivalent to a list comprehension, the list comprehension is generally more concise and easier to read.
 
 Anti-pattern
 ------------

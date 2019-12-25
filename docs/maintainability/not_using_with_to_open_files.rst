@@ -30,10 +30,33 @@ The modified code below is the safest way to open a file. The ``file`` class has
         content = f.read()
         # Python still executes f.close() even though an exception occurs
         1 / 0 
+Pathlib makes the simple cases simpler
+...........................
+The pathlib module makes several complex cases somewhat simpler, but it also makes some of the simple cases even simpler. We could open the file, read its contents and close the file using a with block. As shown above, but there is another way to do that using pathlib:
+
+.. code:: python
+
+    from pathlib import Path
+    p = Path('file.txt')
+    p.read_text()
+
+Using the above code we can not add mode(default is read mode), to do so there is another way mentioned below:
+The modes could be 
+
+- rt : read text
+- wr : write text
+- at : append text 
+
+
+.. code:: python
+
+    path = Path('file.txt')
+    with open(path, mode='at') as f:
+        f.write('# config goes here')
+    
 
 References
 ----------
 
 `effbot - Understanding Python's with statement <http://effbot.org/zone/python-with-statement.htm>`_
-
 

@@ -125,9 +125,9 @@ latex:
 
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/html/python-anti-patterns/latex
-	@cp logo_qc.png $(BUILDDIR)/latex
+	@cp logo_qc.png $(BUILDDIR)/html/python-anti-patterns/latex
 	@echo "Running LaTeX files through pdflatex..."
-	$(MAKE) -C $(BUILDDIR)/latex all-pdf
+	$(MAKE) -C $(BUILDDIR)/html/python-anti-patterns/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/html/python-anti-patterns/latex."
 
 latexpdfja:

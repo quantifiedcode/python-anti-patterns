@@ -1,0 +1,238 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Returning more than one variable type from function call &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../index.html"/>
+        <link rel="up" title="Maintainability" href="index.html"/>
+        <link rel="next" title="Using the global statement" href="using_the_global_statement.html"/>
+        <link rel="prev" title="Not using with to open files" href="not_using_with_to_open_files.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../correctness/index.html"><i class="fa fa-check"></i> Correctness</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="from_module_import_all_used.html">using wildcard imports (<cite>from … import *</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_with_to_open_files.html">Not using <code class="docutils literal notranslate"><span class="pre">with</span></code> to open files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Returning more than one variable type from function call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_the_global_statement.html">Using the <code class="docutils literal notranslate"><span class="pre">global</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_single_letter_as_variable_name.html">Using single letter to name your variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamically_creating_names.html">Dynamically creating variable/method/function names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Documentation</a> &raquo;</li>
+      
+          <li><a href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a> &raquo;</li>
+      
+    <li>Returning more than one variable type from function call</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/maintainability/returning_more_than_one_variable_type_from_function_call.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="returning-more-than-one-variable-type-from-function-call">
+<h1>Returning more than one variable type from function call<a class="headerlink" href="#returning-more-than-one-variable-type-from-function-call" title="Permalink to this headline">¶</a></h1>
+<p>If a function that is supposed to return a given type (e.g. list, tuple, dict) suddenly returns
+something else (e.g. <code class="docutils literal notranslate"><span class="pre">None</span></code>) the caller of that function will always need to check the type of the
+return value before proceeding. This makes for confusing and complex code. If the function is unable
+to produce the supposed return value it is better to raise an exception that can be caught by the caller instead.</p>
+<div class="section" id="anti-pattern">
+<h2>Anti-pattern<a class="headerlink" href="#anti-pattern" title="Permalink to this headline">¶</a></h2>
+<p>In the code below, the function <code class="docutils literal notranslate"><span class="pre">get_secret_code()</span></code> returns a secret code when the code calling the function provides the correct password. If the password is incorrect, the function returns <code class="docutils literal notranslate"><span class="pre">None</span></code>. This leads to hard-to-maintain code, because the caller will have to check the type of the return value before proceeding.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_secret_code</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="o">!=</span> <span class="s2">&quot;bicycle&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;42&quot;</span>
+
+<span class="n">secret_code</span> <span class="o">=</span> <span class="n">get_secret_code</span><span class="p">(</span><span class="s2">&quot;unicycle&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">secret_code</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong password.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The secret code is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">secret_code</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="best-practice">
+<h2>Best practice<a class="headerlink" href="#best-practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="raise-an-exception-when-an-error-is-encountered-or-a-precondition-is-unsatisfied">
+<h3>Raise an exception when an error is encountered or a precondition is unsatisfied<a class="headerlink" href="#raise-an-exception-when-an-error-is-encountered-or-a-precondition-is-unsatisfied" title="Permalink to this headline">¶</a></h3>
+<p>When invalid data is provided to a function, a precondition to a function is not satisfied, or an error occurs during the execution of a function, the function should not return any data. Instead, the function should raise an exception. In the modified version of <code class="docutils literal notranslate"><span class="pre">get_secret_code()</span></code> shown below, <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised when an incorrect value is given for the <code class="docutils literal notranslate"><span class="pre">password</span></code> argument.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_secret_code</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="o">!=</span> <span class="s2">&quot;bicycle&quot;</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;42&quot;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">secret_code</span> <span class="o">=</span> <span class="n">get_secret_code</span><span class="p">(</span><span class="s2">&quot;unicycle&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The secret code is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">secret_code</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong password.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="using_the_global_statement.html" class="btn btn-neutral float-right" title="Using the global statement"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="not_using_with_to_open_files.html" class="btn btn-neutral" title="Not using with to open files"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

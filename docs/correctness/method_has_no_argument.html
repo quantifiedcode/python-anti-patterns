@@ -1,0 +1,292 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Method has no argument &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../index.html"/>
+        <link rel="up" title="Correctness" href="index.html"/>
+        <link rel="next" title="Missing argument to super()" href="missing_argument_to_super.html"/>
+        <link rel="prev" title="Method could be a function" href="method_could_be_a_function.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><i class="fa fa-check"></i> Correctness</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessing_a_protected_member_from_outside_the_class.html">Accessing a protected member from outside the class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_lambda_to_a_variable.html">Assigning a <cite>lambda</cite> expression to a variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_to_builtin.html">Assigning to built-in function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bad_except_clauses_order.html">Bad except clauses order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bad_first_argument_given_to_super.html">Bad first argument given to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="else_clause_on_loop_without_a_break_statement.html"><code class="docutils literal notranslate"><span class="pre">else</span></code> clause on loop without a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_must_accept_three_arguments.html"><code class="docutils literal notranslate"><span class="pre">__exit__</span></code> must accept 3 arguments: type, value, traceback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_return_in_init.html">Explicit return in __init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_import_is_not_the_first_statement.html"><code class="docutils literal notranslate"><span class="pre">__future__</span></code> import is not the first non-docstring statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementing_java-style_getters_and_setters.html">Implementing Java-style getters and setters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_mixed_spaces_and_tabs.html">Indentation contains mixed spaces and tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_tabs.html">Indentation contains tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method_could_be_a_function.html">Method could be a function</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Method has no argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="missing_argument_to_super.html">Missing argument to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable_default_value_as_argument.html">Using a mutable default value as an argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_exception_type_specified.html">No exception type(s) specified</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_defaultdict.html">Not using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_else_in_a_loop.html">Not using <code class="docutils literal notranslate"><span class="pre">else</span></code> where appropriate in a loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_explicit_unpacking.html">Not using explicit unpacking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_get_to_return_a_default_value_from_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">get()</span></code> to return a default value from a dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_setdefault_to_initialize_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> to initialize a dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Documentation</a> &raquo;</li>
+      
+          <li><a href="index.html"><i class="fa fa-check"></i> Correctness</a> &raquo;</li>
+      
+    <li>Method has no argument</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/correctness/method_has_no_argument.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="method-has-no-argument">
+<h1>Method has no argument<a class="headerlink" href="#method-has-no-argument" title="Permalink to this headline">¶</a></h1>
+<p>Unlike some programming languages, Python does not pass references to instance or class objects automatically behind the scenes. So the program must explicitly pass them as arguments whenever it wants to access any members of the instance or class within a method.</p>
+<div class="section" id="anti-pattern">
+<h2>Anti-pattern<a class="headerlink" href="#anti-pattern" title="Permalink to this headline">¶</a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class below the <code class="docutils literal notranslate"><span class="pre">area</span></code> method attempts to return the value of the <code class="docutils literal notranslate"><span class="pre">area</span></code> instance variable. However, <code class="docutils literal notranslate"><span class="pre">self.area</span></code> is undefined because a reference to the instance object has not been explicitly passed as an argument to the method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+    <span class="c1"># missing first argument &quot;self&quot;</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">():</span>
+        <span class="c1"># self is undefined here</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+<div class="section" id="class-method-is-missing-the-cls-keyword">
+<h3>Class method is missing the <code class="docutils literal notranslate"><span class="pre">cls</span></code> keyword<a class="headerlink" href="#class-method-is-missing-the-cls-keyword" title="Permalink to this headline">¶</a></h3>
+<p>The method <code class="docutils literal notranslate"><span class="pre">print_class_name</span></code> attempts to print the name of the class. However, to programmatically access a class name, a method needs to have a reference to the class object. This is accomplished by passing the keyword <code class="docutils literal notranslate"><span class="pre">cls</span></code> as the first argument to the method. Because <code class="docutils literal notranslate"><span class="pre">print_class_name</span></code> does not do this, its reference to <code class="docutils literal notranslate"><span class="pre">cls</span></code> in the body of the method is undefined.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="nd">@classmethod</span>
+    <span class="c1"># missing first argument &quot;cls&quot;</span>
+    <span class="k">def</span> <span class="nf">print_class_name</span><span class="p">():</span>
+        <span class="c1"># cls is undefined here</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, I am </span><span class="si">{0}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The method <code class="docutils literal notranslate"><span class="pre">area</span></code> computes the value of any rectangle. Currently this method is ambiguous. It is defined as a method of the <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class, yet it does not reference any instance or class members. The method needs to explicitly state that it is a static method via the <code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code> decorator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="c1"># &quot;@staticmethod&quot; should be here</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="best-practices">
+<h2>Best practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add-the-self-parameter-to-instance-methods">
+<h3>Add the <code class="docutils literal notranslate"><span class="pre">self</span></code> parameter to instance methods<a class="headerlink" href="#add-the-self-parameter-to-instance-methods" title="Permalink to this headline">¶</a></h3>
+<p>To access the <code class="docutils literal notranslate"><span class="pre">area</span></code> member of a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> instance the first argument of the <code class="docutils literal notranslate"><span class="pre">area</span></code> method needs to be a reference to the instance object, signified by the keyword <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+    <span class="c1"># instance members now accessible because of &quot;self&quot;</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-the-cls-parameter-to-class-methods">
+<h3>Add the <code class="docutils literal notranslate"><span class="pre">cls</span></code> parameter to class methods<a class="headerlink" href="#add-the-cls-parameter-to-class-methods" title="Permalink to this headline">¶</a></h3>
+<p>To access the name of the class the <code class="docutils literal notranslate"><span class="pre">print_class_name</span></code> method needs to explicitly pass an argument to the class object. This is done by adding the keyword <code class="docutils literal notranslate"><span class="pre">cls</span></code> as the first argument of the method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="nd">@classmethod</span>
+    <span class="c1"># class members now accessible, thanks to &quot;cls&quot;</span>
+    <span class="k">def</span> <span class="nf">print_class_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, I am </span><span class="si">{0}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-the-staticmethod-decorator-to-static-methods">
+<h3>Add the <code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code> decorator to static methods<a class="headerlink" href="#add-the-staticmethod-decorator-to-static-methods" title="Permalink to this headline">¶</a></h3>
+<p>If the method is a static method that does not need access to any instance members, then the method should be preceded by the <code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code> decorator. This improves readability by helping clarify that the method should never rely on any instance members.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="c1"># clarifies that the method does not need any instance members</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>PyLint - E0211, no-method-argument</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="missing_argument_to_super.html" class="btn btn-neutral float-right" title="Missing argument to super()"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="method_could_be_a_function.html" class="btn btn-neutral" title="Method could be a function"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Little Book of Python Anti-Patterns &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="#"/>
+        <link rel="next" title="Correctness" href="correctness/index.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="#"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="correctness/index.html"><i class="fa fa-check"></i> Correctness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Documentation</a> &raquo;</li>
+      
+    <li>The Little Book of Python Anti-Patterns</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="the-little-book-of-python-anti-patterns">
+<h1>The Little Book of Python Anti-Patterns<a class="headerlink" href="#the-little-book-of-python-anti-patterns" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/snake_warning.png"><img alt="_images/snake_warning.png" class="align-center" src="_images/snake_warning.png" style="width: 200pt;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>
+     <a class="github_ribbon" href="https://github.com/quantifiedcode/python-anti-patterns"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+     </p>
+<p>Welcome, fellow Pythoneer! This is a small book of Python  <strong>anti-patterns</strong> and <strong>worst practices</strong>.</p>
+<p>Learning about these anti-patterns will help you to avoid them in your own code and make you
+a better programmer (hopefully). Each pattern comes with a small description, examples and
+possible solutions. You can check many of them for free against your project at <a class="reference external" href="https://www.quantifiedcode.com/">QuantifiedCode</a>.</p>
+<div class="section" id="why-did-we-write-this">
+<h2>Why did we write this?<a class="headerlink" href="#why-did-we-write-this" title="Permalink to this headline">¶</a></h2>
+<p><strong>Short answer</strong>: We think that you can learn as much from reading bad code as you can from reading good one.</p>
+<p><strong>Long answer</strong>: There is an overwhelming amount of Python books that show you how to do things by focusing on best practices and examples of good code. There are only very few books out there that show you how <strong>not</strong> to do things. We wanted to change that by providing you with an <strong>anti-book</strong> that teaches you things which you should <strong>never</strong> do in practice.</p>
+</div>
+<div class="section" id="who-are-we">
+<h2>Who are we?<a class="headerlink" href="#who-are-we" title="Permalink to this headline">¶</a></h2>
+<p>We’re <a class="reference external" href="https://www.quantifiedcode.com/">QuantifiedCode</a>, a Berlin-based startup. Our mission is to help programmers write better code! Our first product is an <a class="reference external" href="https://www.quantifiedcode.com/">online tool</a> for automated, data-driven code review. When building this tool we learned a lot about code quality in Python and decided to compile our knowledge into this book.</p>
+</div>
+<div class="section" id="how-is-this-book-organized">
+<h2>How is this book organized?<a class="headerlink" href="#how-is-this-book-organized" title="Permalink to this headline">¶</a></h2>
+<p>This book contains anti- and migrations pattern for Python and for popular Python frameworks, such as Django. We categorized the patterns as follows:</p>
+<ul class="simple">
+<li><p><strong>Correctness</strong>: Anti-patterns that will literally break your code or make it do the wrong things.</p></li>
+<li><p><strong>Maintainability</strong>: Anti-patterns that will make your code hard to maintain or extend.</p></li>
+<li><p><strong>Readability</strong>: Anti-patterns that will make your code hard to read or understand.</p></li>
+<li><p><strong>Performance</strong>: Anti-patterns that will unnecessarily slow your code down.</p></li>
+<li><p><strong>Security</strong>: Anti-patterns that will pose a security risk to your program.</p></li>
+<li><p><strong>Migration</strong>: Patterns that help you migrate faster to new versions of a framework</p></li>
+</ul>
+<p>Some patterns can belong in more than one category, so please don’t take the choice that we’ve made too serious. If you think a pattern is grossly misplaced in its category,
+feel free to <a class="reference external" href="https://github.com/quantifiedcode/python-anti-patterns/issues">create an issue</a> on Github.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Whenever we cite content from another source we tried including the link to the original
+article on the bottom of the page. If you should have missed one, please feel free to add it
+and make a pull request on Github. Thanks!</p>
+</div>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>This document is licensed under a creative-commons NC license, so you can use the text freely
+for non-commercial purposes and adapt it to your needs. The only thing we ask in return is the
+inclusion of a link to this page on the top of your website, so that your readers will be able to
+find the content in its original form and possibly even contribute to it.</p>
+</div>
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>If you think this collection can be improved or extended, please contribute! You can do this by
+simply forking our Github project and sending us a pull request once you’re done adding your changes. We will review and merge all pull requests as fast as possible and be happy to include your name on the list of authors of this document.</p>
+<p>We would also like to thank all contributors to this book for their effort. A full list of contributors can be found at <a class="reference external" href="https://github.com/quantifiedcode/python-anti-patterns/graphs/contributors">Github</a>.</p>
+</div>
+<div class="section" id="list-of-maintainers">
+<h2>List of Maintainers<a class="headerlink" href="#list-of-maintainers" title="Permalink to this headline">¶</a></h2>
+<p>If you have any questions concerning this project, please contact one of the maintainers:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/adewes">Andreas Dewes</a></p></li>
+<li><p><a class="reference external" href="https://github.com/programmdesign">Christoph Neumann</a></p></li>
+</ul>
+</div>
+<div class="section" id="index-of-patterns">
+<h2>Index Of Patterns<a class="headerlink" href="#index-of-patterns" title="Permalink to this headline">¶</a></h2>
+<p>Here’s the full index of all anti-patterns in this book.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="correctness/index.html"><i class="fa fa-check"></i> Correctness</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="correctness/accessing_a_protected_member_from_outside_the_class.html">Accessing a protected member from outside the class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/assigning_a_lambda_to_a_variable.html">Assigning a <cite>lambda</cite> expression to a variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/assigning_to_builtin.html">Assigning to built-in function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/bad_except_clauses_order.html">Bad except clauses order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/bad_first_argument_given_to_super.html">Bad first argument given to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/else_clause_on_loop_without_a_break_statement.html"><code class="docutils literal notranslate"><span class="pre">else</span></code> clause on loop without a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/exit_must_accept_three_arguments.html"><code class="docutils literal notranslate"><span class="pre">__exit__</span></code> must accept 3 arguments: type, value, traceback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/explicit_return_in_init.html">Explicit return in __init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/future_import_is_not_the_first_statement.html"><code class="docutils literal notranslate"><span class="pre">__future__</span></code> import is not the first non-docstring statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/implementing_java-style_getters_and_setters.html">Implementing Java-style getters and setters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/indentation_contains_mixed_spaces_and_tabs.html">Indentation contains mixed spaces and tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/indentation_contains_tabs.html">Indentation contains tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/method_could_be_a_function.html">Method could be a function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/method_has_no_argument.html">Method has no argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/missing_argument_to_super.html">Missing argument to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/mutable_default_value_as_argument.html">Using a mutable default value as an argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/no_exception_type_specified.html">No exception type(s) specified</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/not_using_defaultdict.html">Not using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/not_using_else_in_a_loop.html">Not using <code class="docutils literal notranslate"><span class="pre">else</span></code> where appropriate in a loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/not_using_explicit_unpacking.html">Not using explicit unpacking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">get()</span></code> to return a default value from a dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="correctness/not_using_setdefault_to_initialize_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> to initialize a dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="maintainability/from_module_import_all_used.html">using wildcard imports (<cite>from … import *</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintainability/not_using_with_to_open_files.html">Not using <code class="docutils literal notranslate"><span class="pre">with</span></code> to open files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintainability/returning_more_than_one_variable_type_from_function_call.html">Returning more than one variable type from function call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintainability/using_the_global_statement.html">Using the <code class="docutils literal notranslate"><span class="pre">global</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintainability/using_single_letter_as_variable_name.html">Using single letter to name your variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintainability/dynamically_creating_names.html">Dynamically creating variable/method/function names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="readability/index.html"><i class="fa fa-eye"></i> Readability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="readability/asking_for_permission_instead_of_forgiveness_when_working_with_files.html">Asking for permission instead of forgiveness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/comparison_to_none.html">Comparing things to <cite>None</cite> the wrong way</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/comparison_to_true.html">Comparing things to <cite>True</cite> the wrong way</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/do_not_compare_types_use_isinstance.html">Using <cite>type()</cite> to compare types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/not_using_a_dict_comprehension.html">Not using dict comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/not_using_dict_keys_when_formatting_strings.html">Not using dict keys when formatting strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/not_using_items_to_iterate_over_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">items()</span></code> to iterate over a dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/not_using_named_tuples_when_returning_more_than_one_value.html">Not using named tuples when returning more than one value from a function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/not_using_unpacking_for_updating_multiple_values_at_once.html">Not using unpacking for updating multiple values at once</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/not_using_zip_to_iterate_over_a_pair_of_lists.html">Not using <code class="docutils literal notranslate"><span class="pre">zip()</span></code> to iterate over a pair of lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/putting_type_information_in_a_variable_name.html">Putting type information in a variable name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/test_for_object_identity_should_be_is_not.html">Test for object identity should be <code class="docutils literal notranslate"><span class="pre">is</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/using_an_unpythonic_loop.html">Using an unpythonic loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/using_map_or_filter_where_list_comprehension_is_possible.html">Using <code class="docutils literal notranslate"><span class="pre">map()</span></code> or <code class="docutils literal notranslate"><span class="pre">filter()</span></code> where list comprehension is possible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readability/using_camelcase_in_function_names.html">Using <cite>CamelCase</cite> in function names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="security/index.html"><i class="fa fa-lock"></i> Security</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security/use_of_exec.html">use of exec</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="performance/index.html"><i class="fa fa-dashboard"></i> Performance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="performance/using_key_in_list_to_check_if_key_is_contained_in_a_list.html">Using <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">in</span> <span class="pre">list</span></code> to check if key is contained in list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance/not_using_iteritems_to_iterate_large_dict.html">Not using <code class="docutils literal notranslate"><span class="pre">iteritems()</span></code> to iterate over a large dictionary in Python 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="django/index.html"><i class="fa fa-book"></i> Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="django/all/maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="django/all/maintainability/importing_django_model_fields.html">Importing django.db.models.fields</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="django/all/security/index.html"><i class="fa fa-lock"></i> Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="django/all/security/allowed_hosts_setting_missing.html">ALLOWED_HOSTS setting missing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django/all/security/django_secrect_key_published.html">SECRET_KEY published</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django/all/security/same_value_for_media_root_and_static_root.html">Same value for MEDIA_ROOT and STATIC_ROOT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django/all/security/same_value_for_media_url_and_static_url.html">Same value for MEDIA_URL and STATIC_URL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="django/all/correctness/index.html"><i class="fa fa-check"></i> Correctness</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="django/all/correctness/not_using_forward_slashes.html">Not using forward slashes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django/all/correctness/not_using_null_boolean_field.html">Not using NullBooleanField</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="django/all/performance/index.html"><i class="fa fa-dashboard"></i> Performance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="django/all/performance/inefficient_database_queries.html">Inefficient database queries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="django/1.8/migration/index.html"><i class="fa fa-magic"></i> Migration to 1.8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="django/1.8/migration/template_dirs_deprecated.html">TEMPLATE_DIRS deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django/1.8/migration/template_debug_deprecated.html">TEMPLATE_DEBUG deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django/1.8/migration/template_loaders_deprecated.html">TEMPLATE_LOADERS deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="django/1.8/migration/template_string_if_invalid_deprecated.html">TEMPLATE_STRING_IF_INVALID deprecated</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="correctness/index.html" class="btn btn-neutral float-right" title="Correctness"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

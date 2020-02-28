@@ -1,0 +1,296 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>__exit__ must accept 3 arguments: type, value, traceback &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../index.html"/>
+        <link rel="up" title="Correctness" href="index.html"/>
+        <link rel="next" title="Explicit return in __init__" href="explicit_return_in_init.html"/>
+        <link rel="prev" title="else clause on loop without a break statement" href="else_clause_on_loop_without_a_break_statement.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><i class="fa fa-check"></i> Correctness</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessing_a_protected_member_from_outside_the_class.html">Accessing a protected member from outside the class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_lambda_to_a_variable.html">Assigning a <cite>lambda</cite> expression to a variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_to_builtin.html">Assigning to built-in function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bad_except_clauses_order.html">Bad except clauses order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bad_first_argument_given_to_super.html">Bad first argument given to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="else_clause_on_loop_without_a_break_statement.html"><code class="docutils literal notranslate"><span class="pre">else</span></code> clause on loop without a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">__exit__</span></code> must accept 3 arguments: type, value, traceback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_return_in_init.html">Explicit return in __init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_import_is_not_the_first_statement.html"><code class="docutils literal notranslate"><span class="pre">__future__</span></code> import is not the first non-docstring statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementing_java-style_getters_and_setters.html">Implementing Java-style getters and setters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_mixed_spaces_and_tabs.html">Indentation contains mixed spaces and tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_tabs.html">Indentation contains tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method_could_be_a_function.html">Method could be a function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method_has_no_argument.html">Method has no argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="missing_argument_to_super.html">Missing argument to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable_default_value_as_argument.html">Using a mutable default value as an argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_exception_type_specified.html">No exception type(s) specified</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_defaultdict.html">Not using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_else_in_a_loop.html">Not using <code class="docutils literal notranslate"><span class="pre">else</span></code> where appropriate in a loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_explicit_unpacking.html">Not using explicit unpacking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_get_to_return_a_default_value_from_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">get()</span></code> to return a default value from a dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_setdefault_to_initialize_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> to initialize a dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Documentation</a> &raquo;</li>
+      
+          <li><a href="index.html"><i class="fa fa-check"></i> Correctness</a> &raquo;</li>
+      
+    <li><code class="docutils literal notranslate"><span class="pre">__exit__</span></code> must accept 3 arguments: type, value, traceback</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/correctness/exit_must_accept_three_arguments.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="exit-must-accept-3-arguments-type-value-traceback">
+<h1><code class="docutils literal notranslate"><span class="pre">__exit__</span></code> must accept 3 arguments: type, value, traceback<a class="headerlink" href="#exit-must-accept-3-arguments-type-value-traceback" title="Permalink to this headline">¶</a></h1>
+<p>A <code class="docutils literal notranslate"><span class="pre">contextmanager</span></code> class is any class that implements the <code class="docutils literal notranslate"><span class="pre">__enter__</span></code> and <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> methods according to the <a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers">Python Language Reference’s context management protocol</a>. Implementing the context management protocol enables you to use the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement with instances of the class. The <code class="docutils literal notranslate"><span class="pre">with</span></code> statement is used to ensure that setup and teardown operations are always executed before and after a given block of code. It is functionally equivalent to <code class="docutils literal notranslate"><span class="pre">try...finally</span></code> blocks, except that <code class="docutils literal notranslate"><span class="pre">with</span></code> statements are more concise.</p>
+<p>For example, the following block of code using a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">EXPRESSION</span><span class="p">:</span>
+    <span class="n">BLOCK</span>
+</pre></div>
+</div>
+<p>… is equivalent to the following block of code using <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">finally</span></code> statements.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">EXPRESSION</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">BLOCK</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">EXPRESSION</span><span class="o">.</span><span class="fm">__exit__</span><span class="p">(</span><span class="n">exception_type</span><span class="p">,</span> <span class="n">exception_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In order for <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> to work properly it must have exactly three arguments: <code class="docutils literal notranslate"><span class="pre">exception_type</span></code>, <code class="docutils literal notranslate"><span class="pre">exception_value</span></code>, and <code class="docutils literal notranslate"><span class="pre">traceback</span></code>. The formal argument names in the method definition do not need to correspond directly to these names, but they must appear in this order. If any exceptions occur while attempting to execute the block of code nested after the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement, Python will pass information about the exception into the <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> method. You can then modify the definition of <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> to gracefully handle each type of exception.</p>
+<div class="section" id="anti-pattern">
+<h2>Anti-pattern<a class="headerlink" href="#anti-pattern" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> method defined in the <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class below does not conform to Python’s context management protocol. The method is supposed to take four arguments: <code class="docutils literal notranslate"><span class="pre">self</span></code>, exception type, exception value, and traceback. Because the method signature does not match what Python expects, <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> is never called even though it should have been, because the method <code class="docutils literal notranslate"><span class="pre">divide_by_zero</span></code> creates a <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> exception.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in __enter__&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># never called because</span>
+        <span class="c1"># argument signature is wrong</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in __exit__&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">divide_by_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># causes ZeroDivisionError exception</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">0</span>
+
+<span class="k">with</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">divide_by_zero</span><span class="p">()</span>
+    <span class="c1"># __exit__ should be called but isn&#39;t</span>
+
+<span class="c1"># Output:</span>
+<span class="c1"># &quot;in __enter__&quot;</span>
+<span class="c1"># Traceback (most recent call last):</span>
+<span class="c1">#   File &quot;e0235.py&quot;, line 27, in &lt;module&gt;</span>
+<span class="c1">#     r.divide_by_zero()</span>
+<span class="c1"># TypeError: __exit__() takes exactly 1 argument (4 given)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="best-practices">
+<h2>Best practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<p>Modifying <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> to accept four arguments ensures that <code class="docutils literal notranslate"><span class="pre">__exit__</span></code> is properly called when an exception is raised in the indented block of code following the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement. Note that the argument names do not have to exactly match the names provided below. But they must occur in the order provided below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in __enter__&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exception_type</span><span class="p">,</span> <span class="n">exception_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in __exit__&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">divide_by_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># causes ZeroDivisionError exception</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">0</span>
+
+<span class="k">with</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+    <span class="c1"># exception successfully pass to __exit__</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">divide_by_zero</span><span class="p">()</span>
+
+<span class="c1"># Output:</span>
+<span class="c1"># &quot;in __enter__&quot;</span>
+<span class="c1"># &quot;in __exit__&quot;</span>
+<span class="c1"># Traceback (most recent call last):</span>
+<span class="c1">#   File &quot;e0235.py&quot;, line 27, in &lt;module&gt;</span>
+<span class="c1">#     r.divide_by_zero()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>PyLint - E0235,unexpected-special-method-signature</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/2/reference/compound_stmts.html#with">Python Language Reference - The with statement</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers">Python Language Reference - With Statement Context Managers</a></p></li>
+<li><p><a class="reference external" href="http://stackoverflow.com/a/14776885/1669860">Stack Overflow - Python with…as</a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="explicit_return_in_init.html" class="btn btn-neutral float-right" title="Explicit return in __init__"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="else_clause_on_loop_without_a_break_statement.html" class="btn btn-neutral" title="else clause on loop without a break statement"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>using wildcard imports (from … import *) &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../index.html"/>
+        <link rel="up" title="Maintainability" href="index.html"/>
+        <link rel="next" title="Not using with to open files" href="not_using_with_to_open_files.html"/>
+        <link rel="prev" title="Maintainability" href="index.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../correctness/index.html"><i class="fa fa-check"></i> Correctness</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">using wildcard imports (<cite>from … import *</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_with_to_open_files.html">Not using <code class="docutils literal notranslate"><span class="pre">with</span></code> to open files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="returning_more_than_one_variable_type_from_function_call.html">Returning more than one variable type from function call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_the_global_statement.html">Using the <code class="docutils literal notranslate"><span class="pre">global</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_single_letter_as_variable_name.html">Using single letter to name your variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamically_creating_names.html">Dynamically creating variable/method/function names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Documentation</a> &raquo;</li>
+      
+          <li><a href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a> &raquo;</li>
+      
+    <li>using wildcard imports (<cite>from … import *</cite>)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/maintainability/from_module_import_all_used.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="using-wildcard-imports-from-import">
+<h1>using wildcard imports (<cite>from … import *</cite>)<a class="headerlink" href="#using-wildcard-imports-from-import" title="Permalink to this headline">¶</a></h1>
+<p>When an import statement in the pattern of <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">MODULE</span> <span class="pre">import</span> <span class="pre">*</span></code> is used it may become difficult for a Python validator to detect undefined names in the program that imported the module. Furthermore, as a general best practice, import statements should be as specific as possible and should only import what they need.</p>
+<div class="section" id="anti-pattern">
+<h2>Anti-pattern<a class="headerlink" href="#anti-pattern" title="Permalink to this headline">¶</a></h2>
+<p>The following code imports everything from the <code class="docutils literal notranslate"><span class="pre">math</span></code> built-in Python module.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># wildcard import = bad</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="best-practices">
+<h2>Best practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="make-the-import-statement-more-specific">
+<h3>Make the <code class="docutils literal notranslate"><span class="pre">import</span></code> statement more specific<a class="headerlink" href="#make-the-import-statement-more-specific" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">import</span></code> statement should be refactored to be more specific about what functions or variables it is using from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module. The modified code below specifies exactly which module member it is using, which happens to be <code class="docutils literal notranslate"><span class="pre">ceil</span></code> in this example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-the-whole-module">
+<h3>Import the whole module<a class="headerlink" href="#import-the-whole-module" title="Permalink to this headline">¶</a></h3>
+<p>There are some cases where making the <code class="docutils literal notranslate"><span class="pre">import</span></code> statement specific is not a good solution:</p>
+<ul class="simple">
+<li><p>It may be unpractical or cumbersome to create or maintain the list of objects to be imported from a module</p></li>
+<li><p>A direct import would bind to the same name as that of another object (e.g. from asyncio import TimeoutError)</p></li>
+<li><p>The module that the object is imported from would provide valuable contextual information if it is right next to the object when it’s used.</p></li>
+</ul>
+<p>In these cases, use one of these idioms:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># or</span>
+
+<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://stackoverflow.com/questions/15145159/importing-modules-how-much-is-too-much">Stack Overflow - Importing Modules</a></p></li>
+<li><p><a class="reference external" href="http://stackoverflow.com/questions/710551/import-module-or-from-module-import">Stack Overflow - ‘import module’ or ‘from module import’</a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="not_using_with_to_open_files.html" class="btn btn-neutral float-right" title="Not using with to open files"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Maintainability"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

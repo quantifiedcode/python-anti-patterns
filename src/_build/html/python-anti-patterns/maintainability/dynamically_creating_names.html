@@ -1,0 +1,245 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dynamically creating variable/method/function names &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../index.html"/>
+        <link rel="up" title="Maintainability" href="index.html"/>
+        <link rel="next" title="Readability" href="../readability/index.html"/>
+        <link rel="prev" title="Using single letter to name your variables" href="using_single_letter_as_variable_name.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../correctness/index.html"><i class="fa fa-check"></i> Correctness</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="from_module_import_all_used.html">using wildcard imports (<cite>from … import *</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_with_to_open_files.html">Not using <code class="docutils literal notranslate"><span class="pre">with</span></code> to open files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="returning_more_than_one_variable_type_from_function_call.html">Returning more than one variable type from function call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_the_global_statement.html">Using the <code class="docutils literal notranslate"><span class="pre">global</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_single_letter_as_variable_name.html">Using single letter to name your variables</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dynamically creating variable/method/function names</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Documentation</a> &raquo;</li>
+      
+          <li><a href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a> &raquo;</li>
+      
+    <li>Dynamically creating variable/method/function names</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/maintainability/dynamically_creating_names.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="dynamically-creating-variable-method-function-names">
+<h1>Dynamically creating variable/method/function names<a class="headerlink" href="#dynamically-creating-variable-method-function-names" title="Permalink to this headline">¶</a></h1>
+<p>Sometimes a programmer gets an idea to make his/her work easier by creating magically working code that uses <code class="docutils literal notranslate"><span class="pre">setattr()</span></code> and <code class="docutils literal notranslate"><span class="pre">getattr()</span></code> functions to set some variable. While this may look like a good idea, because there is no need to write all the methods by hand, you are asking for trouble down the road.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Consider the following code. You have some data and want to update the <em>class</em> with all of the data. Of course you don’t want to do this by hand, especially if there are tons of items in <code class="docutils literal notranslate"><span class="pre">data_dict</span></code>. However, when refactoring this kind of code after several years, and you’d like to know where some variable is added to this class, you’d usually use <code class="docutils literal notranslate"><span class="pre">grep</span></code> or <code class="docutils literal notranslate"><span class="pre">ack_grep</span></code> to find it. But when setting variables/methods/functions like this, you’re screwed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;var1&#39;</span><span class="p">:</span> <span class="s1">&#39;Data1&#39;</span><span class="p">,</span> <span class="s1">&#39;var2&#39;</span><span class="p">:</span> <span class="s1">&#39;Data2&#39;</span><span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">MyAwesomeClass</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While previous example may look easy to find and debug, consider this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dat1&#39;</span><span class="p">,</span> <span class="s1">&#39;dat2&#39;</span><span class="p">,</span> <span class="s1">&#39;dat3&#39;</span><span class="p">]</span>
+<span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;dat1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+             <span class="s1">&#39;dat2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+             <span class="s1">&#39;dat3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+             <span class="s1">&#39;dat4&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]}</span>
+
+<span class="k">class</span> <span class="nc">MyAwesomeClass</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_list</span><span class="p">,</span> <span class="n">data_dict</span><span class="p">):</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data_list</span><span class="p">:</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span>
+                <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Now the class contains also <code class="docutils literal notranslate"><span class="pre">unknownX</span></code> variables indexed by their count. Well, what a nice mess we created here. Try to find a year later where these variables come from.</p>
+</div>
+<div class="section" id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="find-another-way">
+<h3>Find another way<a class="headerlink" href="#find-another-way" title="Permalink to this headline">¶</a></h3>
+<p>While the approach in the examples above may be the easiest to write, it is the worst to maintain later. You should always try to find another way to solve your problem.</p>
+<p>Typical examples:</p>
+<ul class="simple">
+<li><p>Use function to parse incoming data</p></li>
+<li><p>Use the data dict/list itself without class</p></li>
+</ul>
+<p>This however depends on the task at hand.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../readability/index.html" class="btn btn-neutral float-right" title="Readability"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="using_single_letter_as_variable_name.html" class="btn btn-neutral" title="Using single letter to name your variables"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

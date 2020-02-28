@@ -31,6 +31,4 @@ Unless you have a very specific reason to use variable names that have the same 
 References
 ----------
 - `Python Documentation: Built-in functions <https://docs.python.org/2/library/functions.html>`_
-
-
-
+- PyLint - W0622, redefined-builtin

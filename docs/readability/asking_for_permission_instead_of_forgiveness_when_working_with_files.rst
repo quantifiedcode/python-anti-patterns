@@ -16,13 +16,17 @@ The code below uses an ``if`` statement to check if a file exists before attempt
     if os.path.exists("file.txt"):
         os.unlink("file.txt")
 
+(Beyond coding style, the above code also has a potential race condition, as another program might delete the file between the ``exists`` and ``unlink`` calls.)
+
 Best practice
 -------------
 
 Assume the file can be used and catch problems as exceptions
 .............................................................
 
-The updated code below is a demonstration of the EAFP coding style, which is the preferred style in the Python community. Unlike the original code, the modified code below simply assumes that the needed file exists, and catches any problems as exceptions. For example, if the file does not exist, the problem will be caught as an ``OSError`` exception.
+The updated code below is a demonstration of the EAFP coding style, which is the preferred style in the Python community. Unlike the original code, the modified code below simply assumes that the needed file exists, and catches any problems as exceptions. For example, if the file does not exist, the problem will be reported as a ``FileNotFoundError`` exception.
+
+In Python 2, a plain ``OSError`` is raised instead (which can also result from other errors, e.g. permission issues).
 
 .. code:: python
 
@@ -31,12 +35,12 @@ The updated code below is a demonstration of the EAFP coding style, which is the
     try:
         os.unlink("file.txt")
     # raised when file does not exist
-    except OSError:
+    except FileNotFoundError: # or OSError, if using Python 2
         pass
 
 References
 ----------
 
-- `Python 2.7.8 - Glossary <https://docs.python.org/2/glossary.html>`_
+- `Python 3 - Glossary: EAFP <https://docs.python.org/3/glossary.html#term-eafp>`_
 
 

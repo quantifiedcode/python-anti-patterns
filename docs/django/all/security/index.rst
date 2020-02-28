@@ -1,7 +1,7 @@
 :fa:`lock` Security
 ===================
 
-Most Django applications contain a lot of proprietory or even confidential information. Hence, it is crucial to take all possible measures to take your Django application secure and to recude the possibility of being hacked.
+Most Django applications contain a lot of proprietary or even confidential information. Hence, it is crucial to take all possible measures to take your Django application secure and to reduce the possibility of being hacked.
 
 Use the following patterns to increase the security of your code.
 

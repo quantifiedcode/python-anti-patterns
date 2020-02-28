@@ -19,7 +19,7 @@ Anti-Pattern
 Best practice
 -------------
 
-Make sure, an appropriate host is set in `ALLOWED_HOSTS`, whenever `DEBUG = False`.
+Make sure, an appropriate host is set in ``ALLOWED_HOSTS``, whenever ``DEBUG = False``.
 
 .. code:: python
 

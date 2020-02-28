@@ -47,7 +47,7 @@ Best practice
 Use ``.values()``
 .................
 
-To avoid such a scenario, make sure you only query the data you really need for your program. Use ``.values()`` to restrict the underlying SQL query to required fields only.
+To avoid such scenario, make sure you only query the data you really need. Use ``.values()`` to restrict the underlying SQL query to required fields only.
 
 .. code:: python
 

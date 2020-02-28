@@ -6,7 +6,7 @@ A secret key has to be be kept secret. Make sure it is only used in production, 
 Anti-pattern
 ------------
 
-This settings.py contains a SECRET_KEY. You should not do this!
+This settings.py contains a ``SECRET_KEY``. You should not do this!
 
 .. code:: python
 

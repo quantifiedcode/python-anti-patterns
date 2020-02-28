@@ -23,26 +23,24 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
     if type(r) is types.ListType:
         print("object r is a list")
 
-Note that the following situation will not raise the error, although it should.
+Note that the following situation will raise the error, although it shouldn't.
 
 .. code:: python
-
-    import types
 
     class Rectangle(object):
         def __init__(self, width, height):
             self.width = width
             self.height = height
 
-    class Circle(object):
-        def __init__(self, radius):
-            self.radius = radius
+    class Square(Rectangle):
+        def __init__(self, length):
+            super(Square, self).__init__(length, length)
 
-    c = Circle(2)
     r = Rectangle(3, 4)
+    s = Square(2)
 
     # bad
-    if type(r) is not type(c):
+    if type(r) is not type(s):
         print("object types do not match")
 
 Best practice
@@ -55,18 +53,21 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
 
 .. code:: python
 
-    import types
-
     class Rectangle(object):
         def __init__(self, width, height):
             self.width = width
             self.height = height
 
+    class Square(Rectangle):
+        def __init__(self, length):
+            super(Square, self).__init__(length, length)
+
     r = Rectangle(3, 4)
+    s = Square(2)
 
     # good
-    if isinstance(r, types.ListType):
-        print("object r is a list")
+    if isinstance(s, Rectangle):
+        print("object s is a Rectangle")
 
 References
 ----------

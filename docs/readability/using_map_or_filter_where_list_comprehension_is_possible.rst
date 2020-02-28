@@ -1,7 +1,8 @@
-Using ``map()`` or ``filter()`` where list comprehension is possible
-====================================================================
+Using ``map()`` or ``filter()``
+===============================
 
-For simple transformations that can be expressed as a list comprehension, use list comprehensions over ``map()`` or ``filter()``. Although a ``map()`` or ``filter()`` expression may be functionally equivalent to a list comprehension, the list comprehension is generally more concise and easier to read.
+For transformations that can be expressed as a list comprehension, use list comprehensions over ``map()`` or ``filter()``. Although a ``map()`` or ``filter()`` expression may be functionally equivalent to a list comprehension, the list comprehension is more concise and easier to read. For expressions that are too long or complicated to express directly within a comprehension extract them into a function.
+
 
 Anti-pattern
 ------------
@@ -25,6 +26,20 @@ In the modified code below, the code uses a list comprehension to generate the s
 
     values = [1, 2, 3]
     doubles = [x * 2 for x in values]
+
+Sometimes a condition or process is too complicated or impossible to express in a single expression, for those extract them to a function and use a comprehension:
+
+.. code:: python
+
+    def process(v):
+        if v.ham == "spam":
+            return 4
+         if v.bacon == "eggs"
+             return 7
+         
+    def cond(v): ...
+ 
+    [process(x) for x in items if cond(v)]  # preferable to map(process, filter(cond, items))
 
 References
 ----------

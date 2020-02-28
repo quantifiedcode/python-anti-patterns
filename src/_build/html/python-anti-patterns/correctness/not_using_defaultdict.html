@@ -1,0 +1,248 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Not using defaultdict() &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../index.html"/>
+        <link rel="up" title="Correctness" href="index.html"/>
+        <link rel="next" title="Not using else where appropriate in a loop" href="not_using_else_in_a_loop.html"/>
+        <link rel="prev" title="No exception type(s) specified" href="no_exception_type_specified.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><i class="fa fa-check"></i> Correctness</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessing_a_protected_member_from_outside_the_class.html">Accessing a protected member from outside the class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_lambda_to_a_variable.html">Assigning a <cite>lambda</cite> expression to a variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_to_builtin.html">Assigning to built-in function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bad_except_clauses_order.html">Bad except clauses order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bad_first_argument_given_to_super.html">Bad first argument given to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="else_clause_on_loop_without_a_break_statement.html"><code class="docutils literal notranslate"><span class="pre">else</span></code> clause on loop without a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_must_accept_three_arguments.html"><code class="docutils literal notranslate"><span class="pre">__exit__</span></code> must accept 3 arguments: type, value, traceback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_return_in_init.html">Explicit return in __init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_import_is_not_the_first_statement.html"><code class="docutils literal notranslate"><span class="pre">__future__</span></code> import is not the first non-docstring statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementing_java-style_getters_and_setters.html">Implementing Java-style getters and setters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_mixed_spaces_and_tabs.html">Indentation contains mixed spaces and tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_tabs.html">Indentation contains tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method_could_be_a_function.html">Method could be a function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method_has_no_argument.html">Method has no argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="missing_argument_to_super.html">Missing argument to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable_default_value_as_argument.html">Using a mutable default value as an argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_exception_type_specified.html">No exception type(s) specified</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Not using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_else_in_a_loop.html">Not using <code class="docutils literal notranslate"><span class="pre">else</span></code> where appropriate in a loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_explicit_unpacking.html">Not using explicit unpacking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_get_to_return_a_default_value_from_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">get()</span></code> to return a default value from a dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_setdefault_to_initialize_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> to initialize a dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Documentation</a> &raquo;</li>
+      
+          <li><a href="index.html"><i class="fa fa-check"></i> Correctness</a> &raquo;</li>
+      
+    <li>Not using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/correctness/not_using_defaultdict.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="not-using-defaultdict">
+<h1>Not using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code><a class="headerlink" href="#not-using-defaultdict" title="Permalink to this headline">¶</a></h1>
+<p>When a dict is created using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code>, the value for each key in the dict will default to the value provided as the first argument of <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code>. This is more concise and less error-prone than manually setting the value of each key.</p>
+<div class="section" id="anti-pattern">
+<h2>Anti-pattern<a class="headerlink" href="#anti-pattern" title="Permalink to this headline">¶</a></h2>
+<p>The code below defines an empty dict and then manually initializes the keys of the dict. Although there is nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea, as explained in the solution below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">if</span> <span class="s2">&quot;k&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span><span class="p">[</span><span class="s2">&quot;k&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;k&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;k&quot;</span><span class="p">])</span>  <span class="c1"># 7</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="best-practice">
+<h2>Best practice<a class="headerlink" href="#best-practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-defaultdict-to-initialize-dict-keys">
+<h3>Use <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code> to initialize dict keys<a class="headerlink" href="#use-defaultdict-to-initialize-dict-keys" title="Permalink to this headline">¶</a></h3>
+<p>The modified code below uses <code class="docutils literal notranslate"><span class="pre">defaultdict</span></code> to initialize the dict. Whenever a new key is created, the default value for that key is 6. This code is functionally equivalent to the previous code, but this one is more concise and less error-prone, because every key automatically initializes to 6 with no work on the part of the programmer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;k&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;k&quot;</span><span class="p">])</span>  <span class="c1"># 7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/2/library/collections.html#collections.defaultdict">Python Standard Library - collections.defaultdict</a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="not_using_else_in_a_loop.html" class="btn btn-neutral float-right" title="Not using else where appropriate in a loop"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="no_exception_type_specified.html" class="btn btn-neutral" title="No exception type(s) specified"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

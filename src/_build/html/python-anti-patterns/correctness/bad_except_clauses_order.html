@@ -1,0 +1,247 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bad except clauses order &mdash; Python Anti-Patterns  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/ribbon.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/menu.css" type="text/css" />
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../index.html"/>
+        <link rel="up" title="Correctness" href="index.html"/>
+        <link rel="next" title="Bad first argument given to super()" href="bad_first_argument_given_to_super.html"/>
+        <link rel="prev" title="Assigning to built-in function" href="assigning_to_builtin.html"/> 
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html"> Python Anti-Patterns</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><i class="fa fa-check"></i> Correctness</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessing_a_protected_member_from_outside_the_class.html">Accessing a protected member from outside the class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_lambda_to_a_variable.html">Assigning a <cite>lambda</cite> expression to a variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_to_builtin.html">Assigning to built-in function</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bad except clauses order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bad_first_argument_given_to_super.html">Bad first argument given to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="else_clause_on_loop_without_a_break_statement.html"><code class="docutils literal notranslate"><span class="pre">else</span></code> clause on loop without a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exit_must_accept_three_arguments.html"><code class="docutils literal notranslate"><span class="pre">__exit__</span></code> must accept 3 arguments: type, value, traceback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_return_in_init.html">Explicit return in __init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_import_is_not_the_first_statement.html"><code class="docutils literal notranslate"><span class="pre">__future__</span></code> import is not the first non-docstring statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementing_java-style_getters_and_setters.html">Implementing Java-style getters and setters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_mixed_spaces_and_tabs.html">Indentation contains mixed spaces and tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="indentation_contains_tabs.html">Indentation contains tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method_could_be_a_function.html">Method could be a function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method_has_no_argument.html">Method has no argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="missing_argument_to_super.html">Missing argument to <code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutable_default_value_as_argument.html">Using a mutable default value as an argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no_exception_type_specified.html">No exception type(s) specified</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_defaultdict.html">Not using <code class="docutils literal notranslate"><span class="pre">defaultdict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_else_in_a_loop.html">Not using <code class="docutils literal notranslate"><span class="pre">else</span></code> where appropriate in a loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_explicit_unpacking.html">Not using explicit unpacking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_get_to_return_a_default_value_from_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">get()</span></code> to return a default value from a dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="not_using_setdefault_to_initialize_a_dictionary.html">Not using <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> to initialize a dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../django/index.html"><i class="fa fa-book"></i> Django</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Python Anti-Patterns</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content" id="signup-box" >
+        <div class="rst-content">
+          <div class="navigation" role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Documentation</a> &raquo;</li>
+      
+          <li><a href="index.html"><i class="fa fa-check"></i> Correctness</a> &raquo;</li>
+      
+    <li>Bad except clauses order</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/correctness/bad_except_clauses_order.rst.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main">
+            
+  <div class="section" id="bad-except-clauses-order">
+<h1>Bad except clauses order<a class="headerlink" href="#bad-except-clauses-order" title="Permalink to this headline">¶</a></h1>
+<p>When an exception occurs, Python will search for the first exception clause which matches the exception type that occurred. It doesn’t need to be an exact match. If the exception clause represents a base class of the raised exception, then Python considers that exception clause to be a match. E.g. if a <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> exception is raised and the first exception clause is <code class="docutils literal notranslate"><span class="pre">Exception</span></code>, then the <code class="docutils literal notranslate"><span class="pre">Exception</span></code> clause will execute because <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> is a sub class of <code class="docutils literal notranslate"><span class="pre">Exception</span></code>. Therefore, more specific exception clauses of sub classes should always be placed before the exception clauses of their base classes to ensure that exception handling is as specific and as helpful as possible.</p>
+<div class="section" id="anti-pattern">
+<h2>Anti-pattern<a class="headerlink" href="#anti-pattern" title="Permalink to this headline">¶</a></h2>
+<p>The code below performs a division operation that results in a <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code>. The code contains an except clause for this type of error, which would be really useful because it pinpoints the exact cause of the problem. However, the <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> exception clause is unreachable because there is a <code class="docutils literal notranslate"><span class="pre">Exception</span></code> exception clause placed before it. When Python experiences an exception, it will linearly test each exception clause and execute the first clause that matches the raised exception. The match does not need to be identical. So long as the raised exception is a sub class of the exception listed in the exception clause, then Python will execute that clause and will skip all other clauses. This defeats the purpose of exception clauses, which is to identify and handle exceptions with as much precision as possible.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="mi">5</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exception&quot;</span><span class="p">)</span>
+<span class="c1"># unreachable code!</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ZeroDivisionError&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="best-practice">
+<h2>Best practice<a class="headerlink" href="#best-practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="move-sub-class-exception-clause-before-its-ancestor-s-clause">
+<h3>Move sub class exception clause before its ancestor’s clause<a class="headerlink" href="#move-sub-class-exception-clause-before-its-ancestor-s-clause" title="Permalink to this headline">¶</a></h3>
+<p>The modified code below places the <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> exception clause in front of the <code class="docutils literal notranslate"><span class="pre">Exception</span></code> exception clause. Now when the exception is triggered the <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> exception clause will execute, which is much more optimal because it is more specific.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="mi">5</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ZeroDivisionError&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exception&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pylint - E0701, bad-except-order</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bad_first_argument_given_to_super.html" class="btn btn-neutral float-right" title="Bad first argument given to super()"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="assigning_to_builtin.html" class="btn btn-neutral" title="Assigning to built-in function"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+    <!--End mc_embed_signup-->
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> - Last updated: Feb 28, 2020 
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

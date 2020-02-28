@@ -35,7 +35,7 @@ Sometimes a condition or process is too complicated or impossible to express in 
         if v.ham == "spam":
             return 4
          if v.bacon == "eggs"
-             return 7
+            return 7
          
     def cond(v): ...
  
@@ -46,5 +46,4 @@ References
 
 - PyLint - W0110, deprecated-lambda
 - `Oliver Fromme - List Comprehensions <http://www.secnetix.de/olli/Python/list_comprehensions.hawk>`_
-
 

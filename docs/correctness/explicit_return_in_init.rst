@@ -35,6 +35,12 @@ Remove the ``return`` statement in the ``__init__`` method that is returning a v
             self.area = width * height
             # return statement removed from here
 
+
+Note: Even if you set the return to anything different than ``None`` Python compiler will throw the error like this to prevent the explicit return:
+
+    TypeError: __init__() should return None, not '...'  
+
+
 Move the program logic to another instance method
 .................................................
 

@@ -19,7 +19,7 @@ Anti-pattern
 Best practice
 -------------
 
-Ensure, ``STATIC_URL`` and ``MEDIA_URL`` point to different URL's.
+Ensure, `STATIC_URL` and `MEDIA_URL` point to different URL's.
 
 .. code:: python
 

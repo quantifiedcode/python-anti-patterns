@@ -4,8 +4,29 @@ This is an open-source book of **Python anti-patterns and worst practices**. Che
 
 **Notice**: This is still (and will always be) a work-in-progress, feel free to contribute by suggesting improvements, adding new articles, improving existing ones, or translating this into other languages.
 
+## PDF Version
+
+You can find a PDF version of the book [here](./docs/The-Little-Book-Of-Python-Anti-Patterns.pdf).
+
 ## New articles
 If you add new articles, please use the provided templates. Depending on the pattern you are creating, use either the [anti-pattern](templates/anti_pattern.rst) or the [migration-pattern](templates/migration_pattern.rst) template.
+
+## Building the Documentation
+
+To build the documentation, first install the required packages:
+
+    pip install -r requirements.txt
+
+Then, go to the `src` directory and run `make`:
+
+    # HTML pages
+    make html
+    # PDF version
+    make latexpdf
+
+For the PDF version, you will need a working LaTeX installation (e.g. texlive).
+
+You will find the updated documentation in the `docs` folder afterwards. You can clean the folder by running `make clean`.
 
 ## License
 

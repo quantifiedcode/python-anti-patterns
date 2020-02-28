@@ -34,10 +34,10 @@ Handle exceptions with Python's built in `exception types <https://docs.python.o
             print("Type error: division by 0.")
         except TypeError:
             # E.g., if b is a string
-            print(f"Type error: division by '{b}'.")
+            print("Type error: division by '{0}'.".format(b))
         except Exception as e:
             # handle any other exception
-            print(f"Error '{e.message}' occured. Arguments {e.args}.")
+            print("Error '{0}' occured. Arguments {1}.".format(e.message, e.args))
         else:
             # Excecutes if no exception occured
             print("No errors")

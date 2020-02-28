@@ -31,28 +31,3 @@ The modified code below is functionally equivalent to the original code, but thi
     elem0, elem1, elem2 = elems
 
 
-Anti-pattern
-------------
-
-Indexing [0] to extract a single data structure nested in a list. It is not clear why the first element is being indexed.
-
-.. code:: python
-
-    data = [{"InstanceId": "i-1"}]
-
-    instance = data[0]
-
-
-Best practice
--------------
-
-Use unpacking
-.............
-
-The modified code below is functionally equivalent but is explicit.
-
-.. code:: python
-
-    data = [{"InstanceId": "i-1"}]
-
-    instance, = data

@@ -11,7 +11,7 @@ The following code mixes spaces and tabs for indentation. The ``print("Hello, Wo
 .. code:: python
 
     def print_hello_world():
-    	# indented with tab
+    # indented with tab
 	print("Hello, World!")
     def print_goodbye_world():
         # indented with 4 spaces

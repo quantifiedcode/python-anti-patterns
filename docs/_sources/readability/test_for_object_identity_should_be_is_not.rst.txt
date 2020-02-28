@@ -30,7 +30,7 @@ Only use the ``is`` operator if you want to check the exact identity of two refe
     some_list = None
 
     if some_list is None:
-        do_something_with_the_list()
+        do_somthing_with_the_list()
 
 References
 ----------

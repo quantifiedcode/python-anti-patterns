@@ -53,7 +53,7 @@ There is no reason why the ``Rectangle`` class MUST return the area immediately 
         def area(self):
             return self._area
 
-Note that the class must inherit from ``object`` now, since the ``property`` decorator only works for new style classes.
+Note that in Python 2 the class must inherit from ``object`` now, since the ``property`` decorator only works for new style classes.
 
 References
 ----------

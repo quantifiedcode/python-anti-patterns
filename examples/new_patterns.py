@@ -81,12 +81,12 @@ d = {'foo' : 1,'bar' : 2}
 
 for key in d:
     value = d[key]
-    print("%s = %d" % (key,value))
+    print(f"{key} = {value}")
 
 #Good
 
 for key,value in d.iteritems():
-    print("%s = %d" % (key,value))
+    print(f"{key} = {value}")
 
 """
 Not using zip() to iterate over a pair of lists
@@ -386,7 +386,7 @@ s = "there were "+str(n_errors)+" errors."
 
 #Good
 
-s = "there were %d errors." % n_errors
+s = f"there were {n_errors} errors."
 
 """
 Putting type information in the variable name (Hungarian notation)

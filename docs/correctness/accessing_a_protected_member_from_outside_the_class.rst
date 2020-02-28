@@ -16,7 +16,7 @@ Anti-pattern
 
     r = Rectangle(5, 6)
     # direct access of protected member
-    print("Width: {:d}".format(r._width))
+    print(f"Width: {r._width}")
 
 Best practice
 -------------

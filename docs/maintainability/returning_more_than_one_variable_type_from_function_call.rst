@@ -24,7 +24,7 @@ In the code below, the function ``get_secret_code()`` returns a secret code when
     if secret_code is None:
         print("Wrong password.")
     else:
-        print("The secret code is {}".format(secret_code))
+        print(f"The secret code is {secret_code}")
 
 
 
@@ -46,7 +46,7 @@ When invalid data is provided to a function, a precondition to a function is not
 
     try:
         secret_code = get_secret_code("unicycle")
-        print("The secret code is {}".format(secret_code))
+        print(f"The secret code is {secret_code}")
     except ValueError:
         print("Wrong password.")
 

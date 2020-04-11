@@ -1,12 +1,12 @@
-Using ``map()`` or ``filter()`` where list comprehension is possible
-====================================================================
+Using ``map()`` or ``filter()`` where generator expression is possible
+======================================================================
 
-For simple transformations that can be expressed as a list comprehension, use list comprehensions over ``map()`` or ``filter()``. Use ``map()`` or ``filter()`` for expressions that are too long or complicated to express with a list comprehension. Although a ``map()`` or ``filter()`` expression may be functionally equivalent to a list comprehension, the list comprehension is generally more concise and easier to read.
+For simple transformations that can be expressed as a generator expression, use generator expressions over ``map()`` or ``filter()``. Use ``map()`` or ``filter()`` for expressions that are too long or complicated to express with a generator expression. Although a ``map()`` or ``filter()`` expression may be functionally equivalent to a generator expression, the generator expression is generally more concise and easier to read.
 
 Anti-pattern
 ------------
 
-The code below defines a list, and then uses ``map()`` to create a second list which is just the doubles of each value from the first list.
+The code below defines a list, and then uses ``map()`` to create a second iterable which is just the doubles of each value from the first list.
 
 .. code:: python
 
@@ -16,10 +16,26 @@ The code below defines a list, and then uses ``map()`` to create a second list w
 Best practice
 -------------
 
-Use list comprehension instead of ``map()``
-...........................................
+Use generator expression instead of ``map()``
+.............................................
 
-In the modified code below, the code uses a list comprehension to generate the second list containing the doubled values from the first list. Although this is functionally equivalent to the first code, the list comprehension is generally agreed to be more concise and easier to read.
+In the modified code below, the code uses a generator expression to generate the second iterable yielding the doubled values from the first list. Although this is functionally equivalent to the first code, the generator expression is generally agreed to be more concise and easier to read.
+
+.. code:: python
+
+    values = [1, 2, 3]
+    doubles = (x * 2 for x in values)
+    
+Use list comprehension instead of ``list(map())``
+.................................................
+
+
+.. code:: python
+
+    values = [1, 2, 3]
+    doubles = list(map(lambda x: x * 2, values))
+
+In the modified code below, the code uses a list comprehension to generate the second list containing the doubled values from the first list. Although this is functionally equivalent to the first code, the generator expression is generally agreed to be more concise and easier to read.
 
 .. code:: python
 
@@ -30,6 +46,6 @@ References
 ----------
 
 - PyLint - W0110, deprecated-lambda
-- `Oliver Fromme - List Comprehensions <http://www.secnetix.de/olli/Python/list_comprehensions.hawk>`_
-
-
+- `Oliver Fromme - list comprehensions <http://www.secnetix.de/olli/Python/list_comprehensions.hawk>`_
+- `flake8-comprehensions <https://pypi.org/project/flake8-comprehensions/>`_
+- `pyupgrade <https://github.com/asottile/pyupgrade>`_

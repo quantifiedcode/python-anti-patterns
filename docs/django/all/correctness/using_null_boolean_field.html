@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Importing django.db.models.fields &mdash; Python Anti-Patterns  documentation</title>
+  <title>Using NullBooleanField &mdash; Python Anti-Patterns  documentation</title>
   
 
   
@@ -38,10 +38,7 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="Python Anti-Patterns  documentation" href="../../../index.html"/>
-        <link rel="up" title="Maintainability" href="index.html"/>
-        <link rel="next" title="Security" href="../security/index.html"/>
-        <link rel="prev" title="Maintainability" href="index.html"/> 
+    <link rel="top" title="Python Anti-Patterns  documentation" href="../../../index.html"/> 
 
 </head>
 
@@ -66,23 +63,13 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
-            <ul class="current">
+            <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../correctness/index.html"><i class="fa fa-check"></i> Correctness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../maintainability/index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../readability/index.html"><i class="fa fa-eye"></i> Readability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html"><i class="fa fa-book"></i> Django</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Importing django.db.models.fields</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../security/index.html"><i class="fa fa-lock"></i> Security</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../correctness/index.html"><i class="fa fa-check"></i> Correctness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html"><i class="fa fa-dashboard"></i> Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../1.8/migration/index.html"><i class="fa fa-magic"></i> Migration to 1.8</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html"><i class="fa fa-book"></i> Django</a></li>
 </ul>
 
         
@@ -107,14 +94,10 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../../index.html">Documentation</a> &raquo;</li>
       
-          <li><a href="../../index.html"><i class="fa fa-book"></i> Django</a> &raquo;</li>
-      
-          <li><a href="index.html"><i class="fa fa-puzzle-piece"></i> Maintainability</a> &raquo;</li>
-      
-    <li>Importing django.db.models.fields</li>
+    <li>Using NullBooleanField</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../../../_sources/django/all/maintainability/importing_django_model_fields.rst.txt" rel="nofollow"> View page source</a>
+          <a href="../../../_sources/django/all/correctness/using_null_boolean_field.rst.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -123,34 +106,39 @@
 
           <div role="main">
             
-  <div class="section" id="importing-django-db-models-fields">
-<h1>Importing django.db.models.fields<a class="headerlink" href="#importing-django-db-models-fields" title="Permalink to this headline">¶</a></h1>
-<p>In Django, models are defined in <code class="docutils literal notranslate"><span class="pre">django.db.models.fields</span></code>. However, for convenience they are imported into <code class="docutils literal notranslate"><span class="pre">django.db.models</span></code>. Django’s standard convention is to use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">django.db</span> <span class="pre">import</span> <span class="pre">models</span></code> and refer to fields as <code class="docutils literal notranslate"><span class="pre">models&lt;some&gt;Field</span></code>. To improve readability and maintainability of your code, change your import statement and model definition.</p>
+  <div class="section" id="using-nullbooleanfield">
+<h1>Using NullBooleanField<a class="headerlink" href="#using-nullbooleanfield" title="Permalink to this headline">¶</a></h1>
+<p>To make a boolean field that accepts <code class="docutils literal notranslate"><span class="pre">NULL</span></code> values in addition to <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>, use a <code class="docutils literal notranslate"><span class="pre">BooleanField</span></code> with the option <code class="docutils literal notranslate"><span class="pre">null=True</span></code>, rather than a <code class="docutils literal notranslate"><span class="pre">NullBooleanField</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">null=True</span></code> option for <code class="docutils literal notranslate"><span class="pre">BooleanField</span></code> was introduced in Django 2.1. <code class="docutils literal notranslate"><span class="pre">NullBooleanField</span></code> was deprecated in Django 3.1, and is removed in Django 4.0.</p>
 <div class="section" id="anti-pattern">
 <h2>Anti-pattern<a class="headerlink" href="#anti-pattern" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db.models</span> <span class="kn">import</span> <span class="n">fields</span>
-
-<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-    <span class="n">first_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-    <span class="n">last_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="best-practice">
-<h2>Best practice<a class="headerlink" href="#best-practice" title="Permalink to this headline">¶</a></h2>
-<p>Stick to standard conventions and use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">django.db</span> <span class="pre">import</span> <span class="pre">models</span></code> instead.</p>
+<p>The following model uses a <code class="docutils literal notranslate"><span class="pre">NullBooleanField</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
     <span class="n">last_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">activated</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">NullBooleanField</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="best-practice">
+<h2>Best practice<a class="headerlink" href="#best-practice" title="Permalink to this headline">¶</a></h2>
+<p>Instead, use a <code class="docutils literal notranslate"><span class="pre">BooleanField</span></code> with the option <code class="docutils literal notranslate"><span class="pre">null=True</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">activated</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.djangoproject.com/en/1.8/ref/models/fields/#module-django.db.models.fields">Django documentation - Model field reference</a></p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#booleanfield">Django documentation - Model field reference: BooleanField</a></p></li>
+<li><p><a class="reference external" href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#nullbooleanfield">Django documentation - Model field reference: NullBooleanField</a></p></li>
 </ul>
 </div>
 </div>
@@ -158,15 +146,6 @@
 
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../security/index.html" class="btn btn-neutral float-right" title="Security"/>Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral" title="Maintainability"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

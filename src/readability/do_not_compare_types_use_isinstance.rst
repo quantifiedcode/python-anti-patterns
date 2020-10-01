@@ -6,11 +6,11 @@ The function ``isinstance`` is the best-equipped to handle type checking because
 Anti-pattern
 ------------
 
-The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to compare a ``Rectangle`` object to a built-in type (``ListType`` in this example). This is not the preferred pattern for comparing types.
+The ``if`` statement below uses the pattern ``if type(OBJECT) is typing.TYPE`` to compare a ``Rectangle`` object to a built-in type (``List`` in this example). This is not the preferred pattern for comparing types.
 
 .. code:: python
 
-    import types
+    import typing
 
     class Rectangle(object):
         def __init__(self, width, height):
@@ -20,14 +20,14 @@ The ``if`` statement below uses the pattern ``if type(OBJECT) is types.TYPE`` to
     r = Rectangle(3, 4)
 
     # bad
-    if type(r) is types.ListType:
+    if type(r) is typing.List:
         print("object r is a list")
 
 Note that the following situation will not raise the error, although it should.
 
 .. code:: python
 
-    import types
+    import typing
 
     class Rectangle(object):
         def __init__(self, width, height):
@@ -55,7 +55,7 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
 
 .. code:: python
 
-    import types
+    import typing
 
     class Rectangle(object):
         def __init__(self, width, height):
@@ -65,13 +65,13 @@ The preferred pattern for comparing types is the built-in function ``isinstance`
     r = Rectangle(3, 4)
 
     # good
-    if isinstance(r, types.ListType):
+    if isinstance(r, typing.List):
         print("object r is a list")
 
 References
 ----------
 
 - `Stack Overflow: Differences between isinstance() and type() in Python <http://stackoverflow.com/questions/1549801/differences-between-isinstance-and-type-in-python>`_
-
+- `typing <https://docs.python.org/3/library/typing.html>`_ — Support for type hints (since Python 3.5)
 
 

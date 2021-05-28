@@ -21,7 +21,7 @@ Here is an example of formatting the string with values from the person. This is
 
     person = {
         'first': 'Tobin',
-        'age':20
+        'age': 20
     }
 
     print('{0} is {1} years old'.format(
@@ -33,7 +33,7 @@ Here is an example of formatting the string with values from the person. This is
     person = {
         'first': 'Tobin',
         'last': 'Brown',
-        'age':20
+        'age': 20
     }
 
     # Bad: we have to change the replacement fields within
@@ -55,16 +55,16 @@ By using the dictionary keys in the string we are formatting, the code is much m
 
     person = {
         'first': 'Tobin',
-        'age':20
+        'age': 20
     }
 
     print('{first} is {age} years old'.format(**person))
     # Output: Tobin is 20 years old
 
     person = {
-        'first':'Tobin',
+        'first': 'Tobin',
         'last': 'Brown',
-        'age':20
+        'age': 20
     }
     print('{first} {last} is {age} years old'.format(**person))
     # Output: Tobin Brown is 20 years old

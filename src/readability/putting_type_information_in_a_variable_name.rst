@@ -22,7 +22,7 @@ Best practice
 Remove type notation
 ....................
 
-Although the modifed code below does not fix the underlying problem of attempting to divide a number by a string, the code is generally less misleading, because there is no misleading description in the variable name ``n`` that ``n`` is a number.
+Although the modified code below does not fix the underlying problem of attempting to divide a number by a string, the code is generally less misleading, because there is no misleading description in the variable name ``n`` that ``n`` is a number.
 
 .. code:: python
 

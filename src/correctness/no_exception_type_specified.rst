@@ -37,9 +37,9 @@ Handle exceptions with Python's built in `exception types <https://docs.python.o
             print("Type error: division by '{0}'.".format(b))
         except Exception as e:
             # handle any other exception
-            print("Error '{0}' occured. Arguments {1}.".format(e.message, e.args))
+            print("Error '{0}' occurred. Arguments {1}.".format(e.message, e.args))
         else:
-            # Excecutes if no exception occured
+            # Excecutes if no exception occurred
             print("No errors")
         finally:
             # Executes always
@@ -50,7 +50,7 @@ Handle exceptions with Python's built in `exception types <https://docs.python.o
 
 With this pattern, you are able to handle exceptions based on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is recommended to handle specific exception types first (e.g., ZeroDivisionError) and generic error types (e.g., Exception) towards the end of the try-except block.
 
-**Cleanup actions (optional)**: The `else`-clause executes only, if no exception occurred. It is useful to log the success of your code. The `finally`-block executes under all circumstances — no matter if an error occured or not. It is useful to clean up the `try-except` block.
+**Cleanup actions (optional)**: The `else`-clause executes only, if no exception occurred. It is useful to log the success of your code. The `finally`-block executes under all circumstances — no matter if an error occurred or not. It is useful to clean up the `try-except` block.
 
 Implement user defined exceptions
 ---------------------------------

@@ -9,7 +9,7 @@ Not using ``iteritems()`` to iterate over a large dictionary in Python 2
 Anti-pattern
 ------------
 
-The code below defines one large dictionary (created with dictionary comprehension) that generates large amounts of data. When using ``items()`` method, the iteration needs to be completed and stored in-memory before ``for`` loop can begin iterating. The prefered way is to use ``iteritems``. This uses (~1.6GB).
+The code below defines one large dictionary (created with dictionary comprehension) that generates large amounts of data. When using ``items()`` method, the iteration needs to be completed and stored in-memory before ``for`` loop can begin iterating. The preferred way is to use ``iteritems``. This uses (~1.6GB).
 
 .. code:: python
 

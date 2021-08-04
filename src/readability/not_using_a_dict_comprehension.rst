@@ -33,6 +33,6 @@ The modified code below uses the new dict comprehension syntax which was introdu
 References
 ----------
 
-- `Stack Overflow - Create a dictionary with list comprehesion <http://stackoverflow.com/questions/1747817/python-create-a-dictionary-with-list-comprehension>`_
+- `Stack Overflow - Create a dictionary with list comprehension <http://stackoverflow.com/questions/1747817/python-create-a-dictionary-with-list-comprehension>`_
 
 

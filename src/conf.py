@@ -189,7 +189,7 @@ latex_elements = {
 #'papersize': 'letterpaper',
 
 # Set font package
-# linux libertine needs this packafe installes on the machine
+# linux libertine needs this package installs on the machine
 # https://www.ctan.org/tex-archive/fonts/libertine/?lang=de
 # but should also be in the full installation of tex-live
 "fontpkg" : """

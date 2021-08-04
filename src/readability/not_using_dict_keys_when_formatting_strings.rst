@@ -1,7 +1,7 @@
 Not using dict keys when formatting strings
 ===========================================
 
-When formatting a string with values from a dictionary, you can use the dictionary keys instead of explicity defining all of the format parameters. Consider this dictionary that stores the name and age of a person.
+When formatting a string with values from a dictionary, you can use the dictionary keys instead of explicitly defining all of the format parameters. Consider this dictionary that stores the name and age of a person.
 
 
 .. code:: python
